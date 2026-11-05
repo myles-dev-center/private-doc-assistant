@@ -1,0 +1,21 @@
+{
+  "field_accuracy": 1.0,
+  "fields_checked": 420,
+  "per_field": {
+    "contract_id": 1.0,
+    "contract_type": 1.0,
+    "counterparty": 1.0,
+    "counterparty_country": 1.0,
+    "effective_date": 1.0,
+    "end_date": 1.0,
+    "auto_renewal": 1.0,
+    "renewal_notice_days": 1.0,
+    "contract_value": 1.0,
+    "currency": 1.0,
+    "payment_terms_days": 1.0,
+    "termination_notice_days": 1.0,
+    "liability_cap": 1.0,
+    "governing_law": 1.0
+  },
+  "errors": []
+}

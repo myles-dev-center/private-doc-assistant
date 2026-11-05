@@ -1,0 +1,38 @@
+import pytest
+
+from docassist.retrieval import fts_query, rrf
+from docassist.store import Store
+
+
+def test_fts_query_keeps_identifiers_as_phrases():
+    q = fts_query("When does contract AP-SA-2024-017 end?")
+    assert '"AP SA 2024 017"' in q
+    assert '"contract"' in q and '"When"' not in q and '"does"' not in q
+
+
+def test_fts_query_escapes_quotes_and_operators():
+    q = fts_query('What about "NEAR" OR AND (x)?')
+    assert q.count('"') % 2 == 0
+
+
+def test_rrf_rewards_agreement():
+    assert rrf([[1, 2, 3], [3, 1, 4]])[0] == 1
+    assert set(rrf([[1], [2]])) == {1, 2}
+
+
+@pytest.mark.parametrize("question", ['he said "hi"', "NOT", "a*b", "x:y", "^start"])
+def test_fts_query_never_breaks_sqlite(tmp_path, question):
+    store = Store(tmp_path / "t.db")
+    store.fts_search(fts_query(question), 5)  # must not raise
+
+
+def test_mirrored_ids_are_distinguished(tmp_path):
+    import numpy as np
+
+    store = Store(tmp_path / "t.db")
+    for cid in ("AP-SA-2024-017", "AP-SA-2024-071"):
+        doc_id = store.add_document(f"{cid}.pdf", "sha", 1, 0, None)
+        store.add_chunks(doc_id, [(0, 1, f"Contract No.: {cid}", f"Contract No.: {cid}")], np.ones((1, 4), np.float32))
+    store.commit()
+    hits = store.get_chunks(store.fts_search(fts_query("contract AP-SA-2024-071"), 2))
+    assert hits[0].filename == "AP-SA-2024-071.pdf"

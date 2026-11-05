@@ -1,0 +1,54 @@
+# Extraction schema for contracts. Each document is read once at ingest time and
+# turned into one row with these fields; aggregate questions ("list all contracts
+# that ...") are answered from that table instead of from a handful of chunks.
+#
+# To adapt to a different document type (invoices, CVs, datasheets...), copy this
+# file and change the fields. Types: text, date (ISO yyyy-mm-dd), number, boolean.
+name: contract
+description: A commercial contract between our company (Alder Precision GmbH) and a counterparty.
+# Fields prepended to every chunk of the document so that a chunk taken out of
+# context still says which contract it belongs to.
+header_fields: [contract_id, contract_type, counterparty]
+fields:
+  - name: contract_id
+    type: text
+    description: Contract number exactly as written, e.g. AP-SA-2024-017.
+  - name: contract_type
+    type: text
+    description: Title of the agreement, e.g. Supply Agreement, Software License Agreement.
+  - name: counterparty
+    type: text
+    description: Full legal name of the other party (not Alder Precision GmbH).
+  - name: counterparty_country
+    type: text
+    description: Country under whose laws the counterparty is organized.
+  - name: effective_date
+    type: date
+    description: Date the agreement commences (the Effective Date), not the signing date.
+  - name: end_date
+    type: date
+    description: Date the initial term ends.
+  - name: auto_renewal
+    type: boolean
+    description: True if the agreement renews automatically after the initial term.
+  - name: renewal_notice_days
+    type: number
+    description: Days of notice required before the end of the term to prevent automatic renewal. Null if it does not renew automatically.
+  - name: contract_value
+    type: number
+    description: Total fees for the whole term (the Total row in the fee schedule). Null if there are no fees.
+  - name: currency
+    type: text
+    description: Three-letter currency code of the fees, e.g. EUR. Null if there are no fees.
+  - name: payment_terms_days
+    type: number
+    description: Number of days within which invoices must be paid.
+  - name: termination_notice_days
+    type: number
+    description: Days of written notice required to terminate for convenience.
+  - name: liability_cap
+    type: number
+    description: Maximum aggregate liability amount. Null if there is no cap.
+  - name: governing_law
+    type: text
+    description: Jurisdiction whose laws govern the agreement, e.g. Germany, England and Wales, the State of New York.

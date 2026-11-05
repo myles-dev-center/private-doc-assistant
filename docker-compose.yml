@@ -1,0 +1,33 @@
+# Local models: point DOCASSIST_LLM_BASE_URL at LM Studio / Ollama on the host
+# (default below). Cloud models: set the URL, key and model names in .env.
+services:
+  api:
+    build:
+      context: .
+      args:
+        UV_INDEX_URL: ${UV_INDEX_URL:-https://pypi.org/simple}
+    env_file: [{path: .env, required: false}]
+    environment:
+      DOCASSIST_LLM_BASE_URL: ${DOCASSIST_LLM_BASE_URL:-http://host.docker.internal:1234/v1}
+    extra_hosts: ["host.docker.internal:host-gateway"]
+    volumes: [docdata:/data]
+    ports: ["8000:8000"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 10s
+      retries: 5
+
+  ui:
+    build:
+      context: .
+      args:
+        UV_INDEX_URL: ${UV_INDEX_URL:-https://pypi.org/simple}
+    command: ["streamlit", "run", "ui/app.py", "--server.address=0.0.0.0", "--server.port=8501"]
+    environment:
+      API_URL: http://api:8000
+    ports: ["8501:8501"]
+    depends_on:
+      api: {condition: service_healthy}
+
+volumes:
+  docdata:

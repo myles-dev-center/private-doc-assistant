@@ -1,0 +1,26 @@
+name: CI
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --frozen
+      - run: uv run ruff check .
+      - run: uv run ruff format --check .
+      # Tests use a fake LLM - no model server or API key needed.
+      - run: uv run pytest -q
+      # The corpus generator is deterministic: regenerating must not change the golden set.
+      - run: |
+          uv run python scripts/make_corpus.py --out /tmp/corpus --golden /tmp/golden.yaml
+          diff /tmp/golden.yaml evals/golden.yaml
+
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t docassist .
