@@ -10,7 +10,7 @@ Runs **on-premises with a local model** (LM Studio / Ollama / vLLM — no docume
 
 *Local 9B model, 30 real agreements. "List all …" questions are answered from a table extracted at ingestion, so the answer shows the rows (and the SQL) it came from; questions about one agreement cite the document and page.*
 
-## Six ways to answer questions about 30 real contracts
+## Seven ways to answer questions about 30 real contracts
 
 **30 commercial agreements from public SEC filings** ([CUAD](https://www.atticusprojectai.org/cuad), labeled by lawyers) that were **never used while building the system**, **44 questions**: 26 about one named agreement (governing law, dates, renewal notice), 10 across all agreements ("which agreements contain a non-compete clause?"), 8 whose answer is not in the documents. Every method gets the same documents, the same questions and the same deterministic scorer, and was run **once**.
 
@@ -22,15 +22,19 @@ Runs **on-premises with a local model** (LM Studio / Ollama / vLLM — no docume
 | **Cloud · this pipeline** | **84%** | **100%** | 40% | 88% | 14% | **6 s** | 1.2 | **$0.030** | $1.19, 12 min |
 | Cloud · all documents in the prompt | 82% | 100% | 20% | 100% | 18% | 20 s | 1 | $0.388 | — |
 | Cloud · agent with search tools | 84% | 92% | 50% | 100% | 11% | 24 s | 4.7 | $0.038 | — |
+| Cloud · [Codex CLI](https://github.com/openai/codex) on the document folder | 89% | 100% | 50% | 100% | 11% | 34 s | 3.3 commands | $0.070 | — |
 
 **Local** = `qwen3.5-9b` (chat) + `nomic-embed-text-v1.5` (embeddings) in LM Studio. **Cloud** = `gpt-6.1-sol` (chat) + `text-embedding-3-small` (embeddings). Cloud cost is the list price of the tokens actually used ($2 / $0.10 cached / $10 per million input / cached / output tokens; prompts over 272k tokens cost 2× input and 1.5× output). Full results and logs: [`evals/cmp/`](evals/cmp/).
+
+**Agent with search tools** is a minimal tool-calling loop (list files, grep, read a page). **Codex CLI** is OpenAI's production coding agent (v0.160.0, same `gpt-6.1-sol` model, reasoning effort `low` like every cloud run here), given the agreements as text files and nothing else; every question is a fresh session ([`scripts/run_codex.py`](scripts/run_codex.py), per-question traces in [`evals/cmp/cloud-codex/traces/`](evals/cmp/cloud-codex/traces/)). Codex reports tokens per turn, not per model call, so its cost leaves out the long-prompt surcharge — a lower bound.
 
 What the table shows:
 
 - **Same model, better answers from the pipeline.** With the 9B local model, this pipeline scores 89%; the same model scores 75% as an agent and 77% reading every document. A small model with the right structure around it matches the large cloud model here.
 - **Giving the model everything is the most expensive way to be less accurate.** With all 30 agreements in the prompt (~250k tokens), the cloud model answers questions about one agreement perfectly but misses most "list all …" answers: asked for the agreements governed by New York law, it listed none of the four and named an Ontario agreement instead. It costs **13×** more per question than this pipeline, and at a few hundred documents the prompt no longer fits at all.
-- **The agent is accurate but slow and unpredictable.** It does well with a strong model (84%, 4.7 tool calls per question), takes 24 s per question (72 s at the 90th percentile), and with the local model it searches badly (75%).
-- **The pipeline is the fastest** (6 s per question in the cloud): one model call for most questions, because the documents were read once at ingestion.
+- **A production agent is as accurate as the pipeline — but every question costs a full search.** Codex matched the local pipeline's 89% and got every question about one agreement right: it writes its own `grep` and Python to scan all 30 files instead of stopping after one search. But it takes 34 s per question (122 s at the 90th percentile, against 12 s for the cloud pipeline), reads ~86k tokens per question, and costs 2.3× as much per question — the pipeline's $1.19 ingestion pays for itself after about 30 questions. It also needs a shell, a sandbox and a developer to run it: a good tool for an analyst, not something a team of non-developers can ask questions of all day.
+- **A simple agent is slow and depends on the model.** The minimal agent does well with a strong model (84%, 24 s per question, 72 s at the 90th percentile), but with the local model it searches badly (75%).
+- **The pipeline is the fastest and cheapest of the accurate methods** (6 s and $0.03 per question in the cloud, or the same accuracy as Codex on a 9B local model): one model call for most questions, because the documents were read once at ingestion.
 
 ### What "local" really costs
 
@@ -90,9 +94,9 @@ After run 2, the extracted table already held the right answer for **26 of 26** 
 
 ## Limits, stated plainly
 
-- **"Across all agreements" questions about clauses are the weak spot for every method** — 50% at best. Some of that is the question, not the system: for "which agreements can be terminated for convenience?", all four strong methods flagged an agreement where *"the Adviser may terminate at any time"*, which the CUAD lawyers did not label as termination for convenience. On a client project these definitions are agreed with the client first.
-- **The sample is small** (30 agreements, 44 questions). Differences of a few points between the local and cloud pipelines are within noise; what holds up is the 13× cost difference, the speed difference, and the weak "list all" results of reading every document and of the local agent.
-- **At a few hundred documents** the "all documents in the prompt" method no longer fits in a 1M-token context, and the agent has much more to search; the pipeline's per-question cost stays flat. That is an extrapolation, not a measurement.
+- **"Across all agreements" questions about clauses are the weak spot for every method** — 50% at best. Some of that is the question, not the system: for "which agreements can be terminated for convenience?", all strong methods flagged an agreement where *"the Adviser may terminate at any time"*, which the CUAD lawyers did not label as termination for convenience. On a client project these definitions are agreed with the client first.
+- **The sample is small** (30 agreements, 44 questions). Differences of a few points between the local and cloud pipelines are within noise; what holds up is the cost and speed differences (13× against all-documents-in-the-prompt; against Codex 2.3× per question and about 6× the wait), and the weak "list all" results of reading every document and of the local agent.
+- **At a few hundred documents** the "all documents in the prompt" method no longer fits in a 1M-token context, and the agents have much more to search; the pipeline's per-question cost stays flat. That is an extrapolation, not a measurement.
 
 ## How it works
 
@@ -159,6 +163,8 @@ SET="--corpus data/corpus-cuad-holdout2 --golden evals/cuad-golden-holdout2.yaml
 DOCASSIST_SCHEMA_PATH=schemas/agreement.yaml uv run python scripts/run_eval.py $SET --configs full --out evals/cmp/local-rag
 uv run python scripts/run_fullread.py --mode map $SET --out evals/cmp/local-fullread     # cloud: --mode single
 uv run python scripts/run_agent.py $SET --out evals/cmp/local-agent
+docker build -t codex-bench:0.160.0 scripts/codex                                       # Codex in a container
+uv run python scripts/run_codex.py $SET --out evals/cmp/cloud-codex --codex-config path/to/config.toml
 uv run python scripts/compare_report.py                                                  # the table above
 ```
 
@@ -212,7 +218,7 @@ src/docassist/   config, llm client (+ token/cost tracking), parsing (+OCR), chu
                  retrieval, structured extraction + SQL, pipeline, evaluation, API, CLI, Excel export
 schemas/         extraction schemas (YAML) - one per document type: contract.yaml (synthetic), agreement.yaml (CUAD)
 scripts/         corpus generators, eval runner, the comparison methods (run_fullread, run_agent), reports
-evals/           golden question sets and results: results*/ (pipeline), cmp/ (six-way comparison)
+evals/           golden question sets and results: results*/ (pipeline), cmp/ (method comparison)
 ui/              Streamlit front end (talks to the API)
 tests/           unit + API tests with a fake LLM
 ```

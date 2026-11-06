@@ -20,6 +20,8 @@ RUNS = [
     ("cloud-rag", "Cloud · our RAG"),
     ("cloud-fullread", "Cloud · all documents in the prompt"),
     ("cloud-agent", "Cloud · agent with tools"),
+    # "calls" for Codex are the shell commands it ran; it reports tokens per turn, not per model call.
+    ("cloud-codex", "Cloud · Codex CLI"),
 ]
 
 

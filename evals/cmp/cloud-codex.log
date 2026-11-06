@@ -1,0 +1,46 @@
+  ok  L01   40.7s $0.037  Which law governs the Endorsement Agreement between Bruce Jenner
+  ok  L02   22.0s $0.045  Which law governs the Co-Branding And Advertising Agreement betw
+  ok  L03   65.5s $0.094  Which law governs the Services Outsourcing Agreement between CCA
+  ok  L04   23.4s $0.013  Which law governs the INTELLECTUAL PROPERTY AGREEMENT, d between
+  ok  L05   34.3s $0.031  Which law governs the Content License Agreement between Global M
+  ok  L06   35.7s $0.051  Which law governs the Maintenance Agreement between THAYER EQUIT
+  ok  L07  203.9s $0.058  Which law governs the Cooperation Agreement between MG Capital M
+  ok  L08  133.2s $0.073  Which law governs the Licensing And Web Site Hosting Agreement b
+  ok  L09   19.9s $0.045  What is the date of the Collaboration Agreement between Anixa Bi
+  ok  L10   27.8s $0.030  What is the date of the Development Agreement between CNS Pharma
+  ok  L11   24.2s $0.028  What is the date of the Sponsorship Agreement between Excite, In
+  ok  L12   23.1s $0.039  What is the date of the Co-Branding And Advertising Agreement be
+  ok  L13  277.7s $0.065  What is the date of the INTELLECTUAL PROPERTY AGREEMENT, d betwe
+  ok  L14   29.3s $0.030  What is the date of the Endorsement Agreement between Movado Gro
+  ok  L15   26.8s $0.029  What is the date of the Strategic Alliance Agreement between UTE
+  ok  L16   30.2s $0.041  What is the date of the Maintenance Agreement between THAYER EQU
+  ok  L17   24.8s $0.034  When does the First Amendment To Distributor Agreement between P
+  ok  L18  120.7s $0.063  When does the Endorsement Agreement between Golfers Incorporated
+  ok  L19   27.0s $0.020  When does the Endorsement Agreement between Kathy Ireland, Inc a
+  ok  L20   27.1s $0.028  How many days of notice are required to prevent the renewal of t
+  ok  L21   31.4s $0.034  How many days of notice are required to prevent the renewal of t
+  ok  L22   24.2s $0.061  How many days of notice are required to prevent the renewal of t
+  ok  L23   66.5s $0.074  How many days of notice are required to prevent the renewal of t
+  ok  L24   25.8s $0.020  What is the date of the Sponsorship Agreement between SABCO RACI
+  ok  L25   27.2s $0.010  What is the date of the Endorsement Agreement between Golfers In
+  ok  L26   35.6s $0.050  Which law governs the Sponsorship Agreement between Excite, Inc 
+  ok  A01   57.2s $0.096  List all agreements governed by the laws of California.
+  ok  A02   58.2s $0.227  List all agreements governed by the laws of New York.
+  ok  A03   36.0s $0.033  List all agreements governed by the laws of Nevada.
+  HAL A04   86.0s $0.155  Which agreements contain a non-compete clause?
+  HAL A05  139.4s $0.165  Which agreements contain an exclusivity commitment?
+  HAL A06   82.8s $0.342  Which agreements can be terminated for convenience, without caus
+  HAL A07  107.8s $0.146  Which agreements give a party audit rights?
+  ok  A08   55.9s $0.052  Which agreements contain a most-favored-nation clause?
+  HAL A09   81.7s $0.265  Which agreements are perpetual, with no fixed end date?
+  ok  A10  121.8s $0.116  How many agreements are governed by the laws of California?
+  ok  U01   22.3s $0.027  How many days of notice are required to prevent the automatic re
+  ok  U02  180.8s $0.029  How many days of notice are required to prevent the automatic re
+  ok  U03   34.7s $0.041  Which law governs the Celebrity Endorsement Agreement between Bi
+  ok  U04   23.7s $0.045  How many days of notice are required to prevent the automatic re
+  ok  U05   24.6s $0.032  How many days of notice are required to prevent the automatic re
+  ok  U06   53.7s $0.061  What was the share price of Marv Enterprises, LLC on the date of
+  ok  U07   22.2s $0.091  How many employees does OntoChem GmbH have according to the Coll
+  ok  U08   20.1s $0.036  Who was the CEO of THAYER EQUITY INVESTORS IV, L.P when the Main
+=> codex: accuracy 0.886, hallucination 0.114, spend $3.06
+DONE

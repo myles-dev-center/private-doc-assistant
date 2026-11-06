@@ -112,5 +112,24 @@
     "calls_per_question": 4.7,
     "input_tokens_per_question": 45080,
     "label": "Cloud \u00b7 agent with tools"
+  },
+  {
+    "name": "cloud-codex",
+    "model": "gpt-6.1-sol",
+    "accuracy": 0.886,
+    "lookup": 1.0,
+    "aggregate": 0.5,
+    "unanswerable": 1.0,
+    "hallucination": 0.114,
+    "aggregate_recall": 0.881,
+    "median_s": 34.5,
+    "p90_s": 121.8,
+    "usd_per_question": 0.0696,
+    "usd_questions": 3.06,
+    "usd_ingest": 0,
+    "ingest_min": 0.0,
+    "calls_per_question": 3.3,
+    "input_tokens_per_question": 85938,
+    "label": "Cloud \u00b7 Codex CLI"
   }
 ]
