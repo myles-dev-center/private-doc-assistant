@@ -21,7 +21,7 @@ CONFIG_NOTES = {
     "naive": "Vector search only, raw chunks — the typical tutorial RAG.",
     "+hybrid": "Adds BM25 keyword search (SQLite FTS5) fused with vector results.",
     "+headers": "Adds the document’s identity (contract no., type, counterparty) to every chunk.",
-    "+scoping": "When the question names a contract or counterparty, searches only that document.",
+    "+scoping": "When the question names a contract or counterparty, answers from that document only (the whole of it if it fits).",
     "full": "Adds structured extraction at ingest and routes list/count/sum questions to SQL.",
 }
 
@@ -53,6 +53,10 @@ code { font-size: 12px; background: var(--bg); padding: 1px 4px; border-radius: 
 """
 
 
+def corpus_label(corpus: str) -> str:
+    return "30 real agreements (CUAD)" if "cuad" in corpus else "30 synthetic contracts"
+
+
 def pct(v) -> str:
     return "–" if v is None else f"{v * 100:.0f}%"
 
@@ -81,7 +85,7 @@ def write_report(run: dict, path: Path) -> Path:
     parts.append("<h1>Document assistant — accuracy report</h1>")
     parts.append(
         f"<p class='meta'>{n} questions ({bt['lookup']['n']} lookup, {bt['aggregate']['n']} aggregate, "
-        f"{bt['unanswerable']['n']} unanswerable) over 30 synthetic contracts · model <code>{e(run['model'])}</code> · "
+        f"{bt['unanswerable']['n']} unanswerable) over {e(corpus_label(run.get('corpus', '')))} · model <code>{e(run['model'])}</code> · "
         f"embeddings <code>{e(run['embed_model'])}</code> · {e(run['started'])}</p>"
     )
 

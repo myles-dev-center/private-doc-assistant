@@ -1,0 +1,59 @@
+# Extraction schema for arbitrary commercial agreements (no shared template, no
+# contract numbers) - used for the CUAD real-contract evaluation. Field
+# definitions follow the CUAD annotation guidelines, so extracted values can be
+# compared with the lawyers' labels.
+#
+# Select it with DOCASSIST_SCHEMA_PATH=schemas/agreement.yaml.
+name: agreement
+description: A commercial agreement between two or more companies or individuals, filed publicly with the SEC.
+header_fields: [agreement_title, party_a, party_b]
+scope_fields: [party_a, party_b]
+fields:
+  - name: agreement_title
+    type: text
+    description: Title of the agreement as written on its first page, e.g. Distributor Agreement.
+  - name: party_a
+    type: text
+    description: Full legal name of the first party named in the agreement, without its defined short name or address.
+  - name: party_b
+    type: text
+    description: Full legal name of the second party named in the agreement, without its defined short name or address.
+  - name: agreement_date
+    type: date
+    description: Date the agreement is dated or was signed.
+  - name: effective_date
+    type: date
+    description: Date the agreement takes effect, if stated separately from the agreement date.
+  - name: expiration_date
+    type: date
+    description: Date the initial term ends. If the term is a period (e.g. five years from the Effective Date), compute the date. Null if perpetual or not determinable.
+  - name: perpetual
+    type: boolean
+    description: True if the agreement has no fixed end date (perpetual, or continues until terminated).
+  - name: auto_renewal
+    type: boolean
+    description: True if the agreement renews or extends automatically after the initial term.
+  - name: renewal_notice_days
+    type: number
+    description: Days of notice required before the end of the term to prevent renewal. Null if not stated.
+  - name: governing_law
+    type: text
+    description: State or country whose laws govern the agreement, e.g. New York, Delaware, England and Wales. Null if not stated.
+  - name: non_compete
+    type: boolean
+    description: True if a party is restricted from competing with the counterparty, or from operating in a certain geography, business or technology sector.
+  - name: exclusivity
+    type: boolean
+    description: True if there is an exclusive dealing commitment, e.g. exclusive rights, buying all requirements from one party, or a ban on working with other parties.
+  - name: termination_for_convenience
+    type: boolean
+    description: True if a party can terminate the agreement without cause (solely by giving notice).
+  - name: cap_on_liability
+    type: boolean
+    description: True if liability for breach is capped (a maximum amount, or a time limit for bringing claims).
+  - name: audit_rights
+    type: boolean
+    description: True if a party may audit the other party's books, records or facilities.
+  - name: most_favored_nation
+    type: boolean
+    description: True if a party is entitled to terms at least as favorable as those given to any third party.

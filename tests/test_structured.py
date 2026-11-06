@@ -4,7 +4,7 @@ from pathlib import Path
 import pytest
 
 from docassist.pipeline import DEFAULT_SCHEMA
-from docassist.structured import Schema, coerce, normalize_date, records_db, run_sql
+from docassist.structured import Schema, coerce, extract, normalize_date, records_db, run_sql
 
 
 @pytest.fixture
@@ -65,3 +65,22 @@ def test_records_db_is_read_only(schema):
             run_sql(db, bad)
     with pytest.raises(sqlite3.OperationalError):
         db.execute("INSERT INTO contracts(filename) VALUES ('x')")
+
+
+def test_long_documents_are_read_in_parts(schema):
+    seen = []
+
+    class PartLLM:
+        def chat_json(self, system, user, *, max_tokens=800):
+            body = user.split("<<<", 1)[1]
+            seen.append(body)
+            if "part 1 of" in user:
+                return {"contract_id": "AP-SA-2024-017", "auto_renewal": False}
+            return {"contract_id": "WRONG", "governing_law": "Germany", "auto_renewal": True}
+
+    text = "A" * 30_000 + " This agreement is governed by the laws of Germany."
+    rec = extract(PartLLM(), schema, text, max_chars=24_000)
+    assert len(seen) == 2 and "governed by" in seen[1]
+    assert rec["contract_id"] == "AP-SA-2024-017"  # first part wins
+    assert rec["governing_law"] == "Germany"  # found only at the end
+    assert rec["auto_renewal"] is True  # any part

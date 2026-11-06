@@ -17,7 +17,7 @@ class FakeLLM:
 
     def __init__(self):
         self.calls: list[tuple[str, str]] = []
-        self.json_mode_supported = True
+        self.json_format = 0
 
     def embed(self, texts, *, query=False, batch=64):
         out = np.zeros((len(texts), 256), dtype=np.float32)

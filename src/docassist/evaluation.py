@@ -7,6 +7,8 @@ Scoring is deterministic (no LLM judge), so results are reproducible and cheap:
                   answer must cite the right source file when it uses retrieval.
 * aggregate     - recall and precision of the expected contract IDs in the answer
                   (or the SQL result), or the expected number for counts and sums.
+                  Documents without an ID scheme are recognized by their aliases
+                  (filename, party names) from the golden file's `documents` map.
 * unanswerable  - the assistant must say the information is not there. Any answer
                   that asserts something instead counts as a hallucination.
 """
@@ -54,6 +56,14 @@ def dates_in(text: str) -> set[str]:
         found.add(dt.datetime.strptime(f"{d} {mon} {y}", "%d %B %Y").date().isoformat())
     for mon, d, y in re.findall(rf"\b({_MONTHS}) (\d{{1,2}})(?:st|nd|rd|th)?,? (\d{{4}})", text):
         found.add(dt.datetime.strptime(f"{d} {mon} {y}", "%d %B %Y").date().isoformat())
+    for d, mon, y in re.findall(rf"\b(\d{{1,2}})(?:st|nd|rd|th)? day of ({_MONTHS}),? (\d{{4}})", text):
+        found.add(dt.datetime.strptime(f"{d} {mon} {y}", "%d %B %Y").date().isoformat())
+    # Slashes are read US-style (month/day/year), dots European (day.month.year).
+    for m, d, y in re.findall(r"\b(\d{1,2})/(\d{1,2})/(\d{4})\b", text):
+        try:
+            found.add(dt.date(int(y), int(m), int(d)).isoformat())
+        except ValueError:
+            pass
     return found
 
 
@@ -73,11 +83,21 @@ def ids_in(text: str) -> set[str]:
     return set(re.findall(r"AP-[A-Z]+-\d{4}-\d{3}", text))
 
 
+def _norm(text: str) -> str:
+    return " " + re.sub(r"[^a-z0-9]+", " ", text.lower()).strip() + " "
+
+
+def docs_in(text: str, documents: dict[str, list[str]]) -> set[str]:
+    """Documents mentioned in the text by any of their aliases (whole-word, case-insensitive)."""
+    t = _norm(text)
+    return {key for key, aliases in documents.items() if any(_norm(a) in t for a in aliases)}
+
+
 def is_refusal(ans: Answer) -> bool:
     return ans.answer.strip() == NOT_FOUND or ans.route == "not_found" or bool(REFUSAL.search(ans.answer))
 
 
-def score(q: dict, ans: Answer) -> Score:
+def score(q: dict, ans: Answer, documents: dict[str, list[str]] | None = None) -> Score:
     exp = q["expected"]
     s = Score(q["id"], q["type"], q.get("tag", ""), q["question"], exp.get("value"), ans.answer, ans.route, False, seconds=ans.seconds)
     s.refused = is_refusal(ans)
@@ -93,9 +113,9 @@ def score(q: dict, ans: Answer) -> Score:
     if ans.rows:
         haystack += "\n" + "\n".join(" ".join(str(v) for v in r) for r in ans.rows)
 
-    if kind == "ids":
+    if kind in ("ids", "docs"):
         expected = set(exp["value"])
-        got = ids_in(haystack)
+        got = ids_in(haystack) if kind == "ids" else docs_in(haystack, documents or {})
         tp = len(expected & got)
         s.recall = tp / len(expected) if expected else 1.0
         s.precision = tp / len(got) if got else (1.0 if not expected else 0.0)
@@ -109,7 +129,7 @@ def score(q: dict, ans: Answer) -> Score:
         options = exp["value"] if isinstance(exp["value"], list) else [exp["value"]]
         s.correct = any(o.lower() in haystack.lower() for o in options)
 
-    if q["type"] == "lookup" and ans.route == "search":
+    if q["type"] == "lookup" and ans.route in ("search", "document"):
         s.citation_ok = any(src.filename == q.get("source") for src in ans.sources)
     # A wrong, confident answer is a hallucination; a refusal is just a miss.
     s.hallucinated = not s.correct and not s.refused

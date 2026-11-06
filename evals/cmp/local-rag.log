@@ -1,0 +1,79 @@
+
+== full: ingesting into data\eval-enriched-cmp-local
+  [1/30] ingested 2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding Agreement_ Agency Agreement.pdf
+  [2/30] ingested AMBASSADOREYEWEARGROUPINC_11_17_1997-EX-10.28-ENDORSEMENT AGREEMENT.PDF
+  [3/30] ingested AMERICANPHYSICIANSCAPITALINC_03_31_2003-EX-10.26-AGENCY AGREEMENT.PDF
+  [4/30] ingested ANIXABIOSCIENCESINC_06_09_2020-EX-10.1-COLLABORATION AGREEMENT.PDF
+  [5/30] ingested BizzingoInc_20120322_8-K_EX-10.17_7504499_EX-10.17_Endorsement Agreement.pdf
+  [6/30] ingested BNCMORTGAGEINC_05_17_1999-EX-10.4-LICENSING AND WEB SITE HOSTING AGREEMENT.PDF
+  [7/30] ingested CCAINDUSTRIESINC_04_14_2014-EX-10.1-OUTSOURCING AGREEMENT.PDF
+  [8/30] ingested CENTRACKINTERNATIONALINC_10_29_1999-EX-10.3-WEB SITE HOSTING AGREEMENT.PDF
+  [9/30] ingested CnsPharmaceuticalsInc_20200326_8-K_EX-10.1_12079626_EX-10.1_Development Agreement.pdf
+  [10/30] ingested ENTRUSTINC_07_24_1998-EX-10.5-STRATEGIC ALLIANCE AGREEMENT.PDF
+  [11/30] ingested FEDERATEDGOVERNMENTINCOMESECURITIESINC_04_28_2020-EX-99.SERV AGREE-SERVICES AGREEMENT_POWEROF.pdf
+  [12/30] ingested GarrettMotionInc_20181001_8-K_EX-2.4_11364532_EX-2.4_Intellectual Property Agreement.pdf
+  [13/30] ingested GlobalTechnologiesGroupInc_20050928_10KSB_EX-10.9_4148808_EX-10.9_Content License Agreement.pdf
+  [14/30] ingested HC2HOLDINGS,INC_05_14_2020-EX-10.1-COOPERATION AGREEMENT.PDF
+  [15/30] ingested HPILHOLDING_01_07_2015-EX-99.1-COOPERATION AGREEMENT.PDF
+  [16/30] ingested IbioInc_20200313_8-K_EX-10.1_12052678_EX-10.1_Development Agreement.pdf
+  [17/30] ingested KitovPharmaLtd_20190326_20-F_EX-4.15_11584449_EX-4.15_Manufacturing Agreement.pdf
+  [18/30] ingested LegacyEducationAllianceInc_20200330_10-K_EX-10.18_12090678_EX-10.18_Development Agreement.pdf
+  [19/30] ingested MARSHALLHOLDINGSINTERNATIONAL,INC_04_14_2004-EX-10.15-ENDORSEMENT AGREEMENT.PDF
+  [20/30] ingested MOVADOGROUPINC_04_30_2003-EX-10.28-ENDORSEMENT AGREEMENT.PDF
+  [21/30] ingested N2KINC_10_16_1997-EX-10.16-SPONSORSHIP AGREEMENT.PDF
+  [22/30] ingested NEONSYSTEMSINC_03_01_1999-EX-10.5-DISTRIBUTOR AGREEMENT_Amendment.pdf
+  [23/30] ingested NETGEAR,INC_04_21_2003-EX-10.16-DISTRIBUTOR AGREEMENT.pdf
+  [24/30] ingested ORBSATCORP_08_17_2007-EX-7.3-STRATEGIC ALLIANCE AGREEMENT.PDF
+  [25/30] ingested PerformanceSportsBrandsInc_20110909_S-1_EX-10.10_7220214_EX-10.10_Endorsement Agreement.pdf
+  [26/30] ingested PREMIERBIOMEDICALINC_05_14_2020-EX-10.2-INTELLECTUAL PROPERTY AGREEMENT.PDF
+  [27/30] ingested PROLONGINTERNATIONALCORP_03_23_1998-EX-10.16-SPONSORSHIP AGREEMENT.PDF
+  [28/30] ingested SPARKLINGSPRINGWATERHOLDINGSLTD_07_03_2002-EX-10.13-SOFTWARE LICENSE AND MAINTENANCE AGREEMENT.PDF
+  [29/30] ingested STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION AGREEMENT.PDF
+  [30/30] ingested SUNTRONCORP_05_17_2006-EX-10.22-MAINTENANCE AGREEMENT.PDF
+  ok  L01 [sql]   7.3s  Which law governs the Endorsement Agreement between Bruce Jenner and T
+  ok  L02 [document]  18.6s  Which law governs the Co-Branding And Advertising Agreement between I-
+  ok  L03 [document]  35.1s  Which law governs the Services Outsourcing Agreement between CCA Indus
+  ok  L04 [document]  37.8s  Which law governs the INTELLECTUAL PROPERTY AGREEMENT, d between HONEY
+  ok  L05 [document]  42.3s  Which law governs the Content License Agreement between Global Music I
+  ok  L06 [document]  33.4s  Which law governs the Maintenance Agreement between THAYER EQUITY INVE
+  ok  L07 [document]  32.4s  Which law governs the Cooperation Agreement between MG Capital Managem
+  ok  L08 [document]  16.3s  Which law governs the Licensing And Web Site Hosting Agreement between
+  ok  L09 [document]  23.0s  What is the date of the Collaboration Agreement between Anixa Bioscien
+  ok  L10 [document]  11.4s  What is the date of the Development Agreement between CNS Pharmaceutic
+  ok  L11 [document]  21.4s  What is the date of the Sponsorship Agreement between Excite, Inc and 
+  ok  L12 [document]  19.6s  What is the date of the Co-Branding And Advertising Agreement between 
+  ok  L13 [document]  38.0s  What is the date of the INTELLECTUAL PROPERTY AGREEMENT, d between HON
+  ok  L14 [document]  17.4s  What is the date of the Endorsement Agreement between Movado Group, In
+  ok  L15 [document]  17.1s  What is the date of the Strategic Alliance Agreement between UTEK Corp
+  ok  L16 [document]  32.8s  What is the date of the Maintenance Agreement between THAYER EQUITY IN
+  ok  L17 [document]  13.6s  When does the First Amendment To Distributor Agreement between Peregri
+  ok  L18 [document]  17.8s  When does the Endorsement Agreement between Golfers Incorporated and A
+  ok  L19 [document]  22.1s  When does the Endorsement Agreement between Kathy Ireland, Inc and Kat
+  ok  L20 [document]  30.9s  How many days of notice are required to prevent the renewal of the Rea
+  ok  L21 [search]  17.6s  How many days of notice are required to prevent the renewal of the Web
+  ok  L22 [document]  31.7s  How many days of notice are required to prevent the renewal of the Coo
+  ok  L23 [document]  19.0s  How many days of notice are required to prevent the renewal of the Co-
+  ok  L24 [document]  10.2s  What is the date of the Sponsorship Agreement between SABCO RACING, IN
+  ok  L25 [document]   6.3s  What is the date of the Endorsement Agreement between Golfers Incorpor
+  ok  L26 [document]  20.9s  Which law governs the Sponsorship Agreement between Excite, Inc and N2
+  ok  A01 [sql]  26.4s  List all agreements governed by the laws of California.
+  ok  A02 [sql]  30.5s  List all agreements governed by the laws of New York.
+  ok  A03 [sql]  16.3s  List all agreements governed by the laws of Nevada.
+  HAL A04 [sql]  26.9s  Which agreements contain a non-compete clause?
+  HAL A05 [sql]  26.5s  Which agreements contain an exclusivity commitment?
+  HAL A06 [sql]  39.6s  Which agreements can be terminated for convenience, without cause?
+  HAL A07 [sql]  21.6s  Which agreements give a party audit rights?
+  ok  A08 [sql]  12.0s  Which agreements contain a most-favored-nation clause?
+  HAL A09 [sql]  21.1s  Which agreements are perpetual, with no fixed end date?
+  ok  A10 [sql]   4.9s  How many agreements are governed by the laws of California?
+  ok  U01 [not_found]   3.1s  How many days of notice are required to prevent the automatic renewal 
+  ok  U02 [not_found]  19.3s  How many days of notice are required to prevent the automatic renewal 
+  ok  U03 [not_found]  12.8s  Which law governs the Celebrity Endorsement Agreement between Bizzingo
+  ok  U04 [not_found]   3.3s  How many days of notice are required to prevent the automatic renewal 
+  ok  U05 [not_found]  12.1s  How many days of notice are required to prevent the automatic renewal 
+  ok  U06 [not_found]  10.3s  What was the share price of Marv Enterprises, LLC on the date of the I
+  ok  U07 [not_found]  20.0s  How many employees does OntoChem GmbH have according to the Collaborat
+  ok  U08 [not_found]  31.9s  Who was the CEO of THAYER EQUITY INVESTORS IV, L.P when the Maintenanc
+  => accuracy 0.886, hallucination 0.114
+
+report: evals\cmp\local-rag\report.html

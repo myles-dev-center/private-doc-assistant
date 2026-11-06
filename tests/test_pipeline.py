@@ -88,3 +88,49 @@ def test_empty_sql_result_falls_back_to_search(assistant, tmp_path, fake_llm, mo
 
     monkeypatch.setattr(pl, "route", lambda *a: {"route": "sql", "sql": "SELECT contract_id FROM contracts WHERE 0"})
     assert assistant.ask("List all contracts that end in 2027?").route != "sql"
+
+
+def test_broken_router_reply_falls_back_to_search(assistant, tmp_path, monkeypatch):
+    assistant.ingest_file(write_txt(tmp_path, "a.txt", "Contract No.: AP-SA-2024-017. Payment within 45 days."))
+    import docassist.pipeline as pl
+
+    def broken(*a):
+        raise ValueError("Unterminated string starting at: line 1 column 25")
+
+    monkeypatch.setattr(pl, "route", broken)
+    ans = assistant.ask("List all contracts that end in 2027?")
+    assert ans.route == "search" and ans.sources
+
+
+def test_sql_rows_without_values_fall_back_to_search(assistant, tmp_path, monkeypatch):
+    assistant.ingest_file(write_txt(tmp_path, "a.txt", "Contract No.: AP-SA-2024-017."))
+    import docassist.pipeline as pl
+
+    sql = "SELECT contract_id, liability_cap FROM contracts"
+    monkeypatch.setattr(pl, "route", lambda *a: {"route": "sql", "sql": sql})
+    assert assistant.ask("List all contracts and their liability caps?").route != "sql"
+
+
+def test_question_naming_a_document_is_answered_from_its_text(assistant, tmp_path, monkeypatch):
+    assistant.ingest_file(write_txt(tmp_path, "a.txt", "Contract No.: AP-SA-2024-017. Payment within 45 days."))
+    import docassist.pipeline as pl
+
+    monkeypatch.setattr(pl, "route", lambda *a: {"route": "sql", "sql": "SELECT contract_id FROM contracts"})
+    ans = assistant.ask("List the payment terms of contract AP-SA-2024-017?")
+    assert ans.route == "document" and ans.sources[0].filename == "a.txt"
+
+
+def test_named_document_is_read_whole_with_its_record(assistant, tmp_path, fake_llm):
+    assistant.ingest_file(write_txt(tmp_path, "a.txt", "Contract No.: AP-SA-2024-017. Payment within 45 days."))
+    assistant.ingest_file(write_txt(tmp_path, "b.txt", "Contract No.: AP-SA-2024-071. Payment within 90 days."))
+    fake_llm.calls.clear()
+    ans = assistant.ask("What are the payment terms in contract AP-SA-2024-071?")
+    prompt = fake_llm.calls[-1][1]
+    assert ans.route == "document" and {s.filename for s in ans.sources} == {"b.txt"}
+    assert "90 days" in prompt and "45 days" not in prompt and "Fields extracted" in prompt
+
+
+def test_long_named_document_falls_back_to_search(assistant, tmp_path):
+    assistant.s = assistant.s.model_copy(update={"full_doc_chars": 10})
+    assistant.ingest_file(write_txt(tmp_path, "a.txt", "Contract No.: AP-SA-2024-017. Payment within 45 days."))
+    assert assistant.ask("What are the payment terms in contract AP-SA-2024-017?").route == "search"

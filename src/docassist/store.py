@@ -41,6 +41,11 @@ END;
 CREATE TRIGGER IF NOT EXISTS chunks_ad AFTER DELETE ON chunks BEGIN
     INSERT INTO chunks_fts(chunks_fts, rowid, search_text) VALUES ('delete', old.id, old.search_text);
 END;
+CREATE TABLE IF NOT EXISTS pages (
+    doc_id INTEGER NOT NULL REFERENCES documents(id) ON DELETE CASCADE,
+    page INTEGER,
+    text TEXT NOT NULL
+);
 CREATE TABLE IF NOT EXISTS extractions (
     doc_id INTEGER PRIMARY KEY REFERENCES documents(id) ON DELETE CASCADE,
     schema_name TEXT NOT NULL,
@@ -136,6 +141,16 @@ class Store:
             sql += " WHERE chunks_fts MATCH ?"
         rows = self.db.execute(sql + " ORDER BY bm25(chunks_fts) LIMIT ?", (*params, limit)).fetchall()
         return [r[0] for r in rows]
+
+    def add_pages(self, doc_id: int, pages: list[tuple[int | None, str]]) -> None:
+        self.db.executemany("INSERT INTO pages(doc_id, page, text) VALUES (?,?,?)", [(doc_id, p, t) for p, t in pages])
+
+    def document_pages(self, doc_id: int) -> list[tuple[int | None, str]]:
+        rows = self.db.execute("SELECT page, text FROM pages WHERE doc_id = ? ORDER BY rowid", (doc_id,)).fetchall()
+        return [(r["page"], r["text"]) for r in rows]
+
+    def document_by_id(self, doc_id: int) -> sqlite3.Row:
+        return self.db.execute("SELECT * FROM documents WHERE id = ?", (doc_id,)).fetchone()
 
     def doc_ids_by_filename(self) -> dict[str, int]:
         return {r["filename"]: r["id"] for r in self.db.execute("SELECT id, filename FROM documents")}

@@ -13,6 +13,13 @@ from openai import BadRequestError, OpenAI
 
 from .config import Settings
 
+# Tried in order. LM Studio rejects json_object but accepts json_schema, which also
+# constrains generation, so long SQL strings can't come back as broken JSON.
+JSON_FORMATS = [
+    {"type": "json_object"},
+    {"type": "json_schema", "json_schema": {"name": "result", "schema": {"type": "object"}}},
+]
+
 
 class LLM:
     def __init__(self, settings: Settings):
@@ -21,14 +28,15 @@ class LLM:
         self.embed_client = make_client(
             settings.embed_base_url or settings.llm_base_url, settings.embed_api_key or settings.llm_api_key, settings.llm_timeout
         )
-        self.json_mode_supported = True
+        self.json_format = 0  # index into JSON_FORMATS; len(JSON_FORMATS) = prompt-only
+        self.usage = Usage()
 
     def chat(self, system: str, user: str, *, max_tokens: int = 800, json_mode: bool = False) -> str:
         kwargs: dict[str, Any] = {}
         if self.s.llm_reasoning_effort:
             kwargs["reasoning_effort"] = self.s.llm_reasoning_effort
         if json_mode:
-            kwargs["response_format"] = {"type": "json_object"}
+            kwargs["response_format"] = JSON_FORMATS[self.json_format]
         resp = self.chat_client.chat.completions.create(
             model=self.s.llm_model,
             messages=[{"role": "system", "content": system}, {"role": "user", "content": user}],
@@ -36,15 +44,16 @@ class LLM:
             max_tokens=max_tokens,
             **kwargs,
         )
+        self.usage.add(resp.usage, self.s.llm_model)
         return strip_think(resp.choices[0].message.content or "")
 
     def chat_json(self, system: str, user: str, *, max_tokens: int = 800) -> dict:
-        """Ask for JSON; fall back to prompt-only JSON if the server rejects json_object mode."""
-        if self.json_mode_supported:
+        """Ask for JSON in the strictest mode the server accepts; prompt-only JSON as a last resort."""
+        while self.json_format < len(JSON_FORMATS):
             try:
                 return parse_json(self.chat(system, user, max_tokens=max_tokens, json_mode=True))
-            except BadRequestError:  # e.g. LM Studio only accepts json_schema
-                self.json_mode_supported = False
+            except BadRequestError:
+                self.json_format += 1
         return parse_json(self.chat(system, user + "\n\nRespond with JSON only.", max_tokens=max_tokens))
 
     def embed(self, texts: list[str], *, query: bool = False, batch: int = 64) -> np.ndarray:
@@ -53,8 +62,59 @@ class LLM:
         for i in range(0, len(texts), batch):
             resp = self.embed_client.embeddings.create(model=self.s.embed_model, input=[prefix + t for t in texts[i : i + batch]])
             out.extend(d.embedding for d in resp.data)
+            self.usage.add_embed(getattr(resp, "usage", None), self.s.embed_model)
         vecs = np.asarray(out, dtype=np.float32)
         return vecs / np.maximum(np.linalg.norm(vecs, axis=1, keepdims=True), 1e-9)
+
+
+# Official list prices, USD per 1M tokens: (input, cached input, output, long-prompt threshold).
+# A request over the threshold is billed at 2x input and 1.5x output as a whole.
+# Models not listed (local ones) cost nothing.
+PRICES = {
+    "gpt-6.1-sol": (2.00, 0.10, 10.00, 272_000),
+    "openai/text-embedding-3-small": (0.02, 0.02, 0.0, 0),
+}
+
+
+def call_cost(model: str, inp: int, cached: int, out: int) -> float:
+    if model not in PRICES:
+        return 0.0
+    p_in, p_cached, p_out, long_at = PRICES[model]
+    k_in, k_out = (2.0, 1.5) if long_at and inp > long_at else (1.0, 1.0)
+    return ((inp - cached) * p_in * k_in + cached * p_cached * k_in + out * p_out * k_out) / 1e6
+
+
+class Usage:
+    """Token counts and list-price cost across calls, for cost reports."""
+
+    def __init__(self):
+        self.calls = self.input = self.cached = self.output = self.embed_tokens = 0
+        self.usd = 0.0
+
+    def add(self, u, model: str = "") -> None:
+        self.calls += 1
+        if u is None:
+            return
+        inp, out = u.prompt_tokens or 0, u.completion_tokens or 0
+        details = getattr(u, "prompt_tokens_details", None)
+        cached = (getattr(details, "cached_tokens", 0) or 0) if details else 0
+        self.input, self.output, self.cached = self.input + inp, self.output + out, self.cached + cached
+        self.usd += call_cost(model, inp, cached, out)
+
+    def add_embed(self, u, model: str) -> None:
+        n = (u.prompt_tokens or 0) if u is not None else 0
+        self.embed_tokens += n
+        self.usd += call_cost(model, n, 0, 0)
+
+    def snapshot(self) -> dict:
+        return {
+            "calls": self.calls,
+            "input": self.input,
+            "cached": self.cached,
+            "output": self.output,
+            "embed_tokens": self.embed_tokens,
+            "usd": round(self.usd, 4),
+        }
 
 
 def make_client(base_url: str, api_key: str, timeout: float) -> OpenAI:

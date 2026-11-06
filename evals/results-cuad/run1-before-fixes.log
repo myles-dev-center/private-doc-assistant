@@ -1,0 +1,387 @@
+
+== naive: ingesting into data\eval-plain-cuad
+  [1/30] ingested ArmstrongFlooringInc_20190107_8-K_EX-10.2_11471795_EX-10.2_Intellectual Property Agreement.pdf
+  [2/30] ingested BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement3.pdf
+  [3/30] ingested BerkshireHillsBancorpInc_20120809_10-Q_EX-10.16_7708169_EX-10.16_Endorsement Agreement.pdf
+  [4/30] ingested BLUEFLYINC_03_27_2002-EX-10.27-e-business Hosting Agreement.PDF
+  [5/30] ingested CHEETAHMOBILEINC_04_22_2014-EX-10.43-Cooperation Agreement.PDF
+  [6/30] ingested CHINARECYCLINGENERGYCORP_11_14_2013-EX-10.6-Cooperation Agreement.PDF
+  [7/30] ingested EbixInc_20010515_10-Q_EX-10.3_4049767_EX-10.3_Co-Branding Agreement.pdf
+  [8/30] ingested EmbarkComInc_19991008_S-1A_EX-10.10_6487661_EX-10.10_Co-Branding Agreement.pdf
+  [9/30] ingested GopageCorp_20140221_10-K_EX-10.1_8432966_EX-10.1_Content License Agreement.pdf
+  [10/30] ingested GridironBionutrientsInc_20171206_8-K_EX-10.1_10972555_EX-10.1_Endorsement Agreement.pdf
+  [11/30] ingested HerImports_20161018_8-KA_EX-10.14_9765707_EX-10.14_Maintenance Agreement.pdf
+  [12/30] ingested ImperialGardenResortInc_20161028_DRS (on F-1)_EX-10.13_9963189_EX-10.13_Outsourcing Agreement.pdf
+  [13/30] ingested INTELLIGENTHIGHWAYSOLUTIONS,INC_01_18_2018-EX-10.1-Strategic Alliance Agreement.PDF
+  [14/30] ingested LegacyEducationAllianceInc_20141110_8-K_EX-10.9_8828866_EX-10.9_Endorsement Agreement.pdf
+  [15/30] ingested Loop Industries, Inc. - Marketing Agreement.PDF
+  [16/30] ingested MIDDLEBROOKPHARMACEUTICALS,INC_03_18_2010-EX-10.1-PROMOTION AGREEMENT.PDF
+  [17/30] ingested MJBIOTECH,INC_12_06_2018-EX-99.01-JOINT VENTURE AGREEMENT.PDF
+  [18/30] ingested MOSSIMOINC_04_14_2000-EX-10.14-ENDORSEMENT AGREEMENT.PDF
+  [19/30] ingested MphaseTechnologiesInc_20030911_10-K_EX-10.15_1560667_EX-10.15_Co-Branding Agreement.pdf
+  [20/30] ingested NATIONALPROCESSINGINC_07_18_1996-EX-10.4-SPONSORSHIP AGREEMENT.PDF
+  [21/30] ingested PANDIONTHERAPEUTICSHOLDCOLLC_05_22_2020-EX-10.17-CONSULTING AGREEMENT.PDF
+  [22/30] ingested PhoenixNewMediaLtd_20110421_F-1_EX-10.17_6958322_EX-10.17_Content License Agreement.pdf
+  [23/30] ingested QIWI_06_16_2017-EX-99.(D)(2)-COOPERATION AGREEMENT.PDF
+  [24/30] ingested RaeSystemsInc_20001114_10-Q_EX-10.57_2631790_EX-10.57_Co-Branding Agreement.pdf
+  [25/30] ingested RUBIOSRESTAURANTSINC_03_31_2008-EX-10.75-SPONSORSHIP AGREEMENT.PDF
+  [26/30] ingested SPIENERGYCO,LTD_03_09_2011-EX-99.5-OPERATIONS AND MAINTENANCE AGREEMENT.PDF
+  [27/30] ingested TUNIUCORP_03_06_2014-EX-10-COOPERATION AGREEMENT.PDF
+  [28/30] ingested WARNINGMANAGEMENTSERVICESINC_12_10_1999-EX-10-ENDORSEMENT AGREEMENT.PDF
+  [29/30] ingested WEBHELPCOMINC_03_22_2000-EX-10.8-HOSTING AGREEMENT.PDF
+  [30/30] ingested WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content License Agreement.pdf
+  --  L01 [not_found]   5.2s  Which law governs the Endorsement Agreement between National Football 
+  --  L02 [not_found]   9.4s  Which law governs the Outsourcing Contract on Development of Miaoli Ro
+  --  L03 [not_found]   6.0s  Which law governs the Talent Endorsement Agreement between Tigrent Lea
+  ok  L04 [search]   5.7s  Which law governs the Content License Agreement between Emdeon Corpora
+  ok  L05 [search]   7.1s  Which law governs the Sponsorship Agreement between National Processin
+  --  L06 [not_found]   5.8s  Which law governs the Cooperation Agreement (2014 Amendment) between N
+  --  L07 [not_found]   3.2s  Which law governs the Endorsement Agreement between FAMOUS FIXINS, INC
+  --  L08 [not_found]   3.5s  Which law governs the Cooperation Agreement between Beike Internet Sec
+  ok  L09 [search]   4.5s  What is the date of the Co-Branding Agreement between Lucent Technolog
+  ok  L10 [search]   6.4s  What is the date of the Endorsement Agreement between MOSSIMO, INC and
+  ok  L11 [search]   8.1s  What is the date of the Outsourcing Contract on Development of Miaoli 
+  ok  L12 [search]   9.1s  What is the date of the Strategic Alliance Agreement between Bravatek 
+  ok  L13 [search]   8.0s  What is the date of the Co-Branding Agreement between Snap Technologie
+  ok  L14 [search]   7.2s  What is the date of the Amendment No. 2 Manufacturing Agreement betwee
+  ok  L15 [search]   7.8s  What is the date of the Cooperation Agreement (2014 Amendment) between
+  ok  L16 [search]   6.3s  What is the date of the Co-Branding Agreement between About.com, Inc a
+  HAL L17 [search]   6.5s  When does the Joint Venture Agreemen between MJ Syndicated, Inc and SI
+  ok  L18 [search]   7.1s  When does the Endorsement Agreement between National Football League A
+  --  L19 [not_found]   5.5s  When does the Cooperation Agreement between Beike Internet Security Te
+  HAL L20 [search]   9.3s  When does the Sponsorship Agreement between SAN DIEGO BALLPARK FUNDING
+  ok  L21 [search]   7.5s  When does the Endorsement Agreement between MOSSIMO, INC and DAVID DUV
+  ok  L22 [search]   8.7s  When does the Content License Agreement between Emdeon Corporation and
+  ok  L23 [search]   7.6s  How many days of notice are required to prevent the renewal of the Co-
+  ok  L24 [search]   9.6s  How many days of notice are required to prevent the renewal of the Hos
+  ok  L25 [search]   8.8s  How many days of notice are required to prevent the renewal of the Web
+  --  L26 [not_found]   5.1s  How many days of notice are required to prevent the renewal of the Str
+  HAL A01 [search]   6.2s  List all agreements governed by the laws of California.
+  HAL A02 [search]  11.9s  List all agreements governed by the laws of New York.
+  HAL A03 [search]   9.3s  List all agreements governed by the laws of People's Republic of China
+  --  A04 [not_found]   5.0s  Which agreements contain a non-compete clause?
+  HAL A05 [search]   7.9s  Which agreements contain an exclusivity commitment?
+  HAL A06 [search]  12.2s  Which agreements can be terminated for convenience, without cause?
+  --  A07 [not_found]   5.9s  Which agreements give a party audit rights?
+  --  A08 [not_found]   3.4s  Which agreements contain a most-favored-nation clause?
+  --  A09 [not_found]   3.0s  Which agreements are perpetual, with no fixed end date?
+  HAL A10 [search]   8.8s  How many agreements are governed by the laws of California?
+  ok  U01 [not_found]   5.8s  How many days of notice are required to prevent the automatic renewal 
+  ok  U02 [not_found]   3.8s  Which law governs the Cooperation Agreement between Xi'an Zhonghong Ne
+  ok  U03 [not_found]   3.4s  How many days of notice are required to prevent the automatic renewal 
+  ok  U04 [not_found]   3.6s  How many days of notice are required to prevent the automatic renewal 
+  ok  U05 [not_found]   2.5s  How many days of notice are required to prevent the automatic renewal 
+  ok  U06 [not_found]   3.0s  What was the share price of Lucent Technologies Inc on the date of the
+  ok  U07 [not_found]   3.8s  How many employees does Chang Chen-Bin Architects Office have accordin
+  ok  U08 [not_found]   9.1s  What is the late payment interest rate in the Software Maintenance Agr
+  => accuracy 0.545, hallucination 0.182
+
+== +hybrid: ingesting into data\eval-plain-cuad
+  [1/30] unchanged ArmstrongFlooringInc_20190107_8-K_EX-10.2_11471795_EX-10.2_Intellectual Property Agreement.pdf
+  [2/30] unchanged BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement3.pdf
+  [3/30] unchanged BerkshireHillsBancorpInc_20120809_10-Q_EX-10.16_7708169_EX-10.16_Endorsement Agreement.pdf
+  [4/30] unchanged BLUEFLYINC_03_27_2002-EX-10.27-e-business Hosting Agreement.PDF
+  [5/30] unchanged CHEETAHMOBILEINC_04_22_2014-EX-10.43-Cooperation Agreement.PDF
+  [6/30] unchanged CHINARECYCLINGENERGYCORP_11_14_2013-EX-10.6-Cooperation Agreement.PDF
+  [7/30] unchanged EbixInc_20010515_10-Q_EX-10.3_4049767_EX-10.3_Co-Branding Agreement.pdf
+  [8/30] unchanged EmbarkComInc_19991008_S-1A_EX-10.10_6487661_EX-10.10_Co-Branding Agreement.pdf
+  [9/30] unchanged GopageCorp_20140221_10-K_EX-10.1_8432966_EX-10.1_Content License Agreement.pdf
+  [10/30] unchanged GridironBionutrientsInc_20171206_8-K_EX-10.1_10972555_EX-10.1_Endorsement Agreement.pdf
+  [11/30] unchanged HerImports_20161018_8-KA_EX-10.14_9765707_EX-10.14_Maintenance Agreement.pdf
+  [12/30] unchanged ImperialGardenResortInc_20161028_DRS (on F-1)_EX-10.13_9963189_EX-10.13_Outsourcing Agreement.pdf
+  [13/30] unchanged INTELLIGENTHIGHWAYSOLUTIONS,INC_01_18_2018-EX-10.1-Strategic Alliance Agreement.PDF
+  [14/30] unchanged LegacyEducationAllianceInc_20141110_8-K_EX-10.9_8828866_EX-10.9_Endorsement Agreement.pdf
+  [15/30] unchanged Loop Industries, Inc. - Marketing Agreement.PDF
+  [16/30] unchanged MIDDLEBROOKPHARMACEUTICALS,INC_03_18_2010-EX-10.1-PROMOTION AGREEMENT.PDF
+  [17/30] unchanged MJBIOTECH,INC_12_06_2018-EX-99.01-JOINT VENTURE AGREEMENT.PDF
+  [18/30] unchanged MOSSIMOINC_04_14_2000-EX-10.14-ENDORSEMENT AGREEMENT.PDF
+  [19/30] unchanged MphaseTechnologiesInc_20030911_10-K_EX-10.15_1560667_EX-10.15_Co-Branding Agreement.pdf
+  [20/30] unchanged NATIONALPROCESSINGINC_07_18_1996-EX-10.4-SPONSORSHIP AGREEMENT.PDF
+  [21/30] unchanged PANDIONTHERAPEUTICSHOLDCOLLC_05_22_2020-EX-10.17-CONSULTING AGREEMENT.PDF
+  [22/30] unchanged PhoenixNewMediaLtd_20110421_F-1_EX-10.17_6958322_EX-10.17_Content License Agreement.pdf
+  [23/30] unchanged QIWI_06_16_2017-EX-99.(D)(2)-COOPERATION AGREEMENT.PDF
+  [24/30] unchanged RaeSystemsInc_20001114_10-Q_EX-10.57_2631790_EX-10.57_Co-Branding Agreement.pdf
+  [25/30] unchanged RUBIOSRESTAURANTSINC_03_31_2008-EX-10.75-SPONSORSHIP AGREEMENT.PDF
+  [26/30] unchanged SPIENERGYCO,LTD_03_09_2011-EX-99.5-OPERATIONS AND MAINTENANCE AGREEMENT.PDF
+  [27/30] unchanged TUNIUCORP_03_06_2014-EX-10-COOPERATION AGREEMENT.PDF
+  [28/30] unchanged WARNINGMANAGEMENTSERVICESINC_12_10_1999-EX-10-ENDORSEMENT AGREEMENT.PDF
+  [29/30] unchanged WEBHELPCOMINC_03_22_2000-EX-10.8-HOSTING AGREEMENT.PDF
+  [30/30] unchanged WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content License Agreement.pdf
+  --  L01 [not_found]   7.2s  Which law governs the Endorsement Agreement between National Football 
+  HAL L02 [search]   7.4s  Which law governs the Outsourcing Contract on Development of Miaoli Ro
+  --  L03 [not_found]   6.0s  Which law governs the Talent Endorsement Agreement between Tigrent Lea
+  --  L04 [not_found]   4.5s  Which law governs the Content License Agreement between Emdeon Corpora
+  --  L05 [not_found]   3.5s  Which law governs the Sponsorship Agreement between National Processin
+  --  L06 [not_found]   2.1s  Which law governs the Cooperation Agreement (2014 Amendment) between N
+  --  L07 [not_found]   3.1s  Which law governs the Endorsement Agreement between FAMOUS FIXINS, INC
+  --  L08 [not_found]   3.2s  Which law governs the Cooperation Agreement between Beike Internet Sec
+  ok  L09 [search]   4.5s  What is the date of the Co-Branding Agreement between Lucent Technolog
+  ok  L10 [search]   6.2s  What is the date of the Endorsement Agreement between MOSSIMO, INC and
+  ok  L11 [search]   7.3s  What is the date of the Outsourcing Contract on Development of Miaoli 
+  ok  L12 [search]   8.1s  What is the date of the Strategic Alliance Agreement between Bravatek 
+  ok  L13 [search]   8.4s  What is the date of the Co-Branding Agreement between Snap Technologie
+  ok  L14 [search]   7.2s  What is the date of the Amendment No. 2 Manufacturing Agreement betwee
+  ok  L15 [search]   8.0s  What is the date of the Cooperation Agreement (2014 Amendment) between
+  ok  L16 [search]   7.3s  What is the date of the Co-Branding Agreement between About.com, Inc a
+  ok  L17 [search]  10.0s  When does the Joint Venture Agreemen between MJ Syndicated, Inc and SI
+  ok  L18 [search]   8.3s  When does the Endorsement Agreement between National Football League A
+  --  L19 [not_found]   3.9s  When does the Cooperation Agreement between Beike Internet Security Te
+  HAL L20 [search]   9.2s  When does the Sponsorship Agreement between SAN DIEGO BALLPARK FUNDING
+  ok  L21 [search]   7.7s  When does the Endorsement Agreement between MOSSIMO, INC and DAVID DUV
+  ok  L22 [search]   9.3s  When does the Content License Agreement between Emdeon Corporation and
+  --  L23 [not_found]  10.2s  How many days of notice are required to prevent the renewal of the Co-
+  ok  L24 [search]   9.1s  How many days of notice are required to prevent the renewal of the Hos
+  --  L25 [not_found]   5.7s  How many days of notice are required to prevent the renewal of the Web
+  --  L26 [not_found]   3.2s  How many days of notice are required to prevent the renewal of the Str
+  HAL A01 [search]  11.7s  List all agreements governed by the laws of California.
+  HAL A02 [search]  13.3s  List all agreements governed by the laws of New York.
+  HAL A03 [search]   9.6s  List all agreements governed by the laws of People's Republic of China
+  --  A04 [not_found]   5.6s  Which agreements contain a non-compete clause?
+  HAL A05 [search]   9.5s  Which agreements contain an exclusivity commitment?
+  HAL A06 [search]  13.7s  Which agreements can be terminated for convenience, without cause?
+  HAL A07 [search]  10.0s  Which agreements give a party audit rights?
+  --  A08 [not_found]   5.6s  Which agreements contain a most-favored-nation clause?
+  HAL A09 [search]   8.0s  Which agreements are perpetual, with no fixed end date?
+  ok  A10 [search]  11.2s  How many agreements are governed by the laws of California?
+  ok  U01 [not_found]   6.0s  How many days of notice are required to prevent the automatic renewal 
+  ok  U02 [not_found]   3.5s  Which law governs the Cooperation Agreement between Xi'an Zhonghong Ne
+  HAL U03 [search]   5.1s  How many days of notice are required to prevent the automatic renewal 
+  ok  U04 [not_found]   5.4s  How many days of notice are required to prevent the automatic renewal 
+  ok  U05 [not_found]   2.5s  How many days of notice are required to prevent the automatic renewal 
+  ok  U06 [not_found]   3.1s  What was the share price of Lucent Technologies Inc on the date of the
+  ok  U07 [not_found]   3.6s  How many employees does Chang Chen-Bin Architects Office have accordin
+  ok  U08 [not_found]   3.4s  What is the late payment interest rate in the Software Maintenance Agr
+  => accuracy 0.477, hallucination 0.227
+
+== +headers: ingesting into data\eval-enriched-cuad
+  [1/30] ingested ArmstrongFlooringInc_20190107_8-K_EX-10.2_11471795_EX-10.2_Intellectual Property Agreement.pdf
+  [2/30] ingested BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement3.pdf
+  [3/30] ingested BerkshireHillsBancorpInc_20120809_10-Q_EX-10.16_7708169_EX-10.16_Endorsement Agreement.pdf
+  [4/30] ingested BLUEFLYINC_03_27_2002-EX-10.27-e-business Hosting Agreement.PDF
+  [5/30] ingested CHEETAHMOBILEINC_04_22_2014-EX-10.43-Cooperation Agreement.PDF
+  [6/30] ingested CHINARECYCLINGENERGYCORP_11_14_2013-EX-10.6-Cooperation Agreement.PDF
+  [7/30] ingested EbixInc_20010515_10-Q_EX-10.3_4049767_EX-10.3_Co-Branding Agreement.pdf
+  [8/30] ingested EmbarkComInc_19991008_S-1A_EX-10.10_6487661_EX-10.10_Co-Branding Agreement.pdf
+  [9/30] ingested GopageCorp_20140221_10-K_EX-10.1_8432966_EX-10.1_Content License Agreement.pdf
+  [10/30] ingested GridironBionutrientsInc_20171206_8-K_EX-10.1_10972555_EX-10.1_Endorsement Agreement.pdf
+  [11/30] ingested HerImports_20161018_8-KA_EX-10.14_9765707_EX-10.14_Maintenance Agreement.pdf
+  [12/30] ingested ImperialGardenResortInc_20161028_DRS (on F-1)_EX-10.13_9963189_EX-10.13_Outsourcing Agreement.pdf
+  [13/30] ingested INTELLIGENTHIGHWAYSOLUTIONS,INC_01_18_2018-EX-10.1-Strategic Alliance Agreement.PDF
+  [14/30] ingested LegacyEducationAllianceInc_20141110_8-K_EX-10.9_8828866_EX-10.9_Endorsement Agreement.pdf
+  [15/30] ingested Loop Industries, Inc. - Marketing Agreement.PDF
+  [16/30] ingested MIDDLEBROOKPHARMACEUTICALS,INC_03_18_2010-EX-10.1-PROMOTION AGREEMENT.PDF
+  [17/30] ingested MJBIOTECH,INC_12_06_2018-EX-99.01-JOINT VENTURE AGREEMENT.PDF
+  [18/30] ingested MOSSIMOINC_04_14_2000-EX-10.14-ENDORSEMENT AGREEMENT.PDF
+  [19/30] ingested MphaseTechnologiesInc_20030911_10-K_EX-10.15_1560667_EX-10.15_Co-Branding Agreement.pdf
+  [20/30] ingested NATIONALPROCESSINGINC_07_18_1996-EX-10.4-SPONSORSHIP AGREEMENT.PDF
+  [21/30] ingested PANDIONTHERAPEUTICSHOLDCOLLC_05_22_2020-EX-10.17-CONSULTING AGREEMENT.PDF
+  [22/30] ingested PhoenixNewMediaLtd_20110421_F-1_EX-10.17_6958322_EX-10.17_Content License Agreement.pdf
+  [23/30] ingested QIWI_06_16_2017-EX-99.(D)(2)-COOPERATION AGREEMENT.PDF
+  [24/30] ingested RaeSystemsInc_20001114_10-Q_EX-10.57_2631790_EX-10.57_Co-Branding Agreement.pdf
+  [25/30] ingested RUBIOSRESTAURANTSINC_03_31_2008-EX-10.75-SPONSORSHIP AGREEMENT.PDF
+  [26/30] ingested SPIENERGYCO,LTD_03_09_2011-EX-99.5-OPERATIONS AND MAINTENANCE AGREEMENT.PDF
+  [27/30] ingested TUNIUCORP_03_06_2014-EX-10-COOPERATION AGREEMENT.PDF
+  [28/30] ingested WARNINGMANAGEMENTSERVICESINC_12_10_1999-EX-10-ENDORSEMENT AGREEMENT.PDF
+  [29/30] ingested WEBHELPCOMINC_03_22_2000-EX-10.8-HOSTING AGREEMENT.PDF
+  [30/30] ingested WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content License Agreement.pdf
+  --  L01 [not_found]   4.0s  Which law governs the Endorsement Agreement between National Football 
+  HAL L02 [search]   6.0s  Which law governs the Outsourcing Contract on Development of Miaoli Ro
+  --  L03 [not_found]   6.3s  Which law governs the Talent Endorsement Agreement between Tigrent Lea
+  ok  L04 [search]   6.3s  Which law governs the Content License Agreement between Emdeon Corpora
+  --  L05 [search]   7.4s  Which law governs the Sponsorship Agreement between National Processin
+  ok  L06 [search]   8.0s  Which law governs the Cooperation Agreement (2014 Amendment) between N
+  --  L07 [not_found]   5.6s  Which law governs the Endorsement Agreement between FAMOUS FIXINS, INC
+  --  L08 [not_found]   3.6s  Which law governs the Cooperation Agreement between Beike Internet Sec
+  ok  L09 [search]   7.5s  What is the date of the Co-Branding Agreement between Lucent Technolog
+  ok  L10 [search]   7.5s  What is the date of the Endorsement Agreement between MOSSIMO, INC and
+  ok  L11 [search]   8.8s  What is the date of the Outsourcing Contract on Development of Miaoli 
+  ok  L12 [search]   8.4s  What is the date of the Strategic Alliance Agreement between Bravatek 
+  ok  L13 [search]   8.2s  What is the date of the Co-Branding Agreement between Snap Technologie
+  ok  L14 [search]   9.7s  What is the date of the Amendment No. 2 Manufacturing Agreement betwee
+  ok  L15 [search]   7.3s  What is the date of the Cooperation Agreement (2014 Amendment) between
+  ok  L16 [search]   7.0s  What is the date of the Co-Branding Agreement between About.com, Inc a
+  --  L17 [not_found]   3.0s  When does the Joint Venture Agreemen between MJ Syndicated, Inc and SI
+  ok  L18 [search]   5.9s  When does the Endorsement Agreement between National Football League A
+  --  L19 [search]   8.3s  When does the Cooperation Agreement between Beike Internet Security Te
+  ok  L20 [search]  10.5s  When does the Sponsorship Agreement between SAN DIEGO BALLPARK FUNDING
+  ok  L21 [search]   9.9s  When does the Endorsement Agreement between MOSSIMO, INC and DAVID DUV
+  ok  L22 [search]   8.8s  When does the Content License Agreement between Emdeon Corporation and
+  ok  L23 [search]   8.3s  How many days of notice are required to prevent the renewal of the Co-
+  ok  L24 [search]   8.4s  How many days of notice are required to prevent the renewal of the Hos
+  ok  L25 [search]   7.1s  How many days of notice are required to prevent the renewal of the Web
+  ok  L26 [search]   7.1s  How many days of notice are required to prevent the renewal of the Str
+  HAL A01 [search]  16.6s  List all agreements governed by the laws of California.
+  HAL A02 [search]  10.2s  List all agreements governed by the laws of New York.
+  HAL A03 [search]  11.4s  List all agreements governed by the laws of People's Republic of China
+  --  A04 [search]   9.3s  Which agreements contain a non-compete clause?
+  HAL A05 [search]  12.2s  Which agreements contain an exclusivity commitment?
+  HAL A06 [search]  11.0s  Which agreements can be terminated for convenience, without cause?
+  HAL A07 [search]   9.8s  Which agreements give a party audit rights?
+  --  A08 [not_found]   6.1s  Which agreements contain a most-favored-nation clause?
+  HAL A09 [search]   8.1s  Which agreements are perpetual, with no fixed end date?
+  HAL A10 [search]  10.0s  How many agreements are governed by the laws of California?
+  ok  U01 [not_found]   6.8s  How many days of notice are required to prevent the automatic renewal 
+  ok  U02 [not_found]   3.4s  Which law governs the Cooperation Agreement between Xi'an Zhonghong Ne
+  ok  U03 [not_found]   3.2s  How many days of notice are required to prevent the automatic renewal 
+  ok  U04 [not_found]   3.5s  How many days of notice are required to prevent the automatic renewal 
+  ok  U05 [not_found]   3.0s  How many days of notice are required to prevent the automatic renewal 
+  ok  U06 [not_found]   1.6s  What was the share price of Lucent Technologies Inc on the date of the
+  ok  U07 [not_found]   4.2s  How many employees does Chang Chen-Bin Architects Office have accordin
+  ok  U08 [not_found]   4.1s  What is the late payment interest rate in the Software Maintenance Agr
+  => accuracy 0.591, hallucination 0.205
+
+== +scoping: ingesting into data\eval-enriched-cuad
+  [1/30] unchanged ArmstrongFlooringInc_20190107_8-K_EX-10.2_11471795_EX-10.2_Intellectual Property Agreement.pdf
+  [2/30] unchanged BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement3.pdf
+  [3/30] unchanged BerkshireHillsBancorpInc_20120809_10-Q_EX-10.16_7708169_EX-10.16_Endorsement Agreement.pdf
+  [4/30] unchanged BLUEFLYINC_03_27_2002-EX-10.27-e-business Hosting Agreement.PDF
+  [5/30] unchanged CHEETAHMOBILEINC_04_22_2014-EX-10.43-Cooperation Agreement.PDF
+  [6/30] unchanged CHINARECYCLINGENERGYCORP_11_14_2013-EX-10.6-Cooperation Agreement.PDF
+  [7/30] unchanged EbixInc_20010515_10-Q_EX-10.3_4049767_EX-10.3_Co-Branding Agreement.pdf
+  [8/30] unchanged EmbarkComInc_19991008_S-1A_EX-10.10_6487661_EX-10.10_Co-Branding Agreement.pdf
+  [9/30] unchanged GopageCorp_20140221_10-K_EX-10.1_8432966_EX-10.1_Content License Agreement.pdf
+  [10/30] unchanged GridironBionutrientsInc_20171206_8-K_EX-10.1_10972555_EX-10.1_Endorsement Agreement.pdf
+  [11/30] unchanged HerImports_20161018_8-KA_EX-10.14_9765707_EX-10.14_Maintenance Agreement.pdf
+  [12/30] unchanged ImperialGardenResortInc_20161028_DRS (on F-1)_EX-10.13_9963189_EX-10.13_Outsourcing Agreement.pdf
+  [13/30] unchanged INTELLIGENTHIGHWAYSOLUTIONS,INC_01_18_2018-EX-10.1-Strategic Alliance Agreement.PDF
+  [14/30] unchanged LegacyEducationAllianceInc_20141110_8-K_EX-10.9_8828866_EX-10.9_Endorsement Agreement.pdf
+  [15/30] unchanged Loop Industries, Inc. - Marketing Agreement.PDF
+  [16/30] unchanged MIDDLEBROOKPHARMACEUTICALS,INC_03_18_2010-EX-10.1-PROMOTION AGREEMENT.PDF
+  [17/30] unchanged MJBIOTECH,INC_12_06_2018-EX-99.01-JOINT VENTURE AGREEMENT.PDF
+  [18/30] unchanged MOSSIMOINC_04_14_2000-EX-10.14-ENDORSEMENT AGREEMENT.PDF
+  [19/30] unchanged MphaseTechnologiesInc_20030911_10-K_EX-10.15_1560667_EX-10.15_Co-Branding Agreement.pdf
+  [20/30] unchanged NATIONALPROCESSINGINC_07_18_1996-EX-10.4-SPONSORSHIP AGREEMENT.PDF
+  [21/30] unchanged PANDIONTHERAPEUTICSHOLDCOLLC_05_22_2020-EX-10.17-CONSULTING AGREEMENT.PDF
+  [22/30] unchanged PhoenixNewMediaLtd_20110421_F-1_EX-10.17_6958322_EX-10.17_Content License Agreement.pdf
+  [23/30] unchanged QIWI_06_16_2017-EX-99.(D)(2)-COOPERATION AGREEMENT.PDF
+  [24/30] unchanged RaeSystemsInc_20001114_10-Q_EX-10.57_2631790_EX-10.57_Co-Branding Agreement.pdf
+  [25/30] unchanged RUBIOSRESTAURANTSINC_03_31_2008-EX-10.75-SPONSORSHIP AGREEMENT.PDF
+  [26/30] unchanged SPIENERGYCO,LTD_03_09_2011-EX-99.5-OPERATIONS AND MAINTENANCE AGREEMENT.PDF
+  [27/30] unchanged TUNIUCORP_03_06_2014-EX-10-COOPERATION AGREEMENT.PDF
+  [28/30] unchanged WARNINGMANAGEMENTSERVICESINC_12_10_1999-EX-10-ENDORSEMENT AGREEMENT.PDF
+  [29/30] unchanged WEBHELPCOMINC_03_22_2000-EX-10.8-HOSTING AGREEMENT.PDF
+  [30/30] unchanged WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content License Agreement.pdf
+  --  L01 [not_found]   7.7s  Which law governs the Endorsement Agreement between National Football 
+  HAL L02 [search]   8.0s  Which law governs the Outsourcing Contract on Development of Miaoli Ro
+  --  L03 [not_found]   6.3s  Which law governs the Talent Endorsement Agreement between Tigrent Lea
+  ok  L04 [search]   6.3s  Which law governs the Content License Agreement between Emdeon Corpora
+  --  L05 [search]   7.4s  Which law governs the Sponsorship Agreement between National Processin
+  ok  L06 [search]   7.9s  Which law governs the Cooperation Agreement (2014 Amendment) between N
+  --  L07 [not_found]   5.6s  Which law governs the Endorsement Agreement between FAMOUS FIXINS, INC
+  --  L08 [not_found]   3.4s  Which law governs the Cooperation Agreement between Beike Internet Sec
+  ok  L09 [search]   5.5s  What is the date of the Co-Branding Agreement between Lucent Technolog
+  ok  L10 [search]   7.4s  What is the date of the Endorsement Agreement between MOSSIMO, INC and
+  ok  L11 [search]   8.9s  What is the date of the Outsourcing Contract on Development of Miaoli 
+  ok  L12 [search]   8.4s  What is the date of the Strategic Alliance Agreement between Bravatek 
+  ok  L13 [search]   8.3s  What is the date of the Co-Branding Agreement between Snap Technologie
+  ok  L14 [search]   9.8s  What is the date of the Amendment No. 2 Manufacturing Agreement betwee
+  ok  L15 [search]   7.3s  What is the date of the Cooperation Agreement (2014 Amendment) between
+  ok  L16 [search]   6.9s  What is the date of the Co-Branding Agreement between About.com, Inc a
+  --  L17 [not_found]   3.0s  When does the Joint Venture Agreemen between MJ Syndicated, Inc and SI
+  ok  L18 [search]   5.9s  When does the Endorsement Agreement between National Football League A
+  --  L19 [search]   8.4s  When does the Cooperation Agreement between Beike Internet Security Te
+  ok  L20 [search]  10.4s  When does the Sponsorship Agreement between SAN DIEGO BALLPARK FUNDING
+  ok  L21 [search]  10.1s  When does the Endorsement Agreement between MOSSIMO, INC and DAVID DUV
+  ok  L22 [search]   8.8s  When does the Content License Agreement between Emdeon Corporation and
+  ok  L23 [search]   8.3s  How many days of notice are required to prevent the renewal of the Co-
+  ok  L24 [search]   8.4s  How many days of notice are required to prevent the renewal of the Hos
+  ok  L25 [search]   7.1s  How many days of notice are required to prevent the renewal of the Web
+  ok  L26 [search]   7.2s  How many days of notice are required to prevent the renewal of the Str
+  HAL A01 [search]  16.5s  List all agreements governed by the laws of California.
+  HAL A02 [search]  10.2s  List all agreements governed by the laws of New York.
+  HAL A03 [search]  11.3s  List all agreements governed by the laws of People's Republic of China
+  --  A04 [search]   9.3s  Which agreements contain a non-compete clause?
+  HAL A05 [search]  12.1s  Which agreements contain an exclusivity commitment?
+  HAL A06 [search]  10.9s  Which agreements can be terminated for convenience, without cause?
+  HAL A07 [search]   9.7s  Which agreements give a party audit rights?
+  --  A08 [not_found]   6.1s  Which agreements contain a most-favored-nation clause?
+  HAL A09 [search]   8.0s  Which agreements are perpetual, with no fixed end date?
+  HAL A10 [search]   9.8s  How many agreements are governed by the laws of California?
+  ok  U01 [not_found]   6.7s  How many days of notice are required to prevent the automatic renewal 
+  ok  U02 [not_found]   3.3s  Which law governs the Cooperation Agreement between Xi'an Zhonghong Ne
+  ok  U03 [not_found]   3.1s  How many days of notice are required to prevent the automatic renewal 
+  ok  U04 [not_found]   3.5s  How many days of notice are required to prevent the automatic renewal 
+  ok  U05 [not_found]   2.9s  How many days of notice are required to prevent the automatic renewal 
+  ok  U06 [not_found]   1.6s  What was the share price of Lucent Technologies Inc on the date of the
+  ok  U07 [not_found]   4.1s  How many employees does Chang Chen-Bin Architects Office have accordin
+  ok  U08 [not_found]   4.1s  What is the late payment interest rate in the Software Maintenance Agr
+  => accuracy 0.591, hallucination 0.205
+
+== full: ingesting into data\eval-enriched-cuad
+  [1/30] unchanged ArmstrongFlooringInc_20190107_8-K_EX-10.2_11471795_EX-10.2_Intellectual Property Agreement.pdf
+  [2/30] unchanged BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement3.pdf
+  [3/30] unchanged BerkshireHillsBancorpInc_20120809_10-Q_EX-10.16_7708169_EX-10.16_Endorsement Agreement.pdf
+  [4/30] unchanged BLUEFLYINC_03_27_2002-EX-10.27-e-business Hosting Agreement.PDF
+  [5/30] unchanged CHEETAHMOBILEINC_04_22_2014-EX-10.43-Cooperation Agreement.PDF
+  [6/30] unchanged CHINARECYCLINGENERGYCORP_11_14_2013-EX-10.6-Cooperation Agreement.PDF
+  [7/30] unchanged EbixInc_20010515_10-Q_EX-10.3_4049767_EX-10.3_Co-Branding Agreement.pdf
+  [8/30] unchanged EmbarkComInc_19991008_S-1A_EX-10.10_6487661_EX-10.10_Co-Branding Agreement.pdf
+  [9/30] unchanged GopageCorp_20140221_10-K_EX-10.1_8432966_EX-10.1_Content License Agreement.pdf
+  [10/30] unchanged GridironBionutrientsInc_20171206_8-K_EX-10.1_10972555_EX-10.1_Endorsement Agreement.pdf
+  [11/30] unchanged HerImports_20161018_8-KA_EX-10.14_9765707_EX-10.14_Maintenance Agreement.pdf
+  [12/30] unchanged ImperialGardenResortInc_20161028_DRS (on F-1)_EX-10.13_9963189_EX-10.13_Outsourcing Agreement.pdf
+  [13/30] unchanged INTELLIGENTHIGHWAYSOLUTIONS,INC_01_18_2018-EX-10.1-Strategic Alliance Agreement.PDF
+  [14/30] unchanged LegacyEducationAllianceInc_20141110_8-K_EX-10.9_8828866_EX-10.9_Endorsement Agreement.pdf
+  [15/30] unchanged Loop Industries, Inc. - Marketing Agreement.PDF
+  [16/30] unchanged MIDDLEBROOKPHARMACEUTICALS,INC_03_18_2010-EX-10.1-PROMOTION AGREEMENT.PDF
+  [17/30] unchanged MJBIOTECH,INC_12_06_2018-EX-99.01-JOINT VENTURE AGREEMENT.PDF
+  [18/30] unchanged MOSSIMOINC_04_14_2000-EX-10.14-ENDORSEMENT AGREEMENT.PDF
+  [19/30] unchanged MphaseTechnologiesInc_20030911_10-K_EX-10.15_1560667_EX-10.15_Co-Branding Agreement.pdf
+  [20/30] unchanged NATIONALPROCESSINGINC_07_18_1996-EX-10.4-SPONSORSHIP AGREEMENT.PDF
+  [21/30] unchanged PANDIONTHERAPEUTICSHOLDCOLLC_05_22_2020-EX-10.17-CONSULTING AGREEMENT.PDF
+  [22/30] unchanged PhoenixNewMediaLtd_20110421_F-1_EX-10.17_6958322_EX-10.17_Content License Agreement.pdf
+  [23/30] unchanged QIWI_06_16_2017-EX-99.(D)(2)-COOPERATION AGREEMENT.PDF
+  [24/30] unchanged RaeSystemsInc_20001114_10-Q_EX-10.57_2631790_EX-10.57_Co-Branding Agreement.pdf
+  [25/30] unchanged RUBIOSRESTAURANTSINC_03_31_2008-EX-10.75-SPONSORSHIP AGREEMENT.PDF
+  [26/30] unchanged SPIENERGYCO,LTD_03_09_2011-EX-99.5-OPERATIONS AND MAINTENANCE AGREEMENT.PDF
+  [27/30] unchanged TUNIUCORP_03_06_2014-EX-10-COOPERATION AGREEMENT.PDF
+  [28/30] unchanged WARNINGMANAGEMENTSERVICESINC_12_10_1999-EX-10-ENDORSEMENT AGREEMENT.PDF
+  [29/30] unchanged WEBHELPCOMINC_03_22_2000-EX-10.8-HOSTING AGREEMENT.PDF
+  [30/30] unchanged WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content License Agreement.pdf
+  HAL L01 [error]   0.0s  Which law governs the Endorsement Agreement between National Football 
+  HAL L02 [error]   0.0s  Which law governs the Outsourcing Contract on Development of Miaoli Ro
+  ok  L03 [sql]   6.5s  Which law governs the Talent Endorsement Agreement between Tigrent Lea
+  ok  L04 [sql]   5.8s  Which law governs the Content License Agreement between Emdeon Corpora
+  --  L05 [sql]   6.2s  Which law governs the Sponsorship Agreement between National Processin
+  ok  L06 [sql]   8.5s  Which law governs the Cooperation Agreement (2014 Amendment) between N
+  HAL L07 [error]   0.0s  Which law governs the Endorsement Agreement between FAMOUS FIXINS, INC
+  --  L08 [not_found]   9.1s  Which law governs the Cooperation Agreement between Beike Internet Sec
+  ok  L09 [sql]   6.1s  What is the date of the Co-Branding Agreement between Lucent Technolog
+  HAL L10 [error]   0.0s  What is the date of the Endorsement Agreement between MOSSIMO, INC and
+  HAL L11 [error]   0.0s  What is the date of the Outsourcing Contract on Development of Miaoli 
+  ok  L12 [sql]   6.3s  What is the date of the Strategic Alliance Agreement between Bravatek 
+  ok  L13 [sql]   6.4s  What is the date of the Co-Branding Agreement between Snap Technologie
+  HAL L14 [error]   0.0s  What is the date of the Amendment No. 2 Manufacturing Agreement betwee
+  HAL L15 [error]   0.0s  What is the date of the Cooperation Agreement (2014 Amendment) between
+  ok  L16 [sql]   5.7s  What is the date of the Co-Branding Agreement between About.com, Inc a
+  HAL L17 [error]   0.0s  When does the Joint Venture Agreemen between MJ Syndicated, Inc and SI
+  ok  L18 [search]   8.9s  When does the Endorsement Agreement between National Football League A
+  --  L19 [search]  12.3s  When does the Cooperation Agreement between Beike Internet Security Te
+  ok  L20 [sql]   9.2s  When does the Sponsorship Agreement between SAN DIEGO BALLPARK FUNDING
+  HAL L21 [error]   0.0s  When does the Endorsement Agreement between MOSSIMO, INC and DAVID DUV
+  ok  L22 [sql]   5.7s  When does the Content License Agreement between Emdeon Corporation and
+  HAL L23 [error]   0.0s  How many days of notice are required to prevent the renewal of the Co-
+  HAL L24 [error]   0.0s  How many days of notice are required to prevent the renewal of the Hos
+  HAL L25 [error]   0.0s  How many days of notice are required to prevent the renewal of the Web
+  HAL L26 [error]   0.0s  How many days of notice are required to prevent the renewal of the Str
+  HAL A01 [sql]  13.0s  List all agreements governed by the laws of California.
+  HAL A02 [sql]  21.9s  List all agreements governed by the laws of New York.
+  HAL A03 [error]   0.0s  List all agreements governed by the laws of People's Republic of China
+  HAL A04 [sql]  25.1s  Which agreements contain a non-compete clause?
+  HAL A05 [sql]  32.4s  Which agreements contain an exclusivity commitment?
+  HAL A06 [sql]  38.1s  Which agreements can be terminated for convenience, without cause?
+  HAL A07 [sql]  29.1s  Which agreements give a party audit rights?
+  ok  A08 [sql]  11.3s  Which agreements contain a most-favored-nation clause?
+  HAL A09 [sql]  12.8s  Which agreements are perpetual, with no fixed end date?
+  HAL A10 [sql]   4.8s  How many agreements are governed by the laws of California?
+  HAL U01 [error]   0.0s  How many days of notice are required to prevent the automatic renewal 
+  HAL U02 [error]   0.0s  Which law governs the Cooperation Agreement between Xi'an Zhonghong Ne
+  HAL U03 [error]   0.0s  How many days of notice are required to prevent the automatic renewal 
+  ok  U04 [sql]   5.3s  How many days of notice are required to prevent the automatic renewal 
+  HAL U05 [error]   0.0s  How many days of notice are required to prevent the automatic renewal 
+  ok  U06 [not_found]   4.7s  What was the share price of Lucent Technologies Inc on the date of the
+  ok  U07 [not_found]   3.1s  How many employees does Chang Chen-Bin Architects Office have accordin
+  ok  U08 [not_found]   3.1s  What is the late payment interest rate in the Software Maintenance Agr
+  => accuracy 0.341, hallucination 0.591
+
+report: evals\results-cuad\report.html

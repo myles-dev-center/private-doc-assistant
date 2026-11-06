@@ -34,6 +34,8 @@ class Settings(BaseSettings):
     embed_query_prefix: str = "search_query: "
 
     data_dir: Path = Path("data/store")
+    # Extraction schema (one YAML per document type); None = schemas/contract.yaml.
+    schema_path: Path | None = None
     chunk_tokens: int = 220
     chunk_overlap: int = 40
     top_k: int = 6
@@ -42,6 +44,10 @@ class Settings(BaseSettings):
     context_headers: bool = True  # prepend document identity to each chunk
     doc_scoping: bool = True  # question names a document (ID, counterparty) -> search only that document
     structured: bool = True  # route aggregate questions to the extracted table
+    # A question that names one document is answered from the whole document (plus its
+    # extracted record) when it is at most this many characters; longer ones use search.
+    # 0 = always search.
+    full_doc_chars: int = 60_000
 
     @property
     def db_path(self) -> Path:

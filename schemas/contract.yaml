@@ -9,6 +9,9 @@ description: A commercial contract between our company (Alder Precision GmbH) an
 # Fields prepended to every chunk of the document so that a chunk taken out of
 # context still says which contract it belongs to.
 header_fields: [contract_id, contract_type, counterparty]
+# Fields that identify one document when a question names them (contract no.,
+# counterparty) - such questions search only that document. Defaults to header_fields.
+scope_fields: [contract_id, counterparty]
 fields:
   - name: contract_id
     type: text

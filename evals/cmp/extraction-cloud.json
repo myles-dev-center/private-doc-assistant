@@ -1,0 +1,48 @@
+{
+  "fields": {
+    "governing_law": [
+      26,
+      27
+    ],
+    "agreement_date": [
+      26,
+      27
+    ],
+    "expiration_date": [
+      11,
+      15
+    ],
+    "renewal_notice_days": [
+      7,
+      7
+    ],
+    "non_compete": [
+      25,
+      30
+    ],
+    "exclusivity": [
+      26,
+      30
+    ],
+    "termination_for_convenience": [
+      24,
+      30
+    ],
+    "cap_on_liability": [
+      22,
+      30
+    ],
+    "audit_rights": [
+      29,
+      30
+    ],
+    "most_favored_nation": [
+      27,
+      30
+    ]
+  },
+  "total": [
+    223,
+    256
+  ]
+}

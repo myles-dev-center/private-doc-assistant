@@ -1,4 +1,4 @@
-from docassist.evaluation import dates_in, ids_in, numbers_in, score, summarize
+from docassist.evaluation import dates_in, docs_in, ids_in, numbers_in, score, summarize
 from docassist.pipeline import NOT_FOUND, Answer, Source
 
 
@@ -10,6 +10,8 @@ def test_date_formats_normalized():
     assert dates_in("ends on 31 March 2027") == {"2027-03-31"}
     assert dates_in("ends March 31, 2027") == {"2027-03-31"}
     assert dates_in("ends 31.03.2027 or 2027-04-01") == {"2027-03-31", "2027-04-01"}
+    assert dates_in("ends 3/31/2027") == {"2027-03-31"}
+    assert dates_in("made this 31st day of March, 2027") == {"2027-03-31"}
 
 
 def test_numbers_normalized():
@@ -45,6 +47,15 @@ def test_aggregate_requires_exact_set_and_reads_sql_rows():
     s = score(q("ids", exp, "aggregate"), extra)
     assert not s.correct and s.recall == 1.0 and s.detail["extra"] == ["AP-SA-2024-071"]
     assert ids_in("AP-SA-2024-017 and AP-NDA-2025-016") == {"AP-SA-2024-017", "AP-NDA-2025-016"}
+
+
+def test_aggregate_by_document_aliases():
+    docs = {"a.pdf": ["a.pdf", "Freeze Tag"], "b.pdf": ["b.pdf", "Corio"], "c.pdf": ["c.pdf", "Adams Golf"]}
+    assert docs_in("FREEZE TAG, INC. and corio", docs) == {"a.pdf", "b.pdf"}
+    assert docs_in("Corioland", docs) == set()
+    ans = Answer("?", "Two match.", "sql", columns=["filename"], rows=[["a.pdf"], ["c.pdf"]])
+    assert score(q("docs", ["a.pdf", "c.pdf"], "aggregate"), ans, docs).correct
+    assert not score(q("docs", ["a.pdf"], "aggregate"), ans, docs).correct
 
 
 def test_summary():

@@ -49,7 +49,7 @@ class Source:
 class Answer:
     question: str
     answer: str
-    route: str  # "search" | "sql" | "not_found"
+    route: str  # "search" | "document" | "sql" | "not_found"
     sources: list[Source] = field(default_factory=list)
     sql: str | None = None
     columns: list[str] | None = None
@@ -61,11 +61,11 @@ class Answer:
 
 
 class Assistant:
-    def __init__(self, settings: Settings, schema_path: Path | None = DEFAULT_SCHEMA):
+    def __init__(self, settings: Settings, schema_path: Path | None = None):
         self.s = settings
         self.llm = LLM(settings)
         self.store = Store(settings.db_path)
-        self.schema = Schema.load(schema_path) if schema_path else None
+        self.schema = Schema.load(schema_path or settings.schema_path or DEFAULT_SCHEMA)
         self.retriever = Retriever(self.store, self.llm, hybrid=settings.hybrid)
 
     # ------------------------------------------------------------ ingest
@@ -90,6 +90,7 @@ class Assistant:
         vectors = self.llm.embed([r[3] for r in rows])
         doc_id = self.store.add_document(path.name, sha, len(doc.pages), doc.ocr_pages, header)
         self.store.add_chunks(doc_id, rows, vectors)
+        self.store.add_pages(doc_id, [(p.number, p.text) for p in doc.pages])
         if record is not None and self.schema:
             self.store.save_extraction(doc_id, self.schema.name, record)
         self.store.commit()
@@ -127,7 +128,10 @@ class Assistant:
         t0 = time.time()
         ans = None
         if self.s.structured and self.schema:
-            ans = self._ask_table(question)
+            try:
+                ans = self._ask_table(question)
+            except Exception:  # a bad model reply must not cost the user an answer
+                log.exception("table route failed, falling back to search")
         if ans is None:
             ans = self._ask_search(question)
         ans.seconds = round(time.time() - t0, 2)
@@ -138,7 +142,9 @@ class Assistant:
 
     def _ask_table(self, question: str) -> Answer | None:
         rows = self.records()
-        if not rows:
+        if not rows or self.scope(question):
+            # A question that names a document is answered from its text, with citations;
+            # its table row may be missing the very field asked about.
             return None
         decision = route(self.llm, self.schema, question, dt.date.today().isoformat())
         if decision["route"] != "sql":
@@ -154,10 +160,11 @@ class Assistant:
             except Exception:
                 log.warning("SQL failed twice, falling back to search: %s", sql)
                 return None
-        if not result:
-            # An empty result usually means an over-strict filter (e.g. exact text match),
-            # not a true "nothing matches"; let document search have a go.
-            log.info("SQL returned no rows, falling back to search: %s", sql)
+        if not has_values(cols, result, {"filename", *self.schema.header_fields}):
+            # No rows usually means an over-strict filter (e.g. exact text match), and rows
+            # with only NULLs mean extraction missed the field - not a true "nothing matches";
+            # let document search have a go.
+            log.info("SQL returned nothing usable, falling back to search: %s", sql)
             return None
         text = self.llm.chat(
             TABLE_ANSWER_SYSTEM,
@@ -179,14 +186,18 @@ class Assistant:
         names = self.store.doc_ids_by_filename()
         hits = set()
         for rec in self.records():
-            for f in self.schema.header_fields:
+            for f in self.schema.scope_fields:
                 v = rec.get(f)
-                if isinstance(v, str) and len(v) >= 6 and f != "contract_type" and normalize(v) in q:
+                if isinstance(v, str) and len(v) >= 6 and normalize(v) in q:
                     hits.add(names[rec["filename"]])
         return hits or None
 
     def _ask_search(self, question: str) -> Answer:
-        hits = self.retriever.search(question, self.s.top_k, self.scope(question))
+        scope = self.scope(question)
+        hits = self._whole_document(scope)
+        route = "document" if hits else "search"
+        if not hits:
+            hits = self.retriever.search(question, self.s.top_k, scope)
         if not hits:
             return Answer(question, NOT_FOUND, "not_found")
         context = "\n\n".join(self._excerpt(i, h) for i, h in enumerate(hits, 1))
@@ -195,7 +206,30 @@ class Assistant:
             return Answer(question, NOT_FOUND, "not_found")
         cited = sorted({int(n) for n in re.findall(r"\[(\d+)\]", text) if 0 < int(n) <= len(hits)})
         sources = [Source(n, hits[n - 1].filename, hits[n - 1].page, hits[n - 1].text) for n in cited]
-        return Answer(question, text, "search", sources=sources)
+        return Answer(question, text, route, sources=sources)
+
+    def _whole_document(self, scope: set[int] | None) -> list[StoredChunk]:
+        """All pages of the one document a question names, plus its extracted record, if it fits.
+
+        Search can miss the clause that answers a question about a known document
+        (e.g. it returns "a corporation organized under the laws of Delaware" for a
+        governing-law question). A typical agreement fits in the context window,
+        so the model may as well read all of it.
+        """
+        if not (scope and len(scope) == 1 and self.s.full_doc_chars):
+            return []
+        doc_id = next(iter(scope))
+        pages = self.store.document_pages(doc_id)
+        if not pages or sum(len(t) for _, t in pages) > self.s.full_doc_chars:
+            return []
+        doc = self.store.document_by_id(doc_id)
+        hits = [StoredChunk(-1, doc_id, doc["filename"], p, t, doc["header"]) for p, t in pages]
+        rec = next((r for r in self.records() if r["filename"] == doc["filename"]), None)
+        if rec:
+            facts = "; ".join(f"{k}: {v}" for k, v in rec.items() if k != "filename" and v is not None)
+            note = "Fields extracted from this document at ingest (check them against the pages):"
+            hits.insert(0, StoredChunk(-1, doc_id, doc["filename"], None, f"{note} {facts}", doc["header"]))
+        return hits
 
     def _excerpt(self, n: int, h: StoredChunk) -> str:
         # Naive RAG passes only the chunk text; with context headers on, the model
@@ -206,6 +240,11 @@ class Assistant:
         else:
             label = f"[{n}]"
         return f"{label}\n{h.text}"
+
+
+def has_values(cols: list[str], rows: list[list], id_cols: set[str]) -> bool:
+    data = [i for i, c in enumerate(cols) if c not in id_cols]
+    return bool(rows) and (not data or any(r[i] is not None for r in rows for i in data))
 
 
 def normalize(text: str) -> str:

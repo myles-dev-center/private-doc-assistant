@@ -29,6 +29,7 @@ class Schema:
     description: str
     fields: list[Field]
     header_fields: list[str]
+    scope_fields: list[str]
 
     @classmethod
     def load(cls, path: Path) -> Schema:
@@ -37,7 +38,8 @@ class Schema:
         for f in fields:
             if f.type not in SQL_TYPES:
                 raise ValueError(f"{path}: field {f.name} has unknown type {f.type}")
-        return cls(raw["name"], raw.get("description", ""), fields, raw.get("header_fields", []))
+        header = raw.get("header_fields", [])
+        return cls(raw["name"], raw.get("description", ""), fields, header, raw.get("scope_fields", header))
 
     @property
     def columns(self) -> list[str]:
@@ -58,13 +60,24 @@ Rules:
 - Booleans: true or false."""
 
 
-def extract(llm: LLM, schema: Schema, text: str, max_chars: int = 24000) -> dict:
-    user = (
-        f"Document type: {schema.description}\n\nFields:\n{schema.describe()}\n\n"
-        f"Document:\n<<<\n{text[:max_chars]}\n>>>\n\nReturn the JSON object."
-    )
-    raw = llm.chat_json(EXTRACT_SYSTEM, user, max_tokens=700)
-    return {f.name: coerce(raw.get(f.name), f.type) for f in schema.fields}
+def extract(llm: LLM, schema: Schema, text: str, max_chars: int = 24000, overlap: int = 1000) -> dict:
+    """One record per document. Long documents are read in overlapping parts, because
+    clauses such as governing law often sit at the very end; the first value found wins,
+    and a boolean is true if any part says so."""
+    parts = [text[i : i + max_chars] for i in range(0, max(len(text), 1), max_chars - overlap)]
+    record: dict = {f.name: None for f in schema.fields}
+    for n, part in enumerate(parts, 1):
+        where = f" (part {n} of {len(parts)}; use null for anything this part does not state)" if len(parts) > 1 else ""
+        user = (
+            f"Document type: {schema.description}\n\nFields:\n{schema.describe()}\n\n"
+            f"Document{where}:\n<<<\n{part}\n>>>\n\nReturn the JSON object."
+        )
+        raw = llm.chat_json(EXTRACT_SYSTEM, user, max_tokens=700)
+        for f in schema.fields:
+            v = coerce(raw.get(f.name), f.type)
+            if v is not None and (record[f.name] is None or (f.type == "boolean" and v)):
+                record[f.name] = v
+    return record
 
 
 def coerce(value, ftype: str):
@@ -121,7 +134,7 @@ def records_db(schema: Schema, rows: list[dict]) -> sqlite3.Connection:
 ROUTE_SYSTEM = """You route questions about a collection of documents.
 The collection has also been extracted into one SQLite table (one row per document).
 Decide:
-- "sql" when the question needs data across MANY documents: listing, filtering, counting, summing, comparing, "which/all contracts ...".
+- "sql" when the question needs data across MANY documents: listing, filtering, counting, summing, comparing, "which/all documents ...".
 - "search" when the question is about ONE specific document or needs wording/clauses not in the table.
 For "sql", write ONE SQLite SELECT statement over the table. Always select the identifying columns plus the columns the question is about.
 SQL rules: compare text with LIKE '%...%' (case-insensitive), never with =, because stored values may be longer or worded differently.

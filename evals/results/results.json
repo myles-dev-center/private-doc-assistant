@@ -1,8 +1,9 @@
 {
   "model": "qwen3.5-9b-mtp",
   "embed_model": "text-embedding-nomic-embed-text-v1.5",
+  "corpus": "data\\corpus",
   "endpoint": "http://localhost:1234/v1",
-  "started": "2026-11-05 13:19",
+  "started": "2026-11-06 07:17",
   "configs": {
     "naive": {
       "settings": {
@@ -34,7 +35,26 @@
         "refusal_on_unanswerable": 0.875,
         "citation_accuracy": 1.0,
         "aggregate_recall": 0.079,
-        "median_seconds": 5.27
+        "median_seconds": 5.29,
+        "usage": {
+          "ingest": {
+            "calls": 0,
+            "input": 0,
+            "cached": 0,
+            "output": 0,
+            "embed_tokens": 0,
+            "usd": 0.0,
+            "seconds": 14.8
+          },
+          "questions": {
+            "calls": 44,
+            "input": 58695,
+            "cached": 0,
+            "output": 1877,
+            "embed_tokens": 0,
+            "usd": 0.0
+          }
+        }
       },
       "scores": [
         {
@@ -51,7 +71,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.68,
+          "seconds": 8.74,
           "detail": {}
         },
         {
@@ -68,7 +88,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 6.49,
+          "seconds": 6.52,
           "detail": {}
         },
         {
@@ -85,7 +105,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.44,
+          "seconds": 3.5,
           "detail": {}
         },
         {
@@ -102,7 +122,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 5.95,
+          "seconds": 6.09,
           "detail": {}
         },
         {
@@ -122,7 +142,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.34,
+          "seconds": 7.49,
           "detail": {}
         },
         {
@@ -139,7 +159,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 8.65,
+          "seconds": 8.81,
           "detail": {}
         },
         {
@@ -156,7 +176,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 5.0,
+          "seconds": 5.03,
           "detail": {}
         },
         {
@@ -173,7 +193,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 2.16,
+          "seconds": 2.24,
           "detail": {}
         },
         {
@@ -190,7 +210,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 5.99,
+          "seconds": 6.0,
           "detail": {}
         },
         {
@@ -207,7 +227,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 5.26,
+          "seconds": 5.29,
           "detail": {}
         },
         {
@@ -224,7 +244,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.29,
+          "seconds": 3.28,
           "detail": {}
         },
         {
@@ -241,7 +261,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 6.26,
+          "seconds": 6.39,
           "detail": {}
         },
         {
@@ -261,7 +281,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 5.14,
+          "seconds": 5.24,
           "detail": {}
         },
         {
@@ -278,7 +298,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.03,
+          "seconds": 3.04,
           "detail": {}
         },
         {
@@ -295,7 +315,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.62,
+          "seconds": 7.71,
           "detail": {}
         },
         {
@@ -312,7 +332,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 5.03,
+          "seconds": 5.0,
           "detail": {}
         },
         {
@@ -329,7 +349,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.21,
+          "seconds": 3.26,
           "detail": {}
         },
         {
@@ -346,7 +366,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.34,
+          "seconds": 8.41,
           "detail": {}
         },
         {
@@ -365,7 +385,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 5.18,
+          "seconds": 5.28,
           "detail": {}
         },
         {
@@ -382,7 +402,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 2.97,
+          "seconds": 3.04,
           "detail": {}
         },
         {
@@ -399,7 +419,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 4.99,
+          "seconds": 5.1,
           "detail": {}
         },
         {
@@ -416,7 +436,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 4.05,
+          "seconds": 6.16,
           "detail": {}
         },
         {
@@ -433,7 +453,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.38,
+          "seconds": 7.53,
           "detail": {}
         },
         {
@@ -469,7 +489,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.07,
+          "seconds": 3.12,
           "detail": {}
         },
         {
@@ -488,7 +508,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.15,
+          "seconds": 3.21,
           "detail": {}
         },
         {
@@ -512,7 +532,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 6.27,
+          "seconds": 6.41,
           "detail": {
             "missing": [
               "AP-LIC-2025-008",
@@ -550,7 +570,7 @@
           "citation_ok": null,
           "recall": 0.1,
           "precision": 1.0,
-          "seconds": 9.04,
+          "seconds": 9.21,
           "detail": {
             "missing": [
               "AP-LIC-2023-020",
@@ -593,7 +613,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 9.55,
+          "seconds": 9.74,
           "detail": {
             "missing": [
               "AP-LIC-2025-008",
@@ -626,7 +646,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 11.01,
+          "seconds": 11.24,
           "detail": {}
         },
         {
@@ -661,7 +681,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 12.06,
+          "seconds": 12.2,
           "detail": {
             "missing": [
               "AP-LIC-2022-009",
@@ -706,7 +726,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 12.4,
+          "seconds": 12.61,
           "detail": {
             "missing": [
               "AP-LIC-2022-009",
@@ -740,7 +760,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 7.87,
+          "seconds": 8.03,
           "detail": {
             "missing": [
               "AP-MSA-2023-017",
@@ -767,7 +787,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 10.68,
+          "seconds": 10.82,
           "detail": {}
         },
         {
@@ -796,7 +816,7 @@
           "citation_ok": null,
           "recall": 0.45454545454545453,
           "precision": 1.0,
-          "seconds": 13.17,
+          "seconds": 13.4,
           "detail": {
             "missing": [
               "AP-LIC-2023-095",
@@ -823,7 +843,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 10.1,
+          "seconds": 10.19,
           "detail": {}
         },
         {
@@ -840,7 +860,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 5.54,
+          "seconds": 5.12,
           "detail": {}
         },
         {
@@ -857,7 +877,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 5.27,
+          "seconds": 4.6,
           "detail": {}
         },
         {
@@ -874,7 +894,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 4.48,
+          "seconds": 1.67,
           "detail": {}
         },
         {
@@ -891,7 +911,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.64,
+          "seconds": 2.9,
           "detail": {}
         },
         {
@@ -908,7 +928,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 2.26,
+          "seconds": 1.75,
           "detail": {}
         },
         {
@@ -925,7 +945,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 4.08,
+          "seconds": 3.47,
           "detail": {}
         },
         {
@@ -942,7 +962,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.71,
+          "seconds": 2.87,
           "detail": {}
         },
         {
@@ -959,7 +979,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.8,
+          "seconds": 3.23,
           "detail": {}
         }
       ]
@@ -994,7 +1014,26 @@
         "refusal_on_unanswerable": 1.0,
         "citation_accuracy": 0.938,
         "aggregate_recall": 0.039,
-        "median_seconds": 8.17
+        "median_seconds": 7.52,
+        "usage": {
+          "ingest": {
+            "calls": 0,
+            "input": 0,
+            "cached": 0,
+            "output": 0,
+            "embed_tokens": 0,
+            "usd": 0.0,
+            "seconds": 0.0
+          },
+          "questions": {
+            "calls": 44,
+            "input": 58766,
+            "cached": 0,
+            "output": 2320,
+            "embed_tokens": 0,
+            "usd": 0.0
+          }
+        }
       },
       "scores": [
         {
@@ -1011,7 +1050,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 11.47,
+          "seconds": 10.75,
           "detail": {}
         },
         {
@@ -1028,7 +1067,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.87,
+          "seconds": 7.13,
           "detail": {}
         },
         {
@@ -1045,7 +1084,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 6.25,
+          "seconds": 5.54,
           "detail": {}
         },
         {
@@ -1062,7 +1101,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 9.31,
+          "seconds": 8.65,
           "detail": {}
         },
         {
@@ -1082,7 +1121,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.87,
+          "seconds": 8.21,
           "detail": {}
         },
         {
@@ -1099,7 +1138,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 9.35,
+          "seconds": 8.68,
           "detail": {}
         },
         {
@@ -1116,7 +1155,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 5.85,
+          "seconds": 5.15,
           "detail": {}
         },
         {
@@ -1133,7 +1172,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 9.97,
+          "seconds": 9.33,
           "detail": {}
         },
         {
@@ -1150,7 +1189,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.17,
+          "seconds": 7.52,
           "detail": {}
         },
         {
@@ -1167,7 +1206,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.19,
+          "seconds": 6.58,
           "detail": {}
         },
         {
@@ -1184,7 +1223,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 6.03,
+          "seconds": 3.25,
           "detail": {}
         },
         {
@@ -1201,7 +1240,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.38,
+          "seconds": 6.72,
           "detail": {}
         },
         {
@@ -1221,7 +1260,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 5.86,
+          "seconds": 5.19,
           "detail": {}
         },
         {
@@ -1238,7 +1277,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 9.02,
+          "seconds": 8.34,
           "detail": {}
         },
         {
@@ -1255,7 +1294,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.18,
+          "seconds": 6.46,
           "detail": {}
         },
         {
@@ -1272,7 +1311,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 10.78,
+          "seconds": 8.06,
           "detail": {}
         },
         {
@@ -1289,7 +1328,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 5.9,
+          "seconds": 5.15,
           "detail": {}
         },
         {
@@ -1306,7 +1345,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 9.19,
+          "seconds": 8.58,
           "detail": {}
         },
         {
@@ -1325,7 +1364,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 5.89,
+          "seconds": 5.25,
           "detail": {}
         },
         {
@@ -1342,7 +1381,7 @@
           "citation_ok": false,
           "recall": null,
           "precision": null,
-          "seconds": 8.79,
+          "seconds": 8.06,
           "detail": {}
         },
         {
@@ -1359,7 +1398,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 12.69,
+          "seconds": 12.04,
           "detail": {}
         },
         {
@@ -1376,7 +1415,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 11.96,
+          "seconds": 11.35,
           "detail": {}
         },
         {
@@ -1393,7 +1432,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 10.32,
+          "seconds": 9.77,
           "detail": {}
         },
         {
@@ -1410,7 +1449,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.02,
+          "seconds": 7.34,
           "detail": {}
         },
         {
@@ -1429,7 +1468,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 6.03,
+          "seconds": 5.37,
           "detail": {}
         },
         {
@@ -1448,7 +1487,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.95,
+          "seconds": 3.27,
           "detail": {}
         },
         {
@@ -1472,7 +1511,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 7.67,
+          "seconds": 6.98,
           "detail": {
             "missing": [
               "AP-LIC-2025-008",
@@ -1510,7 +1549,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 8.5,
+          "seconds": 7.83,
           "detail": {
             "missing": [
               "AP-LIC-2023-020",
@@ -1554,7 +1593,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 8.63,
+          "seconds": 8.01,
           "detail": {
             "missing": [
               "AP-LIC-2025-008",
@@ -1587,7 +1626,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 12.04,
+          "seconds": 11.42,
           "detail": {}
         },
         {
@@ -1622,7 +1661,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 9.74,
+          "seconds": 9.01,
           "detail": {
             "missing": [
               "AP-LIC-2022-009",
@@ -1667,7 +1706,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 10.8,
+          "seconds": 10.16,
           "detail": {
             "missing": [
               "AP-LIC-2022-009",
@@ -1701,7 +1740,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 9.56,
+          "seconds": 9.02,
           "detail": {
             "missing": [
               "AP-MSA-2023-017",
@@ -1728,7 +1767,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 11.13,
+          "seconds": 10.44,
           "detail": {}
         },
         {
@@ -1757,7 +1796,7 @@
           "citation_ok": null,
           "recall": 0.2727272727272727,
           "precision": 1.0,
-          "seconds": 10.88,
+          "seconds": 10.33,
           "detail": {
             "missing": [
               "AP-LIC-2023-020",
@@ -1786,7 +1825,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 11.03,
+          "seconds": 10.34,
           "detail": {}
         },
         {
@@ -1803,7 +1842,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 5.69,
+          "seconds": 4.99,
           "detail": {}
         },
         {
@@ -1820,7 +1859,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.77,
+          "seconds": 3.04,
           "detail": {}
         },
         {
@@ -1837,7 +1876,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.07,
+          "seconds": 2.42,
           "detail": {}
         },
         {
@@ -1854,7 +1893,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.56,
+          "seconds": 2.9,
           "detail": {}
         },
         {
@@ -1871,7 +1910,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 2.29,
+          "seconds": 1.72,
           "detail": {}
         },
         {
@@ -1888,7 +1927,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 4.11,
+          "seconds": 3.39,
           "detail": {}
         },
         {
@@ -1905,7 +1944,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.25,
+          "seconds": 2.55,
           "detail": {}
         },
         {
@@ -1922,7 +1961,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.64,
+          "seconds": 2.95,
           "detail": {}
         }
       ]
@@ -1957,7 +1996,26 @@
         "refusal_on_unanswerable": 1.0,
         "citation_accuracy": 1.0,
         "aggregate_recall": 0.056,
-        "median_seconds": 8.59
+        "median_seconds": 7.23,
+        "usage": {
+          "ingest": {
+            "calls": 30,
+            "input": 47362,
+            "cached": 0,
+            "output": 5666,
+            "embed_tokens": 0,
+            "usd": 0.0,
+            "seconds": 480.4
+          },
+          "questions": {
+            "calls": 44,
+            "input": 68131,
+            "cached": 0,
+            "output": 2321,
+            "embed_tokens": 0,
+            "usd": 0.0
+          }
+        }
       },
       "scores": [
         {
@@ -1974,7 +2032,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 10.34,
+          "seconds": 5.71,
           "detail": {}
         },
         {
@@ -1991,7 +2049,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.67,
+          "seconds": 7.23,
           "detail": {}
         },
         {
@@ -2008,7 +2066,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.92,
+          "seconds": 8.3,
           "detail": {}
         },
         {
@@ -2025,7 +2083,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 9.9,
+          "seconds": 10.02,
           "detail": {}
         },
         {
@@ -2045,7 +2103,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.38,
+          "seconds": 7.71,
           "detail": {}
         },
         {
@@ -2062,7 +2120,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.4,
+          "seconds": 7.11,
           "detail": {}
         },
         {
@@ -2079,7 +2137,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 9.33,
+          "seconds": 8.9,
           "detail": {}
         },
         {
@@ -2096,7 +2154,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 12.56,
+          "seconds": 11.8,
           "detail": {}
         },
         {
@@ -2113,7 +2171,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.63,
+          "seconds": 7.86,
           "detail": {}
         },
         {
@@ -2130,7 +2188,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.49,
+          "seconds": 6.8,
           "detail": {}
         },
         {
@@ -2147,7 +2205,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 9.5,
+          "seconds": 6.73,
           "detail": {}
         },
         {
@@ -2164,7 +2222,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 9.55,
+          "seconds": 8.82,
           "detail": {}
         },
         {
@@ -2184,7 +2242,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.66,
+          "seconds": 6.86,
           "detail": {}
         },
         {
@@ -2201,7 +2259,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.28,
+          "seconds": 4.52,
           "detail": {}
         },
         {
@@ -2218,7 +2276,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.32,
+          "seconds": 4.57,
           "detail": {}
         },
         {
@@ -2235,7 +2293,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.99,
+          "seconds": 5.17,
           "detail": {}
         },
         {
@@ -2252,7 +2310,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.94,
+          "seconds": 8.24,
           "detail": {}
         },
         {
@@ -2269,7 +2327,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 9.58,
+          "seconds": 8.88,
           "detail": {}
         },
         {
@@ -2288,7 +2346,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 6.03,
+          "seconds": 5.22,
           "detail": {}
         },
         {
@@ -2305,7 +2363,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 5.18,
+          "seconds": 4.6,
           "detail": {}
         },
         {
@@ -2322,7 +2380,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 9.21,
+          "seconds": 6.49,
           "detail": {}
         },
         {
@@ -2339,7 +2397,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 12.53,
+          "seconds": 11.79,
           "detail": {}
         },
         {
@@ -2356,7 +2414,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.59,
+          "seconds": 7.83,
           "detail": {}
         },
         {
@@ -2373,7 +2431,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.64,
+          "seconds": 6.89,
           "detail": {}
         },
         {
@@ -2392,7 +2450,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 9.74,
+          "seconds": 6.96,
           "detail": {}
         },
         {
@@ -2411,7 +2469,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.49,
+          "seconds": 7.74,
           "detail": {}
         },
         {
@@ -2435,7 +2493,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 12.46,
+          "seconds": 11.84,
           "detail": {
             "missing": [
               "AP-LIC-2025-008",
@@ -2473,7 +2531,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 10.69,
+          "seconds": 9.98,
           "detail": {
             "missing": [
               "AP-LIC-2023-020",
@@ -2517,7 +2575,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 11.76,
+          "seconds": 11.07,
           "detail": {
             "missing": [
               "AP-LIC-2025-008",
@@ -2550,7 +2608,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 12.54,
+          "seconds": 11.85,
           "detail": {}
         },
         {
@@ -2585,7 +2643,7 @@
           "citation_ok": null,
           "recall": 0.11764705882352941,
           "precision": 1.0,
-          "seconds": 10.37,
+          "seconds": 9.71,
           "detail": {
             "missing": [
               "AP-LIC-2022-009",
@@ -2628,7 +2686,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 6.25,
+          "seconds": 5.61,
           "detail": {
             "missing": [
               "AP-LIC-2022-009",
@@ -2662,7 +2720,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 8.28,
+          "seconds": 7.51,
           "detail": {
             "missing": [
               "AP-MSA-2023-017",
@@ -2689,7 +2747,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 12.0,
+          "seconds": 11.36,
           "detail": {}
         },
         {
@@ -2718,7 +2776,7 @@
           "citation_ok": null,
           "recall": 0.2727272727272727,
           "precision": 1.0,
-          "seconds": 14.06,
+          "seconds": 13.37,
           "detail": {
             "missing": [
               "AP-LIC-2023-020",
@@ -2747,7 +2805,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 12.01,
+          "seconds": 11.58,
           "detail": {}
         },
         {
@@ -2764,7 +2822,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 6.05,
+          "seconds": 5.33,
           "detail": {}
         },
         {
@@ -2781,7 +2839,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.73,
+          "seconds": 3.08,
           "detail": {}
         },
         {
@@ -2798,7 +2856,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.58,
+          "seconds": 2.86,
           "detail": {}
         },
         {
@@ -2815,7 +2873,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.79,
+          "seconds": 3.13,
           "detail": {}
         },
         {
@@ -2832,7 +2890,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.81,
+          "seconds": 3.21,
           "detail": {}
         },
         {
@@ -2849,7 +2907,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 4.53,
+          "seconds": 3.8,
           "detail": {}
         },
         {
@@ -2866,7 +2924,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 4.27,
+          "seconds": 3.52,
           "detail": {}
         },
         {
@@ -2883,7 +2941,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.97,
+          "seconds": 3.33,
           "detail": {}
         }
       ]
@@ -2898,11 +2956,11 @@
       },
       "summary": {
         "n": 44,
-        "accuracy": 0.773,
+        "accuracy": 0.795,
         "by_type": {
           "lookup": {
             "n": 26,
-            "accuracy": 0.962
+            "accuracy": 1.0
           },
           "aggregate": {
             "n": 10,
@@ -2918,7 +2976,26 @@
         "refusal_on_unanswerable": 1.0,
         "citation_accuracy": 1.0,
         "aggregate_recall": 0.056,
-        "median_seconds": 8.33
+        "median_seconds": 5.98,
+        "usage": {
+          "ingest": {
+            "calls": 0,
+            "input": 0,
+            "cached": 0,
+            "output": 0,
+            "embed_tokens": 0,
+            "usd": 0.0,
+            "seconds": 0.0
+          },
+          "questions": {
+            "calls": 44,
+            "input": 69119,
+            "cached": 0,
+            "output": 2158,
+            "embed_tokens": 0,
+            "usd": 0.0
+          }
+        }
       },
       "scores": [
         {
@@ -2927,15 +3004,15 @@
           "tag": "contract-id",
           "question": "When does contract AP-SA-2024-017 end?",
           "expected": "2026-02-28",
-          "answer": "Contract AP-SA-2024-017 is set to remain in force until 2026-02-28, unless terminated earlier in accordance with its terms [5].",
-          "route": "search",
+          "answer": "Contract AP-SA-2024-017 ends on 2026-02-28 [1][2]. This date is confirmed in the extracted fields and explicitly stated in the \"Term and Renewal\" section of the agreement [1][2].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 10.2,
+          "seconds": 8.45,
           "detail": {}
         },
         {
@@ -2944,15 +3021,15 @@
           "tag": "contract-id",
           "question": "When does contract AP-SA-2024-071 end?",
           "expected": "2027-02-28",
-          "answer": "Contract AP-SA-2024-071 shall remain in force until February 28, 2027 [4]. Thereafter, it renews automatically for successive twelve-month periods unless either Party provides written notice of non-renewal at least ninety days before the end of the current term [4].",
-          "route": "search",
+          "answer": "Contract AP-SA-2024-071 ends on February 28, 2027 [1][2].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 9.55,
+          "seconds": 4.93,
           "detail": {}
         },
         {
@@ -2961,15 +3038,15 @@
           "tag": "name",
           "question": "When does the non-disclosure agreement with Lindqvist Automation AB expire?",
           "expected": "2027-04-30",
-          "answer": "The agreement shall remain in force until April 30, 2027, unless terminated earlier [2]. It does not renew automatically; any extension requires a written amendment signed by both Parties [4].",
-          "route": "search",
+          "answer": "The non-disclosure agreement with Lindqvist Automation AB expires on April 30, 2027 [1][2]. This end date is confirmed in both the extracted fields and Section 3 of the agreement text.",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.84,
+          "seconds": 5.26,
           "detail": {}
         },
         {
@@ -2978,15 +3055,15 @@
           "tag": "contract-id",
           "question": "What are the payment terms in contract AP-MSA-2022-090?",
           "expected": 90,
-          "answer": "The fees payable by the Customer are set out in Schedule 1, with all amounts stated in USD and exclusive of value added tax [5]. Invoices are payable 90 days after receipt of a correct invoice, and late payments bear interest at the statutory rate [5].",
-          "route": "search",
+          "answer": "The payment terms for contract AP-MSA-2022-090 specify that invoices are payable 90 days after receipt of a correct invoice [1]. Additionally, late payments bear interest at the statutory rate [2].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.9,
+          "seconds": 6.03,
           "detail": {}
         },
         {
@@ -2998,15 +3075,15 @@
             "German",
             "Germany"
           ],
-          "answer": "The agreement is governed by the laws of Germany, excluding its conflict of laws rules and the United Nations Convention on Contracts for the International Sale of Goods [2][8].",
-          "route": "search",
+          "answer": "The agreement is governed by the laws of Germany [1][2]. This is confirmed in Section 8 (Governing Law and Jurisdiction) of the document, which states that the Agreement shall be governed by the laws of Germany [2].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.81,
+          "seconds": 5.8,
           "detail": {}
         },
         {
@@ -3015,15 +3092,15 @@
           "tag": "name",
           "question": "How many days' notice does Kilnworth Ceramics Ltd need to give to terminate for convenience?",
           "expected": 180,
-          "answer": "Kilnworth Ceramics Ltd needs to give 180 days' prior written notice to terminate the Agreement for convenience [1].",
-          "route": "search",
+          "answer": "Kilnworth Ceramics Ltd needs to give 180 days' prior written notice to terminate the agreement for convenience [3]. This is also confirmed by the extracted field `termination_notice_days: 180.0` in the document metadata [1].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.31,
+          "seconds": 6.2,
           "detail": {}
         },
         {
@@ -3032,15 +3109,15 @@
           "tag": "name",
           "question": "What is the liability cap in the agreement with Kestrel Logistics B.V.?",
           "expected": 1000000,
-          "answer": "The total aggregate liability arising out of or in connection with the agreement shall not exceed 1 million euros (EUR 1,000,000) [1]. This limitation applies subject to exclusions for death, personal injury caused by negligence, fraud, or liabilities that cannot be limited by law [1].",
-          "route": "search",
+          "answer": "The liability cap in the agreement with Kestrel Logistics B.V. is 1,000,000 EUR [1][2]. This limit applies to each Party's total aggregate liability arising out of or in connection with the Agreement, excluding liability for death, personal injury, fraud, or liabilities that cannot be limited by law [2].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 9.39,
+          "seconds": 7.16,
           "detail": {}
         },
         {
@@ -3049,15 +3126,15 @@
           "tag": "contract-id",
           "question": "What is the total contract value of AP-MSA-2025-012?",
           "expected": 800000.0,
-          "answer": "The total contract value for AP-MSA-2025-012 is EUR 800,000.00, comprising two annual fees of EUR 400,000.00 each [1]. These fees are exclusive of value added tax as stated in the Fees and Payment section [5].",
-          "route": "search",
+          "answer": "The total contract value for AP-MSA-2025-012 is EUR 800,000.00 [1][4]. This amount is composed of two annual fees of EUR 400,000.00 each, covering the period from November 1, 2025, to October 31, 2027 [4].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 9.73,
+          "seconds": 8.19,
           "detail": {}
         },
         {
@@ -3066,15 +3143,15 @@
           "tag": "name",
           "question": "What is the effective date of the agreement with Brightwater Analytics Ltd?",
           "expected": "2024-03-01",
-          "answer": "The effective date of the agreement is 2024-03-01 [2]. This Agreement shall commence on that date and remain in force until 2026-02-28, unless terminated earlier [2].",
-          "route": "search",
+          "answer": "The effective date of the agreement with Brightwater Analytics Ltd is 2024-03-01 [1][2].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.58,
+          "seconds": 3.26,
           "detail": {}
         },
         {
@@ -3083,15 +3160,15 @@
           "tag": "contract-id",
           "question": "Who signed contract AP-SA-2022-061 on behalf of the counterparty?",
           "expected": "Anna Keller",
-          "answer": "Markus Ebner, Head of Procurement for Alder Precision GmbH, and Anna Keller, Authorized Signatory for Juniper Coatings GmbH, signed the agreement [1].",
-          "route": "search",
+          "answer": "The counterparty to contract AP-SA-2022-061 is Juniper Coatings GmbH [1]. This agreement was signed by Anna Keller, who is identified as the Authorized Signatory for Juniper Coatings GmbH [3].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.66,
+          "seconds": 6.08,
           "detail": {}
         },
         {
@@ -3100,15 +3177,15 @@
           "tag": "name",
           "question": "When does the master services agreement with Gallowmere Steel Inc. expire?",
           "expected": "2025-08-31",
-          "answer": "The Master Services Agreement expires on 31 August 2025, unless terminated earlier in accordance with its terms [2]. This date marks the end of the second year of the agreement's term, which runs from 1 September 2023 to 31 August 2025 [4].",
-          "route": "search",
+          "answer": "The Master Services Agreement with Gallowmere Steel Inc. expires on August 31, 2025 [1][2]. This end date is confirmed in both the extracted fields and Section 3 of the agreement text [1][2].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 9.49,
+          "seconds": 6.26,
           "detail": {}
         },
         {
@@ -3117,15 +3194,15 @@
           "tag": "contract-id",
           "question": "What are the payment terms in contract AP-LIC-2025-008?",
           "expected": 30,
-          "answer": "The payment terms for contract AP-LIC-2025-008 are net 30 days from the date of a correct invoice [4]. Additionally, all fees are stated in EUR and are exclusive of value added tax, with late payments bearing interest at the statutory rate [4].",
-          "route": "search",
+          "answer": "The payment terms for contract AP-LIC-2025-008 are net 30 days from the date of a correct invoice [4]. Additionally, late payments bear interest at the statutory rate [4].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 9.17,
+          "seconds": 5.98,
           "detail": {}
         },
         {
@@ -3137,15 +3214,15 @@
             "German",
             "Germany"
           ],
-          "answer": "The agreement is governed by the laws of Germany, excluding its conflict of laws rules and the United Nations Convention on Contracts for the International Sale of Goods [6].",
-          "route": "search",
+          "answer": "The agreement is governed by the laws of Germany [1][8].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.58,
+          "seconds": 3.95,
           "detail": {}
         },
         {
@@ -3154,15 +3231,15 @@
           "tag": "name",
           "question": "How many days' notice does Orrin Software GmbH need to give to terminate for convenience?",
           "expected": 90,
-          "answer": "Either Party may terminate the Agreement for convenience upon ninety (90) days' prior written notice [1]. Therefore, Orrin Software GmbH needs to give 90 days' notice.",
-          "route": "search",
+          "answer": "Orrin Software GmbH needs to give ninety (90) days' prior written notice to terminate the Agreement for convenience [3]. This is consistent with the extracted field `termination_notice_days: 90.0` [1].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.91,
+          "seconds": 6.1,
           "detail": {}
         },
         {
@@ -3171,15 +3248,15 @@
           "tag": "name",
           "question": "What is the effective date of the agreement with Dunmore Packaging Ltd?",
           "expected": "2022-02-01",
-          "answer": "The effective date of the agreement is 2022-02-01 [1]. This Agreement commenced on that date and remains in force until 2025-01-31 unless terminated earlier [1].",
-          "route": "search",
+          "answer": "The effective date of the agreement with Dunmore Packaging Ltd is 2022-02-01 [1][2].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.32,
+          "seconds": 4.42,
           "detail": {}
         },
         {
@@ -3188,15 +3265,15 @@
           "tag": "contract-id",
           "question": "Who signed contract AP-LSA-2022-103 on behalf of the counterparty?",
           "expected": "Tom Ellison",
-          "answer": "Tom Ellison, Authorized Signatory for Yellowpine Tooling Inc., signed the agreement [1]. Markus Ebner, Head of Procurement for Alder Precision GmbH, also signed as the other party's representative [1].",
-          "route": "search",
+          "answer": "The contract was signed on behalf of Yellowpine Tooling Inc. by Tom Ellison, who is listed as the Authorized Signatory [3].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.17,
+          "seconds": 4.91,
           "detail": {}
         },
         {
@@ -3205,15 +3282,15 @@
           "tag": "name",
           "question": "When does the non-disclosure agreement with Harbor Metals Inc. expire?",
           "expected": "2027-07-31",
-          "answer": "The agreement is set to remain in force until 31.07.2027, unless terminated earlier in accordance with its terms [3]. It shall not renew automatically; any extension requires a written amendment signed by both Parties [3].",
-          "route": "search",
+          "answer": "The non-disclosure agreement with Harbor Metals Inc. expires on 31.07.2027 [1][2]. This end date is confirmed in both the extracted fields and Section 3 of the agreement, which states the contract remains in force until that date unless terminated earlier [1][2].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.31,
+          "seconds": 6.37,
           "detail": {}
         },
         {
@@ -3222,15 +3299,15 @@
           "tag": "contract-id",
           "question": "What are the payment terms in contract AP-SA-2024-075?",
           "expected": 60,
-          "answer": "The Customer shall pay each undisputed invoice within sixty (60) days of receipt, and late payments bear interest at the statutory rate [5]. All fees are stated in EUR and are exclusive of value added tax [5].",
-          "route": "search",
+          "answer": "The payment terms require the Customer to pay each undisputed invoice within sixty (60) days of receipt, with late payments bearing interest at the statutory rate [2]. The contract specifies a payment term duration of 60.0 days [1].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.38,
+          "seconds": 6.04,
           "detail": {}
         },
         {
@@ -3241,15 +3318,15 @@
           "expected": [
             "New York"
           ],
-          "answer": "The documents do not contain this information.",
-          "route": "not_found",
-          "correct": false,
+          "answer": "The agreement is governed by the laws of the State of New York [1][8].",
+          "route": "document",
+          "correct": true,
           "hallucinated": false,
-          "refused": true,
-          "citation_ok": null,
+          "refused": false,
+          "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 5.9,
+          "seconds": 4.35,
           "detail": {}
         },
         {
@@ -3258,15 +3335,15 @@
           "tag": "name",
           "question": "How many days' notice does Saltmarsh Cloud Ltd need to give to terminate for convenience?",
           "expected": 180,
-          "answer": "Either Party may terminate this Agreement for convenience upon 180 days' prior written notice to the other Party [1]. Therefore, Saltmarsh Cloud Ltd needs to give 180 days' notice.",
-          "route": "search",
+          "answer": "Saltmarsh Cloud Ltd needs to give 180 days' prior written notice to terminate the agreement for convenience [7]. This is confirmed by the extracted field `termination_notice_days: 180.0` in the document metadata [1].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 5.87,
+          "seconds": 5.67,
           "detail": {}
         },
         {
@@ -3275,15 +3352,15 @@
           "tag": "name",
           "question": "What is the liability cap in the agreement with Larchmont Payroll Services LLC?",
           "expected": 500000,
-          "answer": "The total aggregate liability arising out of or in connection with the agreement shall not exceed USD 500,000.00 [3]. This limitation applies to both parties except for liability regarding death, personal injury caused by negligence, fraud, or liabilities that cannot be limited by law [3].",
-          "route": "search",
+          "answer": "The liability cap in the agreement with Larchmont Payroll Services LLC is USD 500,000.00 [1][2].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 9.17,
+          "seconds": 4.99,
           "detail": {}
         },
         {
@@ -3292,15 +3369,15 @@
           "tag": "contract-id",
           "question": "What is the total contract value of AP-LIC-2023-020?",
           "expected": 500000.0,
-          "answer": "The total contract value for AP-LIC-2023-020 is EUR 500,000.00, as detailed in Schedule 1 which lists fees of EUR 250,000.00 for each of the two years [1].",
-          "route": "search",
+          "answer": "The total contract value for AP-LIC-2023-020 is EUR 500,000.00 [1], which corresponds to the sum of fees listed in Schedule 1 totaling 500,000.00 EUR [4].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 9.16,
+          "seconds": 6.82,
           "detail": {}
         },
         {
@@ -3309,15 +3386,15 @@
           "tag": "name",
           "question": "What is the effective date of the agreement with Vexmoor Freight GmbH?",
           "expected": "2022-03-01",
-          "answer": "The effective date of the agreement is 01.03.2022 [1]. This Agreement commenced on that date and remains in force until 28.02.2023, unless terminated earlier [1].",
-          "route": "search",
+          "answer": "The effective date of the agreement with Vexmoor Freight GmbH is 2022-03-01 [1]. This is confirmed in Section 3 of the agreement, which states that the contract shall commence on 01.03.2022 [2].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.42,
+          "seconds": 6.61,
           "detail": {}
         },
         {
@@ -3326,15 +3403,15 @@
           "tag": "contract-id",
           "question": "Who signed contract AP-SA-2022-022 on behalf of the counterparty?",
           "expected": "Oliver Grant",
-          "answer": "Markus Ebner, Head of Procurement for Alder Precision GmbH, and Oliver Grant, Authorized Signatory for Rhenus Valley Fasteners GmbH, signed the agreement [1].",
-          "route": "search",
+          "answer": "Oliver Grant, Authorized Signatory for Rhenus Valley Fasteners GmbH, signed the contract on behalf of the counterparty [3].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.83,
+          "seconds": 4.85,
           "detail": {}
         },
         {
@@ -3345,15 +3422,15 @@
           "expected": [
             "New York"
           ],
-          "answer": "The governing law of the agreement is the laws of the State of New York, excluding its conflict of laws rules [1]. This applies to the Mutual Non-Disclosure Agreement entered into between Alder Precision GmbH and Harbor Metals Inc. [2].",
-          "route": "search",
+          "answer": "The governing law of the contract with Harbor Metals Inc. is the laws of the State of New York [1][2].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.33,
+          "seconds": 3.07,
           "detail": {}
         },
         {
@@ -3364,15 +3441,15 @@
           "expected": [
             "England"
           ],
-          "answer": "The governing law of the agreement is the laws of England and Wales, excluding its conflict of laws rules [3]. This applies to any dispute arising out of the Supply Agreement between Alder Precision GmbH and Harbour Metal Works Ltd [3].",
-          "route": "search",
+          "answer": "The governing law of the contract with Harbour Metal Works Ltd is England and Wales [1][8].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.39,
+          "seconds": 2.76,
           "detail": {}
         },
         {
@@ -3396,7 +3473,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 12.45,
+          "seconds": 11.68,
           "detail": {
             "missing": [
               "AP-LIC-2025-008",
@@ -3434,7 +3511,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 10.64,
+          "seconds": 9.97,
           "detail": {
             "missing": [
               "AP-LIC-2023-020",
@@ -3478,7 +3555,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 11.78,
+          "seconds": 11.1,
           "detail": {
             "missing": [
               "AP-LIC-2025-008",
@@ -3511,7 +3588,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 12.57,
+          "seconds": 11.84,
           "detail": {}
         },
         {
@@ -3546,7 +3623,7 @@
           "citation_ok": null,
           "recall": 0.11764705882352941,
           "precision": 1.0,
-          "seconds": 10.39,
+          "seconds": 9.68,
           "detail": {
             "missing": [
               "AP-LIC-2022-009",
@@ -3589,7 +3666,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 6.24,
+          "seconds": 5.64,
           "detail": {
             "missing": [
               "AP-LIC-2022-009",
@@ -3623,7 +3700,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 8.26,
+          "seconds": 7.56,
           "detail": {
             "missing": [
               "AP-MSA-2023-017",
@@ -3650,7 +3727,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 12.15,
+          "seconds": 11.3,
           "detail": {}
         },
         {
@@ -3679,7 +3756,7 @@
           "citation_ok": null,
           "recall": 0.2727272727272727,
           "precision": 1.0,
-          "seconds": 14.08,
+          "seconds": 13.32,
           "detail": {
             "missing": [
               "AP-LIC-2023-020",
@@ -3708,7 +3785,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 12.06,
+          "seconds": 11.31,
           "detail": {}
         },
         {
@@ -3725,7 +3802,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 6.08,
+          "seconds": 5.36,
           "detail": {}
         },
         {
@@ -3742,7 +3819,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.52,
+          "seconds": 1.81,
           "detail": {}
         },
         {
@@ -3759,7 +3836,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.77,
+          "seconds": 1.79,
           "detail": {}
         },
         {
@@ -3776,7 +3853,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.76,
+          "seconds": 1.77,
           "detail": {}
         },
         {
@@ -3793,7 +3870,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.79,
+          "seconds": 1.81,
           "detail": {}
         },
         {
@@ -3810,7 +3887,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 4.38,
+          "seconds": 5.83,
           "detail": {}
         },
         {
@@ -3827,7 +3904,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.64,
+          "seconds": 1.78,
           "detail": {}
         },
         {
@@ -3844,7 +3921,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.94,
+          "seconds": 2.92,
           "detail": {}
         }
       ]
@@ -3879,7 +3956,26 @@
         "refusal_on_unanswerable": 1.0,
         "citation_accuracy": 1.0,
         "aggregate_recall": 1.0,
-        "median_seconds": 7.39
+        "median_seconds": 3.68,
+        "usage": {
+          "ingest": {
+            "calls": 0,
+            "input": 0,
+            "cached": 0,
+            "output": 0,
+            "embed_tokens": 0,
+            "usd": 0.0,
+            "seconds": 0.0
+          },
+          "questions": {
+            "calls": 57,
+            "input": 65809,
+            "cached": 0,
+            "output": 3614,
+            "embed_tokens": 0,
+            "usd": 0.0
+          }
+        }
       },
       "scores": [
         {
@@ -3888,15 +3984,15 @@
           "tag": "contract-id",
           "question": "When does contract AP-SA-2024-017 end?",
           "expected": "2026-02-28",
-          "answer": "Contract AP-SA-2024-017 ends on 2026-02-28.",
-          "route": "sql",
+          "answer": "Contract AP-SA-2024-017 ends on 2026-02-28 [1][2]. This date is confirmed in the extracted fields and explicitly stated in the \"Term and Renewal\" section of the agreement [1][2].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
-          "citation_ok": null,
+          "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 10.23,
+          "seconds": 6.99,
           "detail": {}
         },
         {
@@ -3905,15 +4001,15 @@
           "tag": "contract-id",
           "question": "When does contract AP-SA-2024-071 end?",
           "expected": "2027-02-28",
-          "answer": "Contract AP-SA-2024-071 ends on 2027-02-28.",
-          "route": "sql",
+          "answer": "Contract AP-SA-2024-071 ends on February 28, 2027 [1][2].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
-          "citation_ok": null,
+          "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 6.98,
+          "seconds": 3.3,
           "detail": {}
         },
         {
@@ -3922,15 +4018,15 @@
           "tag": "name",
           "question": "When does the non-disclosure agreement with Lindqvist Automation AB expire?",
           "expected": "2027-04-30",
-          "answer": "The non-disclosure agreement with Lindqvist Automation AB (contract ID: AP-NDA-2025-016) expires on 2027-04-30.",
-          "route": "sql",
+          "answer": "The non-disclosure agreement with Lindqvist Automation AB expires on April 30, 2027 [1][2]. This end date is confirmed in both the extracted fields and Section 3 of the agreement text.",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
-          "citation_ok": null,
+          "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.77,
+          "seconds": 4.19,
           "detail": {}
         },
         {
@@ -3939,15 +4035,15 @@
           "tag": "contract-id",
           "question": "What are the payment terms in contract AP-MSA-2022-090?",
           "expected": 90,
-          "answer": "The fees payable by the Customer are set out in Schedule 1, with all amounts stated in USD and exclusive of value added tax [5]. Invoices are payable 90 days after receipt of a correct invoice, and late payments bear interest at the statutory rate [5].",
-          "route": "search",
+          "answer": "The payment terms for contract AP-MSA-2022-090 specify that invoices are payable 90 days after receipt of a correct invoice [1]. Additionally, late payments bear interest at the statutory rate [2].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 11.32,
+          "seconds": 3.51,
           "detail": {}
         },
         {
@@ -3959,15 +4055,15 @@
             "German",
             "Germany"
           ],
-          "answer": "The agreement with Tavira Components Lda is governed by German law, as specified in contract AP-LSA-2025-058.",
-          "route": "sql",
+          "answer": "The agreement is governed by the laws of Germany [1][2]. This is confirmed in Section 8 (Governing Law and Jurisdiction) of the document, which states that the Agreement shall be governed by the laws of Germany [2].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
-          "citation_ok": null,
+          "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.36,
+          "seconds": 3.59,
           "detail": {}
         },
         {
@@ -3976,15 +4072,15 @@
           "tag": "name",
           "question": "How many days' notice does Kilnworth Ceramics Ltd need to give to terminate for convenience?",
           "expected": 180,
-          "answer": "Kilnworth Ceramics Ltd needs to give 180 days' notice to terminate for convenience.",
-          "route": "sql",
+          "answer": "Kilnworth Ceramics Ltd needs to give 180 days' prior written notice to terminate the agreement for convenience [3]. This is also confirmed by the extracted field `termination_notice_days: 180.0` in the document metadata [1].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
-          "citation_ok": null,
+          "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 6.5,
+          "seconds": 3.82,
           "detail": {}
         },
         {
@@ -3993,15 +4089,15 @@
           "tag": "name",
           "question": "What is the liability cap in the agreement with Kestrel Logistics B.V.?",
           "expected": 1000000,
-          "answer": "The liability cap in the agreement with Kestrel Logistics B.V. (Contract ID: AP-LSA-2025-006) is \u20ac1,000,000.",
-          "route": "sql",
+          "answer": "The liability cap in the agreement with Kestrel Logistics B.V. is 1,000,000 EUR [1][2]. This limit applies to each Party's total aggregate liability arising out of or in connection with the Agreement, excluding liability for death, personal injury, fraud, or liabilities that cannot be limited by law [2].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
-          "citation_ok": null,
+          "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.97,
+          "seconds": 5.66,
           "detail": {}
         },
         {
@@ -4010,15 +4106,15 @@
           "tag": "contract-id",
           "question": "What is the total contract value of AP-MSA-2025-012?",
           "expected": 800000.0,
-          "answer": "The total contract value of AP-MSA-2025-012 is $800,000.",
-          "route": "sql",
+          "answer": "The total contract value for AP-MSA-2025-012 is EUR 800,000.00 [1][4]. This amount is composed of two annual fees of EUR 400,000.00 each, covering the period from November 1, 2025, to October 31, 2027 [4].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
-          "citation_ok": null,
+          "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.29,
+          "seconds": 5.69,
           "detail": {}
         },
         {
@@ -4027,15 +4123,15 @@
           "tag": "name",
           "question": "What is the effective date of the agreement with Brightwater Analytics Ltd?",
           "expected": "2024-03-01",
-          "answer": "The agreement with Brightwater Analytics Ltd (Contract ID: AP-SA-2024-017) has an effective date of 2024-03-01.",
-          "route": "sql",
+          "answer": "The effective date of the agreement with Brightwater Analytics Ltd is 2024-03-01 [1][2].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
-          "citation_ok": null,
+          "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.39,
+          "seconds": 3.23,
           "detail": {}
         },
         {
@@ -4044,15 +4140,15 @@
           "tag": "contract-id",
           "question": "Who signed contract AP-SA-2022-061 on behalf of the counterparty?",
           "expected": "Anna Keller",
-          "answer": "Markus Ebner, Head of Procurement for Alder Precision GmbH, and Anna Keller, Authorized Signatory for Juniper Coatings GmbH, signed the agreement [1].",
-          "route": "search",
+          "answer": "The counterparty to contract AP-SA-2022-061 is Juniper Coatings GmbH [1]. This agreement was signed by Anna Keller, who is identified as the Authorized Signatory for Juniper Coatings GmbH [3].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.47,
+          "seconds": 3.59,
           "detail": {}
         },
         {
@@ -4061,15 +4157,15 @@
           "tag": "name",
           "question": "When does the master services agreement with Gallowmere Steel Inc. expire?",
           "expected": "2025-08-31",
-          "answer": "The master services agreement with Gallowmere Steel Inc. (contract ID: AP-MSA-2023-019) expires on 2025-08-31.",
-          "route": "sql",
+          "answer": "The Master Services Agreement with Gallowmere Steel Inc. expires on August 31, 2025 [1][2]. This end date is confirmed in both the extracted fields and Section 3 of the agreement text [1][2].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
-          "citation_ok": null,
+          "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.99,
+          "seconds": 3.72,
           "detail": {}
         },
         {
@@ -4078,15 +4174,15 @@
           "tag": "contract-id",
           "question": "What are the payment terms in contract AP-LIC-2025-008?",
           "expected": 30,
-          "answer": "The payment terms for contract AP-LIC-2025-008 are net 30 days from the date of a correct invoice [4]. Additionally, all fees are stated in EUR and are exclusive of value added tax, with late payments bearing interest at the statutory rate [4].",
-          "route": "search",
+          "answer": "The payment terms for contract AP-LIC-2025-008 are net 30 days from the date of a correct invoice [4]. Additionally, late payments bear interest at the statutory rate [4].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 9.0,
+          "seconds": 3.38,
           "detail": {}
         },
         {
@@ -4098,15 +4194,15 @@
             "German",
             "Germany"
           ],
-          "answer": "The agreement with Arbelo Engineering S.L. is governed by the law of Germany, as specified in contract AP-SA-2022-073.",
-          "route": "sql",
+          "answer": "The agreement is governed by the laws of Germany [1][8].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
-          "citation_ok": null,
+          "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.48,
+          "seconds": 1.62,
           "detail": {}
         },
         {
@@ -4115,15 +4211,15 @@
           "tag": "name",
           "question": "How many days' notice does Orrin Software GmbH need to give to terminate for convenience?",
           "expected": 90,
-          "answer": "Orrin Software GmbH needs to give 90 days' notice to terminate for convenience.",
-          "route": "sql",
+          "answer": "Orrin Software GmbH needs to give ninety (90) days' prior written notice to terminate the Agreement for convenience [3]. This is consistent with the extracted field `termination_notice_days: 90.0` [1].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
-          "citation_ok": null,
+          "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 6.2,
+          "seconds": 3.47,
           "detail": {}
         },
         {
@@ -4132,15 +4228,15 @@
           "tag": "name",
           "question": "What is the effective date of the agreement with Dunmore Packaging Ltd?",
           "expected": "2022-02-01",
-          "answer": "The effective date of the agreement with Dunmore Packaging Ltd is 2022-02-01.",
-          "route": "sql",
+          "answer": "The effective date of the agreement with Dunmore Packaging Ltd is 2022-02-01 [1][2].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
-          "citation_ok": null,
+          "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 6.57,
+          "seconds": 2.45,
           "detail": {}
         },
         {
@@ -4149,15 +4245,15 @@
           "tag": "contract-id",
           "question": "Who signed contract AP-LSA-2022-103 on behalf of the counterparty?",
           "expected": "Tom Ellison",
-          "answer": "Tom Ellison, Authorized Signatory for Yellowpine Tooling Inc., signed the agreement [1]. Markus Ebner, Head of Procurement for Alder Precision GmbH, also signed as the other party's representative [1].",
-          "route": "search",
+          "answer": "The contract was signed on behalf of Yellowpine Tooling Inc. by Tom Ellison, who is listed as the Authorized Signatory [3].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.11,
+          "seconds": 2.32,
           "detail": {}
         },
         {
@@ -4166,15 +4262,15 @@
           "tag": "name",
           "question": "When does the non-disclosure agreement with Harbor Metals Inc. expire?",
           "expected": "2027-07-31",
-          "answer": "The non-disclosure agreement with Harbor Metals Inc. (contract ID: AP-NDA-2024-047) expires on 2027-07-31.",
-          "route": "sql",
+          "answer": "The non-disclosure agreement with Harbor Metals Inc. expires on 31.07.2027 [1][2]. This end date is confirmed in both the extracted fields and Section 3 of the agreement, which states the contract remains in force until that date unless terminated earlier [1][2].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
-          "citation_ok": null,
+          "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.81,
+          "seconds": 5.31,
           "detail": {}
         },
         {
@@ -4183,15 +4279,15 @@
           "tag": "contract-id",
           "question": "What are the payment terms in contract AP-SA-2024-075?",
           "expected": 60,
-          "answer": "The Customer shall pay each undisputed invoice within sixty (60) days of receipt, and late payments bear interest at the statutory rate [5]. All fees are stated in EUR and are exclusive of value added tax [5].",
-          "route": "search",
+          "answer": "The payment terms require the Customer to pay each undisputed invoice within sixty (60) days of receipt, with late payments bearing interest at the statutory rate [2]. The contract specifies a payment term duration of 60.0 days [1].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.06,
+          "seconds": 3.67,
           "detail": {}
         },
         {
@@ -4202,15 +4298,15 @@
           "expected": [
             "New York"
           ],
-          "answer": "The agreement with Holloway Sensor Labs Inc. is governed by the law of the State of New York, as specified in contract AP-SA-2024-117.",
-          "route": "sql",
+          "answer": "The agreement is governed by the laws of the State of New York [1][8].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
-          "citation_ok": null,
+          "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.48,
+          "seconds": 1.88,
           "detail": {}
         },
         {
@@ -4219,15 +4315,15 @@
           "tag": "name",
           "question": "How many days' notice does Saltmarsh Cloud Ltd need to give to terminate for convenience?",
           "expected": 180,
-          "answer": "Saltmarsh Cloud Ltd needs to give 180 days' notice to terminate for convenience.",
-          "route": "sql",
+          "answer": "Saltmarsh Cloud Ltd needs to give 180 days' prior written notice to terminate the agreement for convenience [7]. This is confirmed by the extracted field `termination_notice_days: 180.0` in the document metadata [1].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
-          "citation_ok": null,
+          "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 6.07,
+          "seconds": 3.68,
           "detail": {}
         },
         {
@@ -4236,15 +4332,15 @@
           "tag": "name",
           "question": "What is the liability cap in the agreement with Larchmont Payroll Services LLC?",
           "expected": 500000,
-          "answer": "The liability cap in the agreement with Larchmont Payroll Services LLC (Contract ID: AP-LSA-2024-107) is $500,000.",
-          "route": "sql",
+          "answer": "The liability cap in the agreement with Larchmont Payroll Services LLC is USD 500,000.00 [1][2].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
-          "citation_ok": null,
+          "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.83,
+          "seconds": 2.55,
           "detail": {}
         },
         {
@@ -4253,15 +4349,15 @@
           "tag": "contract-id",
           "question": "What is the total contract value of AP-LIC-2023-020?",
           "expected": 500000.0,
-          "answer": "The total contract value of AP-LIC-2023-020 is 500,000.0.",
-          "route": "sql",
+          "answer": "The total contract value for AP-LIC-2023-020 is EUR 500,000.00 [1], which corresponds to the sum of fees listed in Schedule 1 totaling 500,000.00 EUR [4].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
-          "citation_ok": null,
+          "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.24,
+          "seconds": 4.21,
           "detail": {}
         },
         {
@@ -4270,15 +4366,15 @@
           "tag": "name",
           "question": "What is the effective date of the agreement with Vexmoor Freight GmbH?",
           "expected": "2022-03-01",
-          "answer": "The effective date of the agreement with Vexmoor Freight GmbH is 2022-03-01.",
-          "route": "sql",
+          "answer": "The effective date of the agreement with Vexmoor Freight GmbH is 2022-03-01 [1]. This is confirmed in Section 3 of the agreement, which states that the contract shall commence on 01.03.2022 [2].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
-          "citation_ok": null,
+          "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 6.65,
+          "seconds": 4.26,
           "detail": {}
         },
         {
@@ -4287,15 +4383,15 @@
           "tag": "contract-id",
           "question": "Who signed contract AP-SA-2022-022 on behalf of the counterparty?",
           "expected": "Oliver Grant",
-          "answer": "Markus Ebner, Head of Procurement for Alder Precision GmbH, and Oliver Grant, Authorized Signatory for Rhenus Valley Fasteners GmbH, signed the agreement [1].",
-          "route": "search",
+          "answer": "Oliver Grant, Authorized Signatory for Rhenus Valley Fasteners GmbH, signed the contract [3]. The counterparty is identified as Rhenus Valley Fasteners GmbH in the document metadata [1].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.7,
+          "seconds": 3.29,
           "detail": {}
         },
         {
@@ -4306,15 +4402,15 @@
           "expected": [
             "New York"
           ],
-          "answer": "The contract with Harbor Metals Inc. (ID: AP-NDA-2024-047) is governed by the State of New York.",
-          "route": "sql",
+          "answer": "The governing law of the contract with Harbor Metals Inc. is the laws of the State of New York [1][2].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
-          "citation_ok": null,
+          "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.33,
+          "seconds": 3.05,
           "detail": {}
         },
         {
@@ -4325,15 +4421,15 @@
           "expected": [
             "England"
           ],
-          "answer": "The contract with Harbour Metal Works Ltd (ID: AP-SA-2024-071) is governed by the law of England and Wales.",
-          "route": "sql",
+          "answer": "The governing law of the contract with Harbour Metal Works Ltd is England and Wales [1][8].",
+          "route": "document",
           "correct": true,
           "hallucinated": false,
           "refused": false,
-          "citation_ok": null,
+          "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.22,
+          "seconds": 2.78,
           "detail": {}
         },
         {
@@ -4357,7 +4453,7 @@
           "citation_ok": null,
           "recall": 1.0,
           "precision": 1.0,
-          "seconds": 18.38,
+          "seconds": 14.42,
           "detail": {
             "missing": [],
             "extra": []
@@ -4388,7 +4484,7 @@
           "citation_ok": null,
           "recall": 1.0,
           "precision": 1.0,
-          "seconds": 16.9,
+          "seconds": 13.11,
           "detail": {
             "missing": [],
             "extra": []
@@ -4421,7 +4517,7 @@
           "citation_ok": null,
           "recall": 1.0,
           "precision": 1.0,
-          "seconds": 21.65,
+          "seconds": 20.43,
           "detail": {
             "missing": [],
             "extra": []
@@ -4441,7 +4537,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 5.62,
+          "seconds": 4.49,
           "detail": {}
         },
         {
@@ -4476,7 +4572,7 @@
           "citation_ok": null,
           "recall": 1.0,
           "precision": 1.0,
-          "seconds": 36.11,
+          "seconds": 35.06,
           "detail": {
             "missing": [],
             "extra": []
@@ -4503,7 +4599,7 @@
           "citation_ok": null,
           "recall": 1.0,
           "precision": 1.0,
-          "seconds": 21.89,
+          "seconds": 20.61,
           "detail": {
             "missing": [],
             "extra": []
@@ -4530,7 +4626,7 @@
           "citation_ok": null,
           "recall": 1.0,
           "precision": 1.0,
-          "seconds": 12.73,
+          "seconds": 11.49,
           "detail": {
             "missing": [],
             "extra": []
@@ -4550,7 +4646,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 6.3,
+          "seconds": 5.33,
           "detail": {}
         },
         {
@@ -4579,7 +4675,7 @@
           "citation_ok": null,
           "recall": 1.0,
           "precision": 1.0,
-          "seconds": 30.69,
+          "seconds": 29.52,
           "detail": {
             "missing": [],
             "extra": []
@@ -4599,7 +4695,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 6.72,
+          "seconds": 5.7,
           "detail": {}
         },
         {
@@ -4616,7 +4712,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 6.8,
+          "seconds": 6.02,
           "detail": {}
         },
         {
@@ -4625,15 +4721,15 @@
           "tag": "unanswerable",
           "question": "What is the liability cap in the non-disclosure agreement with Harbor Metals Inc.?",
           "expected": null,
-          "answer": "The liability cap in the non-disclosure agreement with Harbor Metals Inc. is not specified (null).",
-          "route": "sql",
+          "answer": "The documents do not contain this information.",
+          "route": "not_found",
           "correct": true,
           "hallucinated": false,
           "refused": true,
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 7.19,
+          "seconds": 1.9,
           "detail": {}
         },
         {
@@ -4650,7 +4746,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 5.75,
+          "seconds": 1.76,
           "detail": {}
         },
         {
@@ -4667,7 +4763,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.88,
+          "seconds": 1.79,
           "detail": {}
         },
         {
@@ -4684,7 +4780,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 6.87,
+          "seconds": 1.74,
           "detail": {}
         },
         {
@@ -4701,7 +4797,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 5.84,
+          "seconds": 6.59,
           "detail": {}
         },
         {
@@ -4718,7 +4814,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.8,
+          "seconds": 1.73,
           "detail": {}
         },
         {
@@ -4735,7 +4831,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.82,
+          "seconds": 2.92,
           "detail": {}
         }
       ]
