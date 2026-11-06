@@ -31,8 +31,15 @@ class AskRequest(BaseModel):
 
 @app.get("/health")
 def health() -> dict:
-    s = get_settings()
-    return {"status": "ok", "model": s.llm_model, "embed_model": s.embed_model, "documents": len(assistant().store.documents())}
+    s, a = get_settings(), assistant()
+    return {
+        "status": "ok",
+        "model": s.llm_model,
+        "embed_model": s.embed_model,
+        "documents": len(a.store.documents()),
+        "schema": a.schema.name,
+        "examples": a.schema.examples,
+    }
 
 
 @app.get("/documents")

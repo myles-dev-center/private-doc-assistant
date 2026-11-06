@@ -6,7 +6,8 @@ import docassist.api as api_module
 def test_api_roundtrip(assistant, monkeypatch, tmp_path):
     monkeypatch.setattr(api_module, "assistant", lambda: assistant)
     c = TestClient(api_module.app)
-    assert c.get("/health").json()["documents"] == 0
+    health = c.get("/health").json()
+    assert health["documents"] == 0 and health["schema"] == "contract" and health["examples"]
 
     r = c.post(
         "/documents", files=[("files", ("a.txt", b"Contract No.: AP-SA-2024-017. Payment within 45 days.")), ("files", ("evil.exe", b"MZ"))]

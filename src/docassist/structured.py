@@ -6,7 +6,7 @@ import datetime as dt
 import json
 import re
 import sqlite3
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 
 import yaml
@@ -30,6 +30,7 @@ class Schema:
     fields: list[Field]
     header_fields: list[str]
     scope_fields: list[str]
+    examples: list[str] = field(default_factory=list)
 
     @classmethod
     def load(cls, path: Path) -> Schema:
@@ -39,7 +40,7 @@ class Schema:
             if f.type not in SQL_TYPES:
                 raise ValueError(f"{path}: field {f.name} has unknown type {f.type}")
         header = raw.get("header_fields", [])
-        return cls(raw["name"], raw.get("description", ""), fields, header, raw.get("scope_fields", header))
+        return cls(raw["name"], raw.get("description", ""), fields, header, raw.get("scope_fields", header), raw.get("examples", []))
 
     @property
     def columns(self) -> list[str]:

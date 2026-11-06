@@ -8,6 +8,11 @@ name: agreement
 description: A commercial agreement between two or more companies or individuals, filed publicly with the SEC.
 header_fields: [agreement_title, party_a, party_b]
 scope_fields: [party_a, party_b]
+examples:
+  - Which agreements are governed by the laws of New York?
+  - Which agreements renew automatically?
+  - Which agreements contain a non-compete clause?
+  - Which agreements give a party audit rights?
 fields:
   - name: agreement_title
     type: text

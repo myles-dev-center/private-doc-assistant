@@ -16,13 +16,12 @@ client = httpx.Client(base_url=API, timeout=600, trust_env=False)
 
 st.set_page_config(page_title="Document Assistant", page_icon="📄", layout="wide")
 
-EXAMPLES = [
-    "When does contract AP-SA-2024-071 end?",
-    "Which law governs the agreement with Harbour Metal Works Ltd?",
-    "List all contracts that end in 2027.",
-    "What is the total value of all EUR-denominated contracts?",
-    "What minimum insurance coverage must Kestrel Logistics B.V. maintain?",
-]
+ROUTES = {
+    "sql": "from extracted table",
+    "document": "from the whole document",
+    "search": "from document search",
+    "not_found": "no supporting text",
+}
 
 
 def api(method: str, path: str, **kw):
@@ -57,11 +56,11 @@ with tab_chat:
     st.caption("Answers cite the document and page. Questions across many documents are answered from the extracted table.")
     if "history" not in st.session_state:
         st.session_state.history = []
-    cols = st.columns(len(EXAMPLES))
     clicked = None
-    for c, ex in zip(cols, EXAMPLES):
-        if c.button(ex, use_container_width=True):
-            clicked = ex
+    if examples := health.get("examples"):
+        for c, ex in zip(st.columns(len(examples)), examples):
+            if c.button(ex, use_container_width=True):
+                clicked = ex
     question = st.chat_input("Ask about your documents…") or clicked
 
     if question:
@@ -73,8 +72,7 @@ with tab_chat:
             st.write(a["question"])
         with st.chat_message("assistant"):
             st.write(a["answer"])
-            meta = {"sql": "from extracted table", "search": "from document search", "not_found": "no supporting text"}[a["route"]]
-            st.caption(f"{meta} · {a['seconds']} s")
+            st.caption(f"{ROUTES.get(a['route'], a['route'])} · {a['seconds']} s")
             if a.get("rows"):
                 df = pd.DataFrame(a["rows"], columns=a["columns"])
                 st.dataframe(df, hide_index=True, use_container_width=True)
@@ -90,11 +88,11 @@ with tab_table:
     if not records:
         st.info("No extracted data yet - ingest some documents.")
     else:
-        st.caption("One row per document, extracted once at ingest. Edit the schema in `schemas/contract.yaml`.")
+        st.caption(f"One row per document, extracted once at ingest. Fields: `schemas/{health['schema']}.yaml`.")
         st.dataframe(pd.DataFrame(records), hide_index=True, use_container_width=True)
         st.download_button(
             "Download Excel",
             api("GET", "/records.xlsx").content,
-            file_name="contracts.xlsx",
+            file_name=f"{health['schema']}s.xlsx",
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
         )
