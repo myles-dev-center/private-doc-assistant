@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import re
 import threading
+import uuid
 from contextlib import contextmanager
 from typing import Any
 from urllib.parse import urlparse
@@ -31,6 +32,7 @@ class LLM:
             settings.embed_base_url or settings.llm_base_url, settings.embed_api_key or settings.llm_api_key, settings.llm_timeout
         )
         self.json_format = 0  # index into JSON_FORMATS; len(JSON_FORMATS) = prompt-only
+        self.cache_key = f"docassist-{uuid.uuid4()}" if settings.llm_cache_key and not is_local_url(settings.llm_base_url) else None
         self.usage = Usage()
         self._local = threading.local()  # usage of the calls made on this thread, see track()
         self.set_concurrency(resolve_concurrency(settings))
@@ -65,6 +67,9 @@ class LLM:
             kwargs["reasoning_effort"] = self.s.llm_reasoning_effort
         if json_mode:
             kwargs["response_format"] = JSON_FORMATS[self.json_format]
+        if self.cache_key:
+            kwargs["extra_body"] = {"prompt_cache_key": self.cache_key}
+            kwargs["extra_headers"] = {"session-id": self.cache_key}
         with self._gate:
             resp = self.chat_client.chat.completions.create(
                 model=self.s.llm_model,

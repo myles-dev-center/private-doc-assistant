@@ -69,6 +69,23 @@ def test_usage_of_one_answer_excludes_parallel_work():
     assert mine.calls == 2 and mine.input == 20 and llm.usage.calls == 7
 
 
+def test_cloud_calls_share_one_cache_key_local_calls_have_none():
+    cloud = LLM(Settings(_env_file=None, llm_base_url="https://api.example.com/v1"))
+    sent = []
+
+    def create(**kw):
+        sent.append(kw)
+        return SlowClient().create()
+
+    cloud.chat_client = SimpleNamespace(chat=SimpleNamespace(completions=SimpleNamespace(create=create)))
+    cloud.chat("s", "u")
+    cloud.chat("s", "v")
+    assert cloud.cache_key and all(k["extra_body"]["prompt_cache_key"] == cloud.cache_key for k in sent)
+    assert all(k["extra_headers"]["session-id"] == cloud.cache_key for k in sent)
+    assert LLM(Settings(_env_file=None, llm_base_url="http://localhost:1234/v1")).cache_key is None
+    assert LLM(Settings(_env_file=None, llm_base_url="https://api.example.com/v1", llm_cache_key=False)).cache_key is None
+
+
 def test_parallel_extraction_matches_sequential():
     from docassist.pipeline import DEFAULT_SCHEMA
     from docassist.structured import Schema, extract

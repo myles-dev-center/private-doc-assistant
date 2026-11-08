@@ -33,6 +33,8 @@ Both rows can be run with the same scripts ([`scripts/run_fullread.py`](scripts/
 
 **Agent with search tools** is a minimal tool-calling loop (list files, grep, read a page). **Codex CLI** is OpenAI's production coding agent (v0.160.0, same model and reasoning effort), given the agreements as text files and nothing else; every question is a fresh session ([`scripts/run_codex.py`](scripts/run_codex.py)). Codex reports tokens per turn, not per model call, so its cost leaves out the long-prompt surcharge — a lower bound.
 
+**All documents in the prompt** sends all 30 agreements (196k–349k tokens) with every question. The cached-input price could in principle make repeated questions cheaper, but in this run only 34 of its 159 prompts were served from the prompt cache, so its cost is close to the full price. That is also what a user would usually pay: the cache only helps when the same document set is asked about again within minutes, and every new or changed document starts from the full price. The pipeline's prompts are small (1k–10k tokens), so its cost hardly depends on caching.
+
 What the table shows:
 
 - **With a strong model, every method is about equally accurate — the difference is cost and waiting time.** The cloud pipeline, all-documents-in-the-prompt, the simple agent and Codex all score 87–89%; none of the differences with the pipeline is statistically significant (paired McNemar test, p ≥ 0.25). The pipeline answers in **4 s for $0.010**; Codex takes 26 s (65 s at the 90th percentile) and 4× the cost, reading ~65k tokens per question; all documents in the prompt cost **38×** as much. The pipeline's one-off ingestion ($0.69 for 30 agreements) pays for itself against Codex after about 23 questions.

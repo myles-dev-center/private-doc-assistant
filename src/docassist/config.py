@@ -24,6 +24,11 @@ class Settings(BaseSettings):
     # Leave empty for models/providers that reject the parameter.
     llm_reasoning_effort: str = "none"
     llm_timeout: float = 180.0
+    # Cloud calls carry one cache key per client (`prompt_cache_key` + `session-id` header),
+    # so requests sharing a long prefix reach the same prompt cache. Without it, a relay
+    # that spreads requests over several upstreams rarely hits the cache (measured:
+    # 0-2 of 9 calls vs 9 of 9). Not sent to local servers.
+    llm_cache_key: bool = True
     # Model requests in flight at once (uploads process several documents and the parts of a
     # long document side by side). 0 = automatic: recommended for this machine's hardware
     # when the chat model is local, 4 for a cloud API. At most 10.

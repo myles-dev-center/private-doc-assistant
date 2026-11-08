@@ -101,6 +101,8 @@ class Library:
 def ask(llm: LLM, lib: Library, question: str, max_steps: int, max_usd: float) -> tuple[str, int]:
     msgs = [{"role": "system", "content": SYSTEM}, {"role": "user", "content": question}]
     kwargs = {"reasoning_effort": llm.s.llm_reasoning_effort} if llm.s.llm_reasoning_effort else {}
+    if llm.cache_key:
+        kwargs |= {"extra_body": {"prompt_cache_key": llm.cache_key}, "extra_headers": {"session-id": llm.cache_key}}
     start = llm.usage.usd
     for step in range(max_steps + 1):
         last = step == max_steps or llm.usage.usd - start > max_usd
