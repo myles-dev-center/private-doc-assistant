@@ -1,0 +1,164 @@
+[
+  {
+    "key": "local",
+    "label": "Local \u00b7 this pipeline",
+    "run": true,
+    "questions": 159,
+    "accuracy": 0.799,
+    "ci95": [
+      0.73,
+      0.854
+    ],
+    "lookup": 0.958,
+    "aggregate": 0.359,
+    "unanswerable": 0.875,
+    "hallucination": 0.17,
+    "median_s": 14.5,
+    "p90_s": 38.7,
+    "calls_per_question": 1.4,
+    "usd_per_question": 0.0,
+    "usd_questions": 0.0,
+    "usd_ingest": 0.0,
+    "ingest_min_per_set": 19
+  },
+  {
+    "key": "local-fullread",
+    "label": "Local \u00b7 model reads every document",
+    "run": false
+  },
+  {
+    "key": "local-agent",
+    "label": "Local \u00b7 agent with search tools",
+    "run": true,
+    "questions": 159,
+    "accuracy": 0.717,
+    "ci95": [
+      0.642,
+      0.781
+    ],
+    "lookup": 0.875,
+    "aggregate": 0.231,
+    "unanswerable": 0.875,
+    "hallucination": 0.27,
+    "median_s": 32.1,
+    "p90_s": 93.7,
+    "calls_per_question": 6.5,
+    "usd_per_question": 0.0,
+    "usd_questions": 0.0,
+    "usd_ingest": null,
+    "ingest_min_per_set": null,
+    "vs_pipeline": {
+      "pipeline_only": 21,
+      "method_only": 8,
+      "p": 0.0241
+    }
+  },
+  {
+    "key": "local-codex",
+    "label": "Local \u00b7 Codex CLI on the document folder",
+    "run": false
+  },
+  {
+    "key": "cloud",
+    "label": "Cloud \u00b7 this pipeline",
+    "run": true,
+    "questions": 159,
+    "accuracy": 0.887,
+    "ci95": [
+      0.828,
+      0.927
+    ],
+    "lookup": 0.99,
+    "aggregate": 0.59,
+    "unanswerable": 0.958,
+    "hallucination": 0.107,
+    "median_s": 4.2,
+    "p90_s": 17.4,
+    "calls_per_question": 1.3,
+    "usd_per_question": 0.0098,
+    "usd_questions": 1.56,
+    "usd_ingest": 2.06,
+    "ingest_min_per_set": 8
+  },
+  {
+    "key": "cloud-fullread",
+    "label": "Cloud \u00b7 all documents in the prompt",
+    "run": true,
+    "questions": 159,
+    "accuracy": 0.868,
+    "ci95": [
+      0.807,
+      0.912
+    ],
+    "lookup": 0.979,
+    "aggregate": 0.538,
+    "unanswerable": 0.958,
+    "hallucination": 0.119,
+    "median_s": 9.1,
+    "p90_s": 24.2,
+    "calls_per_question": 1.0,
+    "usd_per_question": 0.3748,
+    "usd_questions": 59.59,
+    "usd_ingest": null,
+    "ingest_min_per_set": null,
+    "vs_pipeline": {
+      "pipeline_only": 5,
+      "method_only": 2,
+      "p": 0.4531
+    }
+  },
+  {
+    "key": "cloud-agent",
+    "label": "Cloud \u00b7 agent with search tools",
+    "run": true,
+    "questions": 159,
+    "accuracy": 0.868,
+    "ci95": [
+      0.807,
+      0.912
+    ],
+    "lookup": 0.969,
+    "aggregate": 0.59,
+    "unanswerable": 0.917,
+    "hallucination": 0.119,
+    "median_s": 14.8,
+    "p90_s": 43.9,
+    "calls_per_question": 4.9,
+    "usd_per_question": 0.022,
+    "usd_questions": 3.5,
+    "usd_ingest": null,
+    "ingest_min_per_set": null,
+    "vs_pipeline": {
+      "pipeline_only": 3,
+      "method_only": 0,
+      "p": 0.25
+    }
+  },
+  {
+    "key": "cloud-codex",
+    "label": "Cloud \u00b7 Codex CLI on the document folder",
+    "run": true,
+    "questions": 159,
+    "accuracy": 0.881,
+    "ci95": [
+      0.821,
+      0.922
+    ],
+    "lookup": 0.979,
+    "aggregate": 0.59,
+    "unanswerable": 0.958,
+    "hallucination": 0.113,
+    "median_s": 26.3,
+    "p90_s": 64.7,
+    "calls_per_question": 3.3,
+    "usd_per_question": 0.0396,
+    "usd_questions": 6.3,
+    "usd_ingest": null,
+    "ingest_min_per_set": null,
+    "vs_pipeline": {
+      "pipeline_only": 2,
+      "method_only": 1,
+      "p": 1.0
+    }
+  }
+]

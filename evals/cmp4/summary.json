@@ -1,0 +1,308 @@
+{
+  "combos": {
+    "cloud": {
+      "label": "Cloud \u00b7 gpt-6.1-sol + text-embedding-3-small",
+      "chat_model": "gpt-6.1-sol",
+      "embed_model": "openai/text-embedding-3-small",
+      "sets": [
+        "set4",
+        "set5",
+        "set6"
+      ],
+      "questions": 159,
+      "accuracy": 0.887,
+      "ci95": [
+        0.828,
+        0.927
+      ],
+      "hallucination": 0.107,
+      "lookup": [
+        95,
+        96
+      ],
+      "aggregate": [
+        23,
+        39
+      ],
+      "unanswerable": [
+        23,
+        24
+      ],
+      "short": [
+        18,
+        18
+      ],
+      "named-list": [
+        9,
+        9
+      ],
+      "median_s": 4.2,
+      "p90_s": 17.4,
+      "usd_per_question": 0.0098,
+      "usd_questions": 1.56,
+      "usd_ingest": 0.02,
+      "ingest_reused_extraction": true
+    },
+    "cloud-chat": {
+      "label": "Cloud chat \u00b7 gpt-6.1-sol + nomic",
+      "chat_model": "gpt-6.1-sol",
+      "embed_model": "text-embedding-nomic-embed-text-v1.5",
+      "sets": [
+        "set4",
+        "set5",
+        "set6"
+      ],
+      "questions": 159,
+      "accuracy": 0.874,
+      "ci95": [
+        0.814,
+        0.917
+      ],
+      "hallucination": 0.101,
+      "lookup": [
+        93,
+        96
+      ],
+      "aggregate": [
+        23,
+        39
+      ],
+      "unanswerable": [
+        23,
+        24
+      ],
+      "short": [
+        15,
+        18
+      ],
+      "named-list": [
+        9,
+        9
+      ],
+      "median_s": 3.6,
+      "p90_s": 17.1,
+      "usd_per_question": 0.0143,
+      "usd_questions": 2.27,
+      "usd_ingest": 2.05,
+      "ingest_reused_extraction": false
+    },
+    "local": {
+      "label": "Local \u00b7 Qwen 3.5 9B + nomic",
+      "chat_model": "qwen3.5-9b-mtp",
+      "embed_model": "text-embedding-nomic-embed-text-v1.5",
+      "sets": [
+        "set4",
+        "set5",
+        "set6"
+      ],
+      "questions": 159,
+      "accuracy": 0.799,
+      "ci95": [
+        0.73,
+        0.854
+      ],
+      "hallucination": 0.17,
+      "lookup": [
+        92,
+        96
+      ],
+      "aggregate": [
+        14,
+        39
+      ],
+      "unanswerable": [
+        21,
+        24
+      ],
+      "short": [
+        16,
+        18
+      ],
+      "named-list": [
+        0,
+        9
+      ],
+      "median_s": 14.5,
+      "p90_s": 38.7,
+      "usd_per_question": 0.0,
+      "usd_questions": 0.0,
+      "usd_ingest": 0.0,
+      "ingest_reused_extraction": false
+    },
+    "local-chat-cloud-embed": {
+      "label": "Local chat \u00b7 Qwen 3.5 9B + text-embedding-3-small",
+      "chat_model": "qwen3.5-9b-mtp",
+      "embed_model": "openai/text-embedding-3-small",
+      "sets": [
+        "set4",
+        "set5",
+        "set6"
+      ],
+      "questions": 159,
+      "accuracy": 0.799,
+      "ci95": [
+        0.73,
+        0.854
+      ],
+      "hallucination": 0.17,
+      "lookup": [
+        92,
+        96
+      ],
+      "aggregate": [
+        14,
+        39
+      ],
+      "unanswerable": [
+        21,
+        24
+      ],
+      "short": [
+        16,
+        18
+      ],
+      "named-list": [
+        0,
+        9
+      ],
+      "median_s": 12.7,
+      "p90_s": 38.0,
+      "usd_per_question": 0.0,
+      "usd_questions": 0.0,
+      "usd_ingest": 0.01,
+      "ingest_reused_extraction": true
+    }
+  },
+  "pairs": [
+    {
+      "a": "cloud",
+      "b": "cloud-chat",
+      "only_a": 3,
+      "only_b": 1,
+      "p": 0.625,
+      "questions": 159
+    },
+    {
+      "a": "cloud",
+      "b": "local",
+      "only_a": 16,
+      "only_b": 2,
+      "p": 0.0013,
+      "questions": 159
+    },
+    {
+      "a": "cloud",
+      "b": "local-chat-cloud-embed",
+      "only_a": 16,
+      "only_b": 2,
+      "p": 0.0013,
+      "questions": 159
+    },
+    {
+      "a": "cloud-chat",
+      "b": "local",
+      "only_a": 16,
+      "only_b": 4,
+      "p": 0.0118,
+      "questions": 159
+    },
+    {
+      "a": "cloud-chat",
+      "b": "local-chat-cloud-embed",
+      "only_a": 16,
+      "only_b": 4,
+      "p": 0.0118,
+      "questions": 159
+    },
+    {
+      "a": "local",
+      "b": "local-chat-cloud-embed",
+      "only_a": 0,
+      "only_b": 0,
+      "p": 1.0,
+      "questions": 159
+    }
+  ],
+  "extraction": {
+    "gpt-6.1-sol": {
+      "fields": {
+        "governing_law": [
+          77,
+          82
+        ],
+        "agreement_date": [
+          81,
+          83
+        ],
+        "non_compete": [
+          75,
+          90
+        ],
+        "exclusivity": [
+          77,
+          90
+        ],
+        "termination_for_convenience": [
+          85,
+          90
+        ],
+        "cap_on_liability": [
+          69,
+          90
+        ],
+        "audit_rights": [
+          87,
+          90
+        ],
+        "most_favored_nation": [
+          83,
+          90
+        ]
+      },
+      "total": [
+        634,
+        705
+      ]
+    },
+    "qwen3.5-9b-mtp": {
+      "fields": {
+        "governing_law": [
+          80,
+          82
+        ],
+        "agreement_date": [
+          79,
+          83
+        ],
+        "non_compete": [
+          76,
+          90
+        ],
+        "exclusivity": [
+          79,
+          90
+        ],
+        "termination_for_convenience": [
+          79,
+          90
+        ],
+        "cap_on_liability": [
+          83,
+          90
+        ],
+        "audit_rights": [
+          83,
+          90
+        ],
+        "most_favored_nation": [
+          84,
+          90
+        ]
+      },
+      "total": [
+        643,
+        705
+      ]
+    }
+  }
+}

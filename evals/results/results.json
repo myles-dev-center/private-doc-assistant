@@ -3,7 +3,7 @@
   "embed_model": "text-embedding-nomic-embed-text-v1.5",
   "corpus": "data\\corpus",
   "endpoint": "http://localhost:1234/v1",
-  "started": "2026-11-06 07:17",
+  "started": "2026-11-08 07:50",
   "configs": {
     "naive": {
       "settings": {
@@ -35,7 +35,7 @@
         "refusal_on_unanswerable": 0.875,
         "citation_accuracy": 1.0,
         "aggregate_recall": 0.079,
-        "median_seconds": 5.29,
+        "median_seconds": 6.16,
         "usage": {
           "ingest": {
             "calls": 0,
@@ -44,13 +44,13 @@
             "output": 0,
             "embed_tokens": 0,
             "usd": 0.0,
-            "seconds": 14.8
+            "seconds": 18.1
           },
           "questions": {
             "calls": 44,
-            "input": 58695,
+            "input": 59003,
             "cached": 0,
-            "output": 1877,
+            "output": 1902,
             "embed_tokens": 0,
             "usd": 0.0
           }
@@ -63,7 +63,7 @@
           "tag": "contract-id",
           "question": "When does contract AP-SA-2024-017 end?",
           "expected": "2026-02-28",
-          "answer": "Contract AP-SA-2024-017 ends on February 28, 2026. This is indicated in Schedule 1 of the document, which lists the fee period for Year 2 as running from March 1, 2025, to February 28, 2026 [2].",
+          "answer": "Contract AP-SA-2024-017 ends on February 28, 2026. This is indicated in Schedule 1 for that agreement, which lists the second year period as running from March 1, 2025, to February 28, 2026 [2].",
           "route": "search",
           "correct": true,
           "hallucinated": false,
@@ -71,7 +71,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.74,
+          "seconds": 9.8,
           "detail": {}
         },
         {
@@ -88,7 +88,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 6.52,
+          "seconds": 7.66,
           "detail": {}
         },
         {
@@ -105,7 +105,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.5,
+          "seconds": 6.55,
           "detail": {}
         },
         {
@@ -114,7 +114,7 @@
           "tag": "contract-id",
           "question": "What are the payment terms in contract AP-MSA-2022-090?",
           "expected": 90,
-          "answer": "The payment terms for contract AP-MSA-2022-090 specify fees of $1,600,000.00 USD per year for three years (2022\u20132024), totaling $4,800,000.00 [1].",
+          "answer": "The payment terms for contract AP-MSA-2022-090 specify fees of $1,600,000.00 USD per year for three years: 2022, 2023, and 2024 [1]. The total amount for the term is $4,800,000.00 USD [1].",
           "route": "search",
           "correct": true,
           "hallucinated": false,
@@ -122,7 +122,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 6.09,
+          "seconds": 8.21,
           "detail": {}
         },
         {
@@ -142,7 +142,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.49,
+          "seconds": 8.47,
           "detail": {}
         },
         {
@@ -159,7 +159,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 8.81,
+          "seconds": 6.11,
           "detail": {}
         },
         {
@@ -176,7 +176,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 5.03,
+          "seconds": 3.81,
           "detail": {}
         },
         {
@@ -193,7 +193,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 2.24,
+          "seconds": 2.84,
           "detail": {}
         },
         {
@@ -210,7 +210,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 6.0,
+          "seconds": 6.85,
           "detail": {}
         },
         {
@@ -227,7 +227,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 5.29,
+          "seconds": 6.16,
           "detail": {}
         },
         {
@@ -244,7 +244,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.28,
+          "seconds": 4.21,
           "detail": {}
         },
         {
@@ -261,7 +261,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 6.39,
+          "seconds": 7.1,
           "detail": {}
         },
         {
@@ -281,7 +281,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 5.24,
+          "seconds": 6.05,
           "detail": {}
         },
         {
@@ -298,7 +298,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.04,
+          "seconds": 4.0,
           "detail": {}
         },
         {
@@ -307,7 +307,7 @@
           "tag": "name",
           "question": "What is the effective date of the agreement with Dunmore Packaging Ltd?",
           "expected": "2022-02-01",
-          "answer": "The provided excerpts do not contain an \"effective date\" for the agreement with Dunmore Packaging Ltd; Excerpt [1] only states that the Mutual Non-Disclosure Agreement was entered into on 2022-01-26. The specific term and effective date language found in Excerpt [6] applies to a different Supply Agreement between Alder Precision GmbH and Northgate Test Equipment GmbH.",
+          "answer": "The provided excerpts do not contain the effective date for the agreement with Dunmore Packaging Ltd; they only state that the Mutual Non-Disclosure Agreement was entered into on 2022-01-26 [1]. The specific \"Effective Date\" terminology is defined in the Supply Agreements with other parties, such as Northgate Test Equipment GmbH which commenced on March 1, 2023 [6], but this does not apply to the NDA with Dunmore.",
           "route": "search",
           "correct": false,
           "hallucinated": false,
@@ -315,7 +315,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.71,
+          "seconds": 9.52,
           "detail": {}
         },
         {
@@ -332,7 +332,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 5.0,
+          "seconds": 5.77,
           "detail": {}
         },
         {
@@ -349,7 +349,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.26,
+          "seconds": 4.07,
           "detail": {}
         },
         {
@@ -366,7 +366,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.41,
+          "seconds": 9.06,
           "detail": {}
         },
         {
@@ -385,7 +385,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 5.28,
+          "seconds": 5.92,
           "detail": {}
         },
         {
@@ -402,7 +402,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.04,
+          "seconds": 3.7,
           "detail": {}
         },
         {
@@ -411,7 +411,7 @@
           "tag": "name",
           "question": "What is the liability cap in the agreement with Larchmont Payroll Services LLC?",
           "expected": 500000,
-          "answer": "The liability cap in the agreement with Larchmont Payroll Services LLC (Contract No.: AP-LSA-2024-107) shall not exceed 2 million US dollars [3][5].",
+          "answer": "The liability cap in the agreement with Larchmont Payroll Services LLC is 2 million US dollars (USD 2,000,000) [3][5]. This limit applies to the Logistics Services Agreement (Contract No.: AP-LSA-2024-107) entered into between Alder Precision GmbH and Larchmont Payroll Services LLC [1].",
           "route": "search",
           "correct": false,
           "hallucinated": true,
@@ -419,7 +419,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 5.1,
+          "seconds": 7.88,
           "detail": {}
         },
         {
@@ -436,7 +436,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 6.16,
+          "seconds": 6.98,
           "detail": {}
         },
         {
@@ -445,15 +445,15 @@
           "tag": "name",
           "question": "What is the effective date of the agreement with Vexmoor Freight GmbH?",
           "expected": "2022-03-01",
-          "answer": "The provided excerpts do not contain an effective date for the agreement between Alder Precision GmbH and Vexmoor Freight GmbH. Excerpt [2] identifies this as a Master Services Agreement entered into on 27.01.2022, but it does not specify a separate \"Effective Date\" distinct from the execution date, whereas other excerpts explicitly define effective dates for different agreements.",
-          "route": "search",
+          "answer": "The documents do not contain this information.",
+          "route": "not_found",
           "correct": false,
           "hallucinated": false,
           "refused": true,
-          "citation_ok": true,
+          "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 7.53,
+          "seconds": 3.96,
           "detail": {}
         },
         {
@@ -470,7 +470,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 5.11,
+          "seconds": 3.7,
           "detail": {}
         },
         {
@@ -489,7 +489,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.12,
+          "seconds": 3.75,
           "detail": {}
         },
         {
@@ -508,7 +508,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.21,
+          "seconds": 3.9,
           "detail": {}
         },
         {
@@ -532,7 +532,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 6.41,
+          "seconds": 7.09,
           "detail": {
             "missing": [
               "AP-LIC-2025-008",
@@ -570,7 +570,7 @@
           "citation_ok": null,
           "recall": 0.1,
           "precision": 1.0,
-          "seconds": 9.21,
+          "seconds": 9.8,
           "detail": {
             "missing": [
               "AP-LIC-2023-020",
@@ -605,7 +605,7 @@
             "AP-SA-2024-071",
             "AP-SA-2024-117"
           ],
-          "answer": "All the contracts described in the excerpts renew automatically for successive periods of twelve months unless a party provides written notice of non-renewal within a specified timeframe before the term ends [1][2][3][4][5][6]. The specific notice periods vary by contract: 90 days for engineering/IT services and machined components agreements, and 30 days for the software license agreement.",
+          "answer": "All the contracts described in the excerpts renew automatically for successive periods of twelve (12) months unless either Party gives written notice of non-renewal before the end of the then-current term [1][2][3][4][5][6]. The specific notice periods vary by contract: 90 days for engineering/IT services and machined components, and 30 days for software licensing.",
           "route": "search",
           "correct": false,
           "hallucinated": true,
@@ -613,7 +613,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 9.74,
+          "seconds": 10.88,
           "detail": {
             "missing": [
               "AP-LIC-2025-008",
@@ -646,7 +646,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 11.24,
+          "seconds": 12.4,
           "detail": {}
         },
         {
@@ -673,7 +673,7 @@
             "AP-SA-2024-075",
             "AP-SA-2024-117"
           ],
-          "answer": "Based on the provided excerpts, there is only one contract with payment terms longer than 45 days: Excerpt [3], which specifies \"net 90 days\" from the date of a correct invoice. All other excerpts list payment terms of 30, 45, or 60 days, where only the 60-day term in Excerpt [5] exceeds 45 days.\n\n**Contracts with payment terms longer than 45 days:**\n*   **Excerpt [3]:** Net 90 days.\n*   **Excerpt [5]:** Net 60 days.",
+          "answer": "Based on the provided excerpts, there is only one contract with payment terms longer than 45 days:\n\n*   The agreement described in Excerpt [3] has payment terms of **net 90 days** from the date of a correct invoice [3].\n\nAll other contracts listed have payment terms of net 45 days or less (Excerpts [1], [2], and [4] are net 45 days; Excerpt [5] is net 60 days, but the question asks for terms *longer* than 45 days, so only the 90-day term qualifies). Wait, re-evaluating: Net 60 days is longer than 45 days.\n\nCorrected List:\n1.  The agreement in Excerpt [3] has payment terms of **net 90 days** [3].\n2.  The agreement in Excerpt [5] has payment terms of **net 60 days** [5].",
           "route": "search",
           "correct": false,
           "hallucinated": true,
@@ -681,7 +681,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 12.2,
+          "seconds": 17.45,
           "detail": {
             "missing": [
               "AP-LIC-2022-009",
@@ -726,7 +726,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 12.61,
+          "seconds": 14.63,
           "detail": {
             "missing": [
               "AP-LIC-2022-009",
@@ -760,7 +760,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 8.03,
+          "seconds": 8.69,
           "detail": {
             "missing": [
               "AP-MSA-2023-017",
@@ -787,7 +787,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 10.82,
+          "seconds": 11.48,
           "detail": {}
         },
         {
@@ -816,7 +816,7 @@
           "citation_ok": null,
           "recall": 0.45454545454545453,
           "precision": 1.0,
-          "seconds": 13.4,
+          "seconds": 14.19,
           "detail": {
             "missing": [
               "AP-LIC-2023-095",
@@ -835,7 +835,7 @@
           "tag": "aggregate",
           "question": "How many contracts can be terminated for convenience with 30 days' notice or less?",
           "expected": 5,
-          "answer": "Based on the provided excerpts, three agreements allow termination for convenience with thirty (30) days' prior written notice: Excerpt [1], Excerpt [2], and Excerpt [5]. Excerpts [3] and [4] require ninety (90) days, while Excerpt [6] requires one hundred eighty (180) days. Therefore, exactly three contracts listed can be terminated with 30 days' notice or less.",
+          "answer": "Based on the provided excerpts, three agreements allow termination for convenience with thirty (30) days' prior written notice: Excerpt [1], Excerpt [2], and Excerpt [5]. Excerpts [3] and [4] require ninety (90) days, while Excerpt [6] requires one hundred eighty (180) days. Therefore, exactly three contracts listed can be terminated for convenience with 30 days' notice or less.",
           "route": "search",
           "correct": true,
           "hallucinated": false,
@@ -843,7 +843,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 10.19,
+          "seconds": 11.1,
           "detail": {}
         },
         {
@@ -860,7 +860,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 5.12,
+          "seconds": 5.73,
           "detail": {}
         },
         {
@@ -877,7 +877,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 4.6,
+          "seconds": 5.28,
           "detail": {}
         },
         {
@@ -894,7 +894,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 1.67,
+          "seconds": 4.23,
           "detail": {}
         },
         {
@@ -911,7 +911,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 2.9,
+          "seconds": 3.54,
           "detail": {}
         },
         {
@@ -928,7 +928,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 1.75,
+          "seconds": 2.29,
           "detail": {}
         },
         {
@@ -945,7 +945,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.47,
+          "seconds": 4.21,
           "detail": {}
         },
         {
@@ -962,7 +962,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 2.87,
+          "seconds": 3.62,
           "detail": {}
         },
         {
@@ -979,7 +979,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.23,
+          "seconds": 3.85,
           "detail": {}
         }
       ]
@@ -994,11 +994,11 @@
       },
       "summary": {
         "n": 44,
-        "accuracy": 0.432,
+        "accuracy": 0.409,
         "by_type": {
           "lookup": {
             "n": 26,
-            "accuracy": 0.423
+            "accuracy": 0.385
           },
           "aggregate": {
             "n": 10,
@@ -1009,12 +1009,12 @@
             "accuracy": 1.0
           }
         },
-        "hallucination_rate": 0.318,
-        "answerable_hallucination_rate": 0.389,
+        "hallucination_rate": 0.273,
+        "answerable_hallucination_rate": 0.333,
         "refusal_on_unanswerable": 1.0,
         "citation_accuracy": 0.938,
-        "aggregate_recall": 0.039,
-        "median_seconds": 7.52,
+        "aggregate_recall": 0.052,
+        "median_seconds": 7.88,
         "usage": {
           "ingest": {
             "calls": 0,
@@ -1023,13 +1023,13 @@
             "output": 0,
             "embed_tokens": 0,
             "usd": 0.0,
-            "seconds": 0.0
+            "seconds": 0.1
           },
           "questions": {
             "calls": 44,
-            "input": 58766,
+            "input": 59074,
             "cached": 0,
-            "output": 2320,
+            "output": 2260,
             "embed_tokens": 0,
             "usd": 0.0
           }
@@ -1042,15 +1042,15 @@
           "tag": "contract-id",
           "question": "When does contract AP-SA-2024-017 end?",
           "expected": "2026-02-28",
-          "answer": "The excerpt for contract AP-SA-2024-017 [1] lists the final fee period as running from 2025-03-01 to 2026-02-28, indicating the agreement ends on 2026-02-28.",
-          "route": "search",
-          "correct": true,
+          "answer": "The documents do not contain this information.",
+          "route": "not_found",
+          "correct": false,
           "hallucinated": false,
-          "refused": false,
-          "citation_ok": true,
+          "refused": true,
+          "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 10.75,
+          "seconds": 7.91,
           "detail": {}
         },
         {
@@ -1059,7 +1059,7 @@
           "tag": "contract-id",
           "question": "When does contract AP-SA-2024-071 end?",
           "expected": "2027-02-28",
-          "answer": "Contract AP-SA-2024-071 ends on February 28, 2027. This is the final date listed in Schedule 1 for Year 3 of the agreement [1].",
+          "answer": "Contract AP-SA-2024-071 ends on February 28, 2027. This is the final date listed in the fee schedule for Year 3 of the agreement [1].",
           "route": "search",
           "correct": true,
           "hallucinated": false,
@@ -1067,7 +1067,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.13,
+          "seconds": 7.94,
           "detail": {}
         },
         {
@@ -1084,7 +1084,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 5.54,
+          "seconds": 6.38,
           "detail": {}
         },
         {
@@ -1093,7 +1093,7 @@
           "tag": "contract-id",
           "question": "What are the payment terms in contract AP-MSA-2022-090?",
           "expected": 90,
-          "answer": "The provided excerpts list the fees for Contract No. AP-MSA-2022-090 as $1,600,000.00 USD per year for three years (2022\u20132024), totaling $4,800,000.00 [1]. However, the excerpts do not specify the payment terms (e.g., due dates or method of payment), only the fee amounts and periods.",
+          "answer": "The provided excerpts list the fees for Contract No. AP-MSA-2022-090 as 1,600,000.00 USD per year for three years (2022\u20132024), totaling 4,800,000.00 USD [1]. However, the excerpts do not specify the payment terms (e.g., due dates or conditions of payment) for these fees.",
           "route": "search",
           "correct": true,
           "hallucinated": false,
@@ -1101,7 +1101,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.65,
+          "seconds": 9.39,
           "detail": {}
         },
         {
@@ -1113,7 +1113,7 @@
             "German",
             "Germany"
           ],
-          "answer": "The agreement with Tavira Components Lda is governed by the laws of Germany, excluding its conflict of laws rules [2]. This is specified in Section 8 of the Logistics Services Agreement between Alder Precision GmbH and Tavira Components Lda [1][2].",
+          "answer": "The agreement with Tavira Components Lda is governed by the laws of Germany, excluding its conflict of laws rules and the United Nations Convention on Contracts for the International Sale of Goods [2].",
           "route": "search",
           "correct": true,
           "hallucinated": false,
@@ -1121,7 +1121,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.21,
+          "seconds": 8.12,
           "detail": {}
         },
         {
@@ -1130,15 +1130,15 @@
           "tag": "name",
           "question": "How many days' notice does Kilnworth Ceramics Ltd need to give to terminate for convenience?",
           "expected": 180,
-          "answer": "The documents do not contain this information.",
-          "route": "not_found",
-          "correct": false,
+          "answer": "The provided excerpts do not specify a single notice period for termination for convenience; instead, they present three different scenarios with varying requirements. Excerpt [3] states 30 days, while Excerpts [4] and [5] state 60 days, and Excerpt [6] states 180 days. Therefore, the exact number of days cannot be determined from the text alone without knowing which specific version or clause applies to this agreement.",
+          "route": "search",
+          "correct": true,
           "hallucinated": false,
           "refused": true,
-          "citation_ok": null,
+          "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.68,
+          "seconds": 10.8,
           "detail": {}
         },
         {
@@ -1155,7 +1155,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 5.15,
+          "seconds": 5.98,
           "detail": {}
         },
         {
@@ -1164,7 +1164,7 @@
           "tag": "contract-id",
           "question": "What is the total contract value of AP-MSA-2025-012?",
           "expected": 800000.0,
-          "answer": "The total contract value for AP-MSA-2025-012 is 800,000.00 EUR [3]. This amount covers two years: 400,000.00 EUR for the period from 2025-11-01 to 2026-10-31 and another 400,000.00 EUR for the period from 2026-11-01 to 2027-10-31 [3].",
+          "answer": "The total contract value of AP-MSA-2025-012 is 800,000.00 EUR [3]. This amount covers two years: 400,000.00 EUR for the period from 2025-11-01 to 2026-10-31 and another 400,000.00 EUR for the period from 2026-11-01 to 2027-10-31 [3].",
           "route": "search",
           "correct": true,
           "hallucinated": false,
@@ -1172,7 +1172,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 9.33,
+          "seconds": 9.99,
           "detail": {}
         },
         {
@@ -1181,7 +1181,7 @@
           "tag": "name",
           "question": "What is the effective date of the agreement with Brightwater Analytics Ltd?",
           "expected": "2024-03-01",
-          "answer": "The effective date of the agreement with Brightwater Analytics Ltd is 2024-01-24, as stated in Excerpt [2]. This date marks when the Supply Agreement was entered into between Alder Precision GmbH and Brightwater Analytics Ltd.",
+          "answer": "The effective date of the agreement with Brightwater Analytics Ltd is 2024-01-24, as stated in the Supply Agreement contract number AP-SA-2024-017 [2].",
           "route": "search",
           "correct": false,
           "hallucinated": true,
@@ -1189,7 +1189,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.52,
+          "seconds": 7.88,
           "detail": {}
         },
         {
@@ -1206,7 +1206,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 6.58,
+          "seconds": 7.39,
           "detail": {}
         },
         {
@@ -1223,7 +1223,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.25,
+          "seconds": 6.04,
           "detail": {}
         },
         {
@@ -1240,7 +1240,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 6.72,
+          "seconds": 7.0,
           "detail": {}
         },
         {
@@ -1260,7 +1260,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 5.19,
+          "seconds": 5.76,
           "detail": {}
         },
         {
@@ -1269,15 +1269,15 @@
           "tag": "name",
           "question": "How many days' notice does Orrin Software GmbH need to give to terminate for convenience?",
           "expected": 90,
-          "answer": "The provided excerpts do not specify the number of days' notice required for termination for convenience specifically by Orrin Software GmbH; they only state that \"Either Party\" may terminate for convenience upon a certain period (ranging from 90 or 180 days depending on the excerpt) [2][3][4][5][6]. Additionally, Excerpt [1] identifies Hannah Whitfield as the Authorized Signatory for Orrin Software GmbH but does not link her to a specific termination notice period.",
-          "route": "search",
-          "correct": true,
+          "answer": "The documents do not contain this information.",
+          "route": "not_found",
+          "correct": false,
           "hallucinated": false,
           "refused": true,
-          "citation_ok": true,
+          "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 8.34,
+          "seconds": 7.5,
           "detail": {}
         },
         {
@@ -1294,7 +1294,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 6.46,
+          "seconds": 7.06,
           "detail": {}
         },
         {
@@ -1311,7 +1311,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.06,
+          "seconds": 8.48,
           "detail": {}
         },
         {
@@ -1328,7 +1328,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 5.15,
+          "seconds": 5.73,
           "detail": {}
         },
         {
@@ -1337,7 +1337,7 @@
           "tag": "contract-id",
           "question": "What are the payment terms in contract AP-SA-2024-075?",
           "expected": 60,
-          "answer": "The payment terms for contract AP-SA-2024-075 specify fees of 60,000.00 EUR per year for two years, totaling 120,000.00 EUR [1]. The first period runs from 2024-10-01 to 2025-09-30, and the second from 2025-10-01 to 2026-09-30 [1].",
+          "answer": "The payment terms for contract AP-SA-2024-075 consist of two annual fees totaling 120,000.00 EUR, with 60,000.00 EUR due for the period from 2024-10-01 to 2025-09-30 and another 60,000.00 EUR due for the period from 2025-10-01 to 2026-09-30 [1].",
           "route": "search",
           "correct": false,
           "hallucinated": true,
@@ -1345,7 +1345,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.58,
+          "seconds": 9.49,
           "detail": {}
         },
         {
@@ -1364,7 +1364,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 5.25,
+          "seconds": 5.73,
           "detail": {}
         },
         {
@@ -1373,7 +1373,7 @@
           "tag": "name",
           "question": "How many days' notice does Saltmarsh Cloud Ltd need to give to terminate for convenience?",
           "expected": 180,
-          "answer": "The excerpts do not specify a single notice period applicable to Saltmarsh Cloud Ltd; instead, they present multiple versions of an agreement with different terms. One version requires 30 days' notice [1], another requires 180 days [2][4][5], and a third requires 60 days [6]. Without knowing which specific excerpt represents the actual signed agreement between the parties, the required number of days cannot be determined from the provided text.",
+          "answer": "The excerpts do not specify a single notice period applicable to Saltmarsh Cloud Ltd; instead, they present multiple versions of an agreement with different terms. One version requires 30 days' notice [1], another requires 180 days [2][4][5], and a third requires 60 days [6]. Without knowing which specific document version governs the relationship between the parties, the exact number of days cannot be determined from the provided text.",
           "route": "search",
           "correct": true,
           "hallucinated": false,
@@ -1381,7 +1381,7 @@
           "citation_ok": false,
           "recall": null,
           "precision": null,
-          "seconds": 8.06,
+          "seconds": 8.45,
           "detail": {}
         },
         {
@@ -1390,15 +1390,15 @@
           "tag": "name",
           "question": "What is the liability cap in the agreement with Larchmont Payroll Services LLC?",
           "expected": 500000,
-          "answer": "The documents do not contain this information.",
-          "route": "not_found",
+          "answer": "The provided excerpts do not contain a specific liability cap for the agreement with Larchmont Payroll Services LLC. While Excerpt [2] identifies an agreement (AP-LSA-2024-107) between Alder Precision GmbH and Larchmont Payroll Services LLC, it does not include the Limitation of Liability section where such a cap would be defined; the liability caps found in other excerpts ([4], [5], [6]) belong to different agreements involving Quarry Ridge Castings LLC.",
+          "route": "search",
           "correct": false,
           "hallucinated": false,
           "refused": true,
-          "citation_ok": null,
+          "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 12.04,
+          "seconds": 11.14,
           "detail": {}
         },
         {
@@ -1415,7 +1415,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 11.35,
+          "seconds": 11.67,
           "detail": {}
         },
         {
@@ -1432,7 +1432,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 9.77,
+          "seconds": 10.12,
           "detail": {}
         },
         {
@@ -1449,7 +1449,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.34,
+          "seconds": 7.78,
           "detail": {}
         },
         {
@@ -1468,7 +1468,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 5.37,
+          "seconds": 5.84,
           "detail": {}
         },
         {
@@ -1487,7 +1487,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.27,
+          "seconds": 3.73,
           "detail": {}
         },
         {
@@ -1511,7 +1511,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 6.98,
+          "seconds": 7.56,
           "detail": {
             "missing": [
               "AP-LIC-2025-008",
@@ -1541,15 +1541,15 @@
             "AP-SA-2022-073",
             "AP-SA-2023-004"
           ],
-          "answer": "The agreements described in excerpts [1] through [6] are governed by the laws of Germany, excluding its conflict of laws rules and the United Nations Convention on Contracts for the International Sale of Goods [1][2][3][4][5][6].",
+          "answer": "The provided excerpts state that \"This Agreement and any dispute arising out of it shall be governed by the laws of Germany\" [1][2][3][4][5][6]. However, the specific names or identities of the contracts themselves are not mentioned in the text.",
           "route": "search",
           "correct": false,
-          "hallucinated": true,
-          "refused": false,
+          "hallucinated": false,
+          "refused": true,
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 7.83,
+          "seconds": 8.63,
           "detail": {
             "missing": [
               "AP-LIC-2023-020",
@@ -1588,12 +1588,12 @@
           "answer": "Contracts [1], [2], [4], and [5] renew automatically for successive periods of twelve (12) months unless notice is given, whereas contracts [3] and [6] do not renew automatically and require a written amendment for extension.",
           "route": "search",
           "correct": false,
-          "hallucinated": true,
-          "refused": false,
+          "hallucinated": false,
+          "refused": true,
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 8.01,
+          "seconds": 8.48,
           "detail": {
             "missing": [
               "AP-LIC-2025-008",
@@ -1618,7 +1618,7 @@
           "tag": "aggregate",
           "question": "How many supply agreements do we have?",
           "expected": 9,
-          "answer": "The provided excerpts list six distinct Supply Agreements with contract numbers AP-SA-2022-030, AP-SA-2024-075, AP-SA-2022-061, AP-SA-2022-022, AP-SA-2024-017, and AP-SA-2022-073 [1][2][3][4][5][6]. Therefore, there are six supply agreements documented in these texts.",
+          "answer": "The provided excerpts describe six distinct Supply Agreements with contract numbers AP-SA-2022-030, AP-SA-2024-075, AP-SA-2022-061, AP-SA-2022-022, AP-SA-2024-017, and AP-SA-2022-073 [1][2][3][4][5][6]. Therefore, there are six supply agreements listed in the text.",
           "route": "search",
           "correct": false,
           "hallucinated": true,
@@ -1626,7 +1626,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 11.42,
+          "seconds": 11.88,
           "detail": {}
         },
         {
@@ -1661,7 +1661,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 9.01,
+          "seconds": 9.63,
           "detail": {
             "missing": [
               "AP-LIC-2022-009",
@@ -1706,7 +1706,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 10.16,
+          "seconds": 10.67,
           "detail": {
             "missing": [
               "AP-LIC-2022-009",
@@ -1732,7 +1732,7 @@
             "AP-SA-2024-071",
             "AP-SA-2024-117"
           ],
-          "answer": "All provided excerpts state that the agreement renews automatically unless either Party gives written notice of non-renewal at least ninety (90) days before the end of the then-current term [1][2][3][4][5][6]. This requirement applies to contracts governing machined components, raw materials, and engineering/IT services.",
+          "answer": "All the provided excerpts describe agreements that require at least 90 days' written notice of non-renewal. Specifically, Excerpts [1], [2], [3], [4], and [5] explicitly state this requirement in their respective \"Term and Renewal\" sections, while Excerpt [6] also includes the same clause before being cut off.",
           "route": "search",
           "correct": false,
           "hallucinated": true,
@@ -1740,7 +1740,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 9.02,
+          "seconds": 9.53,
           "detail": {
             "missing": [
               "AP-MSA-2023-017",
@@ -1767,7 +1767,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 10.44,
+          "seconds": 10.85,
           "detail": {}
         },
         {
@@ -1788,21 +1788,20 @@
             "AP-MSA-2025-012",
             "AP-SA-2024-117"
           ],
-          "answer": "The following contracts have a liability cap of at least 2,000,000: AP-MSA-2025-012 (EUR 2,000,000) [1], AP-LIC-2025-008 (EUR 2,000,000) [3], and AP-LSA-2022-103 (USD 2,000,000) [5].",
+          "answer": "The contracts with a liability cap of at least 2,000,000 are AP-MSA-2025-012 (EUR 2,000,000) [1], AP-MSA-2022-030 (EUR 2,000,000.00) [2], AP-LIC-2025-008 (EUR 2,000,000) [3], and AP-LSA-2022-103 (USD 2,000,000) [5].",
           "route": "search",
           "correct": false,
           "hallucinated": true,
           "refused": false,
           "citation_ok": null,
-          "recall": 0.2727272727272727,
+          "recall": 0.36363636363636365,
           "precision": 1.0,
-          "seconds": 10.33,
+          "seconds": 12.64,
           "detail": {
             "missing": [
               "AP-LIC-2023-020",
               "AP-LIC-2023-095",
               "AP-LSA-2024-054",
-              "AP-MSA-2022-030",
               "AP-MSA-2022-090",
               "AP-MSA-2023-017",
               "AP-MSA-2023-019",
@@ -1825,7 +1824,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 10.34,
+          "seconds": 10.75,
           "detail": {}
         },
         {
@@ -1842,7 +1841,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 4.99,
+          "seconds": 5.5,
           "detail": {}
         },
         {
@@ -1859,7 +1858,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.04,
+          "seconds": 3.56,
           "detail": {}
         },
         {
@@ -1876,7 +1875,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 2.42,
+          "seconds": 2.87,
           "detail": {}
         },
         {
@@ -1893,7 +1892,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 2.9,
+          "seconds": 3.41,
           "detail": {}
         },
         {
@@ -1910,7 +1909,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 1.72,
+          "seconds": 2.17,
           "detail": {}
         },
         {
@@ -1927,7 +1926,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.39,
+          "seconds": 3.96,
           "detail": {}
         },
         {
@@ -1944,7 +1943,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 2.55,
+          "seconds": 3.16,
           "detail": {}
         },
         {
@@ -1961,7 +1960,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 2.95,
+          "seconds": 3.42,
           "detail": {}
         }
       ]
@@ -1991,27 +1990,27 @@
             "accuracy": 1.0
           }
         },
-        "hallucination_rate": 0.182,
-        "answerable_hallucination_rate": 0.222,
+        "hallucination_rate": 0.159,
+        "answerable_hallucination_rate": 0.194,
         "refusal_on_unanswerable": 1.0,
         "citation_accuracy": 1.0,
         "aggregate_recall": 0.056,
-        "median_seconds": 7.23,
+        "median_seconds": 7.53,
         "usage": {
           "ingest": {
             "calls": 30,
-            "input": 47362,
+            "input": 49342,
             "cached": 0,
-            "output": 5666,
+            "output": 15195,
             "embed_tokens": 0,
             "usd": 0.0,
-            "seconds": 480.4
+            "seconds": 1015.2
           },
           "questions": {
             "calls": 44,
-            "input": 68131,
+            "input": 68508,
             "cached": 0,
-            "output": 2321,
+            "output": 2388,
             "embed_tokens": 0,
             "usd": 0.0
           }
@@ -2032,7 +2031,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 5.71,
+          "seconds": 6.18,
           "detail": {}
         },
         {
@@ -2049,7 +2048,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.23,
+          "seconds": 7.49,
           "detail": {}
         },
         {
@@ -2062,11 +2061,11 @@
           "route": "search",
           "correct": true,
           "hallucinated": false,
-          "refused": false,
+          "refused": true,
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.3,
+          "seconds": 8.71,
           "detail": {}
         },
         {
@@ -2083,7 +2082,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 10.02,
+          "seconds": 9.18,
           "detail": {}
         },
         {
@@ -2103,7 +2102,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.71,
+          "seconds": 8.23,
           "detail": {}
         },
         {
@@ -2120,7 +2119,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.11,
+          "seconds": 7.21,
           "detail": {}
         },
         {
@@ -2137,7 +2136,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.9,
+          "seconds": 9.2,
           "detail": {}
         },
         {
@@ -2146,7 +2145,7 @@
           "tag": "contract-id",
           "question": "What is the total contract value of AP-MSA-2025-012?",
           "expected": 800000.0,
-          "answer": "The total contract value for AP-MSA-2025-012 is EUR 800,000.00 [1]. This amount covers two years of fees: EUR 400,000.00 for the period from 2025-11-01 to 2026-10-31 and another EUR 400,000.00 for the period from 2026-11-01 to 2027-10-31 [1].",
+          "answer": "The total contract value for AP-MSA-2025-012 is EUR 800,000.00 [1]. This amount covers two years of fees totaling 400,000.00 EUR per year from November 1, 2025, to October 31, 2027 [1][5].",
           "route": "search",
           "correct": true,
           "hallucinated": false,
@@ -2154,7 +2153,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 11.8,
+          "seconds": 9.91,
           "detail": {}
         },
         {
@@ -2171,7 +2170,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.86,
+          "seconds": 8.38,
           "detail": {}
         },
         {
@@ -2188,7 +2187,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 6.8,
+          "seconds": 7.33,
           "detail": {}
         },
         {
@@ -2197,15 +2196,15 @@
           "tag": "name",
           "question": "When does the master services agreement with Gallowmere Steel Inc. expire?",
           "expected": "2025-08-31",
-          "answer": "The Master Services Agreement expires on 31 August 2025, unless terminated earlier in accordance with its terms [2]. This date marks the end of the second year of the agreement's term, which runs from 1 September 2023 to 31 August 2025 [4].",
+          "answer": "The Master Services Agreement expires on 31 August 2025, unless terminated earlier in accordance with its terms [2]. This Agreement shall not renew automatically; any extension requires a written amendment signed by both Parties [2].",
           "route": "search",
           "correct": true,
           "hallucinated": false,
-          "refused": false,
+          "refused": true,
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 6.73,
+          "seconds": 8.21,
           "detail": {}
         },
         {
@@ -2214,7 +2213,7 @@
           "tag": "contract-id",
           "question": "What are the payment terms in contract AP-LIC-2025-008?",
           "expected": 30,
-          "answer": "The payment terms for contract AP-LIC-2025-008 are net 30 days from the date of a correct invoice, with late payments bearing interest at the statutory rate [4]. All amounts in this agreement are stated in EUR and are exclusive of value added tax [4].",
+          "answer": "The payment terms for contract AP-LIC-2025-008 are net 30 days from the date of a correct invoice, with late payments bearing interest at the statutory rate [4].",
           "route": "search",
           "correct": true,
           "hallucinated": false,
@@ -2222,7 +2221,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.82,
+          "seconds": 8.2,
           "detail": {}
         },
         {
@@ -2242,7 +2241,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 6.86,
+          "seconds": 7.32,
           "detail": {}
         },
         {
@@ -2259,7 +2258,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 4.52,
+          "seconds": 7.05,
           "detail": {}
         },
         {
@@ -2276,7 +2275,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 4.57,
+          "seconds": 5.03,
           "detail": {}
         },
         {
@@ -2293,7 +2292,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 5.17,
+          "seconds": 5.7,
           "detail": {}
         },
         {
@@ -2306,11 +2305,11 @@
           "route": "search",
           "correct": true,
           "hallucinated": false,
-          "refused": false,
+          "refused": true,
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.24,
+          "seconds": 8.68,
           "detail": {}
         },
         {
@@ -2319,7 +2318,7 @@
           "tag": "contract-id",
           "question": "What are the payment terms in contract AP-SA-2024-075?",
           "expected": 60,
-          "answer": "The payment terms for contract AP-SA-2024-075 require the Customer to pay each undisputed invoice within sixty (60) days of receipt, with late payments bearing interest at the statutory rate [3]. All fees are stated in EUR and are exclusive of value added tax [3].",
+          "answer": "The payment terms for contract AP-SA-2024-075 require the Customer to pay each undisputed invoice within sixty (60) days of receipt, with late payments bearing interest at the statutory rate [3]. All fees are stated in EUR and are exclusive of value added tax [3], totaling 120,000.00 EUR over two years as detailed in Schedule 1 [1].",
           "route": "search",
           "correct": true,
           "hallucinated": false,
@@ -2327,7 +2326,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.88,
+          "seconds": 10.7,
           "detail": {}
         },
         {
@@ -2346,7 +2345,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 5.22,
+          "seconds": 5.73,
           "detail": {}
         },
         {
@@ -2363,7 +2362,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 4.6,
+          "seconds": 4.98,
           "detail": {}
         },
         {
@@ -2380,7 +2379,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 6.49,
+          "seconds": 6.93,
           "detail": {}
         },
         {
@@ -2397,7 +2396,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 11.79,
+          "seconds": 12.26,
           "detail": {}
         },
         {
@@ -2406,7 +2405,7 @@
           "tag": "name",
           "question": "What is the effective date of the agreement with Vexmoor Freight GmbH?",
           "expected": "2022-03-01",
-          "answer": "The effective date of the agreement is 01.03.2022 [1]. This Agreement commenced on that date and remains in force until 28.02.2023, unless terminated earlier [1].",
+          "answer": "The effective date of the agreement with Vexmoor Freight GmbH is 01.03.2022 [1].",
           "route": "search",
           "correct": true,
           "hallucinated": false,
@@ -2414,7 +2413,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.83,
+          "seconds": 7.18,
           "detail": {}
         },
         {
@@ -2431,7 +2430,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 6.89,
+          "seconds": 7.34,
           "detail": {}
         },
         {
@@ -2450,7 +2449,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 6.96,
+          "seconds": 9.47,
           "detail": {}
         },
         {
@@ -2461,7 +2460,7 @@
           "expected": [
             "England"
           ],
-          "answer": "The governing law of the agreement is the laws of England and Wales, excluding its conflict of laws rules [3]. This applies to any dispute arising out of the Supply Agreement between Alder Precision GmbH and Harbour Metal Works Ltd [3].",
+          "answer": "The governing law of the agreement between Alder Precision GmbH and Harbour Metal Works Ltd is the laws of England and Wales, excluding its conflict of laws rules [3].",
           "route": "search",
           "correct": true,
           "hallucinated": false,
@@ -2469,7 +2468,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.74,
+          "seconds": 7.53,
           "detail": {}
         },
         {
@@ -2485,7 +2484,7 @@
             "AP-NDA-2025-016",
             "AP-SA-2024-071"
           ],
-          "answer": "The following contracts end in 2027:\n- The agreement with Harbour Metal Works Ltd ends on February 28, 2027 [1].\n- The agreement with Marrowby Translation Services Ltd ends on 31.10.2027 [2].\n- The agreement with Ostrava Wire & Cable s.r.o. renews automatically for successive periods of twelve (12) months until it expires in 2026, but the next renewal would extend into 2027 [6].",
+          "answer": "The following contracts end in 2027:\n- The Supply Agreement between Harbour Metal Works Ltd and its supplier, which remains in force until February 28, 2027 [1].\n- The Master Services Agreement with Marrowby Translation Services Ltd, which remains in force until October 31, 2027 [2][4].\n- The Master Services Agreement with Ostrava Wire & Cable s.r.o., which remains in force until August 31, 2026 and renews automatically for successive periods of twelve months thereafter [6].",
           "route": "search",
           "correct": false,
           "hallucinated": true,
@@ -2493,7 +2492,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 11.84,
+          "seconds": 12.6,
           "detail": {
             "missing": [
               "AP-LIC-2025-008",
@@ -2531,7 +2530,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 9.98,
+          "seconds": 10.44,
           "detail": {
             "missing": [
               "AP-LIC-2023-020",
@@ -2570,12 +2569,12 @@
           "answer": "The Master Services Agreement with Ostrava Wire & Cable s.r.o. [1], the Supply Agreement with Juniper Coatings GmbH [2], and the Master Services Agreement with Quarry Ridge Castings LLC [6] all renew automatically for successive periods of twelve (12) months unless notice is given. In contrast, the Non-Disclosure Agreements with Lindqvist Automation AB [3] and Dunmore Packaging Ltd [5] do not renew automatically and require a written amendment for extension.",
           "route": "search",
           "correct": false,
-          "hallucinated": true,
-          "refused": false,
+          "hallucinated": false,
+          "refused": true,
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 11.07,
+          "seconds": 11.54,
           "detail": {
             "missing": [
               "AP-LIC-2025-008",
@@ -2600,7 +2599,7 @@
           "tag": "aggregate",
           "question": "How many supply agreements do we have?",
           "expected": 9,
-          "answer": "The provided excerpts list six distinct Supply Agreements with contract numbers AP-SA-2024-075, AP-SA-2022-073, AP-SA-2022-030, AP-SA-2024-017, and AP-SA-2022-022 [1][2][3][4][5]. Additionally, excerpt [6] references the same agreement as excerpt [1], indicating a total of five unique agreements described in the text.",
+          "answer": "The provided excerpts list six distinct Supply Agreements with contract numbers AP-SA-2024-075, AP-SA-2022-073, AP-SA-2022-030, AP-SA-2024-017, and AP-SA-2022-022. Therefore, there are at least five supply agreements detailed in the text.",
           "route": "search",
           "correct": false,
           "hallucinated": true,
@@ -2608,7 +2607,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 11.85,
+          "seconds": 10.97,
           "detail": {}
         },
         {
@@ -2635,7 +2634,7 @@
             "AP-SA-2024-075",
             "AP-SA-2024-117"
           ],
-          "answer": "The following contracts have payment terms longer than 45 days:\n- AP-SA-2024-071 (Harbour Metal Works Ltd) has payment terms of net 90 days [2].\n- AP-MSA-2025-012 (Marrowby Translation Services Ltd) has payment terms of net 90 days [3].",
+          "answer": "The following contracts have payment terms longer than 45 days:\n- Harbour Metal Works Ltd (AP-SA-2024-071): Payment terms are net 90 days [2].\n- Marrowby Translation Services Ltd (AP-MSA-2025-012): Payment terms are net 90 days [3].",
           "route": "search",
           "correct": false,
           "hallucinated": true,
@@ -2643,7 +2642,7 @@
           "citation_ok": null,
           "recall": 0.11764705882352941,
           "precision": 1.0,
-          "seconds": 9.71,
+          "seconds": 9.98,
           "detail": {
             "missing": [
               "AP-LIC-2022-009",
@@ -2686,7 +2685,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 5.61,
+          "seconds": 6.16,
           "detail": {
             "missing": [
               "AP-LIC-2022-009",
@@ -2712,7 +2711,7 @@
             "AP-SA-2024-071",
             "AP-SA-2024-117"
           ],
-          "answer": "The Supply Agreement with Harbour Metal Works Ltd requires at least ninety (90) days' notice of non-renewal [1][6]. Additionally, the Master Services Agreement with Ostrava Wire & Cable s.r.o. also requires written notice of non-renewal at least ninety (90) days before the end of the term [2][3].",
+          "answer": "The Supply Agreement with Harbour Metal Works Ltd requires at least ninety (90) days' notice of non-renewal [1][6]. The Master Services Agreement with Ostrava Wire & Cable s.r.o. also requires at least ninety (90) days' notice of non-renewal [2][3]. In contrast, the agreements with Juniper Coatings GmbH and Quarry Ridge Castings LLC require only 60 days' notice [4][5].",
           "route": "search",
           "correct": false,
           "hallucinated": true,
@@ -2720,7 +2719,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 7.51,
+          "seconds": 9.59,
           "detail": {
             "missing": [
               "AP-MSA-2023-017",
@@ -2747,7 +2746,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 11.36,
+          "seconds": 11.78,
           "detail": {}
         },
         {
@@ -2768,7 +2767,7 @@
             "AP-MSA-2025-012",
             "AP-SA-2024-117"
           ],
-          "answer": "The following contracts have a liability cap of at least EUR 2,000,000 or USD 2,000,000: AP-MSA-2025-012 (Marrowby Translation Services Ltd) with a cap of EUR 2,000,000 [3], AP-LSA-2022-103 (Yellowpine Tooling Inc.) with a cap of USD 2,000,000 [4], and AP-MSA-2022-030 (Vexmoor Freight GmbH) with a cap of EUR 2,000,000.00 [6].",
+          "answer": "The following contracts have a liability cap of at least EUR 2,000,000 or USD 2,000,000:\n- AP-MSA-2025-012 (Marrowby Translation Services Ltd) with a cap of EUR 2,000,000 [3].\n- AP-LSA-2022-103 (Yellowpine Tooling Inc.) with a cap of USD 2,000,000 [4].\n- AP-MSA-2022-030 (Vexmoor Freight GmbH) with a cap of EUR 2,000,000.00 [6].",
           "route": "search",
           "correct": false,
           "hallucinated": true,
@@ -2776,7 +2775,7 @@
           "citation_ok": null,
           "recall": 0.2727272727272727,
           "precision": 1.0,
-          "seconds": 13.37,
+          "seconds": 14.2,
           "detail": {
             "missing": [
               "AP-LIC-2023-020",
@@ -2797,7 +2796,7 @@
           "tag": "aggregate",
           "question": "How many contracts can be terminated for convenience with 30 days' notice or less?",
           "expected": 5,
-          "answer": "Based on the provided excerpts, four contracts allow termination for convenience with thirty (30) days' prior written notice: the Logistics Services Agreement with Yellowpine Tooling Inc. [1], the Master Services Agreement with Gallowmere Steel Inc. [2], the Supply Agreement with Arbelo Engineering S.L. [3], and the Master Services Agreement with Marrowby Translation Services Ltd [4]. The other two agreements require sixty (60) days [5] or ninety (90) days [6] notice for convenience termination.",
+          "answer": "Based on the provided excerpts, four contracts allow termination for convenience with thirty (30) days' prior written notice: the Logistics Services Agreement with Yellowpine Tooling Inc. [1], the Master Services Agreement with Gallowmere Steel Inc. [2], the Supply Agreement with Arbelo Engineering S.L. [3], and the Supply Agreement with Holloway Sensor Labs Inc. [5] (which specifies sixty days, so it does not qualify). Wait, let me re-evaluate.\n\nContracts allowing termination for convenience with 30 days' notice or less:\n1. Yellowpine Tooling Inc. (30 days) [1]\n2. Gallowmere Steel Inc. (30 days) [2]\n3. Arbelo Engineering S.L. (30 days) [3]\n\nContracts allowing termination for convenience with more than 30 days:\n- Holloway Sensor Labs Inc. (60 days) [5]\n- Rhenus Valley Fasteners GmbH (90 days) [6]\n\nContract allowing termination for convenience with 30 days' notice:\n- Marrowby Translation Services Ltd (30 days) [4]\n\nTherefore, there are four contracts that can be terminated for convenience with 30 days' notice or less.",
           "route": "search",
           "correct": true,
           "hallucinated": false,
@@ -2805,7 +2804,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 11.58,
+          "seconds": 20.4,
           "detail": {}
         },
         {
@@ -2822,7 +2821,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 5.33,
+          "seconds": 5.94,
           "detail": {}
         },
         {
@@ -2839,7 +2838,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.08,
+          "seconds": 3.74,
           "detail": {}
         },
         {
@@ -2856,7 +2855,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 2.86,
+          "seconds": 3.51,
           "detail": {}
         },
         {
@@ -2873,7 +2872,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.13,
+          "seconds": 3.57,
           "detail": {}
         },
         {
@@ -2890,7 +2889,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.21,
+          "seconds": 3.64,
           "detail": {}
         },
         {
@@ -2907,7 +2906,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.8,
+          "seconds": 4.26,
           "detail": {}
         },
         {
@@ -2924,7 +2923,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.52,
+          "seconds": 4.08,
           "detail": {}
         },
         {
@@ -2941,7 +2940,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 3.33,
+          "seconds": 3.79,
           "detail": {}
         }
       ]
@@ -2971,12 +2970,12 @@
             "accuracy": 1.0
           }
         },
-        "hallucination_rate": 0.182,
-        "answerable_hallucination_rate": 0.222,
+        "hallucination_rate": 0.159,
+        "answerable_hallucination_rate": 0.194,
         "refusal_on_unanswerable": 1.0,
         "citation_accuracy": 1.0,
         "aggregate_recall": 0.056,
-        "median_seconds": 5.98,
+        "median_seconds": 6.44,
         "usage": {
           "ingest": {
             "calls": 0,
@@ -2985,13 +2984,13 @@
             "output": 0,
             "embed_tokens": 0,
             "usd": 0.0,
-            "seconds": 0.0
+            "seconds": 0.1
           },
           "questions": {
             "calls": 44,
-            "input": 69119,
+            "input": 69489,
             "cached": 0,
-            "output": 2158,
+            "output": 2280,
             "embed_tokens": 0,
             "usd": 0.0
           }
@@ -3012,7 +3011,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.45,
+          "seconds": 8.87,
           "detail": {}
         },
         {
@@ -3029,7 +3028,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 4.93,
+          "seconds": 5.4,
           "detail": {}
         },
         {
@@ -3046,7 +3045,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 5.26,
+          "seconds": 5.82,
           "detail": {}
         },
         {
@@ -3063,7 +3062,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 6.03,
+          "seconds": 6.52,
           "detail": {}
         },
         {
@@ -3075,7 +3074,7 @@
             "German",
             "Germany"
           ],
-          "answer": "The agreement is governed by the laws of Germany [1][2]. This is confirmed in Section 8 (Governing Law and Jurisdiction) of the document, which states that the Agreement shall be governed by the laws of Germany [2].",
+          "answer": "The agreement is governed by the laws of Germany [1][2].",
           "route": "document",
           "correct": true,
           "hallucinated": false,
@@ -3083,7 +3082,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 5.8,
+          "seconds": 4.29,
           "detail": {}
         },
         {
@@ -3100,7 +3099,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 6.2,
+          "seconds": 6.58,
           "detail": {}
         },
         {
@@ -3117,7 +3116,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 7.16,
+          "seconds": 7.6,
           "detail": {}
         },
         {
@@ -3134,7 +3133,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 8.19,
+          "seconds": 8.53,
           "detail": {}
         },
         {
@@ -3151,7 +3150,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 3.26,
+          "seconds": 3.64,
           "detail": {}
         },
         {
@@ -3160,7 +3159,7 @@
           "tag": "contract-id",
           "question": "Who signed contract AP-SA-2022-061 on behalf of the counterparty?",
           "expected": "Anna Keller",
-          "answer": "The counterparty to contract AP-SA-2022-061 is Juniper Coatings GmbH [1]. This agreement was signed by Anna Keller, who is identified as the Authorized Signatory for Juniper Coatings GmbH [3].",
+          "answer": "Anna Keller, Authorized Signatory for Juniper Coatings GmbH, signed the contract [3].",
           "route": "document",
           "correct": true,
           "hallucinated": false,
@@ -3168,7 +3167,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 6.08,
+          "seconds": 4.81,
           "detail": {}
         },
         {
@@ -3185,7 +3184,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 6.26,
+          "seconds": 6.62,
           "detail": {}
         },
         {
@@ -3202,7 +3201,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 5.98,
+          "seconds": 6.36,
           "detail": {}
         },
         {
@@ -3222,7 +3221,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 3.95,
+          "seconds": 4.41,
           "detail": {}
         },
         {
@@ -3239,7 +3238,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 6.1,
+          "seconds": 6.44,
           "detail": {}
         },
         {
@@ -3256,7 +3255,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 4.42,
+          "seconds": 4.89,
           "detail": {}
         },
         {
@@ -3265,7 +3264,7 @@
           "tag": "contract-id",
           "question": "Who signed contract AP-LSA-2022-103 on behalf of the counterparty?",
           "expected": "Tom Ellison",
-          "answer": "The contract was signed on behalf of Yellowpine Tooling Inc. by Tom Ellison, who is listed as the Authorized Signatory [3].",
+          "answer": "Tom Ellison, Authorized Signatory for Yellowpine Tooling Inc., signed the contract on behalf of the counterparty [3].",
           "route": "document",
           "correct": true,
           "hallucinated": false,
@@ -3273,7 +3272,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 4.91,
+          "seconds": 5.2,
           "detail": {}
         },
         {
@@ -3290,7 +3289,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 6.37,
+          "seconds": 6.81,
           "detail": {}
         },
         {
@@ -3307,7 +3306,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 6.04,
+          "seconds": 6.46,
           "detail": {}
         },
         {
@@ -3326,7 +3325,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 4.35,
+          "seconds": 4.84,
           "detail": {}
         },
         {
@@ -3343,7 +3342,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 5.67,
+          "seconds": 6.13,
           "detail": {}
         },
         {
@@ -3360,7 +3359,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 4.99,
+          "seconds": 5.47,
           "detail": {}
         },
         {
@@ -3369,7 +3368,7 @@
           "tag": "contract-id",
           "question": "What is the total contract value of AP-LIC-2023-020?",
           "expected": 500000.0,
-          "answer": "The total contract value for AP-LIC-2023-020 is EUR 500,000.00 [1], which corresponds to the sum of fees listed in Schedule 1 totaling 500,000.00 EUR [4].",
+          "answer": "The total contract value for AP-LIC-2023-020 is EUR 500,000.00 [1][4]. This amount is composed of two annual fees of EUR 250,000.00 each, covering the period from October 1, 2023, to September 30, 2025 [4].",
           "route": "document",
           "correct": true,
           "hallucinated": false,
@@ -3377,7 +3376,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 6.82,
+          "seconds": 8.52,
           "detail": {}
         },
         {
@@ -3386,7 +3385,7 @@
           "tag": "name",
           "question": "What is the effective date of the agreement with Vexmoor Freight GmbH?",
           "expected": "2022-03-01",
-          "answer": "The effective date of the agreement with Vexmoor Freight GmbH is 2022-03-01 [1]. This is confirmed in Section 3 of the agreement, which states that the contract shall commence on 01.03.2022 [2].",
+          "answer": "The effective date of the agreement with Vexmoor Freight GmbH is 2022-03-01 [1]. This is confirmed in Section 3 of the agreement, which states that the Agreement shall commence on 01.03.2022 [2].",
           "route": "document",
           "correct": true,
           "hallucinated": false,
@@ -3394,7 +3393,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 6.61,
+          "seconds": 7.07,
           "detail": {}
         },
         {
@@ -3411,7 +3410,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 4.85,
+          "seconds": 5.36,
           "detail": {}
         },
         {
@@ -3430,7 +3429,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 3.07,
+          "seconds": 3.48,
           "detail": {}
         },
         {
@@ -3449,7 +3448,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 2.76,
+          "seconds": 3.17,
           "detail": {}
         },
         {
@@ -3465,7 +3464,7 @@
             "AP-NDA-2025-016",
             "AP-SA-2024-071"
           ],
-          "answer": "The following contracts end in 2027:\n- The agreement with Harbour Metal Works Ltd ends on February 28, 2027 [1].\n- The agreement with Marrowby Translation Services Ltd ends on 31.10.2027 [2].\n- The agreement with Ostrava Wire & Cable s.r.o. renews automatically for successive periods of twelve (12) months until it expires in 2026, but the next renewal would extend into 2027 [6].",
+          "answer": "The following contracts end in 2027:\n- The Supply Agreement between Harbour Metal Works Ltd and its supplier, which remains in force until February 28, 2027 [1].\n- The Master Services Agreement with Marrowby Translation Services Ltd, which remains in force until October 31, 2027 [2][4].\n- The Master Services Agreement with Ostrava Wire & Cable s.r.o., which remains in force until August 31, 2026 and renews automatically for successive periods of twelve months thereafter [6].",
           "route": "search",
           "correct": false,
           "hallucinated": true,
@@ -3473,7 +3472,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 11.68,
+          "seconds": 12.67,
           "detail": {
             "missing": [
               "AP-LIC-2025-008",
@@ -3511,7 +3510,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 9.97,
+          "seconds": 10.41,
           "detail": {
             "missing": [
               "AP-LIC-2023-020",
@@ -3550,12 +3549,12 @@
           "answer": "The Master Services Agreement with Ostrava Wire & Cable s.r.o. [1], the Supply Agreement with Juniper Coatings GmbH [2], and the Master Services Agreement with Quarry Ridge Castings LLC [6] all renew automatically for successive periods of twelve (12) months unless notice is given. In contrast, the Non-Disclosure Agreements with Lindqvist Automation AB [3] and Dunmore Packaging Ltd [5] do not renew automatically and require a written amendment for extension.",
           "route": "search",
           "correct": false,
-          "hallucinated": true,
-          "refused": false,
+          "hallucinated": false,
+          "refused": true,
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 11.1,
+          "seconds": 11.34,
           "detail": {
             "missing": [
               "AP-LIC-2025-008",
@@ -3580,7 +3579,7 @@
           "tag": "aggregate",
           "question": "How many supply agreements do we have?",
           "expected": 9,
-          "answer": "The provided excerpts list six distinct Supply Agreements with contract numbers AP-SA-2024-075, AP-SA-2022-073, AP-SA-2022-030, AP-SA-2024-017, and AP-SA-2022-022 [1][2][3][4][5]. Additionally, excerpt [6] references the same agreement as excerpt [1], indicating a total of five unique agreements described in the text.",
+          "answer": "The provided excerpts list six distinct Supply Agreements with contract numbers AP-SA-2024-075, AP-SA-2022-073, AP-SA-2022-030, AP-SA-2024-017, and AP-SA-2022-022. Therefore, there are at least five supply agreements detailed in the text.",
           "route": "search",
           "correct": false,
           "hallucinated": true,
@@ -3588,7 +3587,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 11.84,
+          "seconds": 11.1,
           "detail": {}
         },
         {
@@ -3615,7 +3614,7 @@
             "AP-SA-2024-075",
             "AP-SA-2024-117"
           ],
-          "answer": "The following contracts have payment terms longer than 45 days:\n- AP-SA-2024-071 (Harbour Metal Works Ltd) has payment terms of net 90 days [2].\n- AP-MSA-2025-012 (Marrowby Translation Services Ltd) has payment terms of net 90 days [3].",
+          "answer": "The following contracts have payment terms longer than 45 days:\n- Harbour Metal Works Ltd (AP-SA-2024-071): Payment terms are net 90 days [2].\n- Marrowby Translation Services Ltd (AP-MSA-2025-012): Payment terms are net 90 days [3].",
           "route": "search",
           "correct": false,
           "hallucinated": true,
@@ -3623,7 +3622,7 @@
           "citation_ok": null,
           "recall": 0.11764705882352941,
           "precision": 1.0,
-          "seconds": 9.68,
+          "seconds": 10.05,
           "detail": {
             "missing": [
               "AP-LIC-2022-009",
@@ -3666,7 +3665,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 5.64,
+          "seconds": 6.2,
           "detail": {
             "missing": [
               "AP-LIC-2022-009",
@@ -3692,7 +3691,7 @@
             "AP-SA-2024-071",
             "AP-SA-2024-117"
           ],
-          "answer": "The Supply Agreement with Harbour Metal Works Ltd requires at least ninety (90) days' notice of non-renewal [1][6]. Additionally, the Master Services Agreement with Ostrava Wire & Cable s.r.o. also requires written notice of non-renewal at least ninety (90) days before the end of the term [2][3].",
+          "answer": "The Supply Agreement with Harbour Metal Works Ltd requires at least ninety (90) days' notice of non-renewal [1][6]. The Master Services Agreement with Ostrava Wire & Cable s.r.o. also requires at least ninety (90) days' notice of non-renewal [2][3]. In contrast, the agreements with Juniper Coatings GmbH and Quarry Ridge Castings LLC require only 60 days' notice [4][5].",
           "route": "search",
           "correct": false,
           "hallucinated": true,
@@ -3700,7 +3699,7 @@
           "citation_ok": null,
           "recall": 0.0,
           "precision": 0.0,
-          "seconds": 7.56,
+          "seconds": 9.32,
           "detail": {
             "missing": [
               "AP-MSA-2023-017",
@@ -3727,7 +3726,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 11.3,
+          "seconds": 11.76,
           "detail": {}
         },
         {
@@ -3748,7 +3747,7 @@
             "AP-MSA-2025-012",
             "AP-SA-2024-117"
           ],
-          "answer": "The following contracts have a liability cap of at least EUR 2,000,000 or USD 2,000,000: AP-MSA-2025-012 (Marrowby Translation Services Ltd) with a cap of EUR 2,000,000 [3], AP-LSA-2022-103 (Yellowpine Tooling Inc.) with a cap of USD 2,000,000 [4], and AP-MSA-2022-030 (Vexmoor Freight GmbH) with a cap of EUR 2,000,000.00 [6].",
+          "answer": "The following contracts have a liability cap of at least EUR 2,000,000 or USD 2,000,000:\n- AP-MSA-2025-012 (Marrowby Translation Services Ltd) with a cap of EUR 2,000,000 [3].\n- AP-LSA-2022-103 (Yellowpine Tooling Inc.) with a cap of USD 2,000,000 [4].\n- AP-MSA-2022-030 (Vexmoor Freight GmbH) with a cap of EUR 2,000,000.00 [6].",
           "route": "search",
           "correct": false,
           "hallucinated": true,
@@ -3756,7 +3755,7 @@
           "citation_ok": null,
           "recall": 0.2727272727272727,
           "precision": 1.0,
-          "seconds": 13.32,
+          "seconds": 14.03,
           "detail": {
             "missing": [
               "AP-LIC-2023-020",
@@ -3777,7 +3776,7 @@
           "tag": "aggregate",
           "question": "How many contracts can be terminated for convenience with 30 days' notice or less?",
           "expected": 5,
-          "answer": "Based on the provided excerpts, four contracts allow termination for convenience with thirty (30) days' prior written notice: the Logistics Services Agreement with Yellowpine Tooling Inc. [1], the Master Services Agreement with Gallowmere Steel Inc. [2], the Supply Agreement with Arbelo Engineering S.L. [3], and the Master Services Agreement with Marrowby Translation Services Ltd [4]. The other two agreements require sixty (60) days [5] or ninety (90) days [6] notice for convenience termination.",
+          "answer": "Based on the provided excerpts, four contracts allow termination for convenience with thirty (30) days' prior written notice: the Logistics Services Agreement with Yellowpine Tooling Inc. [1], the Master Services Agreement with Gallowmere Steel Inc. [2], the Supply Agreement with Arbelo Engineering S.L. [3], and the Supply Agreement with Holloway Sensor Labs Inc. [5] (which specifies sixty days, so it does not qualify). Wait, let me re-evaluate.\n\nContracts allowing termination for convenience with 30 days' notice or less:\n1. Yellowpine Tooling Inc. (30 days) [1]\n2. Gallowmere Steel Inc. (30 days) [2]\n3. Arbelo Engineering S.L. (30 days) [3]\n\nContracts allowing termination for convenience with more than 30 days:\n- Holloway Sensor Labs Inc. (60 days) [5]\n- Rhenus Valley Fasteners GmbH (90 days) [6]\n\nContract allowing termination for convenience with 30 days' notice:\n- Marrowby Translation Services Ltd (30 days) [4]\n\nTherefore, there are four contracts that can be terminated for convenience with 30 days' notice or less.",
           "route": "search",
           "correct": true,
           "hallucinated": false,
@@ -3785,7 +3784,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 11.31,
+          "seconds": 20.68,
           "detail": {}
         },
         {
@@ -3802,7 +3801,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 5.36,
+          "seconds": 6.6,
           "detail": {}
         },
         {
@@ -3819,7 +3818,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 1.81,
+          "seconds": 2.51,
           "detail": {}
         },
         {
@@ -3836,7 +3835,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 1.79,
+          "seconds": 2.59,
           "detail": {}
         },
         {
@@ -3853,7 +3852,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 1.77,
+          "seconds": 2.53,
           "detail": {}
         },
         {
@@ -3870,7 +3869,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 1.81,
+          "seconds": 2.17,
           "detail": {}
         },
         {
@@ -3887,7 +3886,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 5.83,
+          "seconds": 6.76,
           "detail": {}
         },
         {
@@ -3904,7 +3903,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 1.78,
+          "seconds": 2.32,
           "detail": {}
         },
         {
@@ -3921,7 +3920,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 2.92,
+          "seconds": 3.24,
           "detail": {}
         }
       ]
@@ -3956,7 +3955,7 @@
         "refusal_on_unanswerable": 1.0,
         "citation_accuracy": 1.0,
         "aggregate_recall": 1.0,
-        "median_seconds": 3.68,
+        "median_seconds": 4.03,
         "usage": {
           "ingest": {
             "calls": 0,
@@ -3968,10 +3967,10 @@
             "seconds": 0.0
           },
           "questions": {
-            "calls": 57,
-            "input": 65809,
+            "calls": 58,
+            "input": 67933,
             "cached": 0,
-            "output": 3614,
+            "output": 4296,
             "embed_tokens": 0,
             "usd": 0.0
           }
@@ -3992,7 +3991,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 6.99,
+          "seconds": 7.95,
           "detail": {}
         },
         {
@@ -4009,7 +4008,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 3.3,
+          "seconds": 3.82,
           "detail": {}
         },
         {
@@ -4026,7 +4025,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 4.19,
+          "seconds": 4.63,
           "detail": {}
         },
         {
@@ -4035,7 +4034,7 @@
           "tag": "contract-id",
           "question": "What are the payment terms in contract AP-MSA-2022-090?",
           "expected": 90,
-          "answer": "The payment terms for contract AP-MSA-2022-090 specify that invoices are payable 90 days after receipt of a correct invoice [1]. Additionally, late payments bear interest at the statutory rate [2].",
+          "answer": "The payment terms for contract AP-MSA-2022-090 specify that invoices are payable 90 days after receipt of a correct invoice [1][4]. Additionally, late payments bear interest at the statutory rate [2].",
           "route": "document",
           "correct": true,
           "hallucinated": false,
@@ -4043,7 +4042,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 3.51,
+          "seconds": 3.83,
           "detail": {}
         },
         {
@@ -4055,7 +4054,7 @@
             "German",
             "Germany"
           ],
-          "answer": "The agreement is governed by the laws of Germany [1][2]. This is confirmed in Section 8 (Governing Law and Jurisdiction) of the document, which states that the Agreement shall be governed by the laws of Germany [2].",
+          "answer": "The agreement is governed by the laws of Germany [1][2].",
           "route": "document",
           "correct": true,
           "hallucinated": false,
@@ -4063,7 +4062,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 3.59,
+          "seconds": 1.87,
           "detail": {}
         },
         {
@@ -4080,7 +4079,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 3.82,
+          "seconds": 4.03,
           "detail": {}
         },
         {
@@ -4097,7 +4096,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 5.66,
+          "seconds": 6.38,
           "detail": {}
         },
         {
@@ -4114,7 +4113,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 5.69,
+          "seconds": 6.03,
           "detail": {}
         },
         {
@@ -4131,7 +4130,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 3.23,
+          "seconds": 3.76,
           "detail": {}
         },
         {
@@ -4140,7 +4139,7 @@
           "tag": "contract-id",
           "question": "Who signed contract AP-SA-2022-061 on behalf of the counterparty?",
           "expected": "Anna Keller",
-          "answer": "The counterparty to contract AP-SA-2022-061 is Juniper Coatings GmbH [1]. This agreement was signed by Anna Keller, who is identified as the Authorized Signatory for Juniper Coatings GmbH [3].",
+          "answer": "Anna Keller, Authorized Signatory for Juniper Coatings GmbH, signed the contract [3].",
           "route": "document",
           "correct": true,
           "hallucinated": false,
@@ -4148,7 +4147,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 3.59,
+          "seconds": 2.27,
           "detail": {}
         },
         {
@@ -4165,7 +4164,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 3.72,
+          "seconds": 4.1,
           "detail": {}
         },
         {
@@ -4182,7 +4181,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 3.38,
+          "seconds": 3.54,
           "detail": {}
         },
         {
@@ -4202,7 +4201,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 1.62,
+          "seconds": 1.95,
           "detail": {}
         },
         {
@@ -4219,7 +4218,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 3.47,
+          "seconds": 3.74,
           "detail": {}
         },
         {
@@ -4236,7 +4235,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 2.45,
+          "seconds": 2.64,
           "detail": {}
         },
         {
@@ -4245,7 +4244,7 @@
           "tag": "contract-id",
           "question": "Who signed contract AP-LSA-2022-103 on behalf of the counterparty?",
           "expected": "Tom Ellison",
-          "answer": "The contract was signed on behalf of Yellowpine Tooling Inc. by Tom Ellison, who is listed as the Authorized Signatory [3].",
+          "answer": "Tom Ellison, Authorized Signatory for Yellowpine Tooling Inc., signed the contract on behalf of the counterparty [3].",
           "route": "document",
           "correct": true,
           "hallucinated": false,
@@ -4270,7 +4269,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 5.31,
+          "seconds": 5.64,
           "detail": {}
         },
         {
@@ -4287,7 +4286,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 3.67,
+          "seconds": 3.89,
           "detail": {}
         },
         {
@@ -4306,7 +4305,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 1.88,
+          "seconds": 2.24,
           "detail": {}
         },
         {
@@ -4323,7 +4322,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 3.68,
+          "seconds": 3.94,
           "detail": {}
         },
         {
@@ -4340,7 +4339,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 2.55,
+          "seconds": 2.75,
           "detail": {}
         },
         {
@@ -4349,7 +4348,7 @@
           "tag": "contract-id",
           "question": "What is the total contract value of AP-LIC-2023-020?",
           "expected": 500000.0,
-          "answer": "The total contract value for AP-LIC-2023-020 is EUR 500,000.00 [1], which corresponds to the sum of fees listed in Schedule 1 totaling 500,000.00 EUR [4].",
+          "answer": "The total contract value for AP-LIC-2023-020 is EUR 500,000.00 [1][4]. This amount is composed of two annual fees of EUR 250,000.00 each, covering the period from October 1, 2023, to September 30, 2025 [4].",
           "route": "document",
           "correct": true,
           "hallucinated": false,
@@ -4357,7 +4356,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 4.21,
+          "seconds": 5.79,
           "detail": {}
         },
         {
@@ -4366,7 +4365,7 @@
           "tag": "name",
           "question": "What is the effective date of the agreement with Vexmoor Freight GmbH?",
           "expected": "2022-03-01",
-          "answer": "The effective date of the agreement with Vexmoor Freight GmbH is 2022-03-01 [1]. This is confirmed in Section 3 of the agreement, which states that the contract shall commence on 01.03.2022 [2].",
+          "answer": "The effective date of the agreement with Vexmoor Freight GmbH is 2022-03-01 [1]. This is confirmed in Section 3 of the agreement, which states that the Agreement shall commence on 01.03.2022 [2].",
           "route": "document",
           "correct": true,
           "hallucinated": false,
@@ -4374,7 +4373,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 4.26,
+          "seconds": 4.41,
           "detail": {}
         },
         {
@@ -4383,7 +4382,7 @@
           "tag": "contract-id",
           "question": "Who signed contract AP-SA-2022-022 on behalf of the counterparty?",
           "expected": "Oliver Grant",
-          "answer": "Oliver Grant, Authorized Signatory for Rhenus Valley Fasteners GmbH, signed the contract [3]. The counterparty is identified as Rhenus Valley Fasteners GmbH in the document metadata [1].",
+          "answer": "Oliver Grant, Authorized Signatory for Rhenus Valley Fasteners GmbH, signed the contract on behalf of the counterparty [3].",
           "route": "document",
           "correct": true,
           "hallucinated": false,
@@ -4391,7 +4390,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 3.29,
+          "seconds": 2.62,
           "detail": {}
         },
         {
@@ -4410,7 +4409,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 3.05,
+          "seconds": 3.44,
           "detail": {}
         },
         {
@@ -4429,7 +4428,7 @@
           "citation_ok": true,
           "recall": null,
           "precision": null,
-          "seconds": 2.78,
+          "seconds": 3.15,
           "detail": {}
         },
         {
@@ -4445,7 +4444,7 @@
             "AP-NDA-2025-016",
             "AP-SA-2024-071"
           ],
-          "answer": "The following contracts end in 2027:\n\n*   **AP-LIC-2025-008** (Zandvoort Plastics B.V.)\n*   **AP-MSA-2025-012** (Marrowby Translation Services Ltd)\n*   **AP-NDA-2024-030** (Umberfield Electronics Inc.)\n*   **AP-NDA-2024-047** (Harbor Metals Inc.)\n*   **AP-NDA-2025-016** (Lindqvist Automation AB)\n*   **AP-SA-2024-071** (Harbour Metal Works Ltd)",
+          "answer": "The following contracts end in 2027:\n\n1. **AP-LIC-2025-008** (SOFTWARE LICENSE AGREEMENT) with Zandvoort Plastics B.V., ending on 2027-10-31.\n2. **AP-MSA-2025-012** (MASTER SERVICES AGREEMENT) with Marrowby Translation Services Ltd, ending on 2027-10-31.\n3. **AP-NDA-2024-030** (Mutual Non-Disclosure Agreement) with Umberfield Electronics Inc., ending on 2027-10-31.\n4. **AP-NDA-2024-047** (Mutual Non-Disclosure Agreement) with Harbor Metals Inc., ending on 2027-07-31.\n5. **AP-NDA-2025-016** (Mutual Non-Disclosure Agreement) with Lindqvist Automation AB, ending on 2027-04-30.\n6. **AP-SA-2024-071** (Supply Agreement) with Harbour Metal Works Ltd, ending on 2027-02-28.",
           "route": "sql",
           "correct": true,
           "hallucinated": false,
@@ -4453,7 +4452,7 @@
           "citation_ok": null,
           "recall": 1.0,
           "precision": 1.0,
-          "seconds": 14.42,
+          "seconds": 22.66,
           "detail": {
             "missing": [],
             "extra": []
@@ -4476,7 +4475,7 @@
             "AP-SA-2022-073",
             "AP-SA-2023-004"
           ],
-          "answer": "The following contracts are governed by German law: AP-LIC-2023-020, AP-LSA-2025-058, AP-MSA-2022-030, AP-MSA-2023-017, AP-MSA-2023-120, AP-NDA-2025-016, AP-SA-2022-022, AP-SA-2022-061, AP-SA-2022-073, and AP-SA-2023-004.",
+          "answer": "The following contracts are governed by German law:\n\n1. **AP-LIC-2023-020** (SOFTWARE LICENSE AGREEMENT) with Corvane Security GmbH  \n2. **AP-LSA-2025-058** (Logistics Services Agreement) with Tavira Components Lda  \n3. **AP-MSA-2022-030** (MASTER SERVICES AGREEMENT) with Vexmoor Freight GmbH  \n4. **AP-MSA-2023-017** (MASTER SERVICES AGREEMENT) with Ostrava Wire & Cable s.r.o.  \n5. **AP-MSA-2023-120** (MASTER SERVICES AGREEMENT) with Orrin Software GmbH  \n6. **AP-NDA-2025-016** (Mutual Non-Disclosure Agreement) with Lindqvist Automation AB  \n7. **AP-SA-2022-022** (Supply Agreement) with Rhenus Valley Fasteners GmbH  \n8. **AP-SA-2022-061** (Supply Agreement) with Juniper Coatings GmbH  \n9. **AP-SA-2022-073** (Supply Agreement) with Arbelo Engineering S.L.  \n10. **AP-SA-2023-004** (Supply Agreement) with Northgate Test Equipment GmbH  \n\nTotal: 10 contracts governed by German law.",
           "route": "sql",
           "correct": true,
           "hallucinated": false,
@@ -4484,7 +4483,7 @@
           "citation_ok": null,
           "recall": 1.0,
           "precision": 1.0,
-          "seconds": 13.11,
+          "seconds": 27.02,
           "detail": {
             "missing": [],
             "extra": []
@@ -4509,7 +4508,7 @@
             "AP-SA-2024-071",
             "AP-SA-2024-117"
           ],
-          "answer": "The following contracts renew automatically:\n\n- AP-LIC-2025-008 (Zandvoort Plastics B.V.)\n- AP-LIC-2025-019 (Eskerfield Robotics AG)\n- AP-LSA-2025-058 (Tavira Components Lda)\n- AP-MSA-2022-090 (Quarry Ridge Castings LLC)\n- AP-MSA-2023-017 (Ostrava Wire & Cable s.r.o.)\n- AP-MSA-2023-120 (Orrin Software GmbH)\n- AP-SA-2022-030 (Kilnworth Ceramics Ltd)\n- AP-SA-2022-061 (Juniper Coatings GmbH)\n- AP-SA-2022-073 (Arbelo Engineering S.L.)\n- AP-SA-2023-004 (Northgate Test Equipment GmbH)\n- AP-SA-2024-071 (Harbour Metal Works Ltd)\n- AP-SA-2024-117 (Holloway Sensor Labs Inc.)",
+          "answer": "The following contracts renew automatically:\n\n1. **AP-LIC-2025-008** (Zandvoort Plastics B.V.)\n2. **AP-LIC-2025-019** (Eskerfield Robotics AG)\n3. **AP-LSA-2025-058** (Tavira Components Lda)\n4. **AP-MSA-2022-090** (Quarry Ridge Castings LLC)\n5. **AP-MSA-2023-017** (Ostrava Wire & Cable s.r.o.)\n6. **AP-MSA-2023-120** (Orrin Software GmbH)\n7. **AP-SA-2022-030** (Kilnworth Ceramics Ltd)\n8. **AP-SA-2022-061** (Juniper Coatings GmbH)\n9. **AP-SA-2022-073** (Arbelo Engineering S.L.)\n10. **AP-SA-2023-004** (Northgate Test Equipment GmbH)\n11. **AP-SA-2024-071** (Harbour Metal Works Ltd)\n12. **AP-SA-2024-117** (Holloway Sensor Labs Inc.)",
           "route": "sql",
           "correct": true,
           "hallucinated": false,
@@ -4517,7 +4516,7 @@
           "citation_ok": null,
           "recall": 1.0,
           "precision": 1.0,
-          "seconds": 20.43,
+          "seconds": 23.59,
           "detail": {
             "missing": [],
             "extra": []
@@ -4537,7 +4536,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 4.49,
+          "seconds": 5.49,
           "detail": {}
         },
         {
@@ -4564,7 +4563,7 @@
             "AP-SA-2024-075",
             "AP-SA-2024-117"
           ],
-          "answer": "The following contracts have payment terms longer than 45 days:\n\n*   **AP-LIC-2022-009** (Fenwick Polymers Inc.) \u2013 90 days\n*   **AP-LIC-2023-020** (Corvane Security GmbH) \u2013 60 days\n*   **AP-LIC-2023-095** (Islay Precision Ltd) \u2013 90 days\n*   **AP-LSA-2022-103** (Yellowpine Tooling Inc.) \u2013 90 days\n*   **AP-LSA-2024-054** (Wexford Data Systems Ltd) \u2013 60 days\n*   **AP-LSA-2024-107** (Larchmont Payroll Services LLC) \u2013 90 days\n*   **AP-LSA-2025-006** (Kestrel Logistics B.V.) \u2013 90 days\n*   **AP-LSA-2025-058** (Tavira Components Lda) \u2013 60 days\n*   **AP-MSA-2022-090** (Quarry Ridge Castings LLC) \u2013 90 days\n*   **AP-MSA-2023-019** (Gallowmere Steel Inc.) \u2013 60 days\n*   **AP-MSA-2023-120** (Orrin Software GmbH) \u2013 60 days\n*   **AP-MSA-2025-012** (Marrowby Translation Services Ltd) \u2013 90 days\n*   **AP-SA-2022-061** (Juniper Coatings GmbH) \u2013 60 days\n*   **AP-SA-2023-004** (Northgate Test Equipment GmbH) \u2013 90 days\n*   **AP-SA-2024-071** (Harbour Metal Works Ltd) \u2013 90 days\n*   **AP-SA-2024-075** (Pellucid Optics SA) \u2013 60 days\n*   **AP-SA-2024-117** (Holloway Sensor Labs Inc.) \u2013 60 days",
+          "answer": "Here are the contracts with payment terms longer than 45 days:\n\n1. **AP-LIC-2022-009** (Fenwick Polymers Inc.) \u2013 90 days  \n2. **AP-LIC-2023-020** (Corvane Security GmbH) \u2013 60 days  \n3. **AP-LIC-2023-095** (Islay Precision Ltd) \u2013 90 days  \n4. **AP-LSA-2022-103** (Yellowpine Tooling Inc.) \u2013 90 days  \n5. **AP-LSA-2024-054** (Wexford Data Systems Ltd) \u2013 60 days  \n6. **AP-LSA-2024-107** (Larchmont Payroll Services LLC) \u2013 90 days  \n7. **AP-LSA-2025-006** (Kestrel Logistics B.V.) \u2013 90 days  \n8. **AP-MSA-2022-090** (Quarry Ridge Castings LLC) \u2013 90 days  \n9. **AP-MSA-2023-019** (Gallowmere Steel Inc.) \u2013 60 days  \n10. **AP-MSA-2023-120** (Orrin Software GmbH) \u2013 60 days  \n11. **AP-MSA-2025-012** (Marrowby Translation Services Ltd) \u2013 90 days  \n12. **AP-SA-2022-061** (Juniper Coatings GmbH) \u2013 60 days  \n13. **AP-SA-2023-004** (Northgate Test Equipment GmbH) \u2013 90 days  \n14. **AP-SA-2024-071** (Harbour Metal Works Ltd) \u2013 90 days  \n\nTotal: 14 contracts",
           "route": "sql",
           "correct": true,
           "hallucinated": false,
@@ -4572,7 +4571,7 @@
           "citation_ok": null,
           "recall": 1.0,
           "precision": 1.0,
-          "seconds": 35.06,
+          "seconds": 35.31,
           "detail": {
             "missing": [],
             "extra": []
@@ -4591,7 +4590,7 @@
             "AP-MSA-2023-019",
             "AP-SA-2024-117"
           ],
-          "answer": "The following contracts with counterparties in the United States end before 1 January 2027:\n\n- **AP-LIC-2022-009** (Fenwick Polymers Inc.) \u2013 ends 2025-08-31\n- **AP-LSA-2022-103** (Yellowpine Tooling Inc.) \u2013 ends 2025-07-31\n- **AP-LSA-2024-107** (Larchmont Payroll Services LLC) \u2013 ends 2025-10-31\n- **AP-MSA-2022-090** (Quarry Ridge Castings LLC) \u2013 ends 2024-12-31\n- **AP-MSA-2023-019** (Gallowmere Steel Inc.) \u2013 ends 2025-08-31\n\nNote: Contract **AP-SA-2024-117** ends on 2026-08-31, which is before 2027-01-01, so it is also included.",
+          "answer": "The following contracts with counterparties in the United States end before 1 January 2027:\n\n*   **AP-LIC-2022-009** (Fenwick Polymers Inc.) \u2013 ends 2025-08-31\n*   **AP-LSA-2022-103** (Yellowpine Tooling Inc.) \u2013 ends 2025-07-31\n*   **AP-LSA-2024-107** (Larchmont Payroll Services LLC) \u2013 ends 2025-10-31\n*   **AP-MSA-2022-090** (Quarry Ridge Castings LLC) \u2013 ends 2024-12-31\n*   **AP-MSA-2023-019** (Gallowmere Steel Inc.) \u2013 ends 2025-08-31\n\nNote: The contract **AP-SA-2024-117** (Holloway Sensor Labs Inc.) ends on 2026-08-31, which is before 1 January 2027. Therefore, it should also be included.\n\nCorrected list:\n*   **AP-LIC-2022-009** (Fenwick Polymers Inc.) \u2013 ends 2025-08-31\n*   **AP-LSA-2022-103** (Yellowpine Tooling Inc.) \u2013 ends 2025-07-31\n*   **AP-LSA-2024-107** (Larchmont Payroll Services LLC) \u2013 ends 2025-10-31\n*   **AP-MSA-2022-090** (Quarry Ridge Castings LLC) \u2013 ends 2024-12-31\n*   **AP-MSA-2023-019** (Gallowmere Steel Inc.) \u2013 ends 2025-08-31\n*   **AP-SA-2024-117** (Holloway Sensor Labs Inc.) \u2013 ends 2026-08-31\n\nTotal: 6 contracts.",
           "route": "sql",
           "correct": true,
           "hallucinated": false,
@@ -4599,7 +4598,7 @@
           "citation_ok": null,
           "recall": 1.0,
           "precision": 1.0,
-          "seconds": 20.61,
+          "seconds": 35.58,
           "detail": {
             "missing": [],
             "extra": []
@@ -4618,7 +4617,7 @@
             "AP-SA-2024-071",
             "AP-SA-2024-117"
           ],
-          "answer": "The following contracts require at least 90 days' notice of non-renewal: AP-MSA-2023-017, AP-MSA-2023-120, AP-SA-2022-073, AP-SA-2023-004, AP-SA-2024-071, and AP-SA-2024-117.",
+          "answer": "The following contracts require at least 90 days' notice of non-renewal:\n\n- AP-MSA-2023-017 (Ostrava Wire & Cable s.r.o.)\n- AP-MSA-2023-120 (Orrin Software GmbH)\n- AP-SA-2022-073 (Arbelo Engineering S.L.)\n- AP-SA-2023-004 (Northgate Test Equipment GmbH)\n- AP-SA-2024-071 (Harbour Metal Works Ltd)\n- AP-SA-2024-117 (Holloway Sensor Labs Inc.)",
           "route": "sql",
           "correct": true,
           "hallucinated": false,
@@ -4626,7 +4625,7 @@
           "citation_ok": null,
           "recall": 1.0,
           "precision": 1.0,
-          "seconds": 11.49,
+          "seconds": 15.66,
           "detail": {
             "missing": [],
             "extra": []
@@ -4638,7 +4637,7 @@
           "tag": "aggregate",
           "question": "What is the total value of all EUR-denominated contracts?",
           "expected": 9550000.0,
-          "answer": "The total value of all EUR-denominated contracts is 9,550,000.0.",
+          "answer": "The total value of all EUR-denominated contracts is 9,550,000.",
           "route": "sql",
           "correct": true,
           "hallucinated": false,
@@ -4646,7 +4645,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 5.33,
+          "seconds": 6.18,
           "detail": {}
         },
         {
@@ -4667,7 +4666,7 @@
             "AP-MSA-2025-012",
             "AP-SA-2024-117"
           ],
-          "answer": "The following contracts have a liability cap of at least 2,000,000:\n\n*   **AP-LIC-2023-020** (Corvane Security GmbH) - 2,500,000.0\n*   **AP-LIC-2023-095** (Islay Precision Ltd) - 2,500,000.0\n*   **AP-LIC-2025-008** (Zandvoort Plastics B.V.) - 2,000,000.0\n*   **AP-LSA-2022-103** (Yellowpine Tooling Inc.) - 2,000,000.0\n*   **AP-LSA-2024-054** (Wexford Data Systems Ltd) - 2,500,000.0\n*   **AP-MSA-2022-030** (Vexmoor Freight GmbH) - 2,000,000.0\n*   **AP-MSA-2022-090** (Quarry Ridge Castings LLC) - 2,000,000.0\n*   **AP-MSA-2023-017** (Ostrava Wire & Cable s.r.o.) - 2,500,000.0\n*   **AP-MSA-2023-019** (Gallowmere Steel Inc.) - 2,500,000.0\n*   **AP-MSA-2025-012** (Marrowby Translation Services Ltd) - 2,000,000.0\n*   **AP-SA-2024-117** (Holloway Sensor Labs Inc.) - 2,500,000.0",
+          "answer": "Here are the contracts with a liability cap of at least 2,000,000:\n\n1. **AP-LIC-2023-020** (Corvane Security GmbH) \u2013 Liability Cap: 2,500,000\n2. **AP-LIC-2023-095** (Islay Precision Ltd) \u2013 Liability Cap: 2,500,000\n3. **AP-LIC-2025-008** (Zandvoort Plastics B.V.) \u2013 Liability Cap: 2,000,000\n4. **AP-LSA-2022-103** (Yellowpine Tooling Inc.) \u2013 Liability Cap: 2,000,000\n5. **AP-LSA-2024-054** (Wexford Data Systems Ltd) \u2013 Liability Cap: 2,500,000\n6. **AP-MSA-2022-030** (Vexmoor Freight GmbH) \u2013 Liability Cap: 2,000,000\n7. **AP-MSA-2022-090** (Quarry Ridge Castings LLC) \u2013 Liability Cap: 2,000,000\n8. **AP-MSA-2023-017** (Ostrava Wire & Cable s.r.o.) \u2013 Liability Cap: 2,500,000\n9. **AP-MSA-2023-019** (Gallowmere Steel Inc.) \u2013 Liability Cap: 2,500,000\n10. **AP-MSA-2025-012** (Marrowby Translation Services Ltd) \u2013 Liability Cap: 2,000,000\n11. **AP-SA-2024-117** (Holloway Sensor Labs Inc.) \u2013 Liability Cap: 2,500,000",
           "route": "sql",
           "correct": true,
           "hallucinated": false,
@@ -4675,7 +4674,7 @@
           "citation_ok": null,
           "recall": 1.0,
           "precision": 1.0,
-          "seconds": 29.52,
+          "seconds": 31.64,
           "detail": {
             "missing": [],
             "extra": []
@@ -4695,7 +4694,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 5.7,
+          "seconds": 6.6,
           "detail": {}
         },
         {
@@ -4704,15 +4703,15 @@
           "tag": "unanswerable",
           "question": "What are the payment terms in our agreement with Globex Corporation?",
           "expected": null,
-          "answer": "The documents do not contain this information.",
-          "route": "not_found",
+          "answer": "No documents match.",
+          "route": "sql",
           "correct": true,
           "hallucinated": false,
           "refused": true,
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 6.02,
+          "seconds": 8.04,
           "detail": {}
         },
         {
@@ -4729,7 +4728,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 1.9,
+          "seconds": 2.1,
           "detail": {}
         },
         {
@@ -4746,7 +4745,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 1.76,
+          "seconds": 2.42,
           "detail": {}
         },
         {
@@ -4763,7 +4762,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 1.79,
+          "seconds": 2.45,
           "detail": {}
         },
         {
@@ -4780,7 +4779,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 1.74,
+          "seconds": 2.39,
           "detail": {}
         },
         {
@@ -4789,15 +4788,15 @@
           "tag": "unanswerable",
           "question": "Which contract covers the office cleaning services in Munich?",
           "expected": null,
-          "answer": "The documents do not contain this information.",
-          "route": "not_found",
+          "answer": "No documents match.",
+          "route": "sql",
           "correct": true,
           "hallucinated": false,
           "refused": true,
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 6.59,
+          "seconds": 9.4,
           "detail": {}
         },
         {
@@ -4814,7 +4813,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 1.73,
+          "seconds": 2.1,
           "detail": {}
         },
         {
@@ -4831,7 +4830,7 @@
           "citation_ok": null,
           "recall": null,
           "precision": null,
-          "seconds": 2.92,
+          "seconds": 5.91,
           "detail": {}
         }
       ]

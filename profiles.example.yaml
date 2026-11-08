@@ -1,0 +1,47 @@
+# Model presets the UI can switch between. Copy to profiles.yaml and point
+# DOCASSIST_PROFILES_PATH at it. Each preset overrides any DOCASSIST_* setting
+# (lower-case, without the prefix). API keys are written as ${ENV_VAR}: they are
+# read on the server and never sent to the browser.
+#
+# Each preset stores its documents in its own library (a folder under
+# DOCASSIST_DATA_DIR), because vectors from different embedding models can't be
+# compared. Presets with the same embedding model may share a library - below,
+# "local" and "cloud-chat" search the same index and differ only in the model
+# that reads and answers.
+
+default: local
+
+profiles:
+  local:
+    label: Local · Qwen 3.5 9B (LM Studio)
+    library: nomic
+    llm_base_url: http://localhost:1234/v1
+    llm_model: qwen3.5-9b-mtp
+    embed_model: text-embedding-nomic-embed-text-v1.5
+
+  cloud-chat:
+    label: Cloud chat · GPT-4.1 mini + local embeddings
+    library: nomic
+    llm_base_url: https://api.openai.com/v1
+    llm_api_key: ${OPENAI_API_KEY}
+    llm_model: gpt-4.1-mini
+    llm_reasoning_effort: ""
+    embed_base_url: http://localhost:1234/v1
+    embed_model: text-embedding-nomic-embed-text-v1.5
+
+  cloud:
+    label: Cloud · GPT-4.1 mini + OpenAI embeddings
+    library: openai-small
+    llm_base_url: https://api.openai.com/v1
+    llm_api_key: ${OPENAI_API_KEY}
+    llm_model: gpt-4.1-mini
+    llm_reasoning_effort: ""
+    embed_model: text-embedding-3-small
+    embed_doc_prefix: ""
+    embed_query_prefix: ""
+
+# List prices (USD per 1M tokens: input, cached input, output) for the per-answer
+# cost shown in the UI. Models not listed show "cost unknown"; local models cost nothing.
+prices:
+  gpt-4.1-mini: [0.40, 0.10, 1.60]
+  text-embedding-3-small: [0.02, 0.02, 0]

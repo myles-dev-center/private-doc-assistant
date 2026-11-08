@@ -1,0 +1,1659 @@
+{
+  "combo": "local-chat-cloud-embed",
+  "label": "Local chat \u00b7 Qwen 3.5 9B + text-embedding-3-small",
+  "chat_model": "qwen3.5-9b-mtp",
+  "embed_model": "openai/text-embedding-3-small",
+  "endpoint": "http://localhost:1234/v1",
+  "set": "set5",
+  "library": "qwen3.5-9b-mtp__openai-text-embedding-3-small",
+  "started": "2026-11-08 01:01",
+  "summary": {
+    "n": 53,
+    "accuracy": 0.811,
+    "by_type": {
+      "lookup": {
+        "n": 32,
+        "accuracy": 0.969
+      },
+      "aggregate": {
+        "n": 13,
+        "accuracy": 0.385
+      },
+      "unanswerable": {
+        "n": 8,
+        "accuracy": 0.875
+      }
+    },
+    "hallucination_rate": 0.17,
+    "answerable_hallucination_rate": 0.178,
+    "refusal_on_unanswerable": 0.875,
+    "citation_accuracy": 1.0,
+    "aggregate_recall": 0.704,
+    "median_seconds": 14.15
+  },
+  "usage": {
+    "ingest": {
+      "calls": 0,
+      "input": 0,
+      "cached": 0,
+      "output": 0,
+      "embed_tokens": 243461,
+      "usd": 0.0049,
+      "seconds": 46.8,
+      "reused_extraction_from": "qwen3.5-9b-mtp__text-embedding-nomic-embed-text-v1.5"
+    },
+    "questions": {
+      "calls": 70,
+      "input": 338171,
+      "cached": 0,
+      "output": 6784,
+      "embed_tokens": 0,
+      "usd": 0.0
+    }
+  },
+  "scores": [
+    {
+      "qid": "L01",
+      "qtype": "lookup",
+      "tag": "law",
+      "question": "Which law governs the Sponsorship Agreement between Football Northwest LLC and Mercata, Inc?",
+      "expected": [
+        "Washington"
+      ],
+      "answer": "The Sponsorship Agreement is governed by the laws of the State of Washington [1]. This is further confirmed in Section 13, which states that the agreement shall be construed in accordance with the laws of the state of Washington [5].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 23.92,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 9605,
+        "cached": 0,
+        "output": 49,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L02",
+      "qtype": "lookup",
+      "tag": "law",
+      "question": "Which law governs the Consulting Agreement between Slinger Bag Inc and Aitan Zacharin?",
+      "expected": [
+        "New York"
+      ],
+      "answer": "The Consulting Agreement is governed by the laws of the State of New York [1][9]. Additionally, the Warrant included in the agreement is also subject to the laws of the State of New York [14].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 21.1,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 8344,
+        "cached": 0,
+        "output": 45,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L03",
+      "qtype": "lookup",
+      "tag": "law",
+      "question": "Which law governs the Master Franchise Agreement between Smaaash Entertainment Private Limited and I-AM Capital Acquisition Company?",
+      "expected": [
+        "New York"
+      ],
+      "answer": "The Master Franchise Agreement is governed by the laws of the State of New York [7]. This is confirmed in Section 10.5(a), which states that the agreement shall be governed by, and construed in accordance with, the laws of the State of New York [7].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 19.7,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 7463,
+        "cached": 0,
+        "output": 59,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L04",
+      "qtype": "lookup",
+      "tag": "law",
+      "question": "Which law governs the Strategic Alliance Agreement between IntriCon Corporation and Dynamic Hearing Pty Ltd?",
+      "expected": [
+        "Victoria, Australia",
+        "Victoria"
+      ],
+      "answer": "The Strategic Alliance Agreement is governed by the laws of Victoria, Australia [1][21].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 40.77,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 15400,
+        "cached": 0,
+        "output": 20,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L05",
+      "qtype": "lookup",
+      "tag": "law",
+      "question": "Which law governs the Site Development And Hosting Agreement between Hanover Direct, Inc and The Deerskin Companies, Inc?",
+      "expected": [
+        "New York"
+      ],
+      "answer": "The Site Development and Hosting Agreement is governed by the laws of the State of New York [1][5].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 11.41,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 4883,
+        "cached": 0,
+        "output": 23,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L06",
+      "qtype": "lookup",
+      "tag": "law",
+      "question": "Which law governs the Consulting Agreement between Driven Deliveries, Inc and TruckThat LLC?",
+      "expected": [
+        "California"
+      ],
+      "answer": "The Consulting Agreement is governed by the laws of the State of California [1][7]. This is confirmed in Section 12.1, which states that the agreement shall be governed by the laws of California without regard to conflict of law provisions [7].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 15.51,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 6441,
+        "cached": 0,
+        "output": 53,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L07",
+      "qtype": "lookup",
+      "tag": "law",
+      "question": "Which law governs the Development Agreement between Cargill, Incorporated and Bioamber S.A.S?",
+      "expected": [
+        "Minnesota"
+      ],
+      "answer": "The Development Agreement is governed by the laws of the State of Minnesota, United States of America [12]. This is confirmed in Section 13.2, which states that the agreement shall be construed in accordance with the laws of Minnesota, disregarding its conflicts of law rules [12].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 26.52,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 10496,
+        "cached": 0,
+        "output": 61,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L08",
+      "qtype": "lookup",
+      "tag": "law",
+      "question": "Which law governs the Content License Agreement between CHINA ECONOMIC INFORMATION SERVICE OF XINHUA NEWS AGENCY and XINHUA FINANCIAL NETWORK LIMITED?",
+      "expected": [
+        "Hong Kong"
+      ],
+      "answer": "The Content License Agreement is governed by the laws of Hong Kong [1][2]. This is confirmed in Clause 16.1, which states that the agreement \"is governed by and shall be construed in accordance with the laws of Hong Kong\" [7].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 14.15,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 5140,
+        "cached": 0,
+        "output": 54,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L09",
+      "qtype": "lookup",
+      "tag": "date",
+      "question": "What is the date of the Exclusive Distributor Agreement between LifeUSA/ Envision Health, Inc and Sierra Mountain Minerals, Inc?",
+      "expected": "2005-12-08",
+      "answer": "The Exclusive Distributor Agreement was dated December 8, 2005 [1]. This date is confirmed in the document text as the Effective Date [2].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 13.98,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 6433,
+        "cached": 0,
+        "output": 35,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L10",
+      "qtype": "lookup",
+      "tag": "date",
+      "question": "What is the date of the Marketing And Transportation Services Agreement between Purolator Courier Ltd and Parcelway Courier Systems Canada Ltd. a subsidiary of Dynamex Inc?",
+      "expected": "1995-11-20",
+      "answer": "The Marketing and Transportation Services Agreement was dated November 20, 1995 [2]. This is confirmed by the extracted fields which list the agreement_date as 1995-11-20 [1].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 28.36,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 11504,
+        "cached": 0,
+        "output": 49,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L11",
+      "qtype": "lookup",
+      "tag": "date",
+      "question": "What is the date of the Endorsement Agreement between Teardrop Putter Corporation and Consolidated Artists Inc?",
+      "expected": "1996-01-01",
+      "answer": "The Endorsement Agreement was made and entered into on January 1, 1996 [2]. However, the document was executed (signed) by Teardrop Putter Corporation on February 27, 1996, and by Consolidated Artists, Inc. on October 4, 1996 [5].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 19.0,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 6735,
+        "cached": 0,
+        "output": 73,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L12",
+      "qtype": "lookup",
+      "tag": "date",
+      "question": "What is the date of the Joint Supply And Marketing Agreement between Bunker One Inc and Vertex Energy Operating LLC?",
+      "expected": "2020-01-10",
+      "answer": "The Joint Supply and Marketing Agreement was entered into on January 10, 2020 [1][2].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 28.33,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 11737,
+        "cached": 0,
+        "output": 26,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L13",
+      "qtype": "lookup",
+      "tag": "date",
+      "question": "What is the date of the Sponsorship Agreement between Domini Advisor Trust and Domini Social Investments LLC?",
+      "expected": "2005-02-04",
+      "answer": "The Sponsorship Agreement was dated February 4, 2005 [1][2].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 12.11,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 5258,
+        "cached": 0,
+        "output": 21,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L14",
+      "qtype": "lookup",
+      "tag": "date",
+      "question": "What is the date of the Product Sale And Marketing Agreement between Calm.com, Inc and XpresSpa Group, Inc?",
+      "expected": "2018-11-12",
+      "answer": "The Product Sale and Marketing Agreement between Calm.com, Inc. and XpresSpa Group, Inc. was made on November 12, 2018 [2]. This date is also confirmed in the extracted fields of the document as the agreement_date [1].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 37.97,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 14222,
+        "cached": 0,
+        "output": 58,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L15",
+      "qtype": "lookup",
+      "tag": "date",
+      "question": "What is the date of the Joint Venture Agreement between Novo Integrated Sciences Inc and Harvest Gold Farms Inc?",
+      "expected": "2019-12-19",
+      "answer": "The Joint Venture Agreement between Novo Integrated Sciences Inc. and Harvest Gold Farms Inc. was dated December 19, 2019 [1][3].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 14.17,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 6202,
+        "cached": 0,
+        "output": 34,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L16",
+      "qtype": "lookup",
+      "tag": "date",
+      "question": "What is the date of the Orderly Marketing Agreement between GWG Holdings, Inc and Trust Advisors to the Seller Trusts?",
+      "expected": "2018-12-27",
+      "answer": "The Orderly Marketing Agreement was entered into on December 27, 2018 [3]. This date is also confirmed in the extracted fields as both the agreement_date and effective_date [1].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 17.68,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 7941,
+        "cached": 0,
+        "output": 43,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L17",
+      "qtype": "lookup",
+      "tag": "expiry",
+      "question": "When does the Product Sale And Marketing Agreement between Calm.com, Inc and XpresSpa Group, Inc expire?",
+      "expected": "2019-07-31",
+      "answer": "The Product Sale and Marketing Agreement expires on July 31, 2019, unless terminated earlier or automatically renewed for successive six-month terms [1][2].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 6.46,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 14220,
+        "cached": 0,
+        "output": 36,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L18",
+      "qtype": "lookup",
+      "tag": "expiry",
+      "question": "When does the Joint Supply And Marketing Agreement between Bunker One Inc and Vertex Energy Operating LLC expire?",
+      "expected": "2029-04-30",
+      "answer": "The Joint Supply and Marketing Agreement expires on April 30, 2029 [1]. This date marks the end of the initial Term, which commences on May 1, 2020, with automatic renewals for five-year periods unless notice of non-renewal is given at least 120 days prior to the applicable expiry date [9].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 9.53,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 11735,
+        "cached": 0,
+        "output": 79,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L19",
+      "qtype": "lookup",
+      "tag": "expiry",
+      "question": "When does the Sponsorship Agreement between Southern Racing Promotions, Inc and Logan's Roadhouse, Inc expire?",
+      "expected": "1998-11-30",
+      "answer": "The Sponsorship Agreement expires on November 30, 1998 [1][2].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 10.53,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 4813,
+        "cached": 0,
+        "output": 22,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L20",
+      "qtype": "lookup",
+      "tag": "expiry",
+      "question": "When does the Endorsement Agreement between Teardrop Putter Corporation and Consolidated Artists Inc expire?",
+      "expected": "1998-12-31",
+      "answer": "The Endorsement Agreement expires on December 31, 1998 [1][2]. This is confirmed by the definition of the \"Contract Period\" which concludes on that date [2] and the term of the agreement which continues for three years concluding on December 31, 1998 [6].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 7.03,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 6733,
+        "cached": 0,
+        "output": 69,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L21",
+      "qtype": "lookup",
+      "tag": "expiry",
+      "question": "When does the Sponsorship Agreement between Fruit of Life Productions LLC and Eco Science Solutions, Inc expire?",
+      "expected": "2018-04-30",
+      "answer": "The Sponsorship Agreement expires on April 30, 2018, at 11:59 pm [2]. This expiration date is also confirmed in the extracted fields as 2018-04-30 [1].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 8.32,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 2397,
+        "cached": 0,
+        "output": 54,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L22",
+      "qtype": "lookup",
+      "tag": "notice",
+      "question": "How many days of notice are required to prevent the renewal of the Product Sale And Marketing Agreement between Calm.com, Inc and XpresSpa Group, Inc?",
+      "expected": 30,
+      "answer": "To prevent the renewal of the agreement, either Party must give written notice no later than thirty (30) days in advance of the expiration of the Initial Term or any applicable Renewal Term [2]. This is also confirmed by the extracted field `renewal_notice_days: 30.0` [1].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 7.8,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 14229,
+        "cached": 0,
+        "output": 66,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L23",
+      "qtype": "lookup",
+      "tag": "notice",
+      "question": "How many days of notice are required to prevent the renewal of the Strategic Alliance Agreement between IMedicor, Inc and USA Managed Care Organization?",
+      "expected": 90,
+      "answer": "To prevent the renewal of the agreement, one party must notify the other at least 90 days prior to the expiration of the Initial Term or the current renewal term [4]. This is consistent with the extracted field indicating a renewal_notice_days of 90.0 [1].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 26.7,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 10581,
+        "cached": 0,
+        "output": 58,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L24",
+      "qtype": "lookup",
+      "tag": "notice",
+      "question": "How many days of notice are required to prevent the renewal of the Joint Supply And Marketing Agreement between Bunker One Inc and Vertex Energy Operating LLC?",
+      "expected": 120,
+      "answer": "To prevent the renewal of the agreement, either Party must give written notice of non-renewal no less than 120 days prior to the applicable expiry date [9]. This requirement is also reflected in the extracted fields which specify a renewal_notice_days value of 120.0 [1].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 8.2,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 11744,
+        "cached": 0,
+        "output": 63,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L25",
+      "qtype": "lookup",
+      "tag": "notice",
+      "question": "How many days of notice are required to prevent the renewal of the Site Development And Hosting Agreement between Hanover Direct, Inc and The Deerskin Companies, Inc?",
+      "expected": 90,
+      "answer": "To prevent the renewal of the agreement, either party must provide ninety (90) days written notice to the other. [3] This is confirmed by the extracted fields indicating a renewal_notice_days of 90.0. [1]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 6.49,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 4891,
+        "cached": 0,
+        "output": 50,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L26",
+      "qtype": "lookup",
+      "tag": "law",
+      "question": "Which law governs the Strategic Alliance Agreement between IMedicor, Inc and USA Managed Care Organization?",
+      "expected": [
+        "New York"
+      ],
+      "answer": "The Strategic Alliance Agreement is governed by the internal laws of the State of New York [1][9]. Additionally, all disputes under the agreement shall be resolved in the applicable state or federal courts in Rockland County, New York [9].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 6.62,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 10573,
+        "cached": 0,
+        "output": 49,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "A01",
+      "qtype": "aggregate",
+      "tag": "aggregate",
+      "question": "List all agreements governed by the laws of New York.",
+      "expected": [
+        "AMERICASSHOPPINGMALLINC_12_10_1999-EX-10.2-SITE DEVELOPMENT AND HOSTING AGREEMENT.PDF",
+        "CUROGROUPHOLDINGSCORP_05_04_2020-EX-10.3-SERVICING AGREEMENT.PDF",
+        "DYNTEKINC_07_30_1999-EX-10-ONLINE HOSTING AGREEMENT.PDF",
+        "GWG HOLDINGS, INC. - ORDERLY MARKETING AGREEMENT.PDF",
+        "ICORECONNECTINC_10_13_2010-EX-7.1-Strategic Alliance Agreement.PDF",
+        "LOOKSMARTLTD_07_20_2012-EX-99.(D)(I)-SPONSORSHIP AGREEMENT.PDF",
+        "SLINGERBAGINC_05_27_2020-EX-10.7-CONSULTING AGREEMENT.PDF",
+        "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise Agreement.pdf",
+        "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing Agreement.pdf"
+      ],
+      "answer": "Here are the agreements governed by the laws of New York:\n\n1. **SITE DEVELOPMENT AND HOSTING AGREEMENT** (AMERICASSHOPPINGMALLINC_12_10_1999-EX-10.2-SITE DEVELOPMENT AND HOSTING AGREEMENT.PDF)\n2. **SERVICING AGREEMENT** (CUROGROUPHOLDINGSCORP_05_04_2020-EX-10.3-SERVICING AGREEMENT.PDF)\n3. **ONLINE HOSTING AGREEMENT** (DYNTEKINC_07_30_1999-EX-10-ONLINE HOSTING AGREEMENT.PDF)\n4. **ORDERLY MARKETING AGREEMENT** (GWG HOLDINGS, INC. - ORDERLY MARKETING AGREEMENT.PDF)\n5. **Strategic Alliance Agreement** (ICORECONNECTINC_10_13_2010-EX-7.1-Strategic Alliance Agreement.PDF)\n6. **SPONSORSHIP AGREEMENT** (LOOKSMARTLTD_07_20_2012-EX-99.(D)(I)-SPONSORSHIP AGREEMENT.PDF)\n7. **MASTER FRANCHISE AGREEMENT** (SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise Agreement.pdf)\n8. **CONSULTING AGREEMENT** (SLINGERBAGINC_05_27_2020-EX-10.7-CONSULTING AGREEMENT.PDF)\n9. **PRODUCT SALE AND MARKETING AGREEMENT** (XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing Agreement.pdf)",
+      "route": "sql",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": null,
+      "recall": 1.0,
+      "precision": 1.0,
+      "seconds": 37.46,
+      "detail": {
+        "missing": [],
+        "extra": []
+      },
+      "usage": {
+        "calls": 2,
+        "input": 2774,
+        "cached": 0,
+        "output": 518,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "A02",
+      "qtype": "aggregate",
+      "tag": "aggregate",
+      "question": "List all agreements governed by the laws of California.",
+      "expected": [
+        "DRIVENDELIVERIES,INC_05_22_2020-EX-10.4-CONSULTING AGREEMENT.PDF",
+        "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting Agreement.pdf"
+      ],
+      "answer": "Here are the agreements governed by the laws of California:\n\n1. **DRIVENDELIVERIES,INC_05_22_2020-EX-10.4-CONSULTING AGREEMENT.PDF**  \n   - Title: CONSULTING AGREEMENT  \n   - Parties: Driven Deliveries, Inc. and TruckThat LLC  \n   - Agreement Date: 2019-05-01  \n   - Effective Date: 2019-05-01  \n\n2. **VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting Agreement.pdf**  \n   - Title: SERVICES AND HOSTING AGREEMENT  \n   - Parties: VITALIBIS INC and VOTOCast, Inc.  \n   - Effective Date: 2018-03-07",
+      "route": "sql",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": null,
+      "recall": 1.0,
+      "precision": 1.0,
+      "seconds": 20.88,
+      "detail": {
+        "missing": [],
+        "extra": []
+      },
+      "usage": {
+        "calls": 2,
+        "input": 1284,
+        "cached": 0,
+        "output": 287,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "A03",
+      "qtype": "aggregate",
+      "tag": "aggregate",
+      "question": "List all agreements governed by the laws of Florida.",
+      "expected": [
+        "ClickstreamCorp_20200330_1-A_EX1A-6 MAT CTRCT_12089935_EX1A-6 MAT CTRCT_Development Agreement.pdf",
+        "EcoScienceSolutionsInc_20180406_8-K_EX-10.1_11135398_EX-10.1_Sponsorship Agreement.pdf"
+      ],
+      "answer": "Here are the agreements governed by the laws of Florida:\n\n1. **ClickstreamCorp_20200330_1-A_EX1A-6 MAT CTRCT_12089935_EX1A-6 MAT CTRCT_Development Agreement.pdf**\n   - **Title:** APPLICATION DEVELOPMENT AGREEMENT\n   - **Parties:** InfinixSoft Global LLC and Clickstream Corporation\n   - **Date:** 2020-03-20\n\n2. **EcoScienceSolutionsInc_20180406_8-K_EX-10.1_11135398_EX-10.1_Sponsorship Agreement.pdf**\n   - **Title:** SPONSORSHIP AGREEMENT\n   - **Parties:** Fruit of Life Productions LLC and Eco Science Solutions, Inc.\n   - **Date:** 2018-04-01",
+      "route": "sql",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": null,
+      "recall": 1.0,
+      "precision": 1.0,
+      "seconds": 20.36,
+      "detail": {
+        "missing": [],
+        "extra": []
+      },
+      "usage": {
+        "calls": 2,
+        "input": 1315,
+        "cached": 0,
+        "output": 289,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "A04",
+      "qtype": "aggregate",
+      "tag": "aggregate",
+      "question": "Which agreements contain a non-compete clause?",
+      "expected": [
+        "AMERICASSHOPPINGMALLINC_12_10_1999-EX-10.2-SITE DEVELOPMENT AND HOSTING AGREEMENT.PDF",
+        "BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.PDF",
+        "BIOAMBERINC_04_10_2013-EX-10.34-DEVELOPMENT AGREEMENT (1).pdf",
+        "ClickstreamCorp_20200330_1-A_EX1A-6 MAT CTRCT_12089935_EX1A-6 MAT CTRCT_Development Agreement.pdf",
+        "DRIVENDELIVERIES,INC_05_22_2020-EX-10.4-CONSULTING AGREEMENT.PDF",
+        "DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.PDF",
+        "LOGANSROADHOUSEINC_03_27_1998-EX-10.17-SPONSORSHIP AGREEMENT.PDF",
+        "MANAKOASERVICESCORP_11_21_2007-EX-7.5-STRATEGIC ALLIANCE AGREEMENT.PDF",
+        "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing Agreement.pdf"
+      ],
+      "answer": "The following agreements contain a non-compete clause:\n\n1. **SITE DEVELOPMENT AND HOSTING AGREEMENT** (AMERICASSHOPPINGMALLINC_12_10_1999-EX-10.2-SITE DEVELOPMENT AND HOSTING AGREEMENT.PDF)\n2. **SERVICE AGREEMENT** (BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.PDF)\n3. **DEVELOPMENT AGREEMENT** (BIOAMBERINC_04_10_2013-EX-10.34-DEVELOPMENT AGREEMENT (1).pdf)\n4. **APPLICATION DEVELOPMENT AGREEMENT** (ClickstreamCorp_20200330_1-A_EX1A-6 MAT CTRCT_12089935_EX1A-6 MAT CTRCT_Development Agreement.pdf)\n5. **CONSULTING AGREEMENT** (DRIVENDELIVERIES,INC_05_22_2020-EX-10.4-CONSULTING AGREEMENT.PDF)\n6. **MARKETING AND TRANSPORTATION SERVICES AGREEMENT** (DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.PDF)\n7. **EXCLUSIVE DISTRIBUTOR AGREEMENT** (LEGACYTECHNOLOGYHOLDINGS,INC_12_09_2005-EX-10.2-DISTRIBUTOR AGREEMENT.PDF)\n8. **STRATEGIC ALLIANCE AGREEMENT** (MANAKOASERVICESCORP_11_21_2007-EX-7.5-STRATEGIC ALLIANCE AGREEMENT.PDF)\n9. **JOINT SUPPLY AND MARKETING AGREEMENT** (VertexEnergyInc_20200113_8-K_EX-10.1_11943624_EX-10.1_Marketing Agreement.pdf)\n10. **PRODUCT SALE AND MARKETING AGREEMENT** (XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing Agreement.pdf)",
+      "route": "sql",
+      "correct": false,
+      "hallucinated": true,
+      "refused": false,
+      "citation_ok": null,
+      "recall": 0.8888888888888888,
+      "precision": 0.8,
+      "seconds": 34.77,
+      "detail": {
+        "missing": [
+          "LOGANSROADHOUSEINC_03_27_1998-EX-10.17-SPONSORSHIP AGREEMENT.PDF"
+        ],
+        "extra": [
+          "LEGACYTECHNOLOGYHOLDINGS,INC_12_09_2005-EX-10.2-DISTRIBUTOR AGREEMENT.PDF",
+          "VertexEnergyInc_20200113_8-K_EX-10.1_11943624_EX-10.1_Marketing Agreement.pdf"
+        ]
+      },
+      "usage": {
+        "calls": 2,
+        "input": 1479,
+        "cached": 0,
+        "output": 555,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "A05",
+      "qtype": "aggregate",
+      "tag": "aggregate",
+      "question": "Which agreements contain an exclusivity commitment?",
+      "expected": [
+        "AMERICASSHOPPINGMALLINC_12_10_1999-EX-10.2-SITE DEVELOPMENT AND HOSTING AGREEMENT.PDF",
+        "ArtaraTherapeuticsInc_20200110_8-K_EX-10.5_11943350_EX-10.5_License Agreement.pdf",
+        "BIOAMBERINC_04_10_2013-EX-10.34-DEVELOPMENT AGREEMENT (1).pdf",
+        "ClickstreamCorp_20200330_1-A_EX1A-6 MAT CTRCT_12089935_EX1A-6 MAT CTRCT_Development Agreement.pdf",
+        "DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.PDF",
+        "INTRICONCORP_03_10_2009-EX-10.22-Strategic Alliance Agreement.PDF",
+        "LEGACYTECHNOLOGYHOLDINGS,INC_12_09_2005-EX-10.2-DISTRIBUTOR AGREEMENT.PDF",
+        "LOGANSROADHOUSEINC_03_27_1998-EX-10.17-SPONSORSHIP AGREEMENT.PDF",
+        "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise Agreement.pdf",
+        "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT AGREEMENT.PDF",
+        "ULTRAGENYXPHARMACEUTICALINC_12_23_2013-EX-10.9-SUPPLY AGREEMENT.PDF",
+        "VertexEnergyInc_20200113_8-K_EX-10.1_11943624_EX-10.1_Marketing Agreement.pdf",
+        "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content License Agreement.pdf",
+        "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing Agreement.pdf"
+      ],
+      "answer": "The following agreements contain an exclusivity commitment:\n\n1. **SITE DEVELOPMENT AND HOSTING AGREEMENT** (AMERICASSHOPPINGMALLINC_12_10_1999-EX-10.2-SITE DEVELOPMENT AND HOSTING AGREEMENT.PDF)\n2. **SPONSORED RESEARCH AND LICENSE AGREEMENT** (ArtaraTherapeuticsInc_20200110_8-K_EX-10.5_11943350_EX-10.5_License Agreement.pdf)\n3. **SERVICE AGREEMENT** (BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.PDF)\n4. **DEVELOPMENT AGREEMENT** (BIOAMBERINC_04_10_2013-EX-10.34-DEVELOPMENT AGREEMENT (1).pdf)\n5. **Strategic Alliance Agreement** (INTRICONCORP_03_10_2009-EX-10.22-Strategic Alliance Agreement.PDF)\n6. **EXCLUSIVE DISTRIBUTOR AGREEMENT** (LEGACYTECHNOLOGYHOLDINGS,INC_12_09_2005-EX-10.2-DISTRIBUTOR AGREEMENT.PDF)\n7. **SPONSORSHIP AGREEMENT** (MERCATAINC_03_09_2000-EX-10.21-SPONSORSHIP AGREEMENT.PDF)\n8. **ENDORSEMENT AGREEMENT** (TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT AGREEMENT.PDF)\n9. **SUPPLY AGREEMENT** (ULTRAGENYXPHARMACEUTICALINC_12_23_2013-EX-10.9-SUPPLY AGREEMENT.PDF)\n10. **JOINT SUPPLY AND MARKETING AGREEMENT** (VertexEnergyInc_20200113_8-K_EX-10.1_11943624_EX-10.1_Marketing Agreement.pdf)\n11. **CONTENT LICENSE AGREEMENT** (XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content License Agreement.pdf)\n12. **PRODUCT SALE AND MARKETING AGREEMENT** (XpresspaGroupInc_20190401_10-K_EX-10.28_11599457",
+      "route": "sql",
+      "correct": false,
+      "hallucinated": true,
+      "refused": false,
+      "citation_ok": null,
+      "recall": 0.7142857142857143,
+      "precision": 0.8333333333333334,
+      "seconds": 45.02,
+      "detail": {
+        "missing": [
+          "ClickstreamCorp_20200330_1-A_EX1A-6 MAT CTRCT_12089935_EX1A-6 MAT CTRCT_Development Agreement.pdf",
+          "DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.PDF",
+          "LOGANSROADHOUSEINC_03_27_1998-EX-10.17-SPONSORSHIP AGREEMENT.PDF",
+          "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise Agreement.pdf"
+        ],
+        "extra": [
+          "BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.PDF",
+          "MERCATAINC_03_09_2000-EX-10.21-SPONSORSHIP AGREEMENT.PDF"
+        ]
+      },
+      "usage": {
+        "calls": 2,
+        "input": 3450,
+        "cached": 0,
+        "output": 682,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "A06",
+      "qtype": "aggregate",
+      "tag": "aggregate",
+      "question": "Which agreements can be terminated for convenience, without cause?",
+      "expected": [
+        "ArtaraTherapeuticsInc_20200110_8-K_EX-10.5_11943350_EX-10.5_License Agreement.pdf",
+        "BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.PDF",
+        "ClickstreamCorp_20200330_1-A_EX1A-6 MAT CTRCT_12089935_EX1A-6 MAT CTRCT_Development Agreement.pdf",
+        "DOMINIADVISORTRUST_02_18_2005-EX-99.(H)(2)-SPONSORSHIP AGREEMENT.PDF",
+        "DRIVENDELIVERIES,INC_05_22_2020-EX-10.4-CONSULTING AGREEMENT.PDF",
+        "DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.PDF",
+        "DYNTEKINC_07_30_1999-EX-10-ONLINE HOSTING AGREEMENT.PDF",
+        "GWG HOLDINGS, INC. - ORDERLY MARKETING AGREEMENT.PDF",
+        "ICORECONNECTINC_10_13_2010-EX-7.1-Strategic Alliance Agreement.PDF",
+        "INTRICONCORP_03_10_2009-EX-10.22-Strategic Alliance Agreement.PDF",
+        "MANAKOASERVICESCORP_11_21_2007-EX-7.5-STRATEGIC ALLIANCE AGREEMENT.PDF",
+        "PelicanDeliversInc_20200211_S-1_EX-10.3_11975895_EX-10.3_Development Agreement2.pdf",
+        "PrudentialBancorpInc_20170606_8-K_EX-10.4_10474434_EX-10.4_Endorsement Agreement.pdf",
+        "SLINGERBAGINC_05_27_2020-EX-10.7-CONSULTING AGREEMENT.PDF",
+        "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting Agreement.pdf",
+        "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content License Agreement.pdf"
+      ],
+      "answer": "The following 16 agreements can be terminated for convenience, without cause:\n\n1. **SPONSORED RESEARCH AND LICENSE AGREEMENT** (ArTara, Inc. and The University of Iowa)\n2. **APPLICATION DEVELOPMENT AGREEMENT** (InfinixSoft Global LLC and Clickstream Corporation)\n3. **SERVICING AGREEMENT** (CURO RECEIVABLES FINANCE II, LLC and CURO MANAGEMENT, LLC)\n4. **SPONSORSHIP AGREEMENT** (Domini Advisor Trust and Domini Social Investments LLC)\n5. **CONSULTING AGREEMENT** (Driven Deliveries, Inc. and TruckThat LLC)\n6. **MARKETING AND TRANSPORTATION SERVICES AGREEMENT** (PUROLATOR COURIER LTD. and PARCELWAY COURIER SYSTEMS CANADA LTD.)\n7. **ONLINE HOSTING AGREEMENT** (Diplomat Direct Marketing Corporation and Tadeo E-Commerce Corp.)\n8. **ORDERLY MARKETING AGREEMENT** (GWG HOLDINGS, INC. and THE TRUST ADVISORS TO THE SELLER TRUSTS LISTED ON SCHEDULE A HERETO)\n9. **Strategic Alliance Agreement** (IntriCon Corporation and Dynamic Hearing Pty Ltd)\n10. **STRATEGIC ALLIANCE AGREEMENT** (UTEK Corporation and Manakoa Services Corporation)\n11. **SOFTWARE DEVELOPMENT AGREEMENT** (DOT COM LLC and Pelican Delivers Inc.)\n12. **Split-Dollar Endorsement Agreement** (Prudential Bank and Jeffrey Hanuscin)\n13. **CONSULTING AGREEMENT** (Slinger Bag Inc. and Aitan Zacharin)\n14. **SERVICES AND HOSTING AGREEMENT** (VITALIBIS INC and VOTOCAST, Inc.)\n15. **CONTENT LICENSE AGREEMENT** (CHINA ECONOMIC INFORMATION SERVICE OF XINHUA NEWS AGENCY and XINHUA FINANCIAL NETWORK LIMITED)\n16. **PRODUCT SALE AND MARKETING AGREEMENT** (Calm.com, Inc. and XpresSpa Group, Inc.)",
+      "route": "sql",
+      "correct": false,
+      "hallucinated": true,
+      "refused": false,
+      "citation_ok": null,
+      "recall": 0.875,
+      "precision": 0.875,
+      "seconds": 33.07,
+      "detail": {
+        "missing": [
+          "BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.PDF",
+          "ICORECONNECTINC_10_13_2010-EX-7.1-Strategic Alliance Agreement.PDF"
+        ],
+        "extra": [
+          "CUROGROUPHOLDINGSCORP_05_04_2020-EX-10.3-SERVICING AGREEMENT.PDF",
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing Agreement.pdf"
+        ]
+      },
+      "usage": {
+        "calls": 2,
+        "input": 2359,
+        "cached": 0,
+        "output": 482,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "A07",
+      "qtype": "aggregate",
+      "tag": "aggregate",
+      "question": "Which agreements give a party audit rights?",
+      "expected": [
+        "AMERICASSHOPPINGMALLINC_12_10_1999-EX-10.2-SITE DEVELOPMENT AND HOSTING AGREEMENT.PDF",
+        "ArtaraTherapeuticsInc_20200110_8-K_EX-10.5_11943350_EX-10.5_License Agreement.pdf",
+        "BIOAMBERINC_04_10_2013-EX-10.34-DEVELOPMENT AGREEMENT (1).pdf",
+        "CUROGROUPHOLDINGSCORP_05_04_2020-EX-10.3-SERVICING AGREEMENT.PDF",
+        "DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.PDF",
+        "DYNTEKINC_07_30_1999-EX-10-ONLINE HOSTING AGREEMENT.PDF",
+        "ICORECONNECTINC_10_13_2010-EX-7.1-Strategic Alliance Agreement.PDF",
+        "INTRICONCORP_03_10_2009-EX-10.22-Strategic Alliance Agreement.PDF",
+        "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise Agreement.pdf",
+        "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT AGREEMENT.PDF",
+        "VertexEnergyInc_20200113_8-K_EX-10.1_11943624_EX-10.1_Marketing Agreement.pdf",
+        "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing Agreement.pdf"
+      ],
+      "answer": "The following agreements give a party audit rights:\n\n1. **SITE DEVELOPMENT AND HOSTING AGREEMENT** (AMERICASSHOPPINGMALLINC_12_10_1999-EX-10.2-SITE DEVELOPMENT AND HOSTING AGREEMENT.PDF)\n2. **DEVELOPMENT AGREEMENT** (BIOAMBERINC_04_10_2013-EX-10.34-DEVELOPMENT AGREEMENT (1).pdf)\n3. **SERVICING AGREEMENT** (CUROGROUPHOLDINGSCORP_05_04_2020-EX-10.3-SERVICING AGREEMENT.PDF)\n4. **MARKETING AND TRANSPORTATION SERVICES AGREEMENT** (DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.PDF)\n5. **ONLINE HOSTING AGREEMENT** (DYNTEKINC_07_30_1999-EX-10-ONLINE HOSTING AGREEMENT.PDF)\n6. **Strategic Alliance Agreement** (INTRICONCORP_03_10_2009-EX-10.22-Strategic Alliance Agreement.PDF)\n7. **JOINT VENTURE AGREEMENT** (NOVOINTEGRATEDSCIENCES,INC_12_23_2019-EX-10.1-JOINT VENTURE AGREEMENT.PDF)\n8. **ENDORSEMENT AGREEMENT** (TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT AGREEMENT.PDF)\n9. **JOINT SUPPLY AND MARKETING AGREEMENT** (VertexEnergyInc_20200113_8-K_EX-10.1_11943624_EX-10.1_Marketing Agreement.pdf)\n10. **PRODUCT SALE AND MARKETING AGREEMENT** (XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing Agreement.pdf)",
+      "route": "sql",
+      "correct": false,
+      "hallucinated": true,
+      "refused": false,
+      "citation_ok": null,
+      "recall": 0.75,
+      "precision": 0.9,
+      "seconds": 35.03,
+      "detail": {
+        "missing": [
+          "ArtaraTherapeuticsInc_20200110_8-K_EX-10.5_11943350_EX-10.5_License Agreement.pdf",
+          "ICORECONNECTINC_10_13_2010-EX-7.1-Strategic Alliance Agreement.PDF",
+          "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise Agreement.pdf"
+        ],
+        "extra": [
+          "NOVOINTEGRATEDSCIENCES,INC_12_23_2019-EX-10.1-JOINT VENTURE AGREEMENT.PDF"
+        ]
+      },
+      "usage": {
+        "calls": 2,
+        "input": 1790,
+        "cached": 0,
+        "output": 536,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "A08",
+      "qtype": "aggregate",
+      "tag": "aggregate",
+      "question": "Which agreements contain a most-favored-nation clause?",
+      "expected": [],
+      "answer": "No documents match.",
+      "route": "sql",
+      "correct": true,
+      "hallucinated": false,
+      "refused": true,
+      "citation_ok": null,
+      "recall": 1.0,
+      "precision": 1.0,
+      "seconds": 14.35,
+      "detail": {
+        "missing": [],
+        "extra": []
+      },
+      "usage": {
+        "calls": 2,
+        "input": 1718,
+        "cached": 0,
+        "output": 169,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "A09",
+      "qtype": "aggregate",
+      "tag": "aggregate",
+      "question": "Which agreements are perpetual, with no fixed end date?",
+      "expected": [
+        "BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.PDF",
+        "CUROGROUPHOLDINGSCORP_05_04_2020-EX-10.3-SERVICING AGREEMENT.PDF",
+        "DOMINIADVISORTRUST_02_18_2005-EX-99.(H)(2)-SPONSORSHIP AGREEMENT.PDF",
+        "DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.PDF",
+        "PelicanDeliversInc_20200211_S-1_EX-10.3_11975895_EX-10.3_Development Agreement2.pdf",
+        "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise Agreement.pdf"
+      ],
+      "answer": "The following agreements are perpetual (with no fixed end date):\n\n1. **SPONSORED RESEARCH AND LICENSE AGREEMENT** between ArTara, Inc. and The University of Iowa (File: `ArtaraTherapeuticsInc_20200110_8-K_EX-10.5_11943350_EX-10.5_License Agreement.pdf`)\n2. **SPONSORSHIP AGREEMENT** between Domini Advisor Trust and Domini Social Investments LLC (File: `DOMINIADVISORTRUST_02_18_2005-EX-99.(H)(2)-SPONSORSHIP AGREEMENT.PDF`)\n3. **MARKETING AND TRANSPORTATION SERVICES AGREEMENT** between PUROLATOR COURIER LTD. and PARCELWAY COURIER SYSTEMS CANADA LTD. (File: `DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.PDF`)\n4. **SOFTWARE DEVELOPMENT AGREEMENT** between DOT COM LLC and Pelican Delivers Inc. (File: `PelicanDeliversInc_20200211_S-1_EX-10.3_11975895_EX-10.3_Development Agreement2.pdf`)\n5. **Split-Dollar Endorsement Agreement** between Prudential Bank and Jeffrey Hanuscin (File: `PrudentialBancorpInc_20170606_8-K_EX-10.4_10474434_EX-10.4_Endorsement Agreement.pdf`)\n6. **SERVICES AND HOSTING AGREEMENT** between VITALIBIS INC and VOTOCAST, Inc. (File: `VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting Agreement.pdf`)\n\nNote: Although the row for \"Strategic Alliance Agreement\" is included in the provided data with `perpetual = 1`, it has an explicit expiration date of \"2013-10-01\". Based on standard interpretation, it should not be considered perpetual. However, strictly following the SQL filter `WHERE perpetual = 1` as given in the rows, all seven rows match the criteria. If we consider the logical definition of \"perpetual\" (no expiration date), then only the six agreements listed above qualify.",
+      "route": "sql",
+      "correct": false,
+      "hallucinated": true,
+      "refused": false,
+      "citation_ok": null,
+      "recall": 0.5,
+      "precision": 0.42857142857142855,
+      "seconds": 37.39,
+      "detail": {
+        "missing": [
+          "BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.PDF",
+          "CUROGROUPHOLDINGSCORP_05_04_2020-EX-10.3-SERVICING AGREEMENT.PDF",
+          "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise Agreement.pdf"
+        ],
+        "extra": [
+          "ArtaraTherapeuticsInc_20200110_8-K_EX-10.5_11943350_EX-10.5_License Agreement.pdf",
+          "INTRICONCORP_03_10_2009-EX-10.22-Strategic Alliance Agreement.PDF",
+          "PrudentialBancorpInc_20170606_8-K_EX-10.4_10474434_EX-10.4_Endorsement Agreement.pdf",
+          "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting Agreement.pdf"
+        ]
+      },
+      "usage": {
+        "calls": 2,
+        "input": 1713,
+        "cached": 0,
+        "output": 587,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "A10",
+      "qtype": "aggregate",
+      "tag": "aggregate",
+      "question": "How many agreements are governed by the laws of New York?",
+      "expected": 9,
+      "answer": "There are 9 agreements governed by the laws of New York.",
+      "route": "sql",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 5.78,
+      "detail": {},
+      "usage": {
+        "calls": 2,
+        "input": 834,
+        "cached": 0,
+        "output": 41,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "U01",
+      "qtype": "unanswerable",
+      "tag": "unanswerable",
+      "question": "How many days of notice are required to prevent the automatic renewal of the Consulting Agreement between Driven Deliveries, Inc and TruckThat LLC?",
+      "expected": null,
+      "answer": "The agreement does not have an automatic renewal clause; it is explicitly stated that `auto_renewal` is False [1]. Additionally, Section 7.2 specifies that either party may terminate the agreement with thirty (30) days prior written notice [6]. Therefore, no notice period is required to prevent non-renewal because the agreement does not renew automatically.",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": true,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 6.96,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 6450,
+        "cached": 0,
+        "output": 76,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "U02",
+      "qtype": "unanswerable",
+      "tag": "unanswerable",
+      "question": "How many days of notice are required to prevent the automatic renewal of the Sponsorship Agreement between Southern Racing Promotions, Inc and Logan's Roadhouse, Inc?",
+      "expected": null,
+      "answer": "The documents do not contain this information.",
+      "route": "not_found",
+      "correct": true,
+      "hallucinated": false,
+      "refused": true,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 5.94,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 4823,
+        "cached": 0,
+        "output": 42,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "U03",
+      "qtype": "unanswerable",
+      "tag": "unanswerable",
+      "question": "How many days of notice are required to prevent the automatic renewal of the Servicing Agreement between CURO RECEIVABLES FINANCE II, LLC and CURO MANAGEMENT, LLC?",
+      "expected": null,
+      "answer": "The provided excerpts do not contain information regarding a specific number of days of notice required to prevent the automatic renewal of the agreement. Excerpt [1] indicates that `auto_renewal` is False for this agreement, meaning it does not automatically renew regardless of notice periods.",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": true,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 21.52,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 9007,
+        "cached": 0,
+        "output": 56,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "U04",
+      "qtype": "unanswerable",
+      "tag": "unanswerable",
+      "question": "How many days of notice are required to prevent the automatic renewal of the Development Agreement between Cargill, Incorporated and Bioamber S.A.S?",
+      "expected": null,
+      "answer": "The documents do not contain this information.",
+      "route": "not_found",
+      "correct": true,
+      "hallucinated": false,
+      "refused": true,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 5.27,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 10505,
+        "cached": 0,
+        "output": 3,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "U05",
+      "qtype": "unanswerable",
+      "tag": "unanswerable",
+      "question": "How many days of notice are required to prevent the automatic renewal of the Software Development Agreement between DOT COM LLC and Pelican Delivers Inc?",
+      "expected": null,
+      "answer": "The agreement does not have an automatic renewal clause; it is set to expire upon completion or termination of services as mutually agreed upon [2]. However, either party may terminate the agreement at any time for any reason by providing two weeks' written notice [11].",
+      "route": "document",
+      "correct": false,
+      "hallucinated": true,
+      "refused": false,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 20.91,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 8414,
+        "cached": 0,
+        "output": 54,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "U06",
+      "qtype": "unanswerable",
+      "tag": "unanswerable",
+      "question": "What was the share price of Fruit of Life Productions LLC on the date of the Sponsorship Agreement between Fruit of Life Productions LLC and Eco Science Solutions, Inc?",
+      "expected": null,
+      "answer": "The documents do not contain this information.",
+      "route": "not_found",
+      "correct": true,
+      "hallucinated": false,
+      "refused": true,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 3.62,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 2409,
+        "cached": 0,
+        "output": 3,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "U07",
+      "qtype": "unanswerable",
+      "tag": "unanswerable",
+      "question": "How many employees does Parcelway Courier Systems Canada Ltd. a subsidiary of Dynamex Inc have according to the Marketing And Transportation Services Agreement between Purolator Courier Ltd and Parcelway Courier Systems Canada Ltd. a subsidiary of Dynamex Inc?",
+      "expected": null,
+      "answer": "The documents do not contain this information.",
+      "route": "not_found",
+      "correct": true,
+      "hallucinated": false,
+      "refused": true,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 3.51,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 11519,
+        "cached": 0,
+        "output": 3,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "U08",
+      "qtype": "unanswerable",
+      "tag": "unanswerable",
+      "question": "Who was the CEO of Teardrop Putter Corporation when the Endorsement Agreement between Teardrop Putter Corporation and Consolidated Artists Inc was signed?",
+      "expected": null,
+      "answer": "The documents do not contain this information.",
+      "route": "not_found",
+      "correct": true,
+      "hallucinated": false,
+      "refused": true,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 5.03,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 6744,
+        "cached": 0,
+        "output": 3,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "S01",
+      "qtype": "lookup",
+      "tag": "short-law",
+      "question": "Which law governs our agreement with Hanover?",
+      "expected": [
+        "New York"
+      ],
+      "answer": "The agreement with Hanover is governed by New York law, as specified in the document AMERICASSHOPPINGMALLINC_12_10_1999-EX-10.2-SITE DEVELOPMENT AND HOSTING AGREEMENT.PDF.",
+      "route": "sql",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 11.35,
+      "detail": {},
+      "usage": {
+        "calls": 2,
+        "input": 1132,
+        "cached": 0,
+        "output": 94,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "S02",
+      "qtype": "lookup",
+      "tag": "short-notice",
+      "question": "How many days of notice does the IMedicor agreement require to stop it from renewing?",
+      "expected": 90,
+      "answer": "The agreement requires a renewal notice of 90 days prior to the expiration of the Initial Term or then current renewal term [1]. Additionally, Section 3 states that either party must notify the other of its desire to terminate at least sixty (60) days prior to expiration, though the extracted fields specify 90.0 days [4].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 7.02,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 10572,
+        "cached": 0,
+        "output": 72,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "S03",
+      "qtype": "lookup",
+      "tag": "short-law",
+      "question": "Which law governs our agreement with Purolator?",
+      "expected": [
+        "Province of Ontario"
+      ],
+      "answer": "The agreement with Purolator is governed by the law of Ontario, as specified in the document DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.PDF.",
+      "route": "sql",
+      "correct": false,
+      "hallucinated": true,
+      "refused": false,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 11.77,
+      "detail": {},
+      "usage": {
+        "calls": 2,
+        "input": 1127,
+        "cached": 0,
+        "output": 91,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "S04",
+      "qtype": "lookup",
+      "tag": "short-law",
+      "question": "Which law governs our agreement with Calm?",
+      "expected": [
+        "New York"
+      ],
+      "answer": "The agreement with Calm is governed by New York law, as specified in the document XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing Agreement.pdf.",
+      "route": "sql",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 10.1,
+      "detail": {},
+      "usage": {
+        "calls": 2,
+        "input": 1147,
+        "cached": 0,
+        "output": 102,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "S05",
+      "qtype": "lookup",
+      "tag": "short-law",
+      "question": "Which law governs our agreement with Smaaash?",
+      "expected": [
+        "New York"
+      ],
+      "answer": "The agreement with Smaaash is governed by New York law, as specified in the document SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise Agreement.pdf.",
+      "route": "sql",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 10.23,
+      "detail": {},
+      "usage": {
+        "calls": 2,
+        "input": 1147,
+        "cached": 0,
+        "output": 104,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "S06",
+      "qtype": "lookup",
+      "tag": "short-law",
+      "question": "Which law governs our agreement with Cargill?",
+      "expected": [
+        "Minnesota"
+      ],
+      "answer": "The Development Agreement is governed by the laws of the State of Minnesota, United States of America [12]. This is confirmed in Section 13.2, which states that the agreement shall be construed in accordance with Minnesota law, disregarding its conflicts of law rules [12].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 6.79,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 10487,
+        "cached": 0,
+        "output": 59,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "N01",
+      "qtype": "aggregate",
+      "tag": "named-list",
+      "question": "List all agreements governed by the same law as the Product Sale And Marketing Agreement between Calm.com, Inc and XpresSpa Group, Inc, including that one.",
+      "expected": [
+        "AMERICASSHOPPINGMALLINC_12_10_1999-EX-10.2-SITE DEVELOPMENT AND HOSTING AGREEMENT.PDF",
+        "CUROGROUPHOLDINGSCORP_05_04_2020-EX-10.3-SERVICING AGREEMENT.PDF",
+        "DYNTEKINC_07_30_1999-EX-10-ONLINE HOSTING AGREEMENT.PDF",
+        "GWG HOLDINGS, INC. - ORDERLY MARKETING AGREEMENT.PDF",
+        "ICORECONNECTINC_10_13_2010-EX-7.1-Strategic Alliance Agreement.PDF",
+        "LOOKSMARTLTD_07_20_2012-EX-99.(D)(I)-SPONSORSHIP AGREEMENT.PDF",
+        "SLINGERBAGINC_05_27_2020-EX-10.7-CONSULTING AGREEMENT.PDF",
+        "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise Agreement.pdf",
+        "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing Agreement.pdf"
+      ],
+      "answer": "No documents match the query. The provided rows do not include an agreement titled \"Product Sale And Marketing Agreement\" between Calm.com, Inc and XpresSpa Group, Inc.",
+      "route": "sql",
+      "correct": false,
+      "hallucinated": false,
+      "refused": true,
+      "citation_ok": null,
+      "recall": 0.1111111111111111,
+      "precision": 0.3333333333333333,
+      "seconds": 15.07,
+      "detail": {
+        "missing": [
+          "AMERICASSHOPPINGMALLINC_12_10_1999-EX-10.2-SITE DEVELOPMENT AND HOSTING AGREEMENT.PDF",
+          "CUROGROUPHOLDINGSCORP_05_04_2020-EX-10.3-SERVICING AGREEMENT.PDF",
+          "DYNTEKINC_07_30_1999-EX-10-ONLINE HOSTING AGREEMENT.PDF",
+          "GWG HOLDINGS, INC. - ORDERLY MARKETING AGREEMENT.PDF",
+          "ICORECONNECTINC_10_13_2010-EX-7.1-Strategic Alliance Agreement.PDF",
+          "LOOKSMARTLTD_07_20_2012-EX-99.(D)(I)-SPONSORSHIP AGREEMENT.PDF",
+          "SLINGERBAGINC_05_27_2020-EX-10.7-CONSULTING AGREEMENT.PDF",
+          "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise Agreement.pdf"
+        ],
+        "extra": [
+          "DRIVENDELIVERIES,INC_05_22_2020-EX-10.4-CONSULTING AGREEMENT.PDF",
+          "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting Agreement.pdf"
+        ]
+      },
+      "usage": {
+        "calls": 2,
+        "input": 1645,
+        "cached": 0,
+        "output": 132,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "N02",
+      "qtype": "aggregate",
+      "tag": "named-list",
+      "question": "List all agreements governed by the same law as the Online Hosting Agreement between Diplomat Direct Marketing Corporation and Tadeo E-Commerce Corp, including that one.",
+      "expected": [
+        "AMERICASSHOPPINGMALLINC_12_10_1999-EX-10.2-SITE DEVELOPMENT AND HOSTING AGREEMENT.PDF",
+        "CUROGROUPHOLDINGSCORP_05_04_2020-EX-10.3-SERVICING AGREEMENT.PDF",
+        "DYNTEKINC_07_30_1999-EX-10-ONLINE HOSTING AGREEMENT.PDF",
+        "GWG HOLDINGS, INC. - ORDERLY MARKETING AGREEMENT.PDF",
+        "ICORECONNECTINC_10_13_2010-EX-7.1-Strategic Alliance Agreement.PDF",
+        "LOOKSMARTLTD_07_20_2012-EX-99.(D)(I)-SPONSORSHIP AGREEMENT.PDF",
+        "SLINGERBAGINC_05_27_2020-EX-10.7-CONSULTING AGREEMENT.PDF",
+        "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise Agreement.pdf",
+        "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing Agreement.pdf"
+      ],
+      "answer": "Based on the query results, there is only one agreement matching the criteria (the Online Hosting Agreement between Diplomat Direct Marketing Corporation and Tadeo E-Commerce Corp):\n\n*   **Filename**: DYNTEKINC_07_30_1999-EX-10-ONLINE HOSTING AGREEMENT.PDF\n*   **Agreement Title**: ONLINE HOSTING AGREEMENT\n*   **Party A**: Diplomat Direct Marketing Corporation\n*   **Party B**: Tadeo E-Commerce Corp.\n*   **Agreement Date**: 1999-06-01\n*   **Effective Date**: 1999-06-01\n*   **Expiration Date**: 1999-05-31\n*   **Perpetual**: No\n*   **Auto Renewal**: Yes\n*   **Renewal Notice Days**: 60\n*   **Governing Law**: New York\n*   **Non Compete**: No\n*   **Exclusivity**: No\n*   **Termination for Convenience**: Yes\n*   **Cap on Liability**: No\n*   **Audit Rights**: Yes\n*   **Most Favored Nation**: No",
+      "route": "sql",
+      "correct": false,
+      "hallucinated": true,
+      "refused": false,
+      "citation_ok": null,
+      "recall": 0.1111111111111111,
+      "precision": 1.0,
+      "seconds": 25.99,
+      "detail": {
+        "missing": [
+          "AMERICASSHOPPINGMALLINC_12_10_1999-EX-10.2-SITE DEVELOPMENT AND HOSTING AGREEMENT.PDF",
+          "CUROGROUPHOLDINGSCORP_05_04_2020-EX-10.3-SERVICING AGREEMENT.PDF",
+          "GWG HOLDINGS, INC. - ORDERLY MARKETING AGREEMENT.PDF",
+          "ICORECONNECTINC_10_13_2010-EX-7.1-Strategic Alliance Agreement.PDF",
+          "LOOKSMARTLTD_07_20_2012-EX-99.(D)(I)-SPONSORSHIP AGREEMENT.PDF",
+          "SLINGERBAGINC_05_27_2020-EX-10.7-CONSULTING AGREEMENT.PDF",
+          "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise Agreement.pdf",
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing Agreement.pdf"
+        ],
+        "extra": []
+      },
+      "usage": {
+        "calls": 2,
+        "input": 1401,
+        "cached": 0,
+        "output": 376,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "N03",
+      "qtype": "aggregate",
+      "tag": "named-list",
+      "question": "List all agreements governed by the same law as the Services And Hosting Agreement between VITALIBIS INC and VOTOCAST, Inc, including that one.",
+      "expected": [
+        "DRIVENDELIVERIES,INC_05_22_2020-EX-10.4-CONSULTING AGREEMENT.PDF",
+        "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting Agreement.pdf"
+      ],
+      "answer": "The following agreement is governed by the same law (Virginia) as the Services And Hosting Agreement between VITALIBIS INC and VOTOCAST, Inc:\n\n- **ENDORSEMENT AGREEMENT** (Identifier: TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT AGREEMENT.PDF)",
+      "route": "sql",
+      "correct": false,
+      "hallucinated": true,
+      "refused": false,
+      "citation_ok": null,
+      "recall": 0.5,
+      "precision": 0.5,
+      "seconds": 12.22,
+      "detail": {
+        "missing": [
+          "DRIVENDELIVERIES,INC_05_22_2020-EX-10.4-CONSULTING AGREEMENT.PDF"
+        ],
+        "extra": [
+          "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT AGREEMENT.PDF"
+        ]
+      },
+      "usage": {
+        "calls": 2,
+        "input": 1206,
+        "cached": 0,
+        "output": 119,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    }
+  ]
+}

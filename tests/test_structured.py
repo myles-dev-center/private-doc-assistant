@@ -4,7 +4,7 @@ from pathlib import Path
 import pytest
 
 from docassist.pipeline import DEFAULT_SCHEMA
-from docassist.structured import Schema, coerce, extract, normalize_date, records_db, run_sql
+from docassist.structured import Schema, coerce, extract, locate, normalize_date, records_db, run_sql
 
 
 @pytest.fixture
@@ -75,12 +75,30 @@ def test_long_documents_are_read_in_parts(schema):
             body = user.split("<<<", 1)[1]
             seen.append(body)
             if "part 1 of" in user:
-                return {"contract_id": "AP-SA-2024-017", "auto_renewal": False}
-            return {"contract_id": "WRONG", "governing_law": "Germany", "auto_renewal": True}
+                return {"contract_id": "AP-SA-2024-017", "auto_renewal": False, "evidence": {"contract_id": "No. AP-SA-2024-017"}}
+            return {
+                "contract_id": "WRONG",
+                "governing_law": "Germany",
+                "auto_renewal": True,
+                "evidence": {"governing_law": "laws of Germany"},
+            }
 
     text = "A" * 30_000 + " This agreement is governed by the laws of Germany."
-    rec = extract(PartLLM(), schema, text, max_chars=24_000)
+    ex = extract(PartLLM(), schema, text, max_chars=24_000)
+    rec = ex.record
     assert len(seen) == 2 and "governed by" in seen[1]
     assert rec["contract_id"] == "AP-SA-2024-017"  # first part wins
     assert rec["governing_law"] == "Germany"  # found only at the end
     assert rec["auto_renewal"] is True  # any part
+    # each quote belongs to the part its value came from
+    assert ex.quotes == {"contract_id": "No. AP-SA-2024-017", "governing_law": "laws of Germany"}
+
+
+def test_locate_quote():
+    pages = [(1, "This Agreement shall be governed by\nthe laws of the State of New York."), (2, "Either party may terminate.")]
+    assert locate("governed by the laws of the State of New York", pages) == (True, 1)
+    assert locate("Either Party may terminate", pages) == (True, 2)  # case, punctuation
+    assert locate("governed by the laws of the State of New York, without regard to conflicts", pages) == (True, 1)  # shortened end
+    assert locate("governed by the laws of Delaware", pages) == (False, None)
+    assert locate("This Agreement shall be governed... State of New York", pages) == (True, 1)  # shortened with "..."
+    assert locate("This Agreement shall be governed... laws of Delaware", pages) == (False, None)

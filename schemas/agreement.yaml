@@ -8,11 +8,17 @@ name: agreement
 description: A commercial agreement between two or more companies or individuals, filed publicly with the SEC.
 header_fields: [agreement_title, party_a, party_b]
 scope_fields: [party_a, party_b]
+# Example questions shown in the UI, one per way of answering (`shows`). They name
+# agreements of the 30-contract comparison set (data/corpus-cuad-holdout2).
 examples:
-  - Which agreements are governed by the laws of New York?
-  - Which agreements renew automatically?
-  - Which agreements contain a non-compete clause?
-  - Which agreements give a party audit rights?
+  - question: Which agreements are governed by the laws of New York?
+    shows: sql
+  - question: When does the Endorsement Agreement between Golfers Incorporated and Andy North expire?
+    shows: document
+  - question: What happens if a party goes bankrupt?
+    shows: search
+  - question: How many employees does OntoChem GmbH have?
+    shows: not_found
 fields:
   - name: agreement_title
     type: text

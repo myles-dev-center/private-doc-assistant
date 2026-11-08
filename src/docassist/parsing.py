@@ -38,10 +38,11 @@ class ParsedDoc:
         return sum(p.ocr for p in self.pages)
 
 
-def parse_file(path: Path) -> ParsedDoc:
+def parse_file(path: Path, progress=None) -> ParsedDoc:
+    """`progress(page, pages, ocr)` is called after each PDF page."""
     ext = path.suffix.lower()
     if ext == ".pdf":
-        return parse_pdf(path)
+        return parse_pdf(path, progress)
     if ext == ".docx":
         return parse_docx(path)
     if ext in {".txt", ".md"}:
@@ -49,17 +50,22 @@ def parse_file(path: Path) -> ParsedDoc:
     raise ValueError(f"unsupported file type: {path.name}")
 
 
-def parse_pdf(path: Path) -> ParsedDoc:
+def parse_pdf(path: Path, progress=None) -> ParsedDoc:
     doc = ParsedDoc(path.name)
     reader = PdfReader(str(path))
+    n = len(reader.pages)
     for i, page in enumerate(reader.pages, 1):
         text = (page.extract_text() or "").strip()
         if len(text) < MIN_TEXT_CHARS and page.images:
             ocr_text = ocr_page_images([img.data for img in page.images])
             if ocr_text:
                 doc.pages.append(Page(i, ocr_text, ocr=True))
+                if progress:
+                    progress(i, n, True)
                 continue
         doc.pages.append(Page(i, text))
+        if progress:
+            progress(i, n, False)
     return doc
 
 

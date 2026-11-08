@@ -36,3 +36,35 @@ def test_mirrored_ids_are_distinguished(tmp_path):
     store.commit()
     hits = store.get_chunks(store.fts_search(fts_query("contract AP-SA-2024-071"), 2))
     assert hits[0].filename == "AP-SA-2024-071.pdf"
+
+
+def test_old_library_gains_model_columns(tmp_path):
+    import sqlite3
+
+    path = tmp_path / "old.db"
+    db = sqlite3.connect(path)
+    db.execute(
+        "CREATE TABLE documents (id INTEGER PRIMARY KEY, filename TEXT UNIQUE NOT NULL, sha256 TEXT NOT NULL, "
+        "pages INTEGER, ocr_pages INTEGER DEFAULT 0, header TEXT, ingested_at TEXT DEFAULT CURRENT_TIMESTAMP)"
+    )
+    db.execute("INSERT INTO documents(filename, sha256) VALUES ('a.pdf', 'x')")
+    db.commit()
+    db.close()
+    (doc,) = Store(path).documents()
+    assert doc["filename"] == "a.pdf" and doc["embed_model"] is None and doc["extract_model"] is None
+
+
+def test_chinese_text_is_searchable_by_keyword(tmp_path):
+    import numpy as np
+
+    from docassist.retrieval import fts_text
+
+    store = Store(tmp_path / "t.db")
+    texts = {"a.pdf": "第五条 付款条件：买方应在收到发票后三十日内付款。", "b.pdf": "第九条 适用法律：本合同适用中华人民共和国法律。"}
+    for name, text in texts.items():
+        doc_id = store.add_document(name, "sha", 1, 0, None)
+        store.add_chunks(doc_id, [(0, 1, text, fts_text(text))], np.ones((1, 4), np.float32))
+    store.commit()
+    hits = store.get_chunks(store.fts_search(fts_query("付款条件是什么？"), 2))
+    assert hits[0].filename == "a.pdf"
+    assert fts_text("Payment within 30 days.") == "Payment within 30 days."  # non-CJK text is indexed as before

@@ -39,6 +39,14 @@ def test_unanswerable():
     assert s.hallucinated and not s.correct
 
 
+def test_rejecting_a_false_premise_is_a_refusal():
+    ok = "No notice is required because the agreement does not automatically renew.[1]"
+    assert score(q("refusal", qtype="unanswerable"), Answer("?", ok, "document")).correct
+    assert score(q("refusal", qtype="unanswerable"), Answer("?", "It is not subject to automatic renewal.", "document")).correct
+    bad = score(q("refusal", qtype="unanswerable"), Answer("?", "It does renew automatically; 30 days' notice.", "document"))
+    assert bad.hallucinated and not bad.correct
+
+
 def test_aggregate_requires_exact_set_and_reads_sql_rows():
     exp = ["AP-SA-2024-017", "AP-LIC-2023-020"]
     ans = Answer("?", "Two contracts match.", "sql", columns=["contract_id"], rows=[["AP-SA-2024-017"], ["AP-LIC-2023-020"]])

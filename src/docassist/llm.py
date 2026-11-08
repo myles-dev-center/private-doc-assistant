@@ -4,6 +4,8 @@ from __future__ import annotations
 
 import json
 import re
+import threading
+from contextlib import contextmanager
 from typing import Any
 from urllib.parse import urlparse
 
@@ -30,6 +32,32 @@ class LLM:
         )
         self.json_format = 0  # index into JSON_FORMATS; len(JSON_FORMATS) = prompt-only
         self.usage = Usage()
+        self._local = threading.local()  # usage of the calls made on this thread, see track()
+        self.set_concurrency(resolve_concurrency(settings))
+
+    def set_concurrency(self, n: int) -> None:
+        """At most n model requests in flight at once, across all threads using this client."""
+        self.concurrency = n
+        self._gate = threading.BoundedSemaphore(n)
+
+    @contextmanager
+    def track(self):
+        """Usage of the calls made inside this block on this thread only - so the cost of one
+        answer is right even while uploads run side by side on the same client."""
+        mine = Usage()
+        outer = getattr(self._local, "usage", None)
+        self._local.usage = mine
+        try:
+            yield mine
+        finally:
+            self._local.usage = outer
+            if outer is not None:
+                outer.merge(mine)
+
+    def _count(self, kind: str, u, model: str) -> None:
+        for target in (self.usage, getattr(self._local, "usage", None)):
+            if target is not None:
+                (target.add if kind == "chat" else target.add_embed)(u, model)
 
     def chat(self, system: str, user: str, *, max_tokens: int = 800, json_mode: bool = False) -> str:
         kwargs: dict[str, Any] = {}
@@ -37,14 +65,15 @@ class LLM:
             kwargs["reasoning_effort"] = self.s.llm_reasoning_effort
         if json_mode:
             kwargs["response_format"] = JSON_FORMATS[self.json_format]
-        resp = self.chat_client.chat.completions.create(
-            model=self.s.llm_model,
-            messages=[{"role": "system", "content": system}, {"role": "user", "content": user}],
-            temperature=0,
-            max_tokens=max_tokens,
-            **kwargs,
-        )
-        self.usage.add(resp.usage, self.s.llm_model)
+        with self._gate:
+            resp = self.chat_client.chat.completions.create(
+                model=self.s.llm_model,
+                messages=[{"role": "system", "content": system}, {"role": "user", "content": user}],
+                temperature=0,
+                max_tokens=max_tokens,
+                **kwargs,
+            )
+        self._count("chat", resp.usage, self.s.llm_model)
         return strip_think(resp.choices[0].message.content or "")
 
     def chat_json(self, system: str, user: str, *, max_tokens: int = 800) -> dict:
@@ -56,13 +85,17 @@ class LLM:
                 self.json_format += 1
         return parse_json(self.chat(system, user + "\n\nRespond with JSON only.", max_tokens=max_tokens))
 
-    def embed(self, texts: list[str], *, query: bool = False, batch: int = 64) -> np.ndarray:
+    def embed(self, texts: list[str], *, query: bool = False, batch: int = 64, progress=None) -> np.ndarray:
+        """`progress(done, total)` is called after each batch."""
         prefix = self.s.embed_query_prefix if query else self.s.embed_doc_prefix
         out: list[list[float]] = []
         for i in range(0, len(texts), batch):
-            resp = self.embed_client.embeddings.create(model=self.s.embed_model, input=[prefix + t for t in texts[i : i + batch]])
+            with self._gate:
+                resp = self.embed_client.embeddings.create(model=self.s.embed_model, input=[prefix + t for t in texts[i : i + batch]])
             out.extend(d.embedding for d in resp.data)
-            self.usage.add_embed(getattr(resp, "usage", None), self.s.embed_model)
+            self._count("embed", getattr(resp, "usage", None), self.s.embed_model)
+            if progress:
+                progress(len(out), len(texts))
         vecs = np.asarray(out, dtype=np.float32)
         return vecs / np.maximum(np.linalg.norm(vecs, axis=1, keepdims=True), 1e-9)
 
@@ -90,21 +123,33 @@ class Usage:
     def __init__(self):
         self.calls = self.input = self.cached = self.output = self.embed_tokens = 0
         self.usd = 0.0
+        self._lock = threading.Lock()
+
+    def merge(self, other: Usage) -> None:
+        with self._lock:
+            self.calls += other.calls
+            self.input += other.input
+            self.cached += other.cached
+            self.output += other.output
+            self.embed_tokens += other.embed_tokens
+            self.usd += other.usd
 
     def add(self, u, model: str = "") -> None:
-        self.calls += 1
-        if u is None:
-            return
-        inp, out = u.prompt_tokens or 0, u.completion_tokens or 0
-        details = getattr(u, "prompt_tokens_details", None)
-        cached = (getattr(details, "cached_tokens", 0) or 0) if details else 0
-        self.input, self.output, self.cached = self.input + inp, self.output + out, self.cached + cached
-        self.usd += call_cost(model, inp, cached, out)
+        with self._lock:
+            self.calls += 1
+            if u is None:
+                return
+            inp, out = u.prompt_tokens or 0, u.completion_tokens or 0
+            details = getattr(u, "prompt_tokens_details", None)
+            cached = (getattr(details, "cached_tokens", 0) or 0) if details else 0
+            self.input, self.output, self.cached = self.input + inp, self.output + out, self.cached + cached
+            self.usd += call_cost(model, inp, cached, out)
 
     def add_embed(self, u, model: str) -> None:
-        n = (u.prompt_tokens or 0) if u is not None else 0
-        self.embed_tokens += n
-        self.usd += call_cost(model, n, 0, 0)
+        with self._lock:
+            n = (u.prompt_tokens or 0) if u is not None else 0
+            self.embed_tokens += n
+            self.usd += call_cost(model, n, 0, 0)
 
     def snapshot(self) -> dict:
         return {
@@ -117,12 +162,25 @@ class Usage:
         }
 
 
+def is_local_url(url: str) -> bool:
+    """True for a model server on this machine or the LAN."""
+    host = urlparse(url).hostname or ""
+    return host in {"localhost", "127.0.0.1", "::1", "host.docker.internal"} or host.startswith(("192.168.", "10."))
+
+
+def resolve_concurrency(s: Settings) -> int:
+    """The concurrency to use: the setting, or the recommendation when it is 0 (automatic)."""
+    from .hardware import MAX_CONCURRENCY, recommend_local
+
+    if s.concurrency:
+        return max(1, min(MAX_CONCURRENCY, s.concurrency))
+    return recommend_local()[0] if is_local_url(s.llm_base_url) else 4
+
+
 def make_client(base_url: str, api_key: str, timeout: float) -> OpenAI:
     # A system-wide HTTP proxy (common on corporate and VPN machines) must not
     # capture calls to a model server on this machine or the LAN.
-    host = urlparse(base_url).hostname or ""
-    local = host in {"localhost", "127.0.0.1", "::1", "host.docker.internal"} or host.startswith(("192.168.", "10."))
-    http_client = httpx.Client(trust_env=False, timeout=timeout) if local else None
+    http_client = httpx.Client(trust_env=False, timeout=timeout) if is_local_url(base_url) else None
     return OpenAI(base_url=base_url, api_key=api_key, timeout=timeout, http_client=http_client)
 
 

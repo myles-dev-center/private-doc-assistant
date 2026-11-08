@@ -9,8 +9,10 @@ Scoring is deterministic (no LLM judge), so results are reproducible and cheap:
                   (or the SQL result), or the expected number for counts and sums.
                   Documents without an ID scheme are recognized by their aliases
                   (filename, party names) from the golden file's `documents` map.
-* unanswerable  - the assistant must say the information is not there. Any answer
-                  that asserts something instead counts as a hallucination.
+* unanswerable  - the assistant must say the information is not there. Rejecting the
+                  question's premise counts too: "it does not renew automatically" is
+                  the right answer to "how much notice prevents its automatic renewal?".
+                  Any answer that asserts something instead counts as a hallucination.
 """
 
 from __future__ import annotations
@@ -23,7 +25,10 @@ from .pipeline import NOT_FOUND, Answer
 
 REFUSAL = re.compile(
     r"not (?:contain|include|mention|specif|state|provide|found|available)|no (?:information|mention|such|documents? match|matching)"
-    r"|does not (?:appear|exist)|cannot find|could not find|isn't (?:mentioned|specified)|is not (?:mentioned|specified|stated)",
+    r"|does not (?:appear|exist)|cannot find|could not find|isn't (?:mentioned|specified)|is not (?:mentioned|specified|stated)"
+    # the premise of a renewal question is false
+    r"|(?:does not|will not|doesn't|won't|not) (?:automatically |auto-?)?renew\b"
+    r"|no automatic renewal|not subject to (?:automatic |auto-?)renewal",
     re.I,
 )
 _MONTHS = "January|February|March|April|May|June|July|August|September|October|November|December"

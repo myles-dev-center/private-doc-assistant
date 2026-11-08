@@ -10,6 +10,28 @@ from .llm import LLM
 from .store import Store, StoredChunk
 
 _WORD = re.compile(r"[A-Za-z0-9]+")
+# Chinese, Japanese and Korean script: no spaces between words, so FTS5's unicode61
+# tokenizer would index a whole sentence as one token.
+_CJK = re.compile(r"[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uac00-\ud7af]")
+_CJK_RUN = re.compile(_CJK.pattern + "+")
+
+
+def fts_text(text: str) -> str:
+    """Text as indexed for keyword search. CJK characters become single-character
+    tokens and a CJK phrase becomes a phrase query, a common, dictionary-free way to
+    search Chinese with FTS5. Text without CJK is unchanged."""
+    if not _CJK.search(text):
+        return text
+    return _CJK_RUN.sub(lambda m: " " + " ".join(m.group()) + " ", text)
+
+
+def unspace_cjk(text: str) -> str:
+    """Undo fts_text for CJK runs (text without CJK is returned unchanged)."""
+    if not _CJK.search(text):
+        return text
+    return re.sub(r" ?((?:" + _CJK.pattern + r" )*" + _CJK.pattern + r") ?", lambda m: m.group(1).replace(" ", ""), text)
+
+
 _STOP = set(
     "a an and are as at be by can do does for from has have how i in is it its many much of on or our "
     "the their there this to under was we what when where which who with within".split()
@@ -25,6 +47,10 @@ def fts_query(question: str) -> str:
             terms.append('"' + " ".join(parts) + '"')
     words = [w for w in _WORD.findall(question) if w.lower() not in _STOP]
     terms.extend(f'"{w}"' for w in dict.fromkeys(words))
+    for run in dict.fromkeys(_CJK_RUN.findall(question)):
+        # Overlapping two-character phrases: "付款条件" -> "付 款" "款 条" "条 件"
+        pairs = [run[i : i + 2] for i in range(len(run) - 1)] or [run]
+        terms.extend('"' + " ".join(p) + '"' for p in dict.fromkeys(pairs))
     return " OR ".join(terms)
 
 

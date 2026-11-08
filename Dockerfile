@@ -11,11 +11,9 @@ COPY pyproject.toml uv.lock README.md ./
 RUN uv sync --frozen --no-dev --extra ocr --no-install-project
 COPY src ./src
 COPY schemas ./schemas
-COPY ui ./ui
-COPY .streamlit ./.streamlit
 RUN uv sync --frozen --no-dev --extra ocr
 
 ENV PATH="/app/.venv/bin:$PATH" DOCASSIST_DATA_DIR=/data
 VOLUME /data
-EXPOSE 8000 8501
+EXPOSE 8000
 CMD ["uvicorn", "docassist.api:app", "--host", "0.0.0.0", "--port", "8000"]

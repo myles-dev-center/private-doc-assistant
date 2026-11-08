@@ -7,7 +7,8 @@ from dataclasses import dataclass
 
 from .parsing import ParsedDoc
 
-_SENT_SPLIT = re.compile(r"(?<=[.;:!?])\s+|\n+")
+_SENT_SPLIT = re.compile(r"(?<=[.;:!?])\s+|(?<=[\u3002\uff1b\uff01\uff1f])|\n+")
+_CJK = re.compile(r"[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uac00-\ud7af]")
 
 
 @dataclass
@@ -18,7 +19,9 @@ class Chunk:
 
 
 def approx_tokens(text: str) -> int:
-    return max(1, round(len(text.split()) * 1.3))
+    # About 1.3 tokens per English word; a CJK character is about one token.
+    cjk = len(_CJK.findall(text))
+    return max(1, round(len(_CJK.sub(" ", text).split()) * 1.3) + cjk)
 
 
 def chunk_doc(doc: ParsedDoc, max_tokens: int = 220, overlap: int = 40) -> list[Chunk]:

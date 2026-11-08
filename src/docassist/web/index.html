@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Document Assistant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231f3a5f'/><path d='M10 8h8l5 5v11H10z' fill='none' stroke='white' stroke-width='2'/><path d='M13 17h7M13 21h5' stroke='%23f2b84b' stroke-width='2'/></svg>">
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <span class="logo" aria-hidden="true"></span>
+      <div>
+        <div class="brand-name">Document Assistant</div>
+        <div class="brand-sub" id="schema-name">&nbsp;</div>
+      </div>
+    </div>
+    <nav class="tabs" role="tablist">
+      <button class="tab active" data-tab="ask" role="tab">Ask</button>
+      <button class="tab" data-tab="data" role="tab">Extracted data <span class="count" id="records-count"></span></button>
+    </nav>
+    <div class="profile">
+      <label for="profile-select">Models</label>
+      <div class="select-wrap">
+        <select id="profile-select"></select>
+      </div>
+      <span class="badge" id="profile-badge"></span>
+      <div class="conc">
+        <button class="conc-btn" id="conc-btn" title="Model requests in flight at once">Parallel <strong id="conc-value">–</strong></button>
+        <div class="conc-pop" id="conc-pop" hidden>
+          <div class="conc-title">Parallel model requests</div>
+          <p class="muted" id="conc-help"></p>
+          <div class="conc-row">
+            <input type="range" id="conc-range" min="1" max="10" step="1">
+            <input type="number" id="conc-number" min="1" max="10" step="1">
+          </div>
+          <div class="conc-rec" id="conc-rec"></div>
+          <div class="conc-warn" id="conc-warn" hidden></div>
+          <div class="conc-hw muted" id="conc-hw"></div>
+          <div class="conc-actions">
+            <button class="button small ghost" id="conc-use-rec">Use recommended</button>
+            <button class="button small" id="conc-apply">Apply</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="banner" id="banner" hidden></div>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="side-head">
+        <h2>Library</h2>
+        <span class="muted" id="doc-count"></span>
+      </div>
+      <label class="drop" id="drop">
+        <input type="file" id="file-input" multiple accept=".pdf,.docx,.txt,.md" hidden>
+        <span class="drop-icon" aria-hidden="true">⇪</span>
+        <span><strong>Add documents</strong><br><span class="muted">PDF, DOCX, TXT · drop or click</span></span>
+      </label>
+      <section class="activity" id="activity" hidden>
+        <div class="activity-head"><h2>Background work</h2><span class="muted" id="activity-count"></span></div>
+        <div id="activity-list"></div>
+      </section>
+      <div id="jobs"></div>
+      <input type="search" id="doc-filter" class="filter" placeholder="Filter documents…">
+      <ul class="docs" id="docs"></ul>
+    </aside>
+
+    <main>
+      <section class="panel" id="panel-ask">
+        <div class="thread" id="thread">
+          <div class="welcome" id="welcome">
+            <h1>Ask your documents</h1>
+            <p class="muted">Answers cite the page they come from. Questions across many documents are answered from a table
+              extracted once at upload, with the quote behind every value.</p>
+            <div class="examples" id="examples"></div>
+          </div>
+        </div>
+        <form class="composer" id="composer">
+          <div class="busy-note" id="busy-note" hidden></div>
+          <div class="pin" id="pin" hidden>
+            <span>Only in</span><strong id="pin-name"></strong>
+            <button type="button" class="x" id="pin-clear" title="Ask across all documents">×</button>
+          </div>
+          <div class="input-row">
+            <textarea id="question" rows="1" placeholder="Ask a question about your documents…" maxlength="1000"></textarea>
+            <button class="send" id="send" type="submit" title="Ask (Enter)">Ask</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel" id="panel-data" hidden>
+        <div class="data-head">
+          <div>
+            <h2>Extracted data</h2>
+            <p class="muted">One row per document, filled in by the model when the document was added. Each value comes with
+              the sentence it was taken from:
+              <span class="ev-key ok">●</span> that sentence is in the document &nbsp;
+              <span class="ev-key warn">●</span> it is not – check the value &nbsp;
+              no dot: no source recorded (empty, "No", or added before sources were kept).
+              Click a value with a dot to open the page it comes from.</p>
+          </div>
+          <a class="button" id="xlsx" href="/records.xlsx">Download Excel</a>
+        </div>
+        <div class="toolbar">
+          <input type="search" id="grid-search" class="filter grid-search" placeholder="Search any column…">
+          <div class="select-wrap light">
+            <select id="grid-filter">
+              <option value="all">All rows</option>
+              <option value="check">Needs checking (yellow dot)</option>
+              <option value="edited">Edited by hand</option>
+              <option value="nosource">Added before sources were kept</option>
+            </select>
+          </div>
+          <span class="muted" id="grid-count"></span>
+          <div class="toolbar-actions" id="selection-actions" hidden>
+            <span id="selection-count"></span>
+            <button class="button small ghost" id="sel-reprocess" title="Extract and index again with the selected model preset">Re-process</button>
+            <button class="button small danger" id="sel-delete">Delete</button>
+            <button class="button small ghost" id="sel-clear">Clear selection</button>
+          </div>
+        </div>
+        <div class="table-wrap"><table class="grid" id="grid"></table></div>
+      </section>
+    </main>
+  </div>
+
+  <div class="viewer-backdrop" id="viewer-backdrop" hidden></div>
+  <aside class="viewer" id="viewer" hidden>
+    <div class="viewer-head">
+      <div class="viewer-top">
+        <button class="button small" id="viewer-ask">Ask about this document</button>
+        <button class="viewer-close" id="viewer-close" title="Close (Esc)">✕ Close</button>
+      </div>
+      <div class="viewer-title" id="viewer-title"></div>
+      <div class="muted viewer-sub" id="viewer-sub"></div>
+      <div class="viewer-models" id="viewer-models"></div>
+    </div>
+    <div class="viewer-body" id="viewer-body"></div>
+  </aside>
+
+  <div class="popover" id="popover" hidden></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

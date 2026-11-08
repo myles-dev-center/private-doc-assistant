@@ -25,6 +25,7 @@ import yaml
 from compare_common import public_endpoint
 
 from docassist import Assistant, get_settings
+from docassist.activity import Activity
 from docassist.evaluation import score, summarize
 from docassist.llm import Usage
 from docassist.pipeline import Answer
@@ -75,23 +76,42 @@ def main() -> None:
         assistant = Assistant(settings)
         print(f"\n== {name}: ingesting into {store_dir}", flush=True)
         t0 = time.time()
-        assistant.ingest_dir(args.corpus, progress=lambda i, n, r: print(f"  [{i}/{n}] {r['status']} {r['filename']}", flush=True))
+        title = f"Evaluation {args.tag or args.corpus.name} · {name}: adding documents"
+        assistant.ingest_dir(
+            args.corpus, progress=lambda i, n, r: print(f"  [{i}/{n}] {r['status']} {r['filename']}", flush=True), title=title
+        )
         # Token usage is split into one-off ingestion and per-question answering. Ingestion
         # of a store that already exists is skipped, so its usage reads as zero.
         ingest = assistant.llm.usage.snapshot() | {"seconds": round(time.time() - t0, 1)}
         assistant.llm.usage = Usage()
 
         scores = []
-        for q in golden:
+        act = Activity(
+            "eval",
+            f"Evaluation {args.tag or args.corpus.name} · {name}: answering questions",
+            total=len(golden),
+            unit="questions",
+            model=settings.llm_model,
+            local_model=assistant.uses_local_model(),
+        )
+        for i, q in enumerate(golden):
+            if act.stop_requested:
+                act.finish("cancelled", f"stopped by user after {i} of {len(golden)} questions")
+                print("  stopped by user", flush=True)
+                sys.exit(1)
+            act.update(done=i, detail=q["question"], step=f"{sum(x.correct for x in scores)} of {i} correct so far")
             try:
                 ans = assistant.ask(q["question"])
             except Exception as e:  # keep going; a crash counts as a wrong answer
                 ans = Answer(q["question"], f"ERROR: {e}", "error")
             s = score(q, ans, documents)
             scores.append(s)
+            avg = sum(x.seconds for x in scores) / len(scores)
+            act.update(done=i + 1, eta=round(avg * (len(golden) - i - 1)) or None)
             mark = "ok " if s.correct else ("HAL" if s.hallucinated else "-- ")
             print(f"  {mark} {q['id']} [{s.route}] {s.seconds:>5.1f}s  {q['question'][:70]}", flush=True)
         summary = summarize(scores)
+        act.finish("done", f"accuracy {summary['accuracy']:.0%} on {len(scores)} questions")
         summary["usage"] = {"ingest": ingest, "questions": assistant.llm.usage.snapshot()}
         print(f"  => accuracy {summary['accuracy']}, hallucination {summary['hallucination_rate']}", flush=True)
         run["configs"][name] = {"settings": cfg, "summary": summary, "scores": [asdict(s) for s in scores]}

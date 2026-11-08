@@ -1,0 +1,1600 @@
+{
+  "combo": "cloud-chat",
+  "label": "Cloud chat \u00b7 gpt-6.1-sol + nomic",
+  "chat_model": "gpt-6.1-sol",
+  "embed_model": "text-embedding-nomic-embed-text-v1.5",
+  "endpoint": "OpenAI-compatible API",
+  "set": "set4",
+  "library": "gpt-6.1-sol__text-embedding-nomic-embed-text-v1.5",
+  "started": "2026-11-07 19:19",
+  "summary": {
+    "n": 53,
+    "accuracy": 0.849,
+    "by_type": {
+      "lookup": {
+        "n": 32,
+        "accuracy": 0.969
+      },
+      "aggregate": {
+        "n": 13,
+        "accuracy": 0.538
+      },
+      "unanswerable": {
+        "n": 8,
+        "accuracy": 0.875
+      }
+    },
+    "hallucination_rate": 0.132,
+    "answerable_hallucination_rate": 0.133,
+    "refusal_on_unanswerable": 0.875,
+    "citation_accuracy": 1.0,
+    "aggregate_recall": 0.862,
+    "median_seconds": 3.59
+  },
+  "usage": {
+    "ingest": {
+      "calls": 47,
+      "input": 228325,
+      "cached": 0,
+      "output": 14527,
+      "embed_tokens": 0,
+      "usd": 0.6019,
+      "seconds": 431.4
+    },
+    "questions": {
+      "calls": 71,
+      "input": 286547,
+      "cached": 0,
+      "output": 5800,
+      "embed_tokens": 0,
+      "usd": 0.6311
+    }
+  },
+  "scores": [
+    {
+      "qid": "L01",
+      "qtype": "lookup",
+      "tag": "law",
+      "question": "Which law governs the Marketing Affiliate Agreement between Equidata, Inc and National Credit Report.com, LLC?",
+      "expected": [
+        "Virginia"
+      ],
+      "answer": "The Marketing Affiliate Agreement is governed by and construed in accordance with the laws of the State of Virginia.[5]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 3.59,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 4594,
+        "cached": 0,
+        "output": 26,
+        "embed_tokens": 0,
+        "usd": 0.0094
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "L02",
+      "qtype": "lookup",
+      "tag": "law",
+      "question": "Which law governs the Strategic Alliance Agreement between ChipMOS TECHNOLOGIES INC and Tsinghua Unigroup Ltd?",
+      "expected": [
+        "Taiwan"
+      ],
+      "answer": "The Strategic Alliance Agreement is governed by the laws of Taiwan, as stated in Section 3.1.[5]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 2.56,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 5745,
+        "cached": 0,
+        "output": 27,
+        "embed_tokens": 0,
+        "usd": 0.0118
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "L03",
+      "qtype": "lookup",
+      "tag": "law",
+      "question": "Which law governs the Corporate Sponsorship Agreement between Freeze Tag Inc and American Diabetes Association?",
+      "expected": [
+        "Virginia"
+      ],
+      "answer": "The laws of the Commonwealth of Virginia govern the agreement. [6]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 4.03,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 6386,
+        "cached": 0,
+        "output": 18,
+        "embed_tokens": 0,
+        "usd": 0.013
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "L04",
+      "qtype": "lookup",
+      "tag": "law",
+      "question": "Which law governs the Services Agreement between Idan Maimon and Intellisense Solutions Inc?",
+      "expected": [
+        "New York"
+      ],
+      "answer": "The Services Agreement is governed by New York State law, without regard to its conflict-of-law principles. [4]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 2.87,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 2179,
+        "cached": 0,
+        "output": 27,
+        "embed_tokens": 0,
+        "usd": 0.0046
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "L05",
+      "qtype": "lookup",
+      "tag": "law",
+      "question": "Which law governs the Endorsement Agreement between TOM WATSON and ADAMS GOLF, LTD?",
+      "expected": [
+        "Kansas"
+      ],
+      "answer": "The Endorsement Agreement is governed by the laws of the State of Kansas.[11]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 3.0,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 10574,
+        "cached": 0,
+        "output": 22,
+        "embed_tokens": 0,
+        "usd": 0.0214
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "L06",
+      "qtype": "lookup",
+      "tag": "law",
+      "question": "Which law governs the Consulting Agreement between Aduro Biotech, Inc and IREYA B.V?",
+      "expected": [
+        "California"
+      ],
+      "answer": "California law governs the Consulting Agreement, without regard to conflict-of-law principles.[4]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 2.78,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 2964,
+        "cached": 0,
+        "output": 21,
+        "embed_tokens": 0,
+        "usd": 0.0061
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "L07",
+      "qtype": "lookup",
+      "tag": "law",
+      "question": "Which law governs the Sponsorship And Services Agreement between HOF Village, LLC and National Football Museum, Inc?",
+      "expected": [
+        "Ohio"
+      ],
+      "answer": "The agreement is governed by Ohio law, without regard to conflict-of-law principles.[15]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 3.37,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 13932,
+        "cached": 0,
+        "output": 22,
+        "embed_tokens": 0,
+        "usd": 0.0281
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "L08",
+      "qtype": "lookup",
+      "tag": "law",
+      "question": "Which law governs the Marketing And Reseller Agreement between Todos Medical Ltd and Care G. B. Plus Ltd?",
+      "expected": [
+        "Israel"
+      ],
+      "answer": "The agreement is governed by and construed in accordance with the laws of the State of Israel. [11]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 4.22,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 8098,
+        "cached": 0,
+        "output": 25,
+        "embed_tokens": 0,
+        "usd": 0.0164
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "L09",
+      "qtype": "lookup",
+      "tag": "date",
+      "question": "What is the date of the Product Development And Co-Branding Agreement between INTEGRITY INCORPORATED and TIME LIFE, INC?",
+      "expected": "2000-01-10",
+      "answer": "January 10, 2000. [2]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 3.31,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 6150,
+        "cached": 0,
+        "output": 15,
+        "embed_tokens": 0,
+        "usd": 0.0124
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "L10",
+      "qtype": "lookup",
+      "tag": "date",
+      "question": "What is the date of the Services Agreement between Idan Maimon and Intellisense Solutions Inc?",
+      "expected": "2019-04-01",
+      "answer": "The Services Agreement is dated April 1, 2019. [2]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 3.49,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 2181,
+        "cached": 0,
+        "output": 20,
+        "embed_tokens": 0,
+        "usd": 0.0046
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "L11",
+      "qtype": "lookup",
+      "tag": "date",
+      "question": "What is the date of the Unconditional Capital Maintenance Agreement between American International Group, Inc and American General Life Insurance Company?",
+      "expected": "2011-03-30",
+      "answer": "The agreement is dated March 30, 2011.[2]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 2.99,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 8185,
+        "cached": 0,
+        "output": 18,
+        "embed_tokens": 0,
+        "usd": 0.0165
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "L12",
+      "qtype": "lookup",
+      "tag": "date",
+      "question": "What is the date of the Outsourcing Agreement between Sykes HealthPlan Services, Inc and HealthPlan Services, Inc?",
+      "expected": "1998-01-01",
+      "answer": "The Outsourcing Agreement is dated January 1, 1998. [2]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 2.98,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 3252,
+        "cached": 0,
+        "output": 21,
+        "embed_tokens": 0,
+        "usd": 0.0067
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "L13",
+      "qtype": "lookup",
+      "tag": "date",
+      "question": "What is the date of the Strategic Alliance Agreement between Turnkey Capital Inc and Seminole Indian Company?",
+      "expected": "2017-06-30",
+      "answer": "June 30, 2017.[2]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 2.23,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 3117,
+        "cached": 0,
+        "output": 14,
+        "embed_tokens": 0,
+        "usd": 0.0064
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "L14",
+      "qtype": "lookup",
+      "tag": "date",
+      "question": "What is the date of the Endorsement Agreement between Holiday RV Superstores, Inc and Affinity Group, Inc?",
+      "expected": "2002-03-20",
+      "answer": "The Endorsement Agreement is dated March 20, 2002.[2]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 2.68,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 5860,
+        "cached": 0,
+        "output": 21,
+        "embed_tokens": 0,
+        "usd": 0.0119
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "L15",
+      "qtype": "lookup",
+      "tag": "date",
+      "question": "What is the date of the Promotion Agreement between ASHWORTH, INC and JAMES W. NANTZ III?",
+      "expected": "1998-06-01",
+      "answer": "The Promotion Agreement was signed on December 16, 1998, and was effective as of June 1, 1998.[7][2]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 3.58,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 5998,
+        "cached": 0,
+        "output": 35,
+        "embed_tokens": 0,
+        "usd": 0.0123
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "L16",
+      "qtype": "lookup",
+      "tag": "date",
+      "question": "What is the date of the AMENDMENT NO. 1 Wireless Content License Agreement Number 12965 between Fox Mobile Entertainment and Glu Mobile, Inc. f/k/a Sorrent, Inc?",
+      "expected": "2005-11-18",
+      "answer": "Amendment No. 1 is dated as of November 11, 2005, and was signed by both parties on November 18, 2005.[2][6]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 4.57,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 5427,
+        "cached": 0,
+        "output": 42,
+        "embed_tokens": 0,
+        "usd": 0.0113
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "L17",
+      "qtype": "lookup",
+      "tag": "expiry",
+      "question": "When does the Promotion Agreement between ASHWORTH, INC and JAMES W. NANTZ III expire?",
+      "expected": "2001-05-31",
+      "answer": "The Promotion Agreement expires on May 31, 2001, unless terminated earlier under its terms.[2][5]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 3.5,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 5996,
+        "cached": 0,
+        "output": 28,
+        "embed_tokens": 0,
+        "usd": 0.0123
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "L18",
+      "qtype": "lookup",
+      "tag": "expiry",
+      "question": "When does the Sponsorship And Services Agreement between HOF Village, LLC and National Football Museum, Inc expire?",
+      "expected": "2028-12-31",
+      "answer": "The agreement is scheduled to expire on December 31, 2028, unless extended or terminated earlier under its terms. [8][15][16]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 3.84,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 13932,
+        "cached": 0,
+        "output": 35,
+        "embed_tokens": 0,
+        "usd": 0.0282
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "L19",
+      "qtype": "lookup",
+      "tag": "expiry",
+      "question": "When does the Corporate Sponsorship Agreement between Freeze Tag Inc and American Diabetes Association expire?",
+      "expected": "2020-03-14",
+      "answer": "The agreement expires on March 14, 2020, unless terminated earlier.[2]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 4.5,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 6386,
+        "cached": 0,
+        "output": 22,
+        "embed_tokens": 0,
+        "usd": 0.013
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "L20",
+      "qtype": "lookup",
+      "tag": "expiry",
+      "question": "When does the Outsourcing Agreement between Sykes HealthPlan Services, Inc and HealthPlan Services, Inc expire?",
+      "expected": "1998-12-31",
+      "answer": "The initial term expires on December 31, 1998, but automatically extends to December 31, 1999 unless either party gives at least 90 days\u2019 prior written notice of nonrenewal. After that, the agreement renews annually unless either party gives notice of cancellation by October 1 of the applicable year.[2]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 3.69,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 3250,
+        "cached": 0,
+        "output": 72,
+        "embed_tokens": 0,
+        "usd": 0.0072
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "L21",
+      "qtype": "lookup",
+      "tag": "expiry",
+      "question": "When does the Manufacturing Agreement between Stremicks Heritage Foods, LLC and PREMIER NUTRITION CORPORATION expire?",
+      "expected": "2022-12-31",
+      "answer": "The Manufacturing Agreement expires on December 31, 2022, unless the parties agree in writing to extend it or it is terminated earlier under its terms.[3][10]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 3.55,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 9953,
+        "cached": 0,
+        "output": 39,
+        "embed_tokens": 0,
+        "usd": 0.0203
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "L22",
+      "qtype": "lookup",
+      "tag": "expiry",
+      "question": "When does the Sponsorship Agreement between Stallings Capital Group Consultants, Ltd and GAINSCO, INC expire?",
+      "expected": "2010-12-31",
+      "answer": "The Sponsorship Agreement expires on December 31, 2010, unless GAINSCO terminates it earlier by giving written notice.[2][6]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 3.48,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 3981,
+        "cached": 0,
+        "output": 35,
+        "embed_tokens": 0,
+        "usd": 0.0083
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "L23",
+      "qtype": "lookup",
+      "tag": "notice",
+      "question": "How many days of notice are required to prevent the renewal of the Marketing And Reseller Agreement between Todos Medical Ltd and Care G. B. Plus Ltd?",
+      "expected": 60,
+      "answer": "At least 60 days\u2019 prior written notice is required before the current term expires.[9]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 2.35,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 8107,
+        "cached": 0,
+        "output": 23,
+        "embed_tokens": 0,
+        "usd": 0.0164
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "L24",
+      "qtype": "lookup",
+      "tag": "notice",
+      "question": "How many days of notice are required to prevent the renewal of the Content License Agreement between Digicorp, Inc and New China Media LLC?",
+      "expected": 90,
+      "answer": "Either party must give written notice at least 90 days before the current term expires to prevent automatic renewal.[5]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 2.61,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 14069,
+        "cached": 0,
+        "output": 27,
+        "embed_tokens": 0,
+        "usd": 0.0284
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "L25",
+      "qtype": "lookup",
+      "tag": "notice",
+      "question": "How many days of notice are required to prevent the renewal of the Transportation Contract between JSC NOC KazakhOil and JSC Karakudukmunay?",
+      "expected": 65,
+      "answer": "Either party must give written notice at least 65 days before the end of the initial term or any subsequent extension to prevent automatic renewal.[6]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 2.77,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 10706,
+        "cached": 0,
+        "output": 33,
+        "embed_tokens": 0,
+        "usd": 0.0217
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "L26",
+      "qtype": "lookup",
+      "tag": "notice",
+      "question": "How many days of notice are required to prevent the renewal of the Maintenance Agreement between SAGEM S.A and XIMAGE corporation?",
+      "expected": 60,
+      "answer": "Either party must give at least 60 days\u2019 written notice before the end of the current term to prevent automatic renewal.[3]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 2.95,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 5095,
+        "cached": 0,
+        "output": 30,
+        "embed_tokens": 0,
+        "usd": 0.0105
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "A01",
+      "qtype": "aggregate",
+      "tag": "aggregate",
+      "question": "List all agreements governed by the laws of California.",
+      "expected": [
+        "ADUROBIOTECH,INC_06_02_2020-EX-10.7-CONSULTING AGREEMENT.PDF",
+        "ASHWORTHINC_01_29_1999-EX-10.(D)-PROMOTION AGREEMENT AND NANTZ COMMUNICATIONS, INC..PDF",
+        "BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement1.pdf",
+        "ETELOS,INC_03_09_2004-EX-10.8-DISTRIBUTOR AGREEMENT.PDF",
+        "GIGGLESN_HUGS,INC_06_23_2016-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.PDF",
+        "HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT AGREEMENT.PDF",
+        "MidwestEnergyEmissionsCorp_20080604_8-K_EX-10.2_3093976_EX-10.2_Content License Agreement.pdf"
+      ],
+      "answer": "Seven agreements are governed by California law:\n\n| Agreement | Parties | Filename |\n|---|---|---|\n| Consulting Agreement | Aduro Biotech, Inc. and IREYA B.V | `ADUROBIOTECH,INC_06_02_2020-EX-10.7-CONSULTING AGREEMENT.PDF` |\n| Promotion Agreement | Ashworth, Inc. and James W. Nantz III | `ASHWORTHINC_01_29_1999-EX-10.(D)-PROMOTION AGREEMENT AND NANTZ COMMUNICATIONS, INC..PDF` |\n| Manufacturing Agreement | Stremicks Heritage Foods, LLC and Premier Nutrition Corporation | `BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement1.pdf` |\n| Distributor Agreement | Tripath Technology, Inc. and Uniquest Corporation | `ETELOS,INC_03_09_2004-EX-10.8-DISTRIBUTOR AGREEMENT.PDF` |\n| Strategic Alliance Agreement | Giggles N\u2019 Hugs, Inc. and Kiddo, Inc. | `GIGGLESN_HUGS,INC_06_23_2016-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.PDF` |\n| Endorsement Agreement | Holiday RV Superstores, Inc. and Affinity Group, Inc. | `HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT AGREEMENT.PDF` |\n| Content License Agreement | Digicorp, Inc. and New China Media LLC | `MidwestEnergyEmissionsCorp_20080604_8-K_EX-10.2_3093976_EX-10.2_Content License Agreement.pdf` |",
+      "route": "sql",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": null,
+      "recall": 1.0,
+      "precision": 1.0,
+      "seconds": 15.46,
+      "detail": {
+        "missing": [],
+        "extra": []
+      },
+      "usage": {
+        "calls": 2,
+        "input": 1363,
+        "cached": 0,
+        "output": 432,
+        "embed_tokens": 0,
+        "usd": 0.007
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "A02",
+      "qtype": "aggregate",
+      "tag": "aggregate",
+      "question": "List all agreements governed by the laws of New York.",
+      "expected": [
+        "HERTZGLOBALHOLDINGS,INC_07_07_2016-EX-10.4-INTELLECTUAL PROPERTY AGREEMENT.PDF",
+        "IVILLAGEINC_03_17_1999-EX-10.16-SPONSORSHIP AGREEMENT.PDF",
+        "SCOUTCAMINC_05_12_2020-EX-10.22-SERVICES AGREEMENT.PDF",
+        "SEPARATEACCOUNTIIOFAGL_05_02_2011-EX-99.(J)(4)-UNCONDITIONAL CAPITAL MAINTENANCE AGREEMENT.PDF"
+      ],
+      "answer": "Four agreements are governed by New York law:\n\n| Agreement | Parties | Agreement date | File identifier |\n|---|---|---|---|\n| Intellectual Property Agreement | The Hertz Corporation and Hertz System, Inc. | Not provided | `HERTZGLOBALHOLDINGS,INC_07_07_2016-EX-10.4-INTELLECTUAL PROPERTY AGREEMENT.PDF` |\n| Sponsorship Agreement | Ford Motor Media and iVillage, Inc. | December 18, 1998 | `IVILLAGEINC_03_17_1999-EX-10.16-SPONSORSHIP AGREEMENT.PDF` |\n| Services Agreement | Idan Maimon and Intellisense Solutions, Inc. | April 1, 2019 | `SCOUTCAMINC_05_12_2020-EX-10.22-SERVICES AGREEMENT.PDF` |\n| Unconditional Capital Maintenance Agreement | American International Group, Inc. and American General Life Insurance Company of Delaware | March 30, 2011 | `SEPARATEACCOUNTIIOFAGL_05_02_2011-EX-99.(J)(4)-UNCONDITIONAL CAPITAL MAINTENANCE AGREEMENT.PDF` |",
+      "route": "sql",
+      "correct": true,
+      "hallucinated": false,
+      "refused": true,
+      "citation_ok": null,
+      "recall": 1.0,
+      "precision": 1.0,
+      "seconds": 12.63,
+      "detail": {
+        "missing": [],
+        "extra": []
+      },
+      "usage": {
+        "calls": 2,
+        "input": 1157,
+        "cached": 0,
+        "output": 313,
+        "embed_tokens": 0,
+        "usd": 0.0054
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "A03",
+      "qtype": "aggregate",
+      "tag": "aggregate",
+      "question": "List all agreements governed by the laws of Florida.",
+      "expected": [
+        "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING AGREEMENT.PDF",
+        "TURNKEYCAPITAL,INC_07_20_2017-EX-1.1-Strategic Alliance Agreement.PDF"
+      ],
+      "answer": "Two agreements are governed by Florida law:\n\n1. **Outsourcing Agreement** \u2014 Sykes HealthPlan Services, Inc. and HealthPlan Services, Inc.  \n   `SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING AGREEMENT.PDF`\n2. **Strategic Alliance Agreement** \u2014 Turnkey Capital Inc. (no second party listed).  \n   `TURNKEYCAPITAL,INC_07_20_2017-EX-1.1-Strategic Alliance Agreement.PDF`",
+      "route": "sql",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": null,
+      "recall": 1.0,
+      "precision": 1.0,
+      "seconds": 9.6,
+      "detail": {
+        "missing": [],
+        "extra": []
+      },
+      "usage": {
+        "calls": 2,
+        "input": 935,
+        "cached": 0,
+        "output": 170,
+        "embed_tokens": 0,
+        "usd": 0.0036
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "A04",
+      "qtype": "aggregate",
+      "tag": "aggregate",
+      "question": "Which agreements contain a non-compete clause?",
+      "expected": [
+        "ADAMSGOLFINC_03_21_2005-EX-10.17-ENDORSEMENT AGREEMENT.PDF",
+        "ETELOS,INC_03_09_2004-EX-10.8-DISTRIBUTOR AGREEMENT.PDF",
+        "FuseMedicalInc_20190321_10-K_EX-10.43_11575454_EX-10.43_Distributor Agreement.pdf",
+        "GAINSCOINC_01_21_2010-EX-10.41-SPONSORSHIP AGREEMENT.PDF",
+        "HERTZGLOBALHOLDINGS,INC_07_07_2016-EX-10.4-INTELLECTUAL PROPERTY AGREEMENT.PDF",
+        "SCOUTCAMINC_05_12_2020-EX-10.22-SERVICES AGREEMENT.PDF",
+        "SteelVaultCorp_20081224_10-K_EX-10.16_3074935_EX-10.16_Affiliate Agreement.pdf"
+      ],
+      "answer": "Nine agreements contain a non-compete clause:\n\n| Agreement | Parties | Filename |\n|---|---|---|\n| Endorsement Agreement | Tom Watson and Adams Golf, Ltd. | `ADAMSGOLFINC_03_21_2005-EX-10.17-ENDORSEMENT AGREEMENT.PDF` |\n| Promotion Agreement | Ashworth, Inc. and James W. Nantz III | `ASHWORTHINC_01_29_1999-EX-10.(D)-PROMOTION AGREEMENT AND NANTZ COMMUNICATIONS, INC..PDF` |\n| Distributor Agreement | Tripath Technology, Inc. and Uniquest Corporation | `ETELOS,INC_03_09_2004-EX-10.8-DISTRIBUTOR AGREEMENT.PDF` |\n| Distributorship Agreement | Signature Orthopaedics Pty Ltd and CPM Medical Consultants, LLC | `FuseMedicalInc_20190321_10-K_EX-10.43_11575454_EX-10.43_Distributor Agreement.pdf` |\n| Amendment No. 1 | Twentieth Century Fox Licensing & Merchandising and Glu Mobile, Inc. | `GluMobileInc_20070319_S-1A_EX-10.09_436630_EX-10.09_Content License Agreement2.pdf` |\n| Intellectual Property Agreement | The Hertz Corporation and Hertz System, Inc. | `HERTZGLOBALHOLDINGS,INC_07_07_2016-EX-10.4-INTELLECTUAL PROPERTY AGREEMENT.PDF` |\n| Services Agreement | Idan Maimon and Intellisense Solutions, Inc. | `SCOUTCAMINC_05_12_2020-EX-10.22-SERVICES AGREEMENT.PDF` |\n| Marketing Affiliate Agreement | Equidata, Inc. and National Credit Report.com, LLC | `SteelVaultCorp_20081224_10-K_EX-10.16_3074935_EX-10.16_Affiliate Agreement.pdf` |\n| Marketing and Reseller Agreement | Todos Medical Ltd. and Care G. B. Plus Ltd. | `TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing Agreement_ Reseller Agreement.pdf` |",
+      "route": "sql",
+      "correct": false,
+      "hallucinated": true,
+      "refused": false,
+      "citation_ok": null,
+      "recall": 0.8571428571428571,
+      "precision": 0.6666666666666666,
+      "seconds": 17.15,
+      "detail": {
+        "missing": [
+          "GAINSCOINC_01_21_2010-EX-10.41-SPONSORSHIP AGREEMENT.PDF"
+        ],
+        "extra": [
+          "ASHWORTHINC_01_29_1999-EX-10.(D)-PROMOTION AGREEMENT AND NANTZ COMMUNICATIONS, INC..PDF",
+          "GluMobileInc_20070319_S-1A_EX-10.09_436630_EX-10.09_Content License Agreement2.pdf",
+          "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing Agreement_ Reseller Agreement.pdf"
+        ]
+      },
+      "usage": {
+        "calls": 2,
+        "input": 1504,
+        "cached": 0,
+        "output": 516,
+        "embed_tokens": 0,
+        "usd": 0.0082
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "A05",
+      "qtype": "aggregate",
+      "tag": "aggregate",
+      "question": "Which agreements contain an exclusivity commitment?",
+      "expected": [
+        "ADAMSGOLFINC_03_21_2005-EX-10.17-ENDORSEMENT AGREEMENT.PDF",
+        "ASHWORTHINC_01_29_1999-EX-10.(D)-PROMOTION AGREEMENT AND NANTZ COMMUNICATIONS, INC..PDF",
+        "GluMobileInc_20070319_S-1A_EX-10.09_436630_EX-10.09_Content License Agreement2.pdf",
+        "GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.8_11951679_EX-10.8_Service Agreement.pdf",
+        "IVILLAGEINC_03_17_1999-EX-10.16-SPONSORSHIP AGREEMENT.PDF",
+        "IntegrityMediaInc_20010329_10-K405_EX-10.17_2373875_EX-10.17_Co-Branding Agreement.pdf",
+        "LejuHoldingsLtd_20140121_DRS (on F-1)_EX-10.26_8473102_EX-10.26_Content License Agreement1.pdf",
+        "MidwestEnergyEmissionsCorp_20080604_8-K_EX-10.2_3093976_EX-10.2_Content License Agreement.pdf",
+        "REWALKROBOTICSLTD_07_10_2014-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.PDF",
+        "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING AGREEMENT.PDF",
+        "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing Agreement_ Reseller Agreement.pdf"
+      ],
+      "answer": "**15 agreements** contain an exclusivity commitment:\n\n| Agreement | Parties | File identifier |\n|---|---|---|\n| Endorsement Agreement | Tom Watson / Adams Golf, Ltd. | `ADAMSGOLFINC_03_21_2005-EX-10.17-ENDORSEMENT AGREEMENT.PDF` |\n| Promotion Agreement | Ashworth, Inc. / James W. Nantz III | `ASHWORTHINC_01_29_1999-EX-10.(D)-PROMOTION AGREEMENT AND NANTZ COMMUNICATIONS, INC..PDF` |\n| Distributor Agreement | Tripath Technology, Inc. / Uniquest Corporation | `ETELOS,INC_03_09_2004-EX-10.8-DISTRIBUTOR AGREEMENT.PDF` |\n| Distributorship Agreement | Signature Orthopaedics Pty Ltd / CPM Medical Consultants, LLC | `FuseMedicalInc_20190321_10-K_EX-10.43_11575454_EX-10.43_Distributor Agreement.pdf` |\n| Sponsorship Agreement | Stallings Capital Group Consultants, Ltd. / GAINSCO, Inc. | `GAINSCOINC_01_21_2010-EX-10.41-SPONSORSHIP AGREEMENT.PDF` |\n| Amendment No. 1 | Twentieth Century Fox Licensing & Merchandising / Glu Mobile, Inc. | `GluMobileInc_20070319_S-1A_EX-10.09_436630_EX-10.09_Content License Agreement2.pdf` |\n| Sponsorship and Services Agreement | HOF Village, LLC / National Football Museum, Inc. | `GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.8_11951679_EX-10.8_Service Agreement.pdf` |\n| Product Development and Co-Branding Agreement | Integrity Incorporated / Time Life, Inc. | `IntegrityMediaInc_20010329_10-K405_EX-10.17_2373875_EX-10.17_Co-Branding Agreement.pdf` |\n| Sponsorship Agreement | Ford Motor Media / iVillage, Inc. | `IVILLAGEINC_03_17_1999-EX-10.16-SPONSORSHIP AGREEMENT.PDF` |\n| Domain Name and Content License Agreement | Beijing SINA Internet Information Service Co., Ltd. / Beijing Yisheng Leju Information Services Co., Ltd. | `LejuHoldingsLtd_20140121_DRS (on F-1)_EX-10.26_8473102_EX-10.26_Content License Agreement1.pdf` |\n| Content License Agreement | Digicorp, Inc. / New China Media LLC | `MidwestEnergyEmissionsCorp_20080604_8-K_EX-10.2_3093976_EX-10.2_Content License Agreement.pdf` |\n| Strategic Alliance",
+      "route": "sql",
+      "correct": false,
+      "hallucinated": true,
+      "refused": false,
+      "citation_ok": null,
+      "recall": 1.0,
+      "precision": 0.7333333333333333,
+      "seconds": 20.59,
+      "detail": {
+        "missing": [],
+        "extra": [
+          "ETELOS,INC_03_09_2004-EX-10.8-DISTRIBUTOR AGREEMENT.PDF",
+          "FuseMedicalInc_20190321_10-K_EX-10.43_11575454_EX-10.43_Distributor Agreement.pdf",
+          "GAINSCOINC_01_21_2010-EX-10.41-SPONSORSHIP AGREEMENT.PDF",
+          "SteelVaultCorp_20081224_10-K_EX-10.16_3074935_EX-10.16_Affiliate Agreement.pdf"
+        ]
+      },
+      "usage": {
+        "calls": 2,
+        "input": 1989,
+        "cached": 0,
+        "output": 644,
+        "embed_tokens": 0,
+        "usd": 0.0104
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "A06",
+      "qtype": "aggregate",
+      "tag": "aggregate",
+      "question": "Which agreements can be terminated for convenience, without cause?",
+      "expected": [
+        "ADUROBIOTECH,INC_06_02_2020-EX-10.7-CONSULTING AGREEMENT.PDF",
+        "ETELOS,INC_03_09_2004-EX-10.8-DISTRIBUTOR AGREEMENT.PDF",
+        "GAINSCOINC_01_21_2010-EX-10.41-SPONSORSHIP AGREEMENT.PDF",
+        "HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT AGREEMENT.PDF",
+        "KUBIENT,INC_07_02_2020-EX-10.14-MASTER SERVICES AGREEMENT_Part1.pdf",
+        "MidwestEnergyEmissionsCorp_20080604_8-K_EX-10.2_3093976_EX-10.2_Content License Agreement.pdf",
+        "REWALKROBOTICSLTD_07_10_2014-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.PDF",
+        "SCOUTCAMINC_05_12_2020-EX-10.22-SERVICES AGREEMENT.PDF",
+        "SEPARATEACCOUNTIIOFAGL_05_02_2011-EX-99.(J)(4)-UNCONDITIONAL CAPITAL MAINTENANCE AGREEMENT.PDF"
+      ],
+      "answer": "**10 agreements** allow termination for convenience (without cause):\n\n| Agreement | Parties | File identifier |\n|---|---|---|\n| Consulting Agreement | Aduro Biotech, Inc. and IREYA B.V | `ADUROBIOTECH,INC_06_02_2020-EX-10.7-CONSULTING AGREEMENT.PDF` |\n| Distributor Agreement | Tripath Technology, Inc. and Uniquest Corporation | `ETELOS,INC_03_09_2004-EX-10.8-DISTRIBUTOR AGREEMENT.PDF` |\n| Distributorship Agreement | Signature Orthopaedics Pty Ltd and CPM Medical Consultants, LLC | `FuseMedicalInc_20190321_10-K_EX-10.43_11575454_EX-10.43_Distributor Agreement.pdf` |\n| Sponsorship Agreement | Stallings Capital Group Consultants, Ltd. and GAINSCO, INC. | `GAINSCOINC_01_21_2010-EX-10.41-SPONSORSHIP AGREEMENT.PDF` |\n| Strategic Alliance Agreement | Giggles N\u2019 Hugs, Inc. and Kiddo, Inc. | `GIGGLESN_HUGS,INC_06_23_2016-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.PDF` |\n| Endorsement Agreement | Holiday RV Superstores, Inc. and Affinity Group, Inc. | `HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT AGREEMENT.PDF` |\n| Master Services Agreement | Kubient Inc. and The Associated Press | `KUBIENT,INC_07_02_2020-EX-10.14-MASTER SERVICES AGREEMENT_Part1.pdf` |\n| Content License Agreement | Digicorp, Inc. and New China Media LLC | `MidwestEnergyEmissionsCorp_20080604_8-K_EX-10.2_3093976_EX-10.2_Content License Agreement.pdf` |\n| Strategic Alliance Agreement | Yaskawa Electric Corporation and Argo Medical Technologies Ltd. | `REWALKROBOTICSLTD_07_10_2014-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.PDF` |\n| Services Agreement | Idan Maimon and Intellisense Solutions, Inc. | `SCOUTCAMINC_05_12_2020-EX-10.22-SERVICES AGREEMENT.PDF` |",
+      "route": "sql",
+      "correct": false,
+      "hallucinated": true,
+      "refused": false,
+      "citation_ok": null,
+      "recall": 0.8888888888888888,
+      "precision": 0.8,
+      "seconds": 18.07,
+      "detail": {
+        "missing": [
+          "SEPARATEACCOUNTIIOFAGL_05_02_2011-EX-99.(J)(4)-UNCONDITIONAL CAPITAL MAINTENANCE AGREEMENT.PDF"
+        ],
+        "extra": [
+          "FuseMedicalInc_20190321_10-K_EX-10.43_11575454_EX-10.43_Distributor Agreement.pdf",
+          "GIGGLESN_HUGS,INC_06_23_2016-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.PDF"
+        ]
+      },
+      "usage": {
+        "calls": 2,
+        "input": 1579,
+        "cached": 0,
+        "output": 570,
+        "embed_tokens": 0,
+        "usd": 0.0089
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "A07",
+      "qtype": "aggregate",
+      "tag": "aggregate",
+      "question": "Which agreements give a party audit rights?",
+      "expected": [
+        "BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement1.pdf",
+        "ETELOS,INC_03_09_2004-EX-10.8-DISTRIBUTOR AGREEMENT.PDF",
+        "FuseMedicalInc_20190321_10-K_EX-10.43_11575454_EX-10.43_Distributor Agreement.pdf",
+        "GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.8_11951679_EX-10.8_Service Agreement.pdf",
+        "IVILLAGEINC_03_17_1999-EX-10.16-SPONSORSHIP AGREEMENT.PDF",
+        "IntegrityMediaInc_20010329_10-K405_EX-10.17_2373875_EX-10.17_Co-Branding Agreement.pdf",
+        "MidwestEnergyEmissionsCorp_20080604_8-K_EX-10.2_3093976_EX-10.2_Content License Agreement.pdf",
+        "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING AGREEMENT.PDF",
+        "SteelVaultCorp_20081224_10-K_EX-10.16_3074935_EX-10.16_Affiliate Agreement.pdf",
+        "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing Agreement_ Reseller Agreement.pdf"
+      ],
+      "answer": "Nine agreements grant audit rights. The query does not identify which party holds those rights.\n\n| Agreement | Parties | File identifier |\n|---|---|---|\n| Manufacturing Agreement | Stremicks Heritage Foods, LLC and Premier Nutrition Corporation | `BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement1.pdf` |\n| Distributor Agreement | Tripath Technology, Inc. and Uniquest Corporation | `ETELOS,INC_03_09_2004-EX-10.8-DISTRIBUTOR AGREEMENT.PDF` |\n| Distributorship Agreement | Signature Orthopaedics Pty Ltd and CPM Medical Consultants, LLC | `FuseMedicalInc_20190321_10-K_EX-10.43_11575454_EX-10.43_Distributor Agreement.pdf` |\n| Sponsorship and Services Agreement | HOF Village, LLC and National Football Museum, Inc. | `GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.8_11951679_EX-10.8_Service Agreement.pdf` |\n| Product Development and Co-Branding Agreement | Integrity Incorporated and Time Life, Inc. | `IntegrityMediaInc_20010329_10-K405_EX-10.17_2373875_EX-10.17_Co-Branding Agreement.pdf` |\n| Content License Agreement | Digicorp, Inc. and New China Media LLC | `MidwestEnergyEmissionsCorp_20080604_8-K_EX-10.2_3093976_EX-10.2_Content License Agreement.pdf` |\n| Marketing Affiliate Agreement | Equidata, Inc. and National Credit Report.com, LLC | `SteelVaultCorp_20081224_10-K_EX-10.16_3074935_EX-10.16_Affiliate Agreement.pdf` |\n| Outsourcing Agreement | Sykes HealthPlan Services, Inc. and HealthPlan Services, Inc. | `SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING AGREEMENT.PDF` |\n| Marketing and Reseller Agreement | Todos Medical Ltd. and Care G. B. Plus Ltd. | `TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing Agreement_ Reseller Agreement.pdf` |",
+      "route": "sql",
+      "correct": false,
+      "hallucinated": true,
+      "refused": false,
+      "citation_ok": null,
+      "recall": 0.9,
+      "precision": 1.0,
+      "seconds": 17.57,
+      "detail": {
+        "missing": [
+          "IVILLAGEINC_03_17_1999-EX-10.16-SPONSORSHIP AGREEMENT.PDF"
+        ],
+        "extra": []
+      },
+      "usage": {
+        "calls": 2,
+        "input": 1504,
+        "cached": 0,
+        "output": 540,
+        "embed_tokens": 0,
+        "usd": 0.0084
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "A08",
+      "qtype": "aggregate",
+      "tag": "aggregate",
+      "question": "Which agreements contain a most-favored-nation clause?",
+      "expected": [
+        "ASHWORTHINC_01_29_1999-EX-10.(D)-PROMOTION AGREEMENT AND NANTZ COMMUNICATIONS, INC..PDF",
+        "GAINSCOINC_01_21_2010-EX-10.41-SPONSORSHIP AGREEMENT.PDF",
+        "IVILLAGEINC_03_17_1999-EX-10.16-SPONSORSHIP AGREEMENT.PDF",
+        "IntegrityMediaInc_20010329_10-K405_EX-10.17_2373875_EX-10.17_Co-Branding Agreement.pdf",
+        "LejuHoldingsLtd_20140121_DRS (on F-1)_EX-10.26_8473102_EX-10.26_Content License Agreement1.pdf"
+      ],
+      "answer": "Two agreements contain a most-favored-nation clause:\n\n- **Sponsorship and Services Agreement** \u2014 HOF Village, LLC and National Football Museum, Inc.  \n  File: `GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.8_11951679_EX-10.8_Service Agreement.pdf`\n- **Domain Name and Content License Agreement** \u2014 Beijing SINA Internet Information Service Co., Ltd. and Beijing Yisheng Leju Information Services Co., Ltd.  \n  File: `LejuHoldingsLtd_20140121_DRS (on F-1)_EX-10.26_8473102_EX-10.26_Content License Agreement1.pdf`",
+      "route": "sql",
+      "correct": false,
+      "hallucinated": true,
+      "refused": false,
+      "citation_ok": null,
+      "recall": 0.2,
+      "precision": 0.5,
+      "seconds": 9.54,
+      "detail": {
+        "missing": [
+          "ASHWORTHINC_01_29_1999-EX-10.(D)-PROMOTION AGREEMENT AND NANTZ COMMUNICATIONS, INC..PDF",
+          "GAINSCOINC_01_21_2010-EX-10.41-SPONSORSHIP AGREEMENT.PDF",
+          "IVILLAGEINC_03_17_1999-EX-10.16-SPONSORSHIP AGREEMENT.PDF",
+          "IntegrityMediaInc_20010329_10-K405_EX-10.17_2373875_EX-10.17_Co-Branding Agreement.pdf"
+        ],
+        "extra": [
+          "GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.8_11951679_EX-10.8_Service Agreement.pdf"
+        ]
+      },
+      "usage": {
+        "calls": 2,
+        "input": 970,
+        "cached": 0,
+        "output": 200,
+        "embed_tokens": 0,
+        "usd": 0.0039
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "A09",
+      "qtype": "aggregate",
+      "tag": "aggregate",
+      "question": "Which agreements are perpetual, with no fixed end date?",
+      "expected": [
+        "ETELOS,INC_03_09_2004-EX-10.8-DISTRIBUTOR AGREEMENT.PDF",
+        "SEPARATEACCOUNTIIOFAGL_05_02_2011-EX-99.(J)(4)-UNCONDITIONAL CAPITAL MAINTENANCE AGREEMENT.PDF"
+      ],
+      "answer": "Two agreements are marked perpetual and have no recorded expiration date:\n\n- **Strategic Alliance Agreement** \u2014 Giggles N\u2019 Hugs, Inc. and Kiddo, Inc. (`GIGGLESN_HUGS,INC_06_23_2016-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.PDF`)\n- **Unconditional Capital Maintenance Agreement** \u2014 American International Group, Inc. and American General Life Insurance Company of Delaware (`SEPARATEACCOUNTIIOFAGL_05_02_2011-EX-99.(J)(4)-UNCONDITIONAL CAPITAL MAINTENANCE AGREEMENT.PDF`)\n\nThe **Distributorship Agreement** (`FuseMedicalInc_20190321_10-K_EX-10.43_11575454_EX-10.43_Distributor Agreement.pdf`) is also marked perpetual, but it has a recorded expiration date of March 29, 2019.",
+      "route": "sql",
+      "correct": false,
+      "hallucinated": true,
+      "refused": false,
+      "citation_ok": null,
+      "recall": 0.5,
+      "precision": 0.3333333333333333,
+      "seconds": 10.14,
+      "detail": {
+        "missing": [
+          "ETELOS,INC_03_09_2004-EX-10.8-DISTRIBUTOR AGREEMENT.PDF"
+        ],
+        "extra": [
+          "FuseMedicalInc_20190321_10-K_EX-10.43_11575454_EX-10.43_Distributor Agreement.pdf",
+          "GIGGLESN_HUGS,INC_06_23_2016-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.PDF"
+        ]
+      },
+      "usage": {
+        "calls": 2,
+        "input": 1062,
+        "cached": 0,
+        "output": 235,
+        "embed_tokens": 0,
+        "usd": 0.0045
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "A10",
+      "qtype": "aggregate",
+      "tag": "aggregate",
+      "question": "How many agreements are governed by the laws of California?",
+      "expected": 7,
+      "answer": "7 agreements are governed by California law.",
+      "route": "sql",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 5.76,
+      "detail": {},
+      "usage": {
+        "calls": 2,
+        "input": 1421,
+        "cached": 0,
+        "output": 68,
+        "embed_tokens": 0,
+        "usd": 0.0035
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "U01",
+      "qtype": "unanswerable",
+      "tag": "unanswerable",
+      "question": "How many days of notice are required to prevent the automatic renewal of the Strategic Alliance Agreement between Giggles N' Hugs, Inc and Kiddo, Inc?",
+      "expected": null,
+      "answer": "No notice is required because the agreement does not automatically renew.[1][5]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": true,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 2.81,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 5265,
+        "cached": 0,
+        "output": 20,
+        "embed_tokens": 0,
+        "usd": 0.0107
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "U02",
+      "qtype": "unanswerable",
+      "tag": "unanswerable",
+      "question": "How many days of notice are required to prevent the automatic renewal of the AMENDMENT NO. 1 Wireless Content License Agreement Number 12965 between Fox Mobile Entertainment and Glu Mobile, Inc. f/k/a Sorrent, Inc?",
+      "expected": null,
+      "answer": "The documents do not contain this information.",
+      "route": "not_found",
+      "correct": true,
+      "hallucinated": false,
+      "refused": true,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 2.37,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 5435,
+        "cached": 0,
+        "output": 6,
+        "embed_tokens": 0,
+        "usd": 0.0109
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "U03",
+      "qtype": "unanswerable",
+      "tag": "unanswerable",
+      "question": "How many days of notice are required to prevent the automatic renewal of the STATEMENT OF WORK - APPENDIX A Software Development Agreement between SEATTLE SOFTWARE DEVELOPERS, Inc and PELICAN DELIVERS INC?",
+      "expected": null,
+      "answer": "No notice is required because the agreement does not automatically renew.[1]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": true,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 2.49,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 4818,
+        "cached": 0,
+        "output": 18,
+        "embed_tokens": 0,
+        "usd": 0.0098
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "U04",
+      "qtype": "unanswerable",
+      "tag": "unanswerable",
+      "question": "Which law governs the Maintenance Agreement between SAGEM S.A and XIMAGE corporation?",
+      "expected": null,
+      "answer": "The documents do not contain this information.",
+      "route": "not_found",
+      "correct": true,
+      "hallucinated": false,
+      "refused": true,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 2.19,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 5086,
+        "cached": 0,
+        "output": 6,
+        "embed_tokens": 0,
+        "usd": 0.0102
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "U05",
+      "qtype": "unanswerable",
+      "tag": "unanswerable",
+      "question": "How many days of notice are required to prevent the automatic renewal of the Unconditional Capital Maintenance Agreement between American International Group, Inc and American General Life Insurance Company?",
+      "expected": null,
+      "answer": "The agreement does not automatically renew; it continues indefinitely unless terminated. If the agreement\u2019s termination conditions are met, AIG must give 30 days\u2019 prior written notice.[4]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": true,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 4.45,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 8193,
+        "cached": 0,
+        "output": 40,
+        "embed_tokens": 0,
+        "usd": 0.0168
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "U06",
+      "qtype": "unanswerable",
+      "tag": "unanswerable",
+      "question": "What was the share price of Digicorp, Inc on the date of the Content License Agreement between Digicorp, Inc and New China Media LLC?",
+      "expected": null,
+      "answer": "The June 2, 2008 agreement set the purchase price for Digicorp, Inc.\u2019s Series A Convertible Preferred Stock at $1.00 per share.[2][3]",
+      "route": "document",
+      "correct": false,
+      "hallucinated": true,
+      "refused": false,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 4.14,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 14071,
+        "cached": 0,
+        "output": 41,
+        "embed_tokens": 0,
+        "usd": 0.0286
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "U07",
+      "qtype": "unanswerable",
+      "tag": "unanswerable",
+      "question": "How many employees does IREYA B.V have according to the Consulting Agreement between Aduro Biotech, Inc and IREYA B.V?",
+      "expected": null,
+      "answer": "The documents do not contain this information.",
+      "route": "not_found",
+      "correct": true,
+      "hallucinated": false,
+      "refused": true,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 2.08,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 2973,
+        "cached": 0,
+        "output": 6,
+        "embed_tokens": 0,
+        "usd": 0.006
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "U08",
+      "qtype": "unanswerable",
+      "tag": "unanswerable",
+      "question": "What is the late payment interest rate in the Corporate Sponsorship Agreement between Freeze Tag Inc and American Diabetes Association?",
+      "expected": null,
+      "answer": "The documents do not contain this information.",
+      "route": "not_found",
+      "correct": true,
+      "hallucinated": false,
+      "refused": true,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 2.62,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 6391,
+        "cached": 0,
+        "output": 6,
+        "embed_tokens": 0,
+        "usd": 0.0128
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "S01",
+      "qtype": "lookup",
+      "tag": "short-law",
+      "question": "Which law governs our agreement with Yaskawa?",
+      "expected": [
+        "Israel"
+      ],
+      "answer": "The laws of the State of Israel govern the agreement with Yaskawa. [7]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 16.28,
+      "detail": {},
+      "usage": {
+        "calls": 2,
+        "input": 7335,
+        "cached": 0,
+        "output": 73,
+        "embed_tokens": 0,
+        "usd": 0.0154
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "S02",
+      "qtype": "lookup",
+      "tag": "short-law",
+      "question": "Which law governs our agreement with Equidata?",
+      "expected": [
+        "Virginia"
+      ],
+      "answer": "The agreement with Equidata is governed by and construed under the laws of the State of Virginia. [5]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 2.53,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 4583,
+        "cached": 0,
+        "output": 26,
+        "embed_tokens": 0,
+        "usd": 0.0094
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "S03",
+      "qtype": "lookup",
+      "tag": "short-law",
+      "question": "Which law governs our agreement with Village?",
+      "expected": [
+        "Ohio"
+      ],
+      "answer": "Ohio law governs the agreement, without regard to conflict-of-law principles, under Section 6.5.[15]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 7.52,
+      "detail": {},
+      "usage": {
+        "calls": 2,
+        "input": 14804,
+        "cached": 0,
+        "output": 87,
+        "embed_tokens": 0,
+        "usd": 0.0305
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "S04",
+      "qtype": "lookup",
+      "tag": "short-law",
+      "question": "Which law governs our agreement with Holiday?",
+      "expected": [
+        "California"
+      ],
+      "answer": "California law governs the agreement with Holiday RV Superstores, Inc., without regard to conflict-of-laws principles.[2][4]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 6.64,
+      "detail": {},
+      "usage": {
+        "calls": 2,
+        "input": 6728,
+        "cached": 0,
+        "output": 78,
+        "embed_tokens": 0,
+        "usd": 0.0142
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "S05",
+      "qtype": "lookup",
+      "tag": "short-expiry",
+      "question": "When does the agreement with Stallings expire?",
+      "expected": "2010-12-31",
+      "answer": "The agreement with Stallings expires on December 31, 2010, unless the sponsor terminates it earlier.[2][6]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 6.67,
+      "detail": {},
+      "usage": {
+        "calls": 2,
+        "input": 4849,
+        "cached": 0,
+        "output": 75,
+        "embed_tokens": 0,
+        "usd": 0.0104
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "S06",
+      "qtype": "lookup",
+      "tag": "short-law",
+      "question": "Which law governs our agreement with General?",
+      "expected": [
+        "New York"
+      ],
+      "answer": "The documents do not contain this information.",
+      "route": "not_found",
+      "correct": false,
+      "hallucinated": false,
+      "refused": true,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 6.79,
+      "detail": {},
+      "usage": {
+        "calls": 2,
+        "input": 2363,
+        "cached": 0,
+        "output": 22,
+        "embed_tokens": 0,
+        "usd": 0.0049
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "N01",
+      "qtype": "aggregate",
+      "tag": "named-list",
+      "question": "List all agreements governed by the same law as the Marketing And Reseller Agreement between Todos Medical Ltd and Care G. B. Plus Ltd, including that one.",
+      "expected": [
+        "REWALKROBOTICSLTD_07_10_2014-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.PDF",
+        "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing Agreement_ Reseller Agreement.pdf"
+      ],
+      "answer": "Both agreements are governed by Israeli law:\n\n1. **Strategic Alliance Agreement** \u2014 Yaskawa Electric Corporation and Argo Medical Technologies Ltd. (`REWALKROBOTICSLTD_07_10_2014-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.PDF`)\n2. **Marketing and Reseller Agreement** \u2014 Todos Medical Ltd. and Care G. B. Plus Ltd. (`TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing Agreement_ Reseller Agreement.pdf`)",
+      "route": "sql",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": null,
+      "recall": 1.0,
+      "precision": 1.0,
+      "seconds": 11.92,
+      "detail": {
+        "missing": [],
+        "extra": []
+      },
+      "usage": {
+        "calls": 2,
+        "input": 1295,
+        "cached": 0,
+        "output": 248,
+        "embed_tokens": 0,
+        "usd": 0.0051
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "N02",
+      "qtype": "aggregate",
+      "tag": "named-list",
+      "question": "List all agreements governed by the same law as the Strategic Alliance Agreement between Yaskawa Electric Corporation and Argo Medical Technologies Ltd, including that one.",
+      "expected": [
+        "REWALKROBOTICSLTD_07_10_2014-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.PDF",
+        "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing Agreement_ Reseller Agreement.pdf"
+      ],
+      "answer": "Both agreements are governed by Israeli law:\n\n- **Strategic Alliance Agreement** \u2014 Yaskawa Electric Corporation and Argo Medical Technologies Ltd. (`REWALKROBOTICSLTD_07_10_2014-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.PDF`)\n- **Marketing and Reseller Agreement** \u2014 Todos Medical Ltd. and Care G. B. Plus Ltd. (`TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing Agreement_ Reseller Agreement.pdf`)",
+      "route": "sql",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": null,
+      "recall": 1.0,
+      "precision": 1.0,
+      "seconds": 13.44,
+      "detail": {
+        "missing": [],
+        "extra": []
+      },
+      "usage": {
+        "calls": 2,
+        "input": 1343,
+        "cached": 0,
+        "output": 300,
+        "embed_tokens": 0,
+        "usd": 0.0057
+      },
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "qid": "N03",
+      "qtype": "aggregate",
+      "tag": "named-list",
+      "question": "List all agreements governed by the same law as the Domain Name And Content License Agreement between Beijing SINA Internet Information Service Co., Ltd and Beijing Yisheng Leju Information Services Co., Ltd, including that one.",
+      "expected": [
+        "LejuHoldingsLtd_20140121_DRS (on F-1)_EX-10.26_8473102_EX-10.26_Content License Agreement1.pdf",
+        "LohaCompanyltd_20191209_F-1_EX-10.16_11917878_EX-10.16_Supply Agreement.pdf"
+      ],
+      "answer": "Both agreements are governed by the law of the People\u2019s Republic of China:\n\n1. **Domain Name and Content License Agreement** \u2014 between Beijing SINA Internet Information Service Co., Ltd. and Beijing Yisheng Leju Information Services Co., Ltd.  \n   File: `LejuHoldingsLtd_20140121_DRS (on F-1)_EX-10.26_8473102_EX-10.26_Content License Agreement1.pdf`\n2. **Supply Contract** \u2014 Shenzhen LOHAS Supply Chain Management Co., Ltd. is the only party listed.  \n   File: `LohaCompanyltd_20191209_F-1_EX-10.16_11917878_EX-10.16_Supply Agreement.pdf`",
+      "route": "sql",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": null,
+      "recall": 1.0,
+      "precision": 1.0,
+      "seconds": 13.46,
+      "detail": {
+        "missing": [],
+        "extra": []
+      },
+      "usage": {
+        "calls": 2,
+        "input": 1414,
+        "cached": 0,
+        "output": 342,
+        "embed_tokens": 0,
+        "usd": 0.0062
+      },
+      "model": "gpt-6.1-sol"
+    }
+  ]
+}

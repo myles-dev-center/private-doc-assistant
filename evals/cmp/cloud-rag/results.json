@@ -15,7 +15,7 @@
       },
       "summary": {
         "n": 44,
-        "accuracy": 0.841,
+        "accuracy": 0.864,
         "by_type": {
           "lookup": {
             "n": 26,
@@ -27,12 +27,12 @@
           },
           "unanswerable": {
             "n": 8,
-            "accuracy": 0.875
+            "accuracy": 1.0
           }
         },
-        "hallucination_rate": 0.136,
+        "hallucination_rate": 0.114,
         "answerable_hallucination_rate": 0.139,
-        "refusal_on_unanswerable": 0.875,
+        "refusal_on_unanswerable": 1.0,
         "citation_accuracy": 1.0,
         "aggregate_recall": 0.946,
         "median_seconds": 6.25,
@@ -880,9 +880,9 @@
           "expected": null,
           "answer": "The Development Agreement has no automatic renewal provision, so no notice period to prevent renewal applies; its term continues until the Sublicense Agreement expires, unless terminated earlier.[4]",
           "route": "document",
-          "correct": false,
-          "hallucinated": true,
-          "refused": false,
+          "correct": true,
+          "hallucinated": false,
+          "refused": true,
           "citation_ok": null,
           "recall": null,
           "precision": null,

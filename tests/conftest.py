@@ -5,11 +5,13 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+from contextlib import contextmanager
 
 import numpy as np
 import pytest
 
 from docassist import Assistant, Settings
+from docassist.llm import Usage
 
 
 class FakeLLM:
@@ -18,8 +20,18 @@ class FakeLLM:
     def __init__(self):
         self.calls: list[tuple[str, str]] = []
         self.json_format = 0
+        self.usage = Usage()
+        self.concurrency = 1
 
-    def embed(self, texts, *, query=False, batch=64):
+    @contextmanager
+    def track(self):
+        before = self.usage.snapshot()
+        mine = Usage()
+        yield mine
+        after = self.usage.snapshot()
+        mine.calls = after["calls"] - before["calls"]
+
+    def embed(self, texts, *, query=False, batch=64, progress=None):
         out = np.zeros((len(texts), 256), dtype=np.float32)
         for i, t in enumerate(texts):
             for w in re.findall(r"[a-z0-9]+", t.lower()):
@@ -37,7 +49,9 @@ class FakeLLM:
 
     def chat_json(self, system, user, *, max_tokens=800):
         if system.startswith("You extract"):
-            cid = re.search(r"AP-[A-Z]+-\d{4}-\d{3}", user.split("<<<", 1)[-1])  # document body, not the prompt's example
+            body = user.split("<<<", 1)[-1]  # document body, not the prompt's example
+            cid = re.search(r"AP-[A-Z]+-\d{4}-\d{3}", body)
+            renews = re.search(r"[^.]*renews automatically", body)
             return {
                 "contract_id": cid.group() if cid else None,
                 "counterparty": "Test Co",
@@ -45,12 +59,22 @@ class FakeLLM:
                 "contract_type": "Supply Agreement",
                 "auto_renewal": "yes",
                 "contract_value": "EUR 1,200.50",
+                "evidence": {
+                    "contract_id": cid.group() if cid else None,
+                    "auto_renewal": renews.group().strip() if renews else "renews every year",
+                },
             }
         if system.startswith("You route"):
             if user.rstrip().endswith("?") and "List" in user:
                 return {"route": "sql", "sql": "SELECT contract_id, end_date FROM contracts WHERE end_date LIKE '2027%'"}
             return {"route": "search", "sql": None}
         return json.loads("{}")
+
+
+@pytest.fixture(autouse=True)
+def activity_dir(tmp_path, monkeypatch):
+    """Tests must not show up in the activity panel of a real UI on this machine."""
+    monkeypatch.setenv("DOCASSIST_ACTIVITY_DIR", str(tmp_path / "activity"))
 
 
 @pytest.fixture

@@ -1,0 +1,1635 @@
+{
+  "combo": "local-chat-cloud-embed",
+  "label": "Local chat \u00b7 Qwen 3.5 9B + text-embedding-3-small",
+  "chat_model": "qwen3.5-9b-mtp",
+  "embed_model": "openai/text-embedding-3-small",
+  "endpoint": "http://localhost:1234/v1",
+  "set": "set6",
+  "library": "qwen3.5-9b-mtp__openai-text-embedding-3-small",
+  "started": "2026-11-08 04:07",
+  "summary": {
+    "n": 53,
+    "accuracy": 0.755,
+    "by_type": {
+      "lookup": {
+        "n": 32,
+        "accuracy": 0.938
+      },
+      "aggregate": {
+        "n": 13,
+        "accuracy": 0.308
+      },
+      "unanswerable": {
+        "n": 8,
+        "accuracy": 0.75
+      }
+    },
+    "hallucination_rate": 0.208,
+    "answerable_hallucination_rate": 0.2,
+    "refusal_on_unanswerable": 0.75,
+    "citation_accuracy": 1.0,
+    "aggregate_recall": 0.766,
+    "median_seconds": 14.7
+  },
+  "usage": {
+    "ingest": {},
+    "questions": {
+      "calls": 76,
+      "input": 353264,
+      "cached": 0,
+      "output": 7979,
+      "embed_tokens": 0,
+      "usd": 0.0
+    }
+  },
+  "scores": [
+    {
+      "qid": "L01",
+      "qtype": "lookup",
+      "tag": "law",
+      "question": "Which law governs the Amended and Restated Unconditional Capital Maintenance Agreement between American International Group, Inc and American General Life Insurance Company?",
+      "expected": [
+        "New York"
+      ],
+      "answer": "The Amended and Restated Unconditional Capital Maintenance Agreement is governed by the laws of New York [1][6].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 6.3,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 6823,
+        "cached": 0,
+        "output": 25,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L02",
+      "qtype": "lookup",
+      "tag": "law",
+      "question": "Which law governs the Operations And Maintenance Agreement between MAGELLAN TERMINALS HOLDINGS, L.P and OMEGA REFINING , LLC?",
+      "expected": [
+        "Delaware"
+      ],
+      "answer": "The Operations and Maintenance Agreement is governed by the laws of the State of Delaware [1][21]. This is confirmed in Section 8.6, which states that the agreement shall be governed, construed, and enforced in accordance with the laws of the State of Delaware [21].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 80.55,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 23885,
+        "cached": 0,
+        "output": 59,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L03",
+      "qtype": "lookup",
+      "tag": "law",
+      "question": "Which law governs the Co-Hosting Agreement between NETWORKS ASSOCIATES, INC and SOFTWARE.NET CORPORATION?",
+      "expected": [
+        "California"
+      ],
+      "answer": "The Co-Hosting Agreement is governed by the laws of the State of California [1]. This is further confirmed in Section 12(e) of the agreement, which states that the terms shall be interpreted according to the laws of California without reference to conflict of law principles [7].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 36.77,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 13454,
+        "cached": 0,
+        "output": 58,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L04",
+      "qtype": "lookup",
+      "tag": "law",
+      "question": "Which law governs the Strategic Alliance Agreement between GOLD RESOURCE CORPORATION and HOCHSCHILD MINING HOLDINGS LIMITED?",
+      "expected": [
+        "New York"
+      ],
+      "answer": "The Strategic Alliance Agreement is governed by the laws of the State of New York [1]. Additionally, Article 12.4 specifies that the agreement shall be construed and enforced in accordance with the laws of the United States applicable therein, and disputes are subject to the non-exclusive jurisdiction of the courts of Colorado [19].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 78.66,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 23325,
+        "cached": 0,
+        "output": 66,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L05",
+      "qtype": "lookup",
+      "tag": "law",
+      "question": "Which law governs the Promotion Agreement between Go Call, Inc and PageMaster Corporation?",
+      "expected": [
+        "California"
+      ],
+      "answer": "The Promotion Agreement is governed by the laws of the State of California [4]. This is confirmed in the extracted fields which list \"governing_law: California\" [1].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 21.52,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 8709,
+        "cached": 0,
+        "output": 38,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L06",
+      "qtype": "lookup",
+      "tag": "law",
+      "question": "Which law governs the Non-Exclusive Distributor Agreement between iMine Corporation and SUNWAI Technology?",
+      "expected": [
+        "Indiana"
+      ],
+      "answer": "The Non-Exclusive Distributor Agreement is governed by the laws of the State of Indiana, U.S.A. [9]. This is confirmed in the extracted fields which list the governing law as Indiana [1].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 19.26,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 8476,
+        "cached": 0,
+        "output": 43,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L07",
+      "qtype": "lookup",
+      "tag": "law",
+      "question": "Which law governs the Video-On-Demand Content License Agreement between Rogers Cable Communications Inc and EuroMedia Holdings Corp?",
+      "expected": [
+        "Ontario"
+      ],
+      "answer": "The Video-On-Demand Content License Agreement is governed by the laws of the Province of Ontario and the federal laws of Canada [1]. This is further confirmed in Section 23, which states that the agreement shall be governed by the laws of the Province of Ontario and the federal laws of Canada applicable therein [10].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 34.86,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 13363,
+        "cached": 0,
+        "output": 66,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L08",
+      "qtype": "lookup",
+      "tag": "law",
+      "question": "Which law governs the Strategic Alliance Agreement between Cool Technologies Inc and VETERAN TECHNOLOGY GROUP, LLC?",
+      "expected": [
+        "Missouri"
+      ],
+      "answer": "The Strategic Alliance Agreement is governed by the laws of the State of Missouri [6]. This is confirmed in the extracted fields which list \"governing_law: Missouri\" [1].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 9.79,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 3669,
+        "cached": 0,
+        "output": 39,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L09",
+      "qtype": "lookup",
+      "tag": "date",
+      "question": "What is the date of the First Amendment To Supply And Manufacturing Agreement between Cerus Corporation and Porex Corporation?",
+      "expected": "2018-06-22",
+      "answer": "The First Amendment to the Supply and Manufacturing Agreement between Cerus Corporation and Porex Corporation was made on June 22, 2018 [2]. This date is also confirmed in the extracted fields of the document metadata [1].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 9.24,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 3479,
+        "cached": 0,
+        "output": 50,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L10",
+      "qtype": "lookup",
+      "tag": "date",
+      "question": "What is the date of the Distributor Agreement between JOHNSON MATTHEY CATALOG COMPANY, INC and Nanophase Technologies Corporation?",
+      "expected": "2005-10-24",
+      "answer": "The Distributor Agreement between JOHNSON MATTHEY CATALOG COMPANY, INC. and Nanophase Technologies Corporation was dated October 24, 2005 [1][2].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 64.84,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 21141,
+        "cached": 0,
+        "output": 42,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L11",
+      "qtype": "lookup",
+      "tag": "date",
+      "question": "What is the date of the Promotion Agreement between CNET, Inc and Cyberian Outpost, Inc?",
+      "expected": "1998-01-26",
+      "answer": "The Promotion Agreement between CNET, Inc. and Cyberian Outpost, Inc. is dated January 26, 1998 [1][2].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 14.7,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 5878,
+        "cached": 0,
+        "output": 35,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L12",
+      "qtype": "lookup",
+      "tag": "date",
+      "question": "What is the date of the Strategic Alliance Agreement between GOLD RESOURCE CORPORATION and HOCHSCHILD MINING HOLDINGS LIMITED?",
+      "expected": "2008-12-05",
+      "answer": "The Strategic Alliance Agreement between GOLD RESOURCE CORPORATION and HOCHSCHILD MINING HOLDINGS LIMITED was dated December 5, 2008 [1][2].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 7.52,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 23326,
+        "cached": 0,
+        "output": 35,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L13",
+      "qtype": "lookup",
+      "tag": "date",
+      "question": "What is the date of the Co-Branding Agreement between VerticalNet, Inc and Impresse Corporation?",
+      "expected": "2000-03-03",
+      "answer": "The Co-Branding Agreement between VerticalNet, Inc. and Impresse Corporation was dated March 3, 2000 [1][2].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 31.3,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 12353,
+        "cached": 0,
+        "output": 33,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L14",
+      "qtype": "lookup",
+      "tag": "date",
+      "question": "What is the date of the Endorsement Agreement between Lifeway Foods, Inc and Ludmila Smolyansky?",
+      "expected": "2016-03-14",
+      "answer": "The Endorsement Agreement between Lifeway Foods, Inc. and Ludmila Smolyansky was made on March 14, 2016 [2]. This date is also confirmed in the extracted fields as the agreement_date and effective_date [1].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 9.81,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 3106,
+        "cached": 0,
+        "output": 55,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L15",
+      "qtype": "lookup",
+      "tag": "date",
+      "question": "What is the date of the Affiliate Agreement between Gulf South Medical Supply, Inc and Physician Sales & Service, Inc?",
+      "expected": "1997-12-14",
+      "answer": "No documents match.",
+      "route": "sql",
+      "correct": false,
+      "hallucinated": false,
+      "refused": true,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 9.84,
+      "detail": {},
+      "usage": {
+        "calls": 2,
+        "input": 1506,
+        "cached": 0,
+        "output": 77,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L16",
+      "qtype": "lookup",
+      "tag": "date",
+      "question": "What is the date of the Sponsorship Agreement between Excite, Inc and NetGrocer, Inc?",
+      "expected": "1997-12-15",
+      "answer": "The Sponsorship Agreement was entered into as of December 15, 1997 [2]. This date is also confirmed in the extracted fields where the agreement_date is listed as 1997-12-15 [1].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 20.75,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 9215,
+        "cached": 0,
+        "output": 53,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L17",
+      "qtype": "lookup",
+      "tag": "expiry",
+      "question": "When does the Sponsorship Agreement between Excite, Inc and NetGrocer, Inc expire?",
+      "expected": "1999-12-15",
+      "answer": "The Sponsorship Agreement expires on December 15, 1999, or earlier if Excite delivers all guaranteed Click-throughs described in Section 1(f), whichever occurs later [8]. The agreement's expiration date is also listed as 1999-12-15 in the extracted fields [1].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 6.32,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 9213,
+        "cached": 0,
+        "output": 69,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L18",
+      "qtype": "lookup",
+      "tag": "expiry",
+      "question": "When does the Video-On-Demand Content License Agreement between Rogers Cable Communications Inc and EuroMedia Holdings Corp expire?",
+      "expected": "2010-06-30",
+      "answer": "The Video-On-Demand Content License Agreement expires on June 30, 2010 [1][4].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 5.99,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 13362,
+        "cached": 0,
+        "output": 26,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L19",
+      "qtype": "lookup",
+      "tag": "expiry",
+      "question": "When does the Distributor Agreement between Snotarator LLC and SMSA Ballinger Acquisition Corp expire?",
+      "expected": "2015-05-31",
+      "answer": "The Distributor Agreement expires on May 31, 2015 [1]. This expiration date is also confirmed in Article VI, which states that the term of the agreement shall terminate on May 31, 2015, unless sooner terminated [4].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 7.66,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 7593,
+        "cached": 0,
+        "output": 58,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L20",
+      "qtype": "lookup",
+      "tag": "expiry",
+      "question": "When does the Promotion Agreement between Go Call, Inc and PageMaster Corporation expire?",
+      "expected": "2000-06-01",
+      "answer": "The Promotion Agreement expires on June 1, 2000 [1]. This expiration date is also confirmed in Section 3 of the agreement, which states that the promotion shall terminate on June 1, 2000 [2].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 6.92,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 8708,
+        "cached": 0,
+        "output": 52,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L21",
+      "qtype": "lookup",
+      "tag": "expiry",
+      "question": "When does the Amendment No. 3 To The Nonexclusive Value Added Distributor Agreement between Cisco Systems, Inc and ScanSource, Inc expire?",
+      "expected": "2012-01-20",
+      "answer": "The Amendment No. 3 to the Nonexclusive Value Added Distributor Agreement expires on January 20, 2012 [1]. This expiration date is confirmed in the text of the amendment, which states that the term of the agreement is extended to January 20, 2012, unless sooner terminated [2].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 10.62,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 3159,
+        "cached": 0,
+        "output": 71,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L22",
+      "qtype": "lookup",
+      "tag": "notice",
+      "question": "How many days of notice are required to prevent the renewal of the Maintenance Agreement between Universal Access, Inc and CityNet Telecommunications, Inc?",
+      "expected": 30,
+      "answer": "To prevent the renewal of the Maintenance Agreement, either party must notify the other in writing at least thirty (30) days before the expiration of the then current term [2]. This is also confirmed by the extracted field `renewal_notice_days: 30.0` [1].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 18.13,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 7825,
+        "cached": 0,
+        "output": 61,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L23",
+      "qtype": "lookup",
+      "tag": "notice",
+      "question": "How many days of notice are required to prevent the renewal of the Strategic Alliance Agreement between Cool Technologies Inc and VETERAN TECHNOLOGY GROUP, LLC?",
+      "expected": 30,
+      "answer": "The agreement requires at least thirty (30) days prior written notice from either party to prevent automatic renewal for successive one-year periods [3]. Additionally, the agreement may be terminated earlier with sixty (60) days advance written notice [3].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 6.11,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 3677,
+        "cached": 0,
+        "output": 51,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L24",
+      "qtype": "lookup",
+      "tag": "notice",
+      "question": "How many days of notice are required to prevent the renewal of the Exclusive Distributor Agreement between WATER NOW, INC and Hydraspin USA, Inc?",
+      "expected": 120,
+      "answer": "The agreement requires at least one hundred twenty (120) days prior written notice from either party to terminate before the end of the Initial Term or any renewal period to prevent automatic renewal [1][10].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 29.82,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 12320,
+        "cached": 0,
+        "output": 44,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L25",
+      "qtype": "lookup",
+      "tag": "notice",
+      "question": "How many days of notice are required to prevent the renewal of the Video-On-Demand Content License Agreement between Rogers Cable Communications Inc and EuroMedia Holdings Corp?",
+      "expected": 60,
+      "answer": "The agreement requires sixty (60) days' prior written notice to terminate the agreement, which prevents its automatic renewal. [1][4] Specifically, Section 7 states that if the parties have not executed a new agreement by the expiry date, either party has the right to terminate the extended term with sixty (60) days' prior written notice. [4]",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 9.98,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 13371,
+        "cached": 0,
+        "output": 76,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "L26",
+      "qtype": "lookup",
+      "tag": "notice",
+      "question": "How many days of notice are required to prevent the renewal of the Amended and Restated Unconditional Capital Maintenance Agreement between American International Group, Inc and American General Life Insurance Company?",
+      "expected": 30,
+      "answer": "The agreement does not require a specific number of days of notice to prevent renewal because it is not set to auto-renew. According to the extracted fields, `auto_renewal` is False [1], and Section 7 states that unless terminated earlier, the Agreement shall continue indefinitely, with AIG having the right to terminate upon thirty (30) days' prior written notice [4].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 8.83,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 6831,
+        "cached": 0,
+        "output": 81,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "A01",
+      "qtype": "aggregate",
+      "tag": "aggregate",
+      "question": "List all agreements governed by the laws of California.",
+      "expected": [
+        "ADIANUTRITION,INC_04_01_2005-EX-10.D2-RESELLER AGREEMENT.PDF",
+        "BEYONDCOMCORP_08_03_2000-EX-10.2-CO-HOSTING AGREEMENT.PDF",
+        "CYBERIANOUTPOSTINC_07_09_1998-EX-10.13-PROMOTION AGREEMENT.PDF",
+        "GOCALLINC_03_30_2000-EX-10.7-Promotion Agreement.PDF",
+        "NETGROCERINC_07_31_1998-EX-10.15-SPONSORSHIP AGREEMENT.PDF",
+        "OASYSMOBILE,INC_07_05_2001-EX-10.17-OUTSOURCING AGREEMENT.PDF"
+      ],
+      "answer": "Here are the agreements governed by the laws of California:\n\n1. **RESELLER AGREEMENT** (ADIANUTRITION,INC_04_01_2005-EX-10.D2-RESELLER AGREEMENT.PDF) between PIVX CORPORATION and DETTO TECHNOLOGIES\n2. **CO-HOSTING AGREEMENT** (BEYONDCOMCORP_08_03_2000-EX-10.2-CO-HOSTING AGREEMENT.PDF) between NETWORKS ASSOCIATES, INC. and SOFTWARE.NET CORPORATION\n3. **PROMOTION AGREEMENT** (CYBERIANOUTPOSTINC_07_09_1998-EX-10.13-PROMOTION AGREEMENT.PDF) between CNET, Inc. and Cyberian Outpost, Inc.\n4. **Promotion Agreement Between PageMaster Corporation and Go Call, Inc.** (GOCALLINC_03_30_2000-EX-10.7-Promotion Agreement.PDF) between Go Call, Inc. and PageMaster Corporation\n5. **SPONSORSHIP AGREEMENT** (NETGROCERINC_07_31_1998-EX-10.15-SPONSORSHIP AGREEMENT.PDF) between Excite, Inc. and NetGrocer, Inc.\n6. **OUTSOURCING AGREEMENT** (OASYSMOBILE,INC_07_05_2001-EX-10.17-OUTSOURCING AGREEMENT.PDF) between E.PIPHANY, INC. and HIGH SPEED NET SOLUTIONS, INC.",
+      "route": "sql",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": null,
+      "recall": 1.0,
+      "precision": 1.0,
+      "seconds": 30.73,
+      "detail": {
+        "missing": [],
+        "extra": []
+      },
+      "usage": {
+        "calls": 2,
+        "input": 2113,
+        "cached": 0,
+        "output": 454,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "A02",
+      "qtype": "aggregate",
+      "tag": "aggregate",
+      "question": "List all agreements governed by the laws of Delaware.",
+      "expected": [
+        "GULFSOUTHMEDICALSUPPLYINC_12_24_1997-EX-4-AFFILIATE AGREEMENT.PDF",
+        "ImpresseCorp_20000322_S-1A_EX-10.11_5199234_EX-10.11_Co-Branding Agreement.pdf",
+        "NANOPHASETECHNOLOGIESCORP_11_01_2005-EX-99.1-DISTRIBUTOR AGREEMENT.PDF",
+        "SPOKHOLDINGS,INC_06_19_2020-EX-10.1-COOPERATION AGREEMENT.PDF",
+        "UAGHINC_04_14_2004-EX-10.18-MAINTENANCE AGREEMENT.PDF",
+        "VERTEXENERGYINC_08_14_2014-EX-10.24-OPERATION AND MAINTENANCE AGREEMENT.PDF"
+      ],
+      "answer": "Here are the agreements governed by the laws of Delaware:\n\n1. **AFFILIATE AGREEMENT** (GULFSOUTHMEDICALSUPPLYINC_12_24_1997-EX-4-AFFILIATE AGREEMENT.PDF)\n2. **CO-BRANING AGREEMENT** (ImpresseCorp_20000322_S-1A_EX-10.11_5199234_EX-10.11_Co-Branding Agreement.pdf)\n3. **DISTRIBUTOR AGREEMENT** (NANOPHASETECHNOLOGIESCORP_11_01_2005-EX-99.1-DISTRIBUTOR AGREEMENT.PDF)\n4. **COOPERATION AGREEMENT** (SPOKHOLDINGS,INC_06_19_2020-EX-10.1-COOPERATION AGREEMENT.PDF)\n5. **MAINTENANCE AGREEMENT** (UAGHINC_04_14_2004-EX-10.18-MAINTENANCE AGREEMENT.PDF)\n6. **OPERATION AND MAINTENANCE AGREEMENT** (VERTEXENERGYINC_08_14_2014-EX-10.24-OPERATION AND MAINTENANCE AGREEMENT.PDF)",
+      "route": "sql",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": null,
+      "recall": 1.0,
+      "precision": 1.0,
+      "seconds": 26.81,
+      "detail": {
+        "missing": [],
+        "extra": []
+      },
+      "usage": {
+        "calls": 2,
+        "input": 2163,
+        "cached": 0,
+        "output": 391,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "A03",
+      "qtype": "aggregate",
+      "tag": "aggregate",
+      "question": "List all agreements governed by the laws of Texas.",
+      "expected": [
+        "BLACKBOXSTOCKSINC_08_05_2014-EX-10.1-DISTRIBUTOR AGREEMENT.PDF",
+        "OPTIMIZEDTRANSPORTATIONMANAGEMENT,INC_07_26_2000-EX-6.6-DISTRIBUTOR AGREEMENT.PDF",
+        "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor Agreement.pdf"
+      ],
+      "answer": "Here are the agreements governed by the laws of Texas:\n\n1. **BLACKBOXSTOCKSINC_08_05_2014-EX-10.1-DISTRIBUTOR AGREEMENT.PDF**  \n   - Title: DISTRIBUTOR AGREEMENT  \n   - Parties: Snotarator LLC and SMSA Ballinger Acquisition Corp.  \n   - Dates: Agreement (2013-08-01), Effective (2013-08-01), Expiration (2015-05-31)  \n\n2. **OPTIMIZEDTRANSPORTATIONMANAGEMENT,INC_07_26_2000-EX-6.6-DISTRIBUTOR AGREEMENT.PDF**  \n   - Title: DISTRIBUTOR AGREEMENT  \n   - Parties: COMWARE TECHNICAL SERVICES OF 17922 SKY PARK CIRCLE, SUITE E, IRVINE, CALIFORNIA 92614-6414 and INTERNATIONAL TEST SYSTEMS, INC. OF 4703 SHAVANO OAK, SUITE 102, SAN ANTONIO, TEXAS 78249  \n   - Dates: Effective (2000-04-15), Expiration (2000-10-15)  \n\n3. **WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor Agreement.pdf**  \n   - Title: EXCLUSIVE DISTRIBUTOR AGREEMENT  \n   - Parties: WATER NOW, INC. and BESTEV MANAGEMENT, LLC  \n   - Dates: Agreement (2019-11-12), Effective (2019-11-12)",
+      "route": "sql",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": null,
+      "recall": 1.0,
+      "precision": 1.0,
+      "seconds": 30.8,
+      "detail": {
+        "missing": [],
+        "extra": []
+      },
+      "usage": {
+        "calls": 2,
+        "input": 1575,
+        "cached": 0,
+        "output": 477,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "A04",
+      "qtype": "aggregate",
+      "tag": "aggregate",
+      "question": "Which agreements contain a non-compete clause?",
+      "expected": [
+        "BEYONDCOMCORP_08_03_2000-EX-10.2-CO-HOSTING AGREEMENT.PDF",
+        "BLACKBOXSTOCKSINC_08_05_2014-EX-10.1-DISTRIBUTOR AGREEMENT.PDF",
+        "CYBERIANOUTPOSTINC_07_09_1998-EX-10.13-PROMOTION AGREEMENT.PDF",
+        "EcoScienceSolutionsInc_20171117_8-K_EX-10.1_10956472_EX-10.1_Endorsement Agreement.pdf",
+        "HealthcentralCom_19991108_S-1A_EX-10.27_6623292_EX-10.27_Co-Branding Agreement.pdf",
+        "ImineCorp_20180725_S-1_EX-10.5_11275970_EX-10.5_Distributor Agreement.pdf",
+        "ImpresseCorp_20000322_S-1A_EX-10.11_5199234_EX-10.11_Co-Branding Agreement.pdf",
+        "LifewayFoodsInc_20160316_10-K_EX-10.24_9489766_EX-10.24_Endorsement Agreement.pdf",
+        "MEDALISTDIVERSIFIEDREIT,INC_05_18_2020-EX-10.1-CONSULTING AGREEMENT.PDF",
+        "NETGROCERINC_07_31_1998-EX-10.15-SPONSORSHIP AGREEMENT.PDF"
+      ],
+      "answer": "The following agreements contain a non-compete clause:\n\n- BEYONDCOMCORP_08_03_2000-EX-10.2-CO-HOSTING AGREEMENT.PDF (CO-HOSTING AGREEMENT)\n- BLACKBOXSTOCKSINC_08_05_2014-EX-10.1-DISTRIBUTOR AGREEMENT.PDF (DISTRIBUTOR AGREEMENT)\n- GOCALLINC_03_30_2000-EX-10.7-Promotion Agreement.PDF (Promotion Agreement Between PageMaster Corporation and Go Call, Inc.)\n- HealthcentralCom_19991108_S-1A_EX-10.27_6623292_EX-10.27_Co-Branding Agreement.pdf (CO-BRANDING CONTENT AGREEMENT)\n- ImineCorp_20180725_S-1_EX-10.5_11275970_EX-10.5_Distributor Agreement.pdf (NON-EXCLUSIVE DISTRIBUTOR AGREEMENT)\n- LifewayFoodsInc_20160316_10-K_EX-10.24_9489766_EX-10.24_Endorsement Agreement.pdf (ENDORSEMENT AGREEMENT)\n- MEDALISTDIVERSIFIEDREIT,INC_05_18_2020-EX-10.1-CONSULTING AGREEMENT.PDF (CONSULTING AGREEMENT)\n- Zounds Hearing, Inc. - MANUFACTURING DESIGN MARKETING AGREEMENT.PDF (MANUFACTURING, DESIGN AND MARKETING AGREEMENT)",
+      "route": "sql",
+      "correct": false,
+      "hallucinated": true,
+      "refused": false,
+      "citation_ok": null,
+      "recall": 0.6,
+      "precision": 0.75,
+      "seconds": 26.53,
+      "detail": {
+        "missing": [
+          "CYBERIANOUTPOSTINC_07_09_1998-EX-10.13-PROMOTION AGREEMENT.PDF",
+          "EcoScienceSolutionsInc_20171117_8-K_EX-10.1_10956472_EX-10.1_Endorsement Agreement.pdf",
+          "ImpresseCorp_20000322_S-1A_EX-10.11_5199234_EX-10.11_Co-Branding Agreement.pdf",
+          "NETGROCERINC_07_31_1998-EX-10.15-SPONSORSHIP AGREEMENT.PDF"
+        ],
+        "extra": [
+          "GOCALLINC_03_30_2000-EX-10.7-Promotion Agreement.PDF",
+          "Zounds Hearing, Inc. - MANUFACTURING DESIGN MARKETING AGREEMENT.PDF"
+        ]
+      },
+      "usage": {
+        "calls": 2,
+        "input": 1330,
+        "cached": 0,
+        "output": 409,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "A05",
+      "qtype": "aggregate",
+      "tag": "aggregate",
+      "question": "Which agreements contain an exclusivity commitment?",
+      "expected": [
+        "ADIANUTRITION,INC_04_01_2005-EX-10.D2-RESELLER AGREEMENT.PDF",
+        "BEYONDCOMCORP_08_03_2000-EX-10.2-CO-HOSTING AGREEMENT.PDF",
+        "BLACKBOXSTOCKSINC_08_05_2014-EX-10.1-DISTRIBUTOR AGREEMENT.PDF",
+        "GOCALLINC_03_30_2000-EX-10.7-Promotion Agreement.PDF",
+        "GOLDRESOURCECORP_12_11_2008-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.PDF",
+        "HealthcentralCom_19991108_S-1A_EX-10.27_6623292_EX-10.27_Co-Branding Agreement.pdf",
+        "NANOPHASETECHNOLOGIESCORP_11_01_2005-EX-99.1-DISTRIBUTOR AGREEMENT.PDF",
+        "OPTIMIZEDTRANSPORTATIONMANAGEMENT,INC_07_26_2000-EX-6.6-DISTRIBUTOR AGREEMENT.PDF",
+        "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC ALLIANCE AGREEMENT.PDF",
+        "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor Agreement.pdf"
+      ],
+      "answer": "The following agreements contain an exclusivity commitment:\n\n1. **RESELLER AGREEMENT** (ADIANUTRITION,INC_04_01_2005-EX-10.D2-RESELLER AGREEMENT.PDF) between PIVX CORPORATION and DETTO TECHNOLOGIES\n2. **CO-HOSTING AGREEMENT** (BEYONDCOMCORP_08_03_2000-EX-10.2-CO-HOSTING AGREEMENT.PDF) between NETWORKS ASSOCIATES, INC. and SOFTWARE.NET CORPORATION\n3. **DISTRIBUTOR AGREEMENT** (BLACKBOXSTOCKSINC_08_05_2014-EX-10.1-DISTRIBUTOR AGREEMENT.PDF) between Snotarator LLC and SMSA Ballinger Acquisition Corp.\n4. **ENDORSEMENT AGREEMENT** (EcoScienceSolutionsInc_20171117_8-K_EX-10.1_10956472_EX-10.1_Endorsement Agreement.pdf) between Eco Science Solutions, Inc. and Stephen Marley\n5. **CO-BRANDING CONTENT AGREEMENT** (HealthcentralCom_19991108_S-1A_EX-10.27_6623292_EX-10.27_Co-Branding Agreement.pdf) between MEDIALINX INTERACTIVE, L.P. and HEALTHCENTRAL.COM INC.\n6. **DISTRIBUTOR AGREEMENT** (NANOPHASETECHNOLOGIESCORP_11_01_2005-EX-99.1-DISTRIBUTOR AGREEMENT.PDF) between JOHNSON MATTHEY CATALOG COMPANY, INC. and Nanophase Technologies Corporation\n7. **SPONSORSHIP AGREEMENT** (NETGROCERINC_07_31_1998-EX-10.15-SPONSORSHIP AGREEMENT.PDF) between Excite, Inc. and NetGrocer, Inc.\n8. **DISTRIBUTOR AGREEMENT** (OPTIMIZEDTRANSPORTATIONMANAGEMENT,INC_07_26_2000-EX-6.6-DISTRIBUTOR AGREEMENT.PDF) between COMWARE TECHNICAL SERVICES OF 17922 SKY PARK CIRCLE, SUITE E, IRVINE, CALIFORNIA 92614-6414 and INTERNATIONAL TEST SYSTEMS, INC. OF 4703 SHAVANO OAK, SUITE 102, SAN ANTONIO, TEXAS 78249\n9. **STRATEGIC ALLIANCE AGREEMENT** (USASYNTH",
+      "route": "sql",
+      "correct": false,
+      "hallucinated": true,
+      "refused": false,
+      "citation_ok": null,
+      "recall": 0.8,
+      "precision": 0.8,
+      "seconds": 43.91,
+      "detail": {
+        "missing": [
+          "GOCALLINC_03_30_2000-EX-10.7-Promotion Agreement.PDF",
+          "GOLDRESOURCECORP_12_11_2008-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.PDF"
+        ],
+        "extra": [
+          "EcoScienceSolutionsInc_20171117_8-K_EX-10.1_10956472_EX-10.1_Endorsement Agreement.pdf",
+          "NETGROCERINC_07_31_1998-EX-10.15-SPONSORSHIP AGREEMENT.PDF"
+        ]
+      },
+      "usage": {
+        "calls": 2,
+        "input": 3034,
+        "cached": 0,
+        "output": 682,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "A06",
+      "qtype": "aggregate",
+      "tag": "aggregate",
+      "question": "Which agreements can be terminated for convenience, without cause?",
+      "expected": [
+        "ADIANUTRITION,INC_04_01_2005-EX-10.D2-RESELLER AGREEMENT.PDF",
+        "COOLTECHNOLOGIES,INC_10_25_2017-EX-10.71-Strategic Alliance Agreement.PDF",
+        "CYBERIANOUTPOSTINC_07_09_1998-EX-10.13-PROMOTION AGREEMENT.PDF",
+        "EuromediaHoldingsCorp_20070215_10SB12G_EX-10.B(01)_525118_EX-10.B(01)_Content License Agreement.pdf",
+        "ImineCorp_20180725_S-1_EX-10.5_11275970_EX-10.5_Distributor Agreement.pdf",
+        "JINGWEIINTERNATIONALLTD_10_04_2007-EX-10.7-INTELLECTUAL PROPERTY AGREEMENT.PDF",
+        "MEDALISTDIVERSIFIEDREIT,INC_05_18_2020-EX-10.1-CONSULTING AGREEMENT.PDF",
+        "NANOPHASETECHNOLOGIESCORP_11_01_2005-EX-99.1-DISTRIBUTOR AGREEMENT.PDF",
+        "OPTIMIZEDTRANSPORTATIONMANAGEMENT,INC_07_26_2000-EX-6.6-DISTRIBUTOR AGREEMENT.PDF",
+        "UAGHINC_04_14_2004-EX-10.18-MAINTENANCE AGREEMENT.PDF",
+        "VERTEXENERGYINC_08_14_2014-EX-10.24-OPERATION AND MAINTENANCE AGREEMENT.PDF"
+      ],
+      "answer": "The following agreements can be terminated for convenience, without cause:\n\n1. **RESELLER AGREEMENT** (ADIANUTRITION,INC_04_01_2005-EX-10.D2-RESELLER AGREEMENT.PDF) between PIVX CORPORATION and DETTO TECHNOLOGIES\n2. **Strategic Alliance Agreement** (COOLTECHNOLOGIES,INC_10_25_2017-EX-10.71-Strategic Alliance Agreement.PDF) between Cool Technologies Inc. and VETERAN TECHNOLOGY GROUP, LLC\n3. **PROMOTION AGREEMENT** (CYBERIANOUTPOSTINC_07_09_1998-EX-10.13-PROMOTION AGREEMENT.PDF) between CNET, Inc. and Cyberian Outpost, Inc.\n4. **VIDEO-ON-DEMAND CONTENT LICENSE AGREEMENT** (EuromediaHoldingsCorp_20070215_10SB12G_EX-10.B(01)_525118_EX-10.B(01)_Content License Agreement.pdf) between Rogers Cable Communications Inc. and EuroMedia Holdings Corp.\n5. **NON-EXCLUSIVE DISTRIBUTOR AGREEMENT** (ImineCorp_20180725_S-1_EX-10.5_11275970_EX-10.5_Distributor Agreement.pdf) between iMine Corporation and SUNWAI Technology\n6. **INTELLECTUAL PROPERTY AGREEMENT** (JINGWEIINTERNATIONALLTD_10_04_2007-EX-10.7-INTELLECTUAL PROPERTY AGREEMENT.PDF) between JingWei HengTong Technology (ShenZhen) Co.,Ltd. and ShenZhen JingWei Communication Co.,Ltd.\n7. **CONSULTING AGREEMENT** (MEDALISTDIVERSIFIEDREIT,INC_05_18_2020-EX-10.1-CONSULTING AGREEMENT.PDF) between Gunston Consulting, LLC and Medalist Diversified REIT, Inc.\n8. **DISTRIBUTOR AGREEMENT** (NANOPHASETECHNOLOGIESCORP_11_01_2005-EX-99.1-DISTRIBUTOR AGREEMENT.PDF) between JOHNSON MATTHEY CATALOG COMPANY, INC. and Nanophase Technologies Corporation\n9. **SPONSORSHIP AGREEMENT** (NETGROCERINC_07_31_1998-EX-10.15-SPONSORSHIP AGREEMENT.PDF) between Excite, Inc. and NetGrocer, Inc.",
+      "route": "sql",
+      "correct": false,
+      "hallucinated": true,
+      "refused": false,
+      "citation_ok": null,
+      "recall": 1.0,
+      "precision": 0.8461538461538461,
+      "seconds": 40.4,
+      "detail": {
+        "missing": [],
+        "extra": [
+          "NETGROCERINC_07_31_1998-EX-10.15-SPONSORSHIP AGREEMENT.PDF",
+          "VARIABLESEPARATEACCOUNT_04_30_2014-EX-13.C-UNCONDITIONAL CAPITAL MAINTENANCE AGREEMENT.PDF"
+        ]
+      },
+      "usage": {
+        "calls": 2,
+        "input": 2143,
+        "cached": 0,
+        "output": 636,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "A07",
+      "qtype": "aggregate",
+      "tag": "aggregate",
+      "question": "Which agreements give a party audit rights?",
+      "expected": [
+        "ADIANUTRITION,INC_04_01_2005-EX-10.D2-RESELLER AGREEMENT.PDF",
+        "BEYONDCOMCORP_08_03_2000-EX-10.2-CO-HOSTING AGREEMENT.PDF",
+        "CYBERIANOUTPOSTINC_07_09_1998-EX-10.13-PROMOTION AGREEMENT.PDF",
+        "EuromediaHoldingsCorp_20070215_10SB12G_EX-10.B(01)_525118_EX-10.B(01)_Content License Agreement.pdf",
+        "FEDERATEDGOVERNMENTINCOMESECURITIESINC_04_28_2020-EX-99.SERV AGREE-SERVICES AGREEMENT.pdf",
+        "GOCALLINC_03_30_2000-EX-10.7-Promotion Agreement.PDF",
+        "GOLDRESOURCECORP_12_11_2008-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.PDF",
+        "HealthcentralCom_19991108_S-1A_EX-10.27_6623292_EX-10.27_Co-Branding Agreement.pdf",
+        "ImineCorp_20180725_S-1_EX-10.5_11275970_EX-10.5_Distributor Agreement.pdf",
+        "ImpresseCorp_20000322_S-1A_EX-10.11_5199234_EX-10.11_Co-Branding Agreement.pdf",
+        "NANOPHASETECHNOLOGIESCORP_11_01_2005-EX-99.1-DISTRIBUTOR AGREEMENT.PDF",
+        "NETGROCERINC_07_31_1998-EX-10.15-SPONSORSHIP AGREEMENT.PDF",
+        "OASYSMOBILE,INC_07_05_2001-EX-10.17-OUTSOURCING AGREEMENT.PDF",
+        "VERTEXENERGYINC_08_14_2014-EX-10.24-OPERATION AND MAINTENANCE AGREEMENT.PDF",
+        "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor Agreement.pdf",
+        "Zounds Hearing, Inc. - MANUFACTURING DESIGN MARKETING AGREEMENT.PDF"
+      ],
+      "answer": "The following 15 agreements give a party audit rights:\n\n1. **RESELLER AGREEMENT** (ADIANUTRITION,INC_04_01_2005-EX-10.D2-RESELLER AGREEMENT.PDF) between PIVX CORPORATION and DETTO TECHNOLOGIES\n2. **CO-HOSTING AGREEMENT** (BEYONDCOMCORP_08_03_2000-EX-10.2-CO-HOSTING AGREEMENT.PDF) between NETWORKS ASSOCIATES, INC. and SOFTWARE.NET CORPORATION\n3. **PROMOTION AGREEMENT** (CYBERIANOUTPOSTINC_07_09_1998-EX-10.13-PROMOTION AGREEMENT.PDF) between CNET, Inc. and Cyberian Outpost, Inc.\n4. **VIDEO-ON-DEMAND CONTENT LICENSE AGREEMENT** (EuromediaHoldingsCorp_20070215_10SB12G_EX-10.B(01)_525118_EX-10.B(01)_Content License Agreement.pdf) between Rogers Cable Communications Inc. and EuroMedia Holdings Corp.\n5. **Promotion Agreement Between PageMaster Corporation and Go Call, Inc.** (GOCALLINC_03_30_2000-EX-10.7-Promotion Agreement.PDF) between Go Call, Inc. and PageMaster Corporation\n6. **STRATEGIC ALLIANCE AGREEMENT** (GOLDRESOURCECORP_12_11_2008-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.PDF) between GOLD RESOURCE CORPORATION and HOCHSCHILD MINING HOLDINGS LIMITED\n7. **CO-BRANDING CONTENT AGREEMENT** (HealthcentralCom_19991108_S-1A_EX-10.27_6623292_EX-10.27_Co-Branding Agreement.pdf) between MEDIALINX INTERACTIVE, L.P. and HEALTHCENTRAL.COM INC.\n8. **NON-EXCLUSIVE DISTRIBUTOR AGREEMENT** (ImineCorp_20180725_S-1_EX-10.5_11275970_EX-10.5_Distributor Agreement.pdf) between iMine Corporation and SUNWAI Technology\n9. **CO-BRANING AGREEMENT** (ImpresseCorp_20000322_S-1A_EX-10.11_5199234_EX-10.11_Co-Branding Agreement.pdf) between VerticalNet, Inc. and Impresse Corporation\n10. **",
+      "route": "sql",
+      "correct": false,
+      "hallucinated": true,
+      "refused": false,
+      "citation_ok": null,
+      "recall": 0.875,
+      "precision": 0.9333333333333333,
+      "seconds": 39.97,
+      "detail": {
+        "missing": [
+          "FEDERATEDGOVERNMENTINCOMESECURITIESINC_04_28_2020-EX-99.SERV AGREE-SERVICES AGREEMENT.pdf",
+          "VERTEXENERGYINC_08_14_2014-EX-10.24-OPERATION AND MAINTENANCE AGREEMENT.PDF"
+        ],
+        "extra": [
+          "ScansourceInc_20190822_10-K_EX-10.39_11793959_EX-10.39_Distributor Agreement.pdf"
+        ]
+      },
+      "usage": {
+        "calls": 2,
+        "input": 2265,
+        "cached": 0,
+        "output": 634,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "A08",
+      "qtype": "aggregate",
+      "tag": "aggregate",
+      "question": "Which agreements contain a most-favored-nation clause?",
+      "expected": [
+        "EuromediaHoldingsCorp_20070215_10SB12G_EX-10.B(01)_525118_EX-10.B(01)_Content License Agreement.pdf",
+        "GOLDRESOURCECORP_12_11_2008-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.PDF",
+        "NANOPHASETECHNOLOGIESCORP_11_01_2005-EX-99.1-DISTRIBUTOR AGREEMENT.PDF",
+        "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC ALLIANCE AGREEMENT.PDF"
+      ],
+      "answer": "Three agreements contain a most-favored-nation clause:\n\n1. **VIDEO-ON-DEMAND CONTENT LICENSE AGREEMENT** (Rogers Cable Communications Inc. and EuroMedia Holdings Corp.)\n2. **STRATEGIC ALLIANCE AGREEMENT** (GOLD RESOURCE CORPORATION and HOCHSCHILD MINING HOLDINGS LIMITED)\n3. **DISTRIBUTOR AGREEMENT** (JOHNSON MATTHEY CATALOG COMPANY, INC. and Nanophase Technologies Corporation)",
+      "route": "sql",
+      "correct": false,
+      "hallucinated": true,
+      "refused": false,
+      "citation_ok": null,
+      "recall": 0.75,
+      "precision": 1.0,
+      "seconds": 15.12,
+      "detail": {
+        "missing": [
+          "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC ALLIANCE AGREEMENT.PDF"
+        ],
+        "extra": []
+      },
+      "usage": {
+        "calls": 2,
+        "input": 1541,
+        "cached": 0,
+        "output": 186,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "A09",
+      "qtype": "aggregate",
+      "tag": "aggregate",
+      "question": "Which agreements are perpetual, with no fixed end date?",
+      "expected": [
+        "SPOKHOLDINGS,INC_06_19_2020-EX-10.1-COOPERATION AGREEMENT.PDF",
+        "VARIABLESEPARATEACCOUNT_04_30_2014-EX-13.C-UNCONDITIONAL CAPITAL MAINTENANCE AGREEMENT.PDF"
+      ],
+      "answer": "The following agreements are perpetual (with no fixed end date):\n\n1. **STRATEGIC ALLIANCE AGREEMENT** between GOLD RESOURCE CORPORATION and HOCHSCHILD MINING HOLDINGS LIMITED (ID: GOLDRESOURCECORP_12_11_2008-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.PDF)\n2. **AFFILIATE AGREEMENT** (ID: GULFSOUTHMEDICALSUPPLYINC_12_24_1997-EX-4-AFFILIATE AGREEMENT.PDF)\n3. **COOPERATION AGREEMENT** between Sp\u00f4k Holdings, Inc. and White Hat Strategic Partners LP et al. (ID: SPOKHOLDINGS,INC_06_19_2020-EX-10.1-COOPERATION AGREEMENT.PDF)\n4. **STRATEGIC ALLIANCE AGREEMENT** between OXBOW CARBON & MINERALS LLC and GLOBAL ENERGY, INC. (ID: USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC ALLIANCE AGREEMENT.PDF)\n5. **AMENDED AND RESTATED UNCONDITIONAL CAPITAL MAINTENANCE AGREEMENT** between American International Group, Inc. and American General Life Insurance Company (ID: VARIABLESEPARATEACCOUNT_04_30_2014-EX-13.C-UNCONDITIONAL CAPITAL MAINTENANCE AGREEMENT.PDF)\n\nNote: Two rows in the provided data are marked as perpetual but have an `expiration_date` listed (HealthcentralCom and OASYSMOBILE,INC). Based strictly on the `perpetual = 1` filter, they are included in the count of 7, though logically they may not be truly perpetual. If \"no fixed end date\" implies `expiration_date` is null, then only **5** agreements match that stricter definition.",
+      "route": "sql",
+      "correct": false,
+      "hallucinated": true,
+      "refused": false,
+      "citation_ok": null,
+      "recall": 1.0,
+      "precision": 0.2857142857142857,
+      "seconds": 30.15,
+      "detail": {
+        "missing": [],
+        "extra": [
+          "GOLDRESOURCECORP_12_11_2008-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.PDF",
+          "GULFSOUTHMEDICALSUPPLYINC_12_24_1997-EX-4-AFFILIATE AGREEMENT.PDF",
+          "HealthcentralCom_19991108_S-1A_EX-10.27_6623292_EX-10.27_Co-Branding Agreement.pdf",
+          "OASYSMOBILE,INC_07_05_2001-EX-10.17-OUTSOURCING AGREEMENT.PDF",
+          "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC ALLIANCE AGREEMENT.PDF"
+        ]
+      },
+      "usage": {
+        "calls": 2,
+        "input": 1742,
+        "cached": 0,
+        "output": 470,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "A10",
+      "qtype": "aggregate",
+      "tag": "aggregate",
+      "question": "How many agreements are governed by the laws of California?",
+      "expected": 6,
+      "answer": "There are 6 agreements governed by the laws of California.",
+      "route": "sql",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 5.94,
+      "detail": {},
+      "usage": {
+        "calls": 2,
+        "input": 831,
+        "cached": 0,
+        "output": 39,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "U01",
+      "qtype": "unanswerable",
+      "tag": "unanswerable",
+      "question": "How many days of notice are required to prevent the automatic renewal of the Affiliate Agreement between Gulf South Medical Supply, Inc and Physician Sales & Service, Inc?",
+      "expected": null,
+      "answer": "No documents match.",
+      "route": "sql",
+      "correct": true,
+      "hallucinated": false,
+      "refused": true,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 10.3,
+      "detail": {},
+      "usage": {
+        "calls": 2,
+        "input": 1788,
+        "cached": 0,
+        "output": 101,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "U02",
+      "qtype": "unanswerable",
+      "tag": "unanswerable",
+      "question": "How many days of notice are required to prevent the automatic renewal of the Cooperation Agreement between Sp\u00f4k Holdings, Inc and White Hat Strategic Partners LP?",
+      "expected": null,
+      "answer": "The documents do not contain this information.",
+      "route": "not_found",
+      "correct": true,
+      "hallucinated": false,
+      "refused": true,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 8.51,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 4956,
+        "cached": 0,
+        "output": 3,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "U03",
+      "qtype": "unanswerable",
+      "tag": "unanswerable",
+      "question": "How many days of notice are required to prevent the automatic renewal of the Promotion Agreement between CNET, Inc and Cyberian Outpost, Inc?",
+      "expected": null,
+      "answer": "The agreement does not have an automatic renewal clause, as indicated by `auto_renewal: False` in the extracted fields [1]. Instead, either party may terminate the agreement at any time after the first three months of the Term by giving 30 days' written notice [4].",
+      "route": "document",
+      "correct": false,
+      "hallucinated": true,
+      "refused": false,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 6.65,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 5886,
+        "cached": 0,
+        "output": 60,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "U04",
+      "qtype": "unanswerable",
+      "tag": "unanswerable",
+      "question": "How many days of notice are required to prevent the automatic renewal of the Endorsement Agreement between Lifeway Foods, Inc and Ludmila Smolyansky?",
+      "expected": null,
+      "answer": "The documents do not contain this information.",
+      "route": "not_found",
+      "correct": true,
+      "hallucinated": false,
+      "refused": true,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 3.19,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 3114,
+        "cached": 0,
+        "output": 3,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "U05",
+      "qtype": "unanswerable",
+      "tag": "unanswerable",
+      "question": "How many days of notice are required to prevent the automatic renewal of the Co-Branding Content Agreement between MEDIALINX INTERACTIVE, L.P and HEALTHCENTRAL.com INC?",
+      "expected": null,
+      "answer": "The agreement does not have an automatic renewal clause; it explicitly states that auto_renewal is False [1]. Therefore, no notice period is required to prevent renewal because the contract expires on 2001-06-30 without automatically extending.",
+      "route": "document",
+      "correct": false,
+      "hallucinated": true,
+      "refused": false,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 27.3,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 11357,
+        "cached": 0,
+        "output": 54,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "U06",
+      "qtype": "unanswerable",
+      "tag": "unanswerable",
+      "question": "What was the share price of Lifeway Foods, Inc on the date of the Endorsement Agreement between Lifeway Foods, Inc and Ludmila Smolyansky?",
+      "expected": null,
+      "answer": "The documents do not contain this information.",
+      "route": "not_found",
+      "correct": true,
+      "hallucinated": false,
+      "refused": true,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 3.77,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 3116,
+        "cached": 0,
+        "output": 3,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "U07",
+      "qtype": "unanswerable",
+      "tag": "unanswerable",
+      "question": "How many employees does InnerScope Hearing Technologies, Inc have according to the MANUFACTURING, DESIGN AND MARKETING AGREEMENT (t between Zounds Hearing, Inc and InnerScope Hearing Technologies, Inc?",
+      "expected": null,
+      "answer": "The documents do not contain this information.",
+      "route": "not_found",
+      "correct": true,
+      "hallucinated": false,
+      "refused": true,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 21.62,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 10499,
+        "cached": 0,
+        "output": 3,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "U08",
+      "qtype": "unanswerable",
+      "tag": "unanswerable",
+      "question": "What is the late payment interest rate in the Amendment No. 3 To The Nonexclusive Value Added Distributor Agreement between Cisco Systems, Inc and ScanSource, Inc?",
+      "expected": null,
+      "answer": "The documents do not contain this information.",
+      "route": "not_found",
+      "correct": true,
+      "hallucinated": false,
+      "refused": true,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 3.56,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 3164,
+        "cached": 0,
+        "output": 3,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "S01",
+      "qtype": "lookup",
+      "tag": "short-law",
+      "question": "Which law governs our agreement with JOHNSON?",
+      "expected": [
+        "Delaware"
+      ],
+      "answer": "The agreement with JOHNSON is governed by Delaware law, as specified in the document NANOPHASETECHNOLOGIESCORP_11_01_2005-EX-99.1-DISTRIBUTOR AGREEMENT.PDF.",
+      "route": "sql",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 9.89,
+      "detail": {},
+      "usage": {
+        "calls": 2,
+        "input": 1137,
+        "cached": 0,
+        "output": 97,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "S02",
+      "qtype": "lookup",
+      "tag": "short-law",
+      "question": "Which law governs our agreement with ASSOCIATES?",
+      "expected": [
+        "California"
+      ],
+      "answer": "The agreement with ASSOCIATES is governed by California law, as specified in the document BEYONDCOMCORP_08_03_2000-EX-10.2-CO-HOSTING AGREEMENT.PDF.",
+      "route": "sql",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 9.42,
+      "detail": {},
+      "usage": {
+        "calls": 2,
+        "input": 1122,
+        "cached": 0,
+        "output": 92,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "S03",
+      "qtype": "lookup",
+      "tag": "short-notice",
+      "question": "How many days of notice does the Rogers agreement require to stop it from renewing?",
+      "expected": 60,
+      "answer": "The Rogers agreement requires **60 days** of notice to stop it from renewing, as found in the document *EuromediaHoldingsCorp_20070215_10SB12G_EX-10.B(01)_525118_EX-10.B(01)_Content License Agreement.pdf*.",
+      "route": "sql",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 10.5,
+      "detail": {},
+      "usage": {
+        "calls": 2,
+        "input": 1171,
+        "cached": 0,
+        "output": 115,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "S04",
+      "qtype": "lookup",
+      "tag": "short-date",
+      "question": "When was the MAGELLAN agreement signed?",
+      "expected": "2010-11-03",
+      "answer": "The MAGELLAN agreement was signed on 2010-11-03.",
+      "route": "sql",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 7.67,
+      "detail": {},
+      "usage": {
+        "calls": 2,
+        "input": 1139,
+        "cached": 0,
+        "output": 61,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "S05",
+      "qtype": "lookup",
+      "tag": "short-notice",
+      "question": "How many days of notice does the General agreement require to stop it from renewing?",
+      "expected": 30,
+      "answer": "No documents match.",
+      "route": "sql",
+      "correct": false,
+      "hallucinated": false,
+      "refused": true,
+      "citation_ok": null,
+      "recall": null,
+      "precision": null,
+      "seconds": 6.99,
+      "detail": {},
+      "usage": {
+        "calls": 2,
+        "input": 1155,
+        "cached": 0,
+        "output": 48,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "S06",
+      "qtype": "lookup",
+      "tag": "short-law",
+      "question": "Which law governs our agreement with Snotarator?",
+      "expected": [
+        "Texas"
+      ],
+      "answer": "The agreement is governed by the laws of the State of Texas [6]. This is confirmed in the extracted fields which list the governing_law as Texas [1].",
+      "route": "document",
+      "correct": true,
+      "hallucinated": false,
+      "refused": false,
+      "citation_ok": true,
+      "recall": null,
+      "precision": null,
+      "seconds": 15.6,
+      "detail": {},
+      "usage": {
+        "calls": 1,
+        "input": 7584,
+        "cached": 0,
+        "output": 34,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "N01",
+      "qtype": "aggregate",
+      "tag": "named-list",
+      "question": "List all agreements governed by the same law as the Co-Branding Agreement between VerticalNet, Inc and Impresse Corporation, including that one.",
+      "expected": [
+        "GULFSOUTHMEDICALSUPPLYINC_12_24_1997-EX-4-AFFILIATE AGREEMENT.PDF",
+        "ImpresseCorp_20000322_S-1A_EX-10.11_5199234_EX-10.11_Co-Branding Agreement.pdf",
+        "NANOPHASETECHNOLOGIESCORP_11_01_2005-EX-99.1-DISTRIBUTOR AGREEMENT.PDF",
+        "SPOKHOLDINGS,INC_06_19_2020-EX-10.1-COOPERATION AGREEMENT.PDF",
+        "UAGHINC_04_14_2004-EX-10.18-MAINTENANCE AGREEMENT.PDF",
+        "VERTEXENERGYINC_08_14_2014-EX-10.24-OPERATION AND MAINTENANCE AGREEMENT.PDF"
+      ],
+      "answer": "The following agreements are governed by California law:\n\n1. **RESELLER AGREEMENT** (ADIANUTRITION,INC_04_01_2005-EX-10.D2-RESELLER AGREEMENT.PDF) between PIVX CORPORATION and DETTO TECHNOLOGIES\n2. **CO-HOSTING AGREEMENT** (BEYONDCOMCORP_08_03_2000-EX-10.2-CO-HOSTING AGREEMENT.PDF) between NETWORKS ASSOCIATES, INC. and SOFTWARE.NET CORPORATION\n3. **PROMOTION AGREEMENT** (CYBERIANOUTPOSTINC_07_09_1998-EX-10.13-PROMOTION AGREEMENT.PDF) between CNET, Inc. and Cyberian Outpost, Inc.\n4. **Promotion Agreement Between PageMaster Corporation and Go Call, Inc.** (GOCALLINC_03_30_2000-EX-10.7-Promotion Agreement.PDF) between Go Call, Inc. and PageMaster Corporation\n5. **SPONSORSHIP AGREEMENT** (NETGROCERINC_07_31_1998-EX-10.15-SPONSORSHIP AGREEMENT.PDF) between Excite, Inc. and NetGrocer, Inc.\n6. **OUTSOURCING AGREEMENT** (OASYSMOBILE,INC_07_05_2001-EX-10.17-OUTSOURCING AGREEMENT.PDF) between E.PIPHANY, INC. and HIGH SPEED NET SOLUTIONS, INC.",
+      "route": "sql",
+      "correct": false,
+      "hallucinated": true,
+      "refused": false,
+      "citation_ok": null,
+      "recall": 0.0,
+      "precision": 0.0,
+      "seconds": 46.59,
+      "detail": {
+        "missing": [
+          "GULFSOUTHMEDICALSUPPLYINC_12_24_1997-EX-4-AFFILIATE AGREEMENT.PDF",
+          "ImpresseCorp_20000322_S-1A_EX-10.11_5199234_EX-10.11_Co-Branding Agreement.pdf",
+          "NANOPHASETECHNOLOGIESCORP_11_01_2005-EX-99.1-DISTRIBUTOR AGREEMENT.PDF",
+          "SPOKHOLDINGS,INC_06_19_2020-EX-10.1-COOPERATION AGREEMENT.PDF",
+          "UAGHINC_04_14_2004-EX-10.18-MAINTENANCE AGREEMENT.PDF",
+          "VERTEXENERGYINC_08_14_2014-EX-10.24-OPERATION AND MAINTENANCE AGREEMENT.PDF"
+        ],
+        "extra": [
+          "ADIANUTRITION,INC_04_01_2005-EX-10.D2-RESELLER AGREEMENT.PDF",
+          "BEYONDCOMCORP_08_03_2000-EX-10.2-CO-HOSTING AGREEMENT.PDF",
+          "CYBERIANOUTPOSTINC_07_09_1998-EX-10.13-PROMOTION AGREEMENT.PDF",
+          "GOCALLINC_03_30_2000-EX-10.7-Promotion Agreement.PDF",
+          "NETGROCERINC_07_31_1998-EX-10.15-SPONSORSHIP AGREEMENT.PDF",
+          "OASYSMOBILE,INC_07_05_2001-EX-10.17-OUTSOURCING AGREEMENT.PDF"
+        ]
+      },
+      "usage": {
+        "calls": 4,
+        "input": 3801,
+        "cached": 0,
+        "output": 640,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "N02",
+      "qtype": "aggregate",
+      "tag": "named-list",
+      "question": "List all agreements governed by the same law as the Operations And Maintenance Agreement between MAGELLAN TERMINALS HOLDINGS, L.P and OMEGA REFINING , LLC, including that one.",
+      "expected": [
+        "GULFSOUTHMEDICALSUPPLYINC_12_24_1997-EX-4-AFFILIATE AGREEMENT.PDF",
+        "ImpresseCorp_20000322_S-1A_EX-10.11_5199234_EX-10.11_Co-Branding Agreement.pdf",
+        "NANOPHASETECHNOLOGIESCORP_11_01_2005-EX-99.1-DISTRIBUTOR AGREEMENT.PDF",
+        "SPOKHOLDINGS,INC_06_19_2020-EX-10.1-COOPERATION AGREEMENT.PDF",
+        "UAGHINC_04_14_2004-EX-10.18-MAINTENANCE AGREEMENT.PDF",
+        "VERTEXENERGYINC_08_14_2014-EX-10.24-OPERATION AND MAINTENANCE AGREEMENT.PDF"
+      ],
+      "answer": "Based on the query results, there is only one agreement matching the criteria (the Operations And Maintenance Agreement between MAGELLAN TERMINALS HOLDINGS, L.P. and OMEGA REFINING, LLC), which is governed by **Delaware** law:\n\n*   **Filename**: VERTEXENERGYINC_08_14_2014-EX-10.24-OPERATION AND MAINTENANCE AGREEMENT.PDF\n    *   **Agreement Title**: OPERATION AND MAINTENANCE AGREEMENT\n    *   **Party A**: MAGELLAN TERMINALS HOLDINGS, L.P.\n    *   **Party B**: OMEGA REFINING, LLC\n    *   **Governing Law**: Delaware",
+      "route": "sql",
+      "correct": false,
+      "hallucinated": true,
+      "refused": false,
+      "citation_ok": null,
+      "recall": 0.16666666666666666,
+      "precision": 1.0,
+      "seconds": 18.85,
+      "detail": {
+        "missing": [
+          "GULFSOUTHMEDICALSUPPLYINC_12_24_1997-EX-4-AFFILIATE AGREEMENT.PDF",
+          "ImpresseCorp_20000322_S-1A_EX-10.11_5199234_EX-10.11_Co-Branding Agreement.pdf",
+          "NANOPHASETECHNOLOGIESCORP_11_01_2005-EX-99.1-DISTRIBUTOR AGREEMENT.PDF",
+          "SPOKHOLDINGS,INC_06_19_2020-EX-10.1-COOPERATION AGREEMENT.PDF",
+          "UAGHINC_04_14_2004-EX-10.18-MAINTENANCE AGREEMENT.PDF"
+        ],
+        "extra": []
+      },
+      "usage": {
+        "calls": 2,
+        "input": 1429,
+        "cached": 0,
+        "output": 272,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    },
+    {
+      "qid": "N03",
+      "qtype": "aggregate",
+      "tag": "named-list",
+      "question": "List all agreements governed by the same law as the Distributor Agreement between COMWARE TECHNICAL SERVICES and INTERNATIONAL TEST SYSTEMS, INC, including that one.",
+      "expected": [
+        "BLACKBOXSTOCKSINC_08_05_2014-EX-10.1-DISTRIBUTOR AGREEMENT.PDF",
+        "OPTIMIZEDTRANSPORTATIONMANAGEMENT,INC_07_26_2000-EX-6.6-DISTRIBUTOR AGREEMENT.PDF",
+        "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor Agreement.pdf"
+      ],
+      "answer": "The Distributor Agreement between COMWARE TECHNICAL SERVICES and INTERNATIONAL TEST SYSTEMS, INC. is governed by **Texas** law. There are **2** agreements in the provided list governed by Texas law:\n\n1. **BLACKBOXSTOCKSINC_08_05_2014-EX-10.1-DISTRIBUTOR AGREEMENT.PDF** (Distributor Agreement between Snotarator LLC and SMSA Ballinger Acquisition Corp.)\n2. **OPTIMIZEDTRANSPORTATIONMANAGEMENT,INC_07_26_2000-EX-6.6-DISTRIBUTOR AGREEMENT.PDF** (Distributor Agreement between COMWARE TECHNICAL SERVICES and INTERNATIONAL TEST SYSTEMS, INC.)\n3. **WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor Agreement.pdf** (Exclusive Distributor Agreement between WATER NOW, INC. and BESTEV MANAGEMENT, LLC)\n\nWait, the SQL query filters for `governing_law = 'California' OR governing_law = 'Texas'`, but the question asks specifically for agreements governed by the **same law** as the COMWARE agreement (which is Texas). The provided rows include both California and Texas agreements because of the SQL filter.\n\nHowever, strictly answering the user's specific question (\"List all agreements governed by the same law as...\"), I must filter the results to only those with `governing_law = 'Texas'`.\n\n**Agreements governed by Texas law:**\n1. **BLACKBOXSTOCKSINC_08_05_2014-EX-10.1-DISTRIBUTOR AGREEMENT.PDF**\n2. **OPTIMIZEDTRANSPORTATIONMANAGEMENT,INC_07_26_2000-EX-6.6-DISTRIBUTOR AGREEMENT.PDF**\n3. **WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor Agreement.pdf**",
+      "route": "sql",
+      "correct": false,
+      "hallucinated": true,
+      "refused": false,
+      "citation_ok": null,
+      "recall": 1.0,
+      "precision": 0.3333333333333333,
+      "seconds": 45.58,
+      "detail": {
+        "missing": [],
+        "extra": [
+          "ADIANUTRITION,INC_04_01_2005-EX-10.D2-RESELLER AGREEMENT.PDF",
+          "BEYONDCOMCORP_08_03_2000-EX-10.2-CO-HOSTING AGREEMENT.PDF",
+          "CYBERIANOUTPOSTINC_07_09_1998-EX-10.13-PROMOTION AGREEMENT.PDF",
+          "GOCALLINC_03_30_2000-EX-10.7-Promotion Agreement.PDF",
+          "NETGROCERINC_07_31_1998-EX-10.15-SPONSORSHIP AGREEMENT.PDF",
+          "OASYSMOBILE,INC_07_05_2001-EX-10.17-OUTSOURCING AGREEMENT.PDF"
+        ]
+      },
+      "usage": {
+        "calls": 3,
+        "input": 4342,
+        "cached": 0,
+        "output": 649,
+        "embed_tokens": 0,
+        "usd": 0.0
+      },
+      "model": "qwen3.5-9b-mtp"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+# The four model combinations of the demo, for scripts/run_combos.py.
+# Keys and the cloud endpoint come from environment variables (DEMO_CHAT_BASE, DEMO_CHAT_KEY, DEMO_EMBED_KEY).
+combos:
+  local:
+    label: Local · Qwen 3.5 9B + nomic
+    llm_base_url: http://localhost:1234/v1
+    llm_model: qwen3.5-9b-mtp
+    embed_base_url: http://localhost:1234/v1
+    embed_model: text-embedding-nomic-embed-text-v1.5
+
+  cloud-chat:
+    label: Cloud chat · gpt-6.1-sol + nomic
+    llm_base_url: ${DEMO_CHAT_BASE}
+    llm_api_key: ${DEMO_CHAT_KEY}
+    llm_model: gpt-6.1-sol
+    llm_reasoning_effort: low
+    llm_timeout: 600
+    embed_base_url: http://localhost:1234/v1
+    embed_api_key: not-needed
+    embed_model: text-embedding-nomic-embed-text-v1.5
+
+  cloud:
+    label: Cloud · gpt-6.1-sol + text-embedding-3-small
+    llm_base_url: ${DEMO_CHAT_BASE}
+    llm_api_key: ${DEMO_CHAT_KEY}
+    llm_model: gpt-6.1-sol
+    llm_reasoning_effort: low
+    llm_timeout: 600
+    embed_base_url: https://openrouter.ai/api/v1
+    embed_api_key: ${DEMO_EMBED_KEY}
+    embed_model: openai/text-embedding-3-small
+    embed_doc_prefix: ""
+    embed_query_prefix: ""
+
+  local-chat-cloud-embed:
+    label: Local chat · Qwen 3.5 9B + text-embedding-3-small
+    llm_base_url: http://localhost:1234/v1
+    llm_model: qwen3.5-9b-mtp
+    embed_base_url: https://openrouter.ai/api/v1
+    embed_api_key: ${DEMO_EMBED_KEY}
+    embed_model: openai/text-embedding-3-small
+    embed_doc_prefix: ""
+    embed_query_prefix: ""
